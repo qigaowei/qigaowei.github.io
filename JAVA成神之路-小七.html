@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    </meta>
+    <title>
+        JAVA成神之路-小七
+    </title>
+</head>
+<body>
+<a href="https://mp.weixin.qq.com/s/mP49OCkwqSnamtop0cChdQ">如何避免出现SQL注入漏洞</a><br>
+<a href="https://mp.weixin.qq.com/s/x6_mNdtb6i2XmTiyz4kXrg">Spring Boot参数校验以及分组校验的使用</a><br>
+<a href="https://mp.weixin.qq.com/s/_FxP2sR4Rslq7rGqZ8bbCw">设计模式在业务系统中的应用</a><br>
+<a href="https://mp.weixin.qq.com/s/yaIOCfEigkQMm2kt6I7Orw">自己动手从0开始实现一个分布式RPC框架</a><br>
+<a href="https://mp.weixin.qq.com/s/2yxexZUr5MWdMZ02GCSwdA">谈谈JVM内部锁升级过程</a><br>
+<a href="https://mp.weixin.qq.com/s/KgJFyEmZApF7l5UUJeWf8Q">从操作系统层面分析Java IO演进之路</a><br>
+<a href="https://mp.weixin.qq.com/s/mcI6QUW0naOmL3PMiKzLdw">如何用Netty写一个高性能的分布式服务框架？</a><br>
+<a href="https://mp.weixin.qq.com/s/9aUTvdKFbsi_fzuO0BjPvw">性能优化：关于缓存的一些思考</a><br>
+<a href="https://mp.weixin.qq.com/s/3w82k45ZePn2WO5zOAaYCw">Java编程技巧之样板代码</a><br>
+<a href="https://mp.weixin.qq.com/s/axWymUaYaARtvsYqvfyTtw">10问10答：你真的了解线程池吗？</a><br>
+<a href="https://mp.weixin.qq.com/s/3_PXGk57fPAL0pMPneg4fA">参数校验优雅实践</a><br>
+<a href="https://mp.weixin.qq.com/s/4S_BhPtIMikefPJLo5498Q">分区取模分库分表策略：多表事务分库内闭环解决方案</a><br>
+<a href="https://mp.weixin.qq.com/s/DiphH8bvR8TtLyQmnTkpuw">几种Java常用序列化框架的选型与对比</a><br>
+<a href="https://mp.weixin.qq.com/s/66Q_jYBjWa1AVwbLwVzrfw">小白也能懂的Nacos服务模型</a><br>
+<a href="https://mp.weixin.qq.com/s/7UTEHA6pdHeitg1htzdcRw">​Java Map中那些巧妙的设计</a><br>
+<a href="https://mp.weixin.qq.com/s/X6FI9Ci7ZXGDNDCkh2VnNA">浅谈分库分表那些事儿</a><br>
+<a href="https://mp.weixin.qq.com/s/Vpyugl5FtwKHTon-EuO8zQ">收藏！这些IDE使用技巧，你都知道吗</a><br>
+<a href="https://mp.weixin.qq.com/s/AVMN8jyqMXWhE9bRs_e0aQ">Java异步非阻塞编程的几种方式</a><br>
+<a href="https://mp.weixin.qq.com/s/Wib0Ly45te00HMUnIG-tbg">如何优化你的if-else？来试试“责任树模式”</a><br>
+<a href="https://mp.weixin.qq.com/s/oK6A3viNP3XafEvl7rzjKA">如何实现Java类隔离加载？</a><br>
+<a href="https://mp.weixin.qq.com/s/SZPs9JgIR4jAFGXx-gOkyA">为什么说应用架构需要分类思维？</a><br>
+<a href="https://mp.weixin.qq.com/s/sXv9XIIVDsflXr0FdrGM1A">前沿实践：垃圾回收器是如何演进的？</a><br>
+<a href="https://mp.weixin.qq.com/s/iklfWLmSD4XMAKmFcffp9g">底层原理：垃圾回收算法是如何设计的？</a><br>
+<a href="https://mp.weixin.qq.com/s/fzLcAkYwKhj-9hgoVkTzaw">CPU飙高，系统性能问题如何排查？</a><br>
+<a href="https://mp.weixin.qq.com/s/u7geoZNpLtfr_crkXVHjAg">面对复杂业务，if-else coder 如何升级？</a><br>
+<a href="https://mp.weixin.qq.com/s/GdqT92fRObAbgvdZi08dLg">如何理解这6种常见设计模式？</a><br>
+<a href="https://mp.weixin.qq.com/s/HBKUmyPBpFESY0Ygmcaevw">Java编程技巧：如何实现参数的输入输出？</a><br>
+<a href="https://mp.weixin.qq.com/s/KQG2U8_aotDL4YFB8ee6Zw">云原生时代，微服务如何演进？</a><br>
+<a href="https://mp.weixin.qq.com/s/Z6zISNEZDRqRJn5YpNpl_A">快速入门数据结构和算法</a><br>
+<a href="https://mp.weixin.qq.com/s/K9Oyn0cbwqVCh1j3N5bd_w">Java 开发必备！ I/O与Netty原理精讲</a><br>
+<a href="https://mp.weixin.qq.com/s/2AL3uJ5BG2X3Y2Vxg0XqnQ">如何选择分布式事务解决方案？</a><br>
+<a href="https://mp.weixin.qq.com/s/KITwpPQJu4K3wAQ3rTjS-A">Java 的这些坑，你踩到了吗？</a><br>
+<a href="https://mp.weixin.qq.com/s/AVTSj2jny-Fjch74kv1oug">阿里开发者工具盘点：用它！让开发事半功倍</a><br>
+<a href="https://mp.weixin.qq.com/s/pxWpXB37yKe2ksRLbwgGpg">阿里技术 2019 年度热文 Top10 出炉，你错过哪些？</a><br>
+<a href="https://mp.weixin.qq.com/s/-ioLU65Sxg8tTmPyItZ2Iw">Java工程师该如何编写高效代码？</a><br>
+<a href="https://mp.weixin.qq.com/s/QidAD9OuVdEXFqxRMPx5lQ">响应速度不给力？解锁正确缓存姿势</a><br>
+<a href="https://mp.weixin.qq.com/s/23-S5tXTqi2LSe84OoQvvA">跑得好好的Java进程，怎么突然就瘫痪了？</a><br>
+<a href="https://mp.weixin.qq.com/s/-op5WR1wSkgAuP7JYZWP8g">Redis 多线程网络模型全面揭秘</a><br>
+<a href="https://mp.weixin.qq.com/s/KKrxuVCrjlXXWMPTXQ-fvA">分布式之系统底层原理</a><br>
+<a href="https://mp.weixin.qq.com/s/COrkvVDRyOEV32mOu-M5Og">收藏 | 2020年腾讯技术工程十大热门文章</a><br>
+<a href="https://mp.weixin.qq.com/s/QduIxKOykMmoZp13UGF1XQ">MySQL 索引知识点总结</a><br>
+<a href="https://mp.weixin.qq.com/s/ASrINfC8gHbYryIWSSwT_A">Java内存泄漏、性能优化、宕机死锁的N种姿势</a><br>
+<a href="https://mp.weixin.qq.com/s/qHJiTjpvDikFcdl9SRL97Q">深入理解 MySQL 索引底层原理</a><br>
+<a href="https://mp.weixin.qq.com/s/pg8e2feY0MRAESUXXzPDUQ">免费开放阅读 | 数据库管理系统的事务原理（上）</a><br>
+<a href="https://mp.weixin.qq.com/s/bIwkyRw5Gi5947UbbXr95A">你知道 Java 类是如何被加载的吗？</a><br>
+<a href="https://mp.weixin.qq.com/s/aGMdHo0c4DFvysQrb4OqAQ">快快来，和我们一起开启稳定性的探索之旅</a><br>
+<a href="https://mp.weixin.qq.com/s/aA1eDYIUHuIfigTw2ffouw">咱们从头到尾说一次 Java 垃圾回收</a><br>
+<a href="https://mp.weixin.qq.com/s/PstnDFD7iFbdJ90z-lC6yw">30 分钟让你掌握 Git 的黑魔法</a><br>
+<a href="https://mp.weixin.qq.com/s/X-DEj-Rwi4AbGyJeBsb0-A">面试经 | 资深 Java 程序员设计的 23 个问题（含答案）</a><br>
+<a href="https://mp.weixin.qq.com/s/jsUxTHykzhc90DGwtIkezw">庖丁解牛 | 图解 RocketMQ 核心原理</a><br>
+<a href="https://mp.weixin.qq.com/s/sxWuetL965WgF-ZORM3aQw">微服务架构下，解决数据一致性问题的实践</a><br>
+<a href="https://mp.weixin.qq.com/s/iDJbl-ax-8u2gyQRRbCEUg">网易考拉在服务化改造方面的实践</a><br>
+<a href="https://mp.weixin.qq.com/s/eITNupM7fOuDwEmxRLhH7A">高段位程序员的学习之道</a><br>
+<a href="https://mp.weixin.qq.com/s/2CAeqrkorKHeRE6GX9JpbQ">限流和降级（上） | 如何打造平台稳定性能力（一）</a><br>
+<a href="https://mp.weixin.qq.com/s/Kxk2Ag-7dbpBZEs1xBJYeQ">里程碑 | Apache RocketMQ 正式开源分布式事务消息</a><br>
+<a href="https://mp.weixin.qq.com/s/xbAaZ1aEFVKGxdgB-ElkaA">不能完整地满足服务开发和治理的微服务都是扯淡！！！</a><br>
+<a href="https://mp.weixin.qq.com/s/jRhylPdxrAv-0z8OXnuTKg">腾讯技术工程 2019 年十大最受欢迎文章出炉</a><br>
+<a href="https://mp.weixin.qq.com/s/UQKrAR3zsdTRz8nFiLk2uQ">这才是真正的Git——Git内部原理揭秘！</a><br>
+<a href="https://mp.weixin.qq.com/s/if81us1RNSOILzL8pwj72g">垃圾回收-实战篇</a><br>
+<a href="https://mp.weixin.qq.com/s/-T6X-qxjNNonaMJ4hjF3gQ">从 RPC 到服务化框架设计</a><br>
+<a href="https://mp.weixin.qq.com/s/GU3cbUkI84IMwttDz16P3w">认识 MySQL 和 Redis 的数据一致性问题</a><br>
+<a href="https://mp.weixin.qq.com/s/TTn3YNwKKWn5IS8F6HJHIg">高并发系统建设经验总结</a><br>
+<a href="https://mp.weixin.qq.com/s/XslSlWWD1oSZMOz35sUTVA">浅谈 RocketMQ、Kafka、Pulsar 的事务消息</a><br>
+<a href="https://mp.weixin.qq.com/s/-MXA4T-ei_U5ewXUNZ0QdQ">分布式消息队列</a><br>
+<a href="https://mp.weixin.qq.com/s/k8sA6XPrp80JiNbuwKaVfg">消息队列背后的设计思想</a><br>
+<a href="https://mp.weixin.qq.com/s/k8agEub4qmhm3kX_TpETrA">这篇Redis文章，图灵看了都说好</a><br>
+<a href="https://mp.weixin.qq.com/s/8gDVqlywLBl-MZa6XrtXug">为什么磁盘存储引擎用 b+树来作为索引结构？</a><br>
+<a href="https://mp.weixin.qq.com/s/sRFmW57KUY3yyyRkyw0L4A">MySQL 深入学习总结</a><br>
+<a href="https://mp.weixin.qq.com/s/EDzFOo3gcivOe_RgipkTkQ">​网络 IO 演变发展过程和模型介绍</a><br>
+<a href="https://mp.weixin.qq.com/s/COrkvVDRyOEV32mOu-M5Og">收藏 | 2020年腾讯技术工程十大热门文章</a><br>
+<a href="https://mp.weixin.qq.com/s/ziJ8OFiLA1it3sQvycN7Mg">翻越缓存的三座大山</a><br>
+<a href="https://mp.weixin.qq.com/s/DigeE4YxuT55cSeyb1q1tQ">ZooKeeper 源码和实践揭秘</a><br>
+<a href="https://mp.weixin.qq.com/s/YfHszSORHP_-W7pJA8PEcg">如何设计一个高可用、高并发秒杀系统</a><br>
+<a href="https://mp.weixin.qq.com/s/2M_rq1GCMvAuo7pgn9mP7g">HTML 文件在PC&移动端完美自适应布局的技巧</a><br>
+<a href="https://mp.weixin.qq.com/s/E3PGP6FDBFUcghYfpe6vsg">唯一ID生成算法剖析</a><br>
+<a href="https://mp.weixin.qq.com/s/pL3mNYH8-NJWa4z1014-hA">微服务架构系列一：关键技术与原理研究</a><br>
+<a href="https://mp.weixin.qq.com/s/F68-e2umTQIq0aGfif58ow">深入浅出百亿请求高可用Redis(codis)分布式集群揭秘</a><br>
+<a href="https://mp.weixin.qq.com/s/Jyjkt5ZJFOlDPGW19Zg0xA">并发场景下的幂等问题——分布式锁详解</a><br>
+<a href="https://mp.weixin.qq.com/s/9XbOAvR2GyBAIKKcmV5LpA">消息队列的使用场景是什么样的?</a><br>
+<a href="https://mp.weixin.qq.com/s/_pDB4VJJY_aDCsnly7doTg">MYSQL 中锁的各种模式与类型</a><br>
+<a href="https://mp.weixin.qq.com/s/D5dinmi-YwQeeJzjSYBqfA">谈谈 Java 接口 Result 设计</a><br>
+<a href="https://mp.weixin.qq.com/s/6Y_x4Y0LlOnFuX_02_sVoQ">Effective Java 在工作中的应用总结</a><br>
+<a href="https://mp.weixin.qq.com/s/9D9lLOI8QellnY2YKpOpJA">如何提升 Java 代码的可读性</a><br>
+<a href="https://mp.weixin.qq.com/s/H4-gHR_yMoejr6fvyJj-gg">Java 对象转换方案分析与 mapstruct 实践</a><br>
+<a href="https://mp.weixin.qq.com/s/dkb5x8njAAA2JQj_qyWoyg">自己动手从0开始实现一个分布式 RPC 框架</a><br>
+<a href="https://mp.weixin.qq.com/s/IdYBF-xJJZithGNkwhHPWg">重温设计模式之 Factory</a><br>
+<a href="https://mp.weixin.qq.com/s/vqT4NmfUZ9pXnZwKkujtLQ">如何通过事务消息保障抢购业务的分布式一致性？</a><br>
+<a href="https://mp.weixin.qq.com/s/V6XcB3U7eFcKUigGSZd3EQ">消息中间件：为什么我们选择 RocketMQ</a><br>
+<a href="https://mp.weixin.qq.com/s/dtsBOBPm59fabce0S4tKUA">面试题系列：JVM 夺命连环10问</a><br>
+<a href="https://mp.weixin.qq.com/s/srIgoFyW9j3z-QnyUPPaGg">面试题系列：Zookeeper 夺命连环9问</a><br>
+<a href="https://mp.weixin.qq.com/s/h8MhdLg0d2YYRfxCM2k7JA">Java 编程技巧之样板代码</a><br>
+<a href="https://mp.weixin.qq.com/s/dhywrsaEbX5GfMsm8Xs2aA">面试题系列：Dubbo 夺命连环9问</a><br>
+<a href="https://mp.weixin.qq.com/s/1fzVVw4dqjXO97ZcMnICqw">面试题系列：分布式夺命连环9问</a><br>
+<a href="https://mp.weixin.qq.com/s/27Izv5ZG-Xs6CTco6kl11g">面试题系列：网络篇夺命连环12问</a><br>
+<a href="https://mp.weixin.qq.com/s/UASAEiGWrTUnSaG81eC27w">面试题系列：Java 夺命连环16问</a><br>
+<a href="https://mp.weixin.qq.com/s/pIu82Ndob6tapw8B0Wgn-A">面试题系列：Linux 夺命连环5问</a><br>
+<a href="https://mp.weixin.qq.com/s/J9EuySFQKpFKQSixNFCyKQ">「技术人生」第2篇：学会分析事物的本质</a><br>
+<a href="https://mp.weixin.qq.com/s/RjJv4uRrqaCg5jqijAG0BA">面试题系列：Mysql 夺命连环13问</a><br>
+<a href="https://mp.weixin.qq.com/s/nBatZCMmt6_48g6SBpXK1g">面试题系列：MQ 夺命连环11问</a><br>
+<a href="https://mp.weixin.qq.com/s/-qYf8BNJVWDOcrQbJglWzw">面试题系列：Redis 夺命连环11问</a><br>
+<a href="https://mp.weixin.qq.com/s/JEQ9ha9NhZ-k3SUNlRx8Jw">面试题系列：Spring 夺命连环10问</a><br>
+<a href="https://mp.weixin.qq.com/s/pS2U15xKX6-Or0at_2lRdg">优秀技术人，如何做到高效沟通？</a><br>
+<a href="https://mp.weixin.qq.com/s/dd_PM1gpvk-PTt5tn-yDOQ">建网站应该选择自己建站还是在线建站？</a><br>
+<a href="https://mp.weixin.qq.com/s/cmmVsRCSTQAtXIuINgpecQ">成长慢，是因为认知不够，导致思维方式落后</a><br>
+<a href="https://mp.weixin.qq.com/s/cGGjc5FS4YI3ai1U0jSLpQ">饿了么4年 + 阿里2年研发路上的总结与思考</a><br>
+<a href="https://mp.weixin.qq.com/s/ps37VftZ-Tas0Woy4PWxgg">阿里高级技术专家总结6年来的成长和收获</a><br>
+<a href="https://mp.weixin.qq.com/s/R1DTKwNMbjHYZaVqVb0oxQ">周志明：职业电竞选手的Java大神路</a><br>
+<a href="https://mp.weixin.qq.com/s/d4Y9iMlUorB9BvPh495_Tg">如何提升微服务的幸福感</a><br>
+<a href="https://mp.weixin.qq.com/s/4LQyF64eAKHJT1Fr39cnJA">Java代码精简之道</a><br>
+<a href="https://mp.weixin.qq.com/s/4kigzgRx85eqz064u_YJOA">服务发现与配置管理高可用最佳实践</a><br>
+<a href="https://mp.weixin.qq.com/s/Y9S89MT0uAobzRKgYVrI9Q">浅谈缓存最终一致性的解决方案</a><br>
+<a href="https://mp.weixin.qq.com/s/WyfRV-7sK_O8pxDZbPXQtQ">慢sql治理经典案例分享</a><br>
+<a href="https://www.cnblogs.com/leijisong/p/15154018.html">面试官问线程池哪些参数是可以在运行阶段修改的？ </a><br>
+<a href="https://www.cnblogs.com/sang-bit/p/15317854.html">ACID的实现原理 </a><br>
+<a href="https://blog.csdn.net/liyifan687/article/details/115051198">MySQL的ACID是如何实现的？</a><br>
+<a href="https://segmentfault.com/a/1190000022904663">深度分析：锁升级过程和锁状态，看完这篇你就懂了！</a><br>
+<a href="https://segmentfault.com/a/1190000022808576">你了解 Redis 的三种集群模式吗？</a><br>
+<a href="https://zhuanlan.zhihu.com/p/105587132">彻底弄懂Redis的内存淘汰策略</a><br>
+<a href="https://blog.csdn.net/java_collect/article/details/105042975">Mysql默认隔离级别为什么是可重复读？</a><br>
+<a href="https://dominicpoi.com/2019/06/16/MySQL-1/">MySQL为什么默认隔离级别为可重复读？</a><br>
+<a href="https://cloud.tencent.com/developer/article/1815254#:~:text=%E6%80%BB%E7%BB%93,%E6%9C%80%E5%A4%9A%E7%9A%84%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95%E3%80%82">10张图带你彻底搞懂限流、熔断、服务降级</a><br>
+<a href="https://blog.51cto.com/u_15064644/3461285">zooKeeper篇-zk的选举机制</a><br>
+<a href="https://blog.csdn.net/qq_35275233/article/details/87888809#:~:text=%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95%E5%8F%88%E5%8F%AB%E5%A4%8D%E5%90%88,a%2Cb%2Cc%EF%BC%89%E3%80%82">mysql 联合索引生效的条件、索引失效的条件</a><br>
+<a href="https://blog.csdn.net/qq_29479041/article/details/85053466">并发编程之读写锁ReentrantReadWriteLock的锁降级</a><br>
+<a href="https://cloud.tencent.com/developer/article/1768986">深夜！小胖问我什么是读写锁？插队策略？升降级？</a><br>
+<a href="https://juejin.cn/post/6844903601546985485">深入理解读写锁ReentrantReadWriteLock</a><br>
+<a href="https://juejin.cn/post/6844904062329028621">MySQL 的覆盖索引与回表</a><br>
+<a href="https://www.51cto.com/article/637727.html">进来抄作业：一次完美的分库分表实践！</a><br>
+<a href="https://zhuanlan.zhihu.com/p/48269420">MySQL的锁机制 - 记录锁、间隙锁、临键锁</a><br>
+<a href="https://zhuanlan.zhihu.com/p/370228995">Java集合之HashMap+ConcurrentHashMap详解</a><br>
+<a href="https://blog.csdn.net/H_L_S/article/details/106727440">RabbitMQ/RocketMQ/Kafka 如何提高消费速度</a><br>
+<a href="https://myoule.zhipin.com/questions/212695f5f6070a46tnV_3tW4F1E~.html">Redis 热点 key 问题怎么解决？</a><br>
+<a href="https://zhuanlan.zhihu.com/p/101396825">Spring事务失效的 8 大原因，这次可以吊打面试官了！</a><br>
+<a href="https://zhuanlan.zhihu.com/p/52977862">数据库基础（四）Innodb MVCC实现原理</a><br>
+<a href="https://juejin.cn/post/6844903886667382798">关于Redis热点key的一些思考</a><br>
+<a href="https://blog.csdn.net/hao134838/article/details/103261116">快速定位线上CPU100%原因</a><br>
+<a href="https://cloud.tencent.com/developer/article/1592943">7 种 JVM 垃圾收集器，看完我跪了。。</a><br>
+<a href="https://www.cnblogs.com/Mr-Mango/articles/14383714.html">JVM - OOM可能发生在哪些区域上 </a><br>
+<a href="https://www.jianshu.com/p/44480d03a03f">HashMap 1.7 死循环分析</a><br>
+<a href="https://zhuanlan.zhihu.com/p/108640505">分布式链路追踪系统原理（上）</a><br>
+<a href="https://www.shangmayuan.com/a/c654087cdeb94106954d4409.html">MySQL 中Redo与Binlog顺序一致性问题 </a><br>
+<a href="https://mp.weixin.qq.com/s/ZdZqgeM9hqnpdQ4hGPpNTA">数据仓库开发 SQL 使用技巧总结 </a><br>
+<a href="https://mp.weixin.qq.com/s/HUm9HKKZ-Xm2KAhiSFrTsw">SpringBoot+ShardingJDBC实现读写分离、分库分表 </a><br>
+<a href="https://mp.weixin.qq.com/s/GGXmLQqtxHdiOdTP47H-hw">Spring Boot 实现读写分离，还有谁不会？？ </a><br>
+<a href="https://mp.weixin.qq.com/s/iVvykwfnfd1JgBXvlfXsfA">面试必备：聊聊分布式锁的多种实现！ </a><br>
+<a href="https://mp.weixin.qq.com/s/PzDO-UCLzxqDbFoHbS47Sg">深度解读 RocketMQ 存储机制 </a><br>
+<a href="https://mp.weixin.qq.com/s/fNFnJqKuKiqEykiGR3I1rw">同事写了一个责任链模式，Bug无数 </a><br>
+<a href="https://mp.weixin.qq.com/s/gjS6dh5hRsYAQadTpk9Vyw">IDEA调试的时候，操作如何回退？ </a><br>
+<a href="https://mp.weixin.qq.com/s/Oi3xakVtg1ahF33PWfOjvA">一款自动生成单元测试的 IDEA 插件 </a><br>
+<a href="https://mp.weixin.qq.com/s/A48JWPbhQ2vhzaz2Mz9HMA">浅入浅出代理模式与 Spring 事务管理 </a><br>
+<a href="https://mp.weixin.qq.com/s/eJsTEWaTq-szgoM-BHFpBg">这 30 款 IDEA 宝贝插件 YYDS </a><br>
+<a href="https://mp.weixin.qq.com/s/hgKyQkrXJB9BFSp2u4e3Uw">Spring Boot 实现万能文件在线预览 </a><br>
+<a href="https://mp.weixin.qq.com/s/dNRqCFgYHO_NYF_RJIYMSg">干掉Random：这个类已经成为获取随机数的王者 </a><br>
+<a href="https://mp.weixin.qq.com/s/Vq2e4cCLH1KNV12Ar3Wlcg">ConcurrentHashMap 是如何保证线程安全的，你知道么？ </a><br>
+<a href="https://mp.weixin.qq.com/s/Io64o3tbEcf150dS5_ltbQ">两万字详解！InnoDB锁专题！？ </a><br>
+<a href="https://mp.weixin.qq.com/s/0l076uwtmbbSFHNPKsSB3A">比 MyBatis 快 100 倍，天生支持联表！ </a><br>
+<a href="https://mp.weixin.qq.com/s/PIQDfHVYBEJLzxaaRSfpgA">美团面试：使用MySQL，你遇到过哪些坑？ </a><br>
+<a href="https://mp.weixin.qq.com/s/Yk5KsTEWrAdHgVSrd0OoHw">美团面试：MySQL中有哪些锁？当时我就懵逼了！ </a><br>
+<a href="https://mp.weixin.qq.com/s/hsH7LMBEDGe_df9UbfOvbQ">后台服务架构高性能设计之道 </a><br>
+<a href="https://mp.weixin.qq.com/s/ic57T3Yj2C_5tpdnM39IrQ">SpringBoot 分布式事务的解决方案（JTA+Atomic+多数据源） </a><br>
+<a href="https://mp.weixin.qq.com/s/MaQTI4afIh2Zehc-F-iisQ">基于代价的慢查询优化建议 </a><br>
+<a href="https://mp.weixin.qq.com/s/ueT-ySopvGAty17vHFh55g">还在用分页？太Low ！试试 MyBatis 流式查询，真心爽！ </a><br>
+<a href="https://mp.weixin.qq.com/s/6MkpbDDAn9RzUu9UDItNBg">5 大步骤 + 10 个案例，堪称 SQL 优化万能公式 </a><br>
+<a href="https://mp.weixin.qq.com/s/iLm6YD61ecMVq9voDmOKsA">xxl-job 和 ElasticJob比，谁牛？ </a><br>
+<a href="https://mp.weixin.qq.com/s/nSvBaNBYTZ_0Fk-9xkOLQg">Redis实现分布式锁的8大坑！切记！ </a><br>
+<a href="https://mp.weixin.qq.com/s/ckD6C3P7F89gLocEKAL-uw">springboot整合redis实现分布式锁 </a><br>
+<a href="https://mp.weixin.qq.com/s/KtsDhbryS3mqMBO-lB_LAQ">Java8 Stream：2万字20个实例，玩转集合的筛选、归约、分组、聚合 </a><br>
+<a href="https://mp.weixin.qq.com/s/V0BX5tRlrrZhfe2-ui2aRA">InnoDB原理篇：聊聊数据页变成索引这件事 </a><br>
+<a href="https://mp.weixin.qq.com/s/dqHVAPO9XBsixRwMdprYdA">面试不怂之 Redis 与缓存大全 </a><br>
+<a href="https://mp.weixin.qq.com/s/x3U9wYuV0lWNLTL_yNAepg">说说 Spring Bean 的实例化过程？面试必问的！ </a><br>
+<a href="https://mp.weixin.qq.com/s/sR8eNpS5N5MbvRwySg229g">面试官：谈谈ReentrantLock与synchronized的区别？ </a><br>
+<a href="https://mp.weixin.qq.com/s/r_S9Kw_4WpBsU-8oUbsKkw">@Autowire和@Resource注解使用的正确姿势，别再用错的了！！ </a><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
