@@ -1,0 +1,2 @@
+File---->Setting---->Editor---->Inlay Hints---->Code vision---->取消勾选所有（可逆）
+关闭以上设置，可以减少内存占用，提升运行速度，适合低配置电脑
