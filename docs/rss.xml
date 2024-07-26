@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Fri, 26 Jul 2024 01:05:32 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>springboot多数据源</title><link>https://qigaowei.github.io/post/springboot-duo-shu-ju-yuan.html</link><description>```   &#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Fri, 26 Jul 2024 01:14:42 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>springboot多数据源</title><link>https://qigaowei.github.io/post/springboot-duo-shu-ju-yuan.html</link><description>```   &#13;
       &lt;dependency&gt;&#13;
             &lt;groupId&gt;com.baomidou&lt;/groupId&gt;&#13;
             &lt;artifactId&gt;dynamic-datasource-spring-boot-starter&lt;/artifactId&gt;&#13;
@@ -11,12 +11,12 @@
 spring.datasource.dynamic.primary=master &#13;
 spring.datasource.dynamic.strict=true&#13;
 spring.datasource.dynamic.datasource.master.url=jdbc:mysql://10.1.1.160:3306/account_gateway?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=GMT%2B8&#13;
-spring.datasource.dynamic.datasource.master.username=qjdadmin&#13;
-spring.datasource.dynamic.datasource.master.password=QjdChina1&#13;
+spring.datasource.dynamic.datasource.master.username=root&#13;
+spring.datasource.dynamic.datasource.master.password=A123456&#13;
 spring.datasource.dynamic.datasource.master.driver-class-name=com.mysql.cj.jdbc.Driver&#13;
 spring.datasource.dynamic.datasource.second.url=jdbc:mysql://10.8.1.8:3306/db_search?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=GMT%2B8&#13;
 spring.datasource.dynamic.datasource.second.username=root&#13;
-spring.datasource.dynamic.datasource.second.password=BIGdata&#13;
+spring.datasource.dynamic.datasource.second.password=A123456&#13;
 spring.datasource.dynamic.datasource.second.driver-class-name=com.mysql.cj.jdbc.Driver&#13;
 ```&#13;
 &#13;
