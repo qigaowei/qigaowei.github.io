@@ -10,7 +10,8 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="import com.vladsch.flexmark.util.ast.Node;
+<meta name="description" content="```
+import com.vladsch.flexmark.util.ast.Node;
 import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
 import com.vladsch.flexmark.util.data.MutableDataSet;
@@ -25,20 +26,25 @@ import com.vladsch.flexmark.util.data.MutableDataSet;
         // 解析并渲染Markdown
         Node document = parser.parse(content);
         String html = renderer.render(document);
-
+```
+```
  <dependency>
             <groupId>com.vladsch.flexmark</groupId>
             <artifactId>flexmark</artifactId>
             <version>0.62.2</version>
         </dependency>
-
- <dependency>
+```
+下面这种jar包体积会很大，建议上面这种
+```
+<dependency>
             <groupId>com.vladsch.flexmark</groupId>
             <artifactId>flexmark-all</artifactId>
             <version>0.62.2</version>
-        </dependency>。">
+        </dependency>
+```。">
 <meta property="og:title" content="markdown转html，示例和优化">
-<meta property="og:description" content="import com.vladsch.flexmark.util.ast.Node;
+<meta property="og:description" content="```
+import com.vladsch.flexmark.util.ast.Node;
 import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
 import com.vladsch.flexmark.util.data.MutableDataSet;
@@ -53,18 +59,22 @@ import com.vladsch.flexmark.util.data.MutableDataSet;
         // 解析并渲染Markdown
         Node document = parser.parse(content);
         String html = renderer.render(document);
-
+```
+```
  <dependency>
             <groupId>com.vladsch.flexmark</groupId>
             <artifactId>flexmark</artifactId>
             <version>0.62.2</version>
         </dependency>
-
- <dependency>
+```
+下面这种jar包体积会很大，建议上面这种
+```
+<dependency>
             <groupId>com.vladsch.flexmark</groupId>
             <artifactId>flexmark-all</artifactId>
             <version>0.62.2</version>
-        </dependency>。">
+        </dependency>
+```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/markdown-zhuan-html%EF%BC%8C-shi-li-he-you-hua.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -124,30 +134,35 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>import com.vladsch.flexmark.util.ast.Node;<br>
-import com.vladsch.flexmark.html.HtmlRenderer;<br>
-import com.vladsch.flexmark.parser.Parser;<br>
-import com.vladsch.flexmark.util.data.MutableDataSet;</p>
-<p>// 配置选项<br>
-MutableDataSet options = new MutableDataSet();</p>
-<pre class="notranslate"><code class="notranslate">    // 创建解析器和渲染器
-    Parser parser = Parser.builder(options).build();
-    HtmlRenderer renderer = HtmlRenderer.builder(options).build();
+<div class="markdown-body" id="postBody"><pre class="notranslate"><code class="notranslate">import com.vladsch.flexmark.util.ast.Node;
+import com.vladsch.flexmark.html.HtmlRenderer;
+import com.vladsch.flexmark.parser.Parser;
+import com.vladsch.flexmark.util.data.MutableDataSet;
 
-    // 解析并渲染Markdown
-    Node document = parser.parse(content);
-    String html = renderer.render(document);
+ // 配置选项
+        MutableDataSet options = new MutableDataSet();
+
+        // 创建解析器和渲染器
+        Parser parser = Parser.builder(options).build();
+        HtmlRenderer renderer = HtmlRenderer.builder(options).build();
+
+        // 解析并渲染Markdown
+        Node document = parser.parse(content);
+        String html = renderer.render(document);
 </code></pre>
- 
-            com.vladsch.flexmark
-            flexmark
-            0.62.2
-        
- 
-            com.vladsch.flexmark
-            flexmark-all
-            0.62.2
-        </div>
+<pre class="notranslate"><code class="notranslate"> &lt;dependency&gt;
+            &lt;groupId&gt;com.vladsch.flexmark&lt;/groupId&gt;
+            &lt;artifactId&gt;flexmark&lt;/artifactId&gt;
+            &lt;version&gt;0.62.2&lt;/version&gt;
+        &lt;/dependency&gt;
+</code></pre>
+<p>下面这种jar包体积会很大，建议上面这种</p>
+<pre class="notranslate"><code class="notranslate">&lt;dependency&gt;
+            &lt;groupId&gt;com.vladsch.flexmark&lt;/groupId&gt;
+            &lt;artifactId&gt;flexmark-all&lt;/artifactId&gt;
+            &lt;version&gt;0.62.2&lt;/version&gt;
+        &lt;/dependency&gt;
+</code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

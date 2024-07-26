@@ -1,3 +1,4 @@
+```
 import com.vladsch.flexmark.util.ast.Node;
 import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
@@ -13,15 +14,19 @@ import com.vladsch.flexmark.util.data.MutableDataSet;
         // 解析并渲染Markdown
         Node document = parser.parse(content);
         String html = renderer.render(document);
-
+```
+```
  <dependency>
             <groupId>com.vladsch.flexmark</groupId>
             <artifactId>flexmark</artifactId>
             <version>0.62.2</version>
         </dependency>
-
- <dependency>
+```
+下面这种jar包体积会很大，建议上面这种
+```
+<dependency>
             <groupId>com.vladsch.flexmark</groupId>
             <artifactId>flexmark-all</artifactId>
             <version>0.62.2</version>
         </dependency>
+```
