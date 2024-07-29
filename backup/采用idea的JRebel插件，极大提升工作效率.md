@@ -4,5 +4,5 @@
 ### 每次可以节省几分钟
 
 ## 必须重启的情况
-### 1MQ，修改了consumerGroup，@RocketMQMessageListener(consumerGroup=
-### 2com.baomidou.mybatisplus.extension.service.IService#saveBatch(java.util.Collection<T>)，使用此方法时，修改了实体类。
+### 1MQ，修改了consumerGroup，@RocketMQMessageListener(consumerGroup=，需要重启。
+### 2修改了com.baomidou.mybatisplus的实体类，需要重启。
