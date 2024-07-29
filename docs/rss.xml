@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Sun, 28 Jul 2024 04:56:23 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>指定jdk17启动springboot项目</title><link>https://qigaowei.github.io/post/zhi-ding-jdk17-qi-dong-springboot-xiang-mu.html</link><description>#!/bin/bash&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Mon, 29 Jul 2024 06:43:21 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>指定jdk17启动springboot项目</title><link>https://qigaowei.github.io/post/zhi-ding-jdk17-qi-dong-springboot-xiang-mu.html</link><description>#!/bin/bash&#13;
 &#13;
 export JAVA_HOME=/usr/local/jdk-17.0.8/&#13;
 export JRE_HOME=${JAVA_HOME}/jre&#13;
@@ -86,13 +86,14 @@ public class EnterpriseBasicInfoServiceImpl extends ServiceImpl&lt;EnterpriseBas
             &lt;version&gt;5.7.14&lt;/version&gt;&#13;
         &lt;/dependency&gt;&#13;
 ```。</description><guid isPermaLink="true">https://qigaowei.github.io/post/huo-qu-dang-tian-zhi-ding-shi-fen-miao-de-jian-dan-fang-fa.html</guid><pubDate>Fri, 26 Jul 2024 00:56:33 +0000</pubDate></item><item><title>mysql返回随机数据</title><link>https://qigaowei.github.io/post/mysql-fan-hui-sui-ji-shu-ju.html</link><description>ORDER BY RAND()。</description><guid isPermaLink="true">https://qigaowei.github.io/post/mysql-fan-hui-sui-ji-shu-ju.html</guid><pubDate>Fri, 26 Jul 2024 00:43:41 +0000</pubDate></item><item><title>磁力一键复制源码</title><link>https://qigaowei.github.io/post/ci-li-yi-jian-fu-zhi-yuan-ma.html</link><description>```&#13;
- @ResponseBody&#13;
+ @PostMapping('/magnet')&#13;
+    @ResponseBody&#13;
     public String magnet(@RequestBody QueryVo vo) throws Exception{&#13;
         StringBuffer magnets=new StringBuffer('');&#13;
-        if(vo.getP()==null){&#13;
-            vo.setP(0);&#13;
+        if(vo.getPage()==null){&#13;
+            vo.setPage(0);&#13;
         }&#13;
-        String html=HttpRequest.get('https://doc.htmcdn.com:39988/search?word='+vo.getK()+'&amp;sort=&amp;page='+vo.getP()+'')&#13;
+        String html=HttpRequest.get('https://doc.htmcdn.com:39988/search?word='+vo.getKey()+'&amp;sort=&amp;page='+vo.getPage()+'')&#13;
                 .header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7')&#13;
                 .header('Accept-Encoding', 'gzip, deflate, br, zstd')&#13;
                 .header('Accept-Language', 'zh')&#13;
@@ -133,11 +134,11 @@ public class EnterpriseBasicInfoServiceImpl extends ServiceImpl&lt;EnterpriseBas
         }&#13;
         return doc.select('body &gt; div.wrapper &gt; div.p-wrapper &gt; div:nth-child(6)').html();&#13;
     }&#13;
- @Data&#13;
+  @Data&#13;
     public static class QueryVo {&#13;
-        private String k;&#13;
+        private String key;&#13;
         private String url;&#13;
-        private Integer p;&#13;
+        private Integer page;&#13;
     }&#13;
 ```&#13;
 ```&#13;

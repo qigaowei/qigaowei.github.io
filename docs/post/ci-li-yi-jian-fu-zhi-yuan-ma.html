@@ -11,13 +11,14 @@
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
 <meta name="description" content="```
- @ResponseBody
+ @PostMapping('/magnet')
+    @ResponseBody
     public String magnet(@RequestBody QueryVo vo) throws Exception{
         StringBuffer magnets=new StringBuffer('');
-        if(vo.getP()==null){
-            vo.setP(0);
+        if(vo.getPage()==null){
+            vo.setPage(0);
         }
-        String html=HttpRequest.get('https://doc.htmcdn.com:39988/search?word='+vo.getK()+'&sort=&page='+vo.getP()+'')
+        String html=HttpRequest.get('https://doc.htmcdn.com:39988/search?word='+vo.getKey()+'&sort=&page='+vo.getPage()+'')
                 .header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7')
                 .header('Accept-Encoding', 'gzip, deflate, br, zstd')
                 .header('Accept-Language', 'zh')
@@ -58,11 +59,11 @@
         }
         return doc.select('body > div.wrapper > div.p-wrapper > div:nth-child(6)').html();
     }
- @Data
+  @Data
     public static class QueryVo {
-        private String k;
+        private String key;
         private String url;
-        private Integer p;
+        private Integer page;
     }
 ```
 ```
@@ -80,13 +81,14 @@
 ### html引用clipboard.min.js就可以实现一键复制。">
 <meta property="og:title" content="磁力一键复制源码">
 <meta property="og:description" content="```
- @ResponseBody
+ @PostMapping('/magnet')
+    @ResponseBody
     public String magnet(@RequestBody QueryVo vo) throws Exception{
         StringBuffer magnets=new StringBuffer('');
-        if(vo.getP()==null){
-            vo.setP(0);
+        if(vo.getPage()==null){
+            vo.setPage(0);
         }
-        String html=HttpRequest.get('https://doc.htmcdn.com:39988/search?word='+vo.getK()+'&sort=&page='+vo.getP()+'')
+        String html=HttpRequest.get('https://doc.htmcdn.com:39988/search?word='+vo.getKey()+'&sort=&page='+vo.getPage()+'')
                 .header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7')
                 .header('Accept-Encoding', 'gzip, deflate, br, zstd')
                 .header('Accept-Language', 'zh')
@@ -127,11 +129,11 @@
         }
         return doc.select('body > div.wrapper > div.p-wrapper > div:nth-child(6)').html();
     }
- @Data
+  @Data
     public static class QueryVo {
-        private String k;
+        private String key;
         private String url;
-        private Integer p;
+        private Integer page;
     }
 ```
 ```
@@ -206,13 +208,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre class="notranslate"><code class="notranslate"> @ResponseBody
+<div class="markdown-body" id="postBody"><pre class="notranslate"><code class="notranslate"> @PostMapping("/magnet")
+    @ResponseBody
     public String magnet(@RequestBody QueryVo vo) throws Exception{
         StringBuffer magnets=new StringBuffer("");
-        if(vo.getP()==null){
-            vo.setP(0);
+        if(vo.getPage()==null){
+            vo.setPage(0);
         }
-        String html=HttpRequest.get("https://doc.htmcdn.com:39988/search?word="+vo.getK()+"&amp;sort=&amp;page="+vo.getP()+"")
+        String html=HttpRequest.get("https://doc.htmcdn.com:39988/search?word="+vo.getKey()+"&amp;sort=&amp;page="+vo.getPage()+"")
                 .header("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7")
                 .header("Accept-Encoding", "gzip, deflate, br, zstd")
                 .header("Accept-Language", "zh")
@@ -253,11 +256,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         }
         return doc.select("body &gt; div.wrapper &gt; div.p-wrapper &gt; div:nth-child(6)").html();
     }
- @Data
+  @Data
     public static class QueryVo {
-        private String k;
+        private String key;
         private String url;
-        private Integer p;
+        private Integer page;
     }
 </code></pre>
 <pre class="notranslate"><code class="notranslate"> &lt;dependency&gt;
