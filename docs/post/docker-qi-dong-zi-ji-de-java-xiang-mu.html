@@ -17,6 +17,19 @@
 ### docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker stop 停止容器
 ### docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker rm 删除容器
 ### docker images -a | grep demo-8-app | awk '{print $1}'| xargs docker rmi 删除镜像
+
+
+## Dockerfile内容
+```
+# 使用官方的Java基础镜像
+FROM openjdk:8-jre-alpine
+
+# 复制应用程序JAR文件到容器中
+COPY demo-0.0.1-SNAPSHOT.jar /demo-0.0.1-SNAPSHOT.jar
+
+# 指定容器启动命令
+CMD ['java', '-jar', '/demo-0.0.1-SNAPSHOT.jar']
+```
 。">
 <meta property="og:title" content="docker启动自己的java项目">
 <meta property="og:description" content="### docker build -t demo-8-app .    创建镜像，注意最后的标点符号，跟jar包和Dockerfile一个目录
@@ -26,6 +39,19 @@
 ### docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker stop 停止容器
 ### docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker rm 删除容器
 ### docker images -a | grep demo-8-app | awk '{print $1}'| xargs docker rmi 删除镜像
+
+
+## Dockerfile内容
+```
+# 使用官方的Java基础镜像
+FROM openjdk:8-jre-alpine
+
+# 复制应用程序JAR文件到容器中
+COPY demo-0.0.1-SNAPSHOT.jar /demo-0.0.1-SNAPSHOT.jar
+
+# 指定容器启动命令
+CMD ['java', '-jar', '/demo-0.0.1-SNAPSHOT.jar']
+```
 。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/docker-qi-dong-zi-ji-de-java-xiang-mu.html">
@@ -91,7 +117,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h3>docker logs  通过上个命令的id，查看镜像</h3>
 <h3>docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker stop 停止容器</h3>
 <h3>docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker rm 删除容器</h3>
-<h3>docker images -a | grep demo-8-app | awk '{print $1}'| xargs docker rmi 删除镜像</h3></div>
+<h3>docker images -a | grep demo-8-app | awk '{print $1}'| xargs docker rmi 删除镜像</h3>
+<h2>Dockerfile内容</h2>
+<pre class="notranslate"><code class="notranslate"># 使用官方的Java基础镜像
+FROM openjdk:8-jre-alpine
+
+# 复制应用程序JAR文件到容器中
+COPY demo-0.0.1-SNAPSHOT.jar /demo-0.0.1-SNAPSHOT.jar
+
+# 指定容器启动命令
+CMD ["java", "-jar", "/demo-0.0.1-SNAPSHOT.jar"]
+</code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

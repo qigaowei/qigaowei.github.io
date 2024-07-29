@@ -5,3 +5,16 @@
 ### docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker stop 停止容器
 ### docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker rm 删除容器
 ### docker images -a | grep demo-8-app | awk '{print $1}'| xargs docker rmi 删除镜像
+
+
+## Dockerfile内容
+```
+# 使用官方的Java基础镜像
+FROM openjdk:8-jre-alpine
+
+# 复制应用程序JAR文件到容器中
+COPY demo-0.0.1-SNAPSHOT.jar /demo-0.0.1-SNAPSHOT.jar
+
+# 指定容器启动命令
+CMD ["java", "-jar", "/demo-0.0.1-SNAPSHOT.jar"]
+```
