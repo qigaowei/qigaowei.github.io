@@ -1,4 +1,4 @@
-### docker build -t demo-8-app .    
+1.  docker build -t demo-8-app .    
 ### 创建镜像，注意最后的标点符号，跟jar包和Dockerfile一个目录
 ### docker run -e TZ=Asia/Shanghai --restart=always -v /root/demo8:/root -d -p 44444:33333 demo-8-app  
 ### 启动容器,定时任务需要指定时区，端口44444为宿主机端口，33333为容器内的端口，路径类推
