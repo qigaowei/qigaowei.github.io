@@ -30,10 +30,10 @@ public class ThirdFilter extends OncePerRequestFilter {
 }
 ```
 
-### springboot启动类要加入注解
+1.  springboot启动类要加入注解
 ```
 @ServletComponentScan(basePackages = {"com.abc.bigdata.riskmanagement.filter"})
 ```
 
-### 过滤器注册为@Component导致urlPatterns不生效
+2.  过滤器注册为@Component导致urlPatterns不生效,应该为@WebFilter
 

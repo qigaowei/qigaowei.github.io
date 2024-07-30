@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Tue, 30 Jul 2024 01:39:43 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>指定jdk17启动springboot项目</title><link>https://qigaowei.github.io/post/zhi-ding-jdk17-qi-dong-springboot-xiang-mu.html</link><description>创建一个如下的shell脚本&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Tue, 30 Jul 2024 01:41:15 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>指定jdk17启动springboot项目</title><link>https://qigaowei.github.io/post/zhi-ding-jdk17-qi-dong-springboot-xiang-mu.html</link><description>创建一个如下的shell脚本&#13;
 ```&#13;
 #!/bin/bash&#13;
 &#13;
@@ -260,12 +260,12 @@ public class ThirdFilter extends OncePerRequestFilter {&#13;
 }&#13;
 ```&#13;
 &#13;
-### springboot启动类要加入注解&#13;
+1.  springboot启动类要加入注解&#13;
 ```&#13;
 @ServletComponentScan(basePackages = {'com.abc.bigdata.riskmanagement.filter'})&#13;
 ```&#13;
 &#13;
-### 过滤器注册为@Component导致urlPatterns不生效&#13;
+2.  过滤器注册为@Component导致urlPatterns不生效,应该为@WebFilter&#13;
 &#13;
 。</description><guid isPermaLink="true">https://qigaowei.github.io/post/springboot-guo-lv-qi.html</guid><pubDate>Wed, 17 Jul 2024 06:36:05 +0000</pubDate></item><item><title>Feign绕过SSL验证的方案，Feign调用https接口，亲测可用，引入包非常少，非常简单</title><link>https://qigaowei.github.io/post/Feign-rao-guo-SSL-yan-zheng-de-fang-an-%EF%BC%8CFeign-diao-yong-https-jie-kou-%EF%BC%8C-qin-ce-ke-yong-%EF%BC%8C-yin-ru-bao-fei-chang-shao-%EF%BC%8C-fei-chang-jian-dan.html</link><description>```&#13;
 import feign.Client;&#13;

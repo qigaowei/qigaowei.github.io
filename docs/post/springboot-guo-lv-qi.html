@@ -42,12 +42,12 @@ public class ThirdFilter extends OncePerRequestFilter {
 }
 ```
 
-### springboot启动类要加入注解
+1.  springboot启动类要加入注解
 ```
 @ServletComponentScan(basePackages = {'com.abc.bigdata.riskmanagement.filter'})
 ```
 
-### 过滤器注册为@Component导致urlPatterns不生效
+2.  过滤器注册为@Component导致urlPatterns不生效,应该为@WebFilter
 
 。">
 <meta property="og:title" content="springboot过滤器">
@@ -83,12 +83,12 @@ public class ThirdFilter extends OncePerRequestFilter {
 }
 ```
 
-### springboot启动类要加入注解
+1.  springboot启动类要加入注解
 ```
 @ServletComponentScan(basePackages = {'com.abc.bigdata.riskmanagement.filter'})
 ```
 
-### 过滤器注册为@Component导致urlPatterns不生效
+2.  过滤器注册为@Component导致urlPatterns不生效,应该为@WebFilter
 
 。">
 <meta property="og:type" content="article">
@@ -180,10 +180,14 @@ public class ThirdFilter extends OncePerRequestFilter {
 
 }
 </code></pre>
-<h3>springboot启动类要加入注解</h3>
+<ol>
+<li>springboot启动类要加入注解</li>
+</ol>
 <pre class="notranslate"><code class="notranslate">@ServletComponentScan(basePackages = {"com.abc.bigdata.riskmanagement.filter"})
 </code></pre>
-<h3>过滤器注册为<a class="user-mention notranslate" data-hovercard-type="organization" data-hovercard-url="/orgs/component/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/component">@component</a>导致urlPatterns不生效</h3></div>
+<ol start="2">
+<li>过滤器注册为<a class="user-mention notranslate" data-hovercard-type="organization" data-hovercard-url="/orgs/component/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/component">@component</a>导致urlPatterns不生效,应该为<a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/webfilter/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/webfilter">@webfilter</a></li>
+</ol></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
