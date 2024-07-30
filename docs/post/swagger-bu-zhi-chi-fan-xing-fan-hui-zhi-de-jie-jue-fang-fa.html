@@ -10,15 +10,15 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="#### 公司使用apifox给前端提供接口文档，
-#### 我先通过http://localhost:9604/v2/api-docs导出swagger的json格式，
-#### 然后再导入到apifox，
-#### 结果接口返回值的泛型里面的字段不显示。">
+<meta name="description" content="-  公司使用apifox给前端提供接口文档，
+-  我先通过http://localhost:9604/v2/api-docs导出swagger的json格式，
+-  然后再导入到apifox，
+-  结果接口返回值的泛型里面的字段不显示。">
 <meta property="og:title" content="swagger不支持泛型返回值的解决方法">
-<meta property="og:description" content="#### 公司使用apifox给前端提供接口文档，
-#### 我先通过http://localhost:9604/v2/api-docs导出swagger的json格式，
-#### 然后再导入到apifox，
-#### 结果接口返回值的泛型里面的字段不显示。">
+<meta property="og:description" content="-  公司使用apifox给前端提供接口文档，
+-  我先通过http://localhost:9604/v2/api-docs导出swagger的json格式，
+-  然后再导入到apifox，
+-  结果接口返回值的泛型里面的字段不显示。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/swagger-bu-zhi-chi-fan-xing-fan-hui-zhi-de-jie-jue-fang-fa.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -78,14 +78,32 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h4>公司使用apifox给前端提供接口文档，</h4>
-<h4>我先通过<a href="http://localhost:9604/v2/api-docs%E5%AF%BC%E5%87%BAswagger%E7%9A%84json%E6%A0%BC%E5%BC%8F%EF%BC%8C" rel="nofollow">http://localhost:9604/v2/api-docs导出swagger的json格式，</a></h4>
-<h4>然后再导入到apifox，</h4>
-<h4>结果接口返回值的泛型里面的字段不显示。</h4>
-<h4>后来看到apifox的idea插件可以实现泛型返回值的字段解析，</h4>
-<h4>Apifox Helper 是 Apifox 团队针对 IntelliJ IDEA 环境所推出的插件，可以在 IDEA 环境中识别本地 Java、Kotlin 后端项目的源代码，自动生成 API 文档并一键同步到 Apifox 的项目中。</h4>
-<h4>完美解决。</h4>
-<h4>跟swagger的版本没有关系，跟swagger的注解有关系</h4></div>
+<div class="markdown-body" id="postBody"><ul>
+<li>
+<p>公司使用apifox给前端提供接口文档，</p>
+</li>
+<li>
+<p>我先通过<a href="http://localhost:9604/v2/api-docs%E5%AF%BC%E5%87%BAswagger%E7%9A%84json%E6%A0%BC%E5%BC%8F%EF%BC%8C" rel="nofollow">http://localhost:9604/v2/api-docs导出swagger的json格式，</a></p>
+</li>
+<li>
+<p>然后再导入到apifox，</p>
+</li>
+<li>
+<p>结果接口返回值的泛型里面的字段不显示。</p>
+</li>
+<li>
+<p>后来看到apifox的idea插件可以实现泛型返回值的字段解析，</p>
+</li>
+<li>
+<p>Apifox Helper 是 Apifox 团队针对 IntelliJ IDEA 环境所推出的插件，可以在 IDEA 环境中识别本地 Java、Kotlin 后端项目的源代码，自动生成 API 文档并一键同步到 Apifox 的项目中。</p>
+</li>
+<li>
+<p>完美解决。</p>
+</li>
+<li>
+<p>跟swagger的版本没有关系，跟swagger的注解有关系</p>
+</li>
+</ul></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
