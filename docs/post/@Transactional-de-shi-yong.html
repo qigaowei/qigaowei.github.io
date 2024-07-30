@@ -10,10 +10,14 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="- @Transactional(rollbackFor = Exception.class)
+<meta name="description" content="```
+@Transactional(rollbackFor = Exception.class)
+```
 - 必须指定Exception.class，要不会回滚失败。">
 <meta property="og:title" content="@Transactional的使用">
-<meta property="og:description" content="- @Transactional(rollbackFor = Exception.class)
+<meta property="og:description" content="```
+@Transactional(rollbackFor = Exception.class)
+```
 - 必须指定Exception.class，要不会回滚失败。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/%40Transactional-de-shi-yong.html">
@@ -74,8 +78,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><ul>
-<li><a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/transactional/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/transactional">@transactional</a>(rollbackFor = Exception.class)</li>
+<div class="markdown-body" id="postBody"><pre class="notranslate"><code class="notranslate">@Transactional(rollbackFor = Exception.class)
+</code></pre>
+<ul>
 <li>必须指定Exception.class，要不会回滚失败</li>
 </ul></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
