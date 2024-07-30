@@ -14,12 +14,54 @@
 获取用checkedRows.value
 2. 新增修改删除以后需要调用list接口
 3. 变量定义在使用地方的前面
+4. 
+```
+WHStyle = ref({
+      width: '600',
+      height: '400'
+    })
+```
+不起作用改成下面的
+```
+ WHStyle = reactive({
+      width: '500',
+      height: '400'
+    })
+```
+5. 不起作用，两个都试试
+```
+ :style='{ width: '100%' }'
+```
+```
+ width='100%'
+```
 。">
 <meta property="og:title" content="js与vue总结">
 <meta property="og:description" content="1. const checkedRows = ref([])
 获取用checkedRows.value
 2. 新增修改删除以后需要调用list接口
 3. 变量定义在使用地方的前面
+4. 
+```
+WHStyle = ref({
+      width: '600',
+      height: '400'
+    })
+```
+不起作用改成下面的
+```
+ WHStyle = reactive({
+      width: '500',
+      height: '400'
+    })
+```
+5. 不起作用，两个都试试
+```
+ :style='{ width: '100%' }'
+```
+```
+ width='100%'
+```
 。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/js-yu-vue-zong-jie.html">
@@ -85,7 +127,26 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 获取用checkedRows.value</li>
 <li>新增修改删除以后需要调用list接口</li>
 <li>变量定义在使用地方的前面</li>
-</ol></div>
+<li></li>
+</ol>
+<pre class="notranslate"><code class="notranslate">WHStyle = ref({
+      width: '600',
+      height: '400'
+    })
+</code></pre>
+<p>不起作用改成下面的</p>
+<pre class="notranslate"><code class="notranslate"> WHStyle = reactive({
+      width: '500',
+      height: '400'
+    })
+</code></pre>
+<ol start="5">
+<li>不起作用，两个都试试</li>
+</ol>
+<pre class="notranslate"><code class="notranslate"> :style="{ width: '100%' }"
+</code></pre>
+<pre class="notranslate"><code class="notranslate"> width="100%"
+</code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
