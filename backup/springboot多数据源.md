@@ -24,4 +24,4 @@ spring.datasource.dynamic.datasource.second.driver-class-name=com.mysql.cj.jdbc.
 @DS("master")
 public class EnterpriseBasicInfoServiceImpl extends ServiceImpl<EnterpriseBasicInfoMapper, EnterpriseBasicInfo>{
 ```
- 
+ -    @DS("master")这个注解的意思就是指定数据库连接为master的数据连接
