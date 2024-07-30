@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Tue, 30 Jul 2024 00:52:03 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>指定jdk17启动springboot项目</title><link>https://qigaowei.github.io/post/zhi-ding-jdk17-qi-dong-springboot-xiang-mu.html</link><description>#!/bin/bash&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Tue, 30 Jul 2024 00:57:49 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>指定jdk17启动springboot项目</title><link>https://qigaowei.github.io/post/zhi-ding-jdk17-qi-dong-springboot-xiang-mu.html</link><description>创建一个如下的shell脚本&#13;
+```&#13;
+#!/bin/bash&#13;
 &#13;
 export JAVA_HOME=/usr/local/jdk-17.0.8/&#13;
 export JRE_HOME=${JAVA_HOME}/jre&#13;
@@ -7,6 +9,7 @@ export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib&#13;
 export PATH=.:${JAVA_HOME}/bin:$PATH&#13;
 &#13;
 nohup java -jar chatgpt-0.0.1-SNAPSHOT.jar &gt; /dev/null 2&gt;&amp;1 &amp;&#13;
+```&#13;
 。</description><guid isPermaLink="true">https://qigaowei.github.io/post/zhi-ding-jdk17-qi-dong-springboot-xiang-mu.html</guid><pubDate>Sun, 28 Jul 2024 04:55:58 +0000</pubDate></item><item><title>hutool的jsonpath的使用</title><link>https://qigaowei.github.io/post/hutool-de-jsonpath-de-shi-yong.html</link><description>```&#13;
 JSON res = JSONUtil.parse(str);&#13;
 String imageUrl = JSONUtil.getByPath(res, 'data.video.cover').toString();&#13;
