@@ -10,11 +10,11 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="### 1循环很多次执行sql，才有优化的空间，执行sql操作次数太少，优化空间不大
-### 2多条sql查询，可以用union拼起来，只执行一条。">
+<meta name="description" content="1. 循环很多次执行sql，才有优化的空间，执行sql操作次数太少，优化空间不大
+2. 多条sql查询，可以用union拼起来，只执行一条。">
 <meta property="og:title" content="接口优化中的sql查询优化，秒级到毫秒级">
-<meta property="og:description" content="### 1循环很多次执行sql，才有优化的空间，执行sql操作次数太少，优化空间不大
-### 2多条sql查询，可以用union拼起来，只执行一条。">
+<meta property="og:description" content="1. 循环很多次执行sql，才有优化的空间，执行sql操作次数太少，优化空间不大
+2. 多条sql查询，可以用union拼起来，只执行一条。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/jie-kou-you-hua-zhong-de-sql-cha-xun-you-hua-%EF%BC%8C-miao-ji-dao-hao-miao-ji.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -74,12 +74,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h3>1循环很多次执行sql，才有优化的空间，执行sql操作次数太少，优化空间不大</h3>
-<h3>2多条sql查询，可以用union拼起来，只执行一条。</h3>
-<h3>3in在mysql和oracle中都有1000个数量限制，不推荐使用</h3>
-<h3>4exist在mybatis的xml写法复杂，没有union简洁</h3>
-<h3>5把查出来的对象，传到下层，避免重复查询</h3>
-<h3>6创建合适的索引</h3></div>
+<div class="markdown-body" id="postBody"><ol>
+<li>循环很多次执行sql，才有优化的空间，执行sql操作次数太少，优化空间不大</li>
+<li>多条sql查询，可以用union拼起来，只执行一条。</li>
+<li>in在mysql和oracle中都有1000个数量限制，不推荐使用</li>
+<li>exist在mybatis的xml写法复杂，没有union简洁</li>
+<li>把查出来的对象，传到下层，避免重复查询</li>
+<li>创建合适的索引</li>
+</ol></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
