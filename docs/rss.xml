@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Tue, 30 Jul 2024 22:13:41 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>指定jdk17启动springboot项目</title><link>https://qigaowei.github.io/post/zhi-ding-jdk17-qi-dong-springboot-xiang-mu.html</link><description>创建一个如下的shell脚本&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Tue, 30 Jul 2024 22:17:08 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>指定jdk17启动springboot项目</title><link>https://qigaowei.github.io/post/zhi-ding-jdk17-qi-dong-springboot-xiang-mu.html</link><description>创建一个如下的shell脚本&#13;
 ```&#13;
 #!/bin/bash&#13;
 &#13;
@@ -253,7 +253,8 @@ WHStyle = ref({&#13;
 ```&#13;
 - 优化接口，使用union，&#13;
 - 加上索引，提高接口响应速度&#13;
--  in有数量限制，可能不走索引&#13;
+-  in有数量限制，MySQL和oracle都有1000个限制&#13;
+- in里面数据太多，可能不走索引&#13;
 - EXISTS也可以，但是union的写法最简单&#13;
 - UNION ALL会有重复数据。</description><guid isPermaLink="true">https://qigaowei.github.io/post/Mybatis%20union%20-xun-huan.html</guid><pubDate>Wed, 17 Jul 2024 06:49:26 +0000</pubDate></item><item><title>springboot过滤器</title><link>https://qigaowei.github.io/post/springboot-guo-lv-qi.html</link><description>```&#13;
 package com.abc.bigdata.riskmanagement.filter;&#13;

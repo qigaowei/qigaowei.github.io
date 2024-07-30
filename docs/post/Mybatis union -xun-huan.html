@@ -20,7 +20,8 @@
 ```
 - 优化接口，使用union，
 - 加上索引，提高接口响应速度
--  in有数量限制，可能不走索引
+-  in有数量限制，MySQL和oracle都有1000个限制
+- in里面数据太多，可能不走索引
 - EXISTS也可以，但是union的写法最简单
 - UNION ALL会有重复数据。">
 <meta property="og:title" content="Mybatis union 循环">
@@ -34,7 +35,8 @@
 ```
 - 优化接口，使用union，
 - 加上索引，提高接口响应速度
--  in有数量限制，可能不走索引
+-  in有数量限制，MySQL和oracle都有1000个限制
+- in里面数据太多，可能不走索引
 - EXISTS也可以，但是union的写法最简单
 - UNION ALL会有重复数据。">
 <meta property="og:type" content="article">
@@ -105,7 +107,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <ul>
 <li>优化接口，使用union，</li>
 <li>加上索引，提高接口响应速度</li>
-<li>in有数量限制，可能不走索引</li>
+<li>in有数量限制，MySQL和oracle都有1000个限制</li>
+<li>in里面数据太多，可能不走索引</li>
 <li>EXISTS也可以，但是union的写法最简单</li>
 <li>UNION ALL会有重复数据</li>
 </ul></div>
