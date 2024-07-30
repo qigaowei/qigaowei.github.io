@@ -1,4 +1,4 @@
-URLEncoder.encode(url)
-若含有+号
-必须转义才能正确访问
-HttpRequest.get(url)
+- URLEncoder.encode(url)
+- 若含有+号
+- 必须转义才能正确访问
+- HttpRequest.get(url)
