@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Tue, 30 Jul 2024 22:17:08 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>指定jdk17启动springboot项目</title><link>https://qigaowei.github.io/post/zhi-ding-jdk17-qi-dong-springboot-xiang-mu.html</link><description>创建一个如下的shell脚本&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Tue, 30 Jul 2024 22:28:18 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>指定jdk17启动springboot项目</title><link>https://qigaowei.github.io/post/zhi-ding-jdk17-qi-dong-springboot-xiang-mu.html</link><description>创建一个如下的shell脚本&#13;
 ```&#13;
 #!/bin/bash&#13;
 &#13;
@@ -243,7 +243,7 @@ WHStyle = ref({&#13;
 -  每次可以节省几分钟&#13;
 &#13;
 2.  必须重启的情况&#13;
-- 1MQ，修改了consumerGroup，@RocketMQMessageListener(consumerGroup=，需要重启。</description><guid isPermaLink="true">https://qigaowei.github.io/post/cai-yong-idea-de-JRebel-cha-jian-%EF%BC%8C-ji-da-ti-sheng-gong-zuo-xiao-lv.html</guid><pubDate>Wed, 17 Jul 2024 06:49:57 +0000</pubDate></item><item><title>Mybatis union 循环</title><link>https://qigaowei.github.io/post/Mybatis%20union%20-xun-huan.html</link><description>```&#13;
+- 1MQ，修改了consumerGroup，@RocketMQMessageListener(consumerGroup=，需要重启。</description><guid isPermaLink="true">https://qigaowei.github.io/post/cai-yong-idea-de-JRebel-cha-jian-%EF%BC%8C-ji-da-ti-sheng-gong-zuo-xiao-lv.html</guid><pubDate>Wed, 17 Jul 2024 06:49:57 +0000</pubDate></item><item><title>Mybatis使用union优化sql</title><link>https://qigaowei.github.io/post/Mybatis-shi-yong-union-you-hua-sql.html</link><description>```&#13;
 &lt;foreach collection='nameList' item='name' separator='union'&gt;&#13;
 		select id  from table where name = #{name}&#13;
 	&lt;/foreach&gt;&#13;
@@ -256,7 +256,7 @@ WHStyle = ref({&#13;
 -  in有数量限制，MySQL和oracle都有1000个限制&#13;
 - in里面数据太多，可能不走索引&#13;
 - EXISTS也可以，但是union的写法最简单&#13;
-- UNION ALL会有重复数据。</description><guid isPermaLink="true">https://qigaowei.github.io/post/Mybatis%20union%20-xun-huan.html</guid><pubDate>Wed, 17 Jul 2024 06:49:26 +0000</pubDate></item><item><title>springboot过滤器</title><link>https://qigaowei.github.io/post/springboot-guo-lv-qi.html</link><description>```&#13;
+- UNION ALL会有重复数据。</description><guid isPermaLink="true">https://qigaowei.github.io/post/Mybatis-shi-yong-union-you-hua-sql.html</guid><pubDate>Wed, 17 Jul 2024 06:49:26 +0000</pubDate></item><item><title>springboot过滤器</title><link>https://qigaowei.github.io/post/springboot-guo-lv-qi.html</link><description>```&#13;
 package com.abc.bigdata.riskmanagement.filter;&#13;
 &#13;
 import lombok.extern.slf4j.Slf4j;&#13;
