@@ -10,10 +10,11 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="1.  docker build -t demo-8-app .    
-### 创建镜像，注意最后的标点符号，跟jar包和Dockerfile一个目录
-### docker run -e TZ=Asia/Shanghai --restart=always -v /root/demo8:/root -d -p 44444:33333 demo-8-app  
-### 启动容器,定时任务需要指定时区，端口44444为宿主机端口，33333为容器内的端口，路径类推
+<meta name="description" content="1. 创建镜像，注意最后的标点符号，跟jar包和Dockerfile一个目录
+  - docker build -t demo-8-app .    
+2. 启动容器,定时任务需要指定时区，端口44444为宿主机端口，33333为容器内的端口，路径类推
+- docker run -e TZ=Asia/Shanghai --restart=always -v /root/demo8:/root -d -p 44444:33333 demo-8-app  
+
 ### docker logs  
 ### 通过上个命令返回的id，查看镜像
 
@@ -38,10 +39,11 @@ CMD ['java', '-jar', '/demo-0.0.1-SNAPSHOT.jar']
 ```
 。">
 <meta property="og:title" content="docker启动自己的java项目">
-<meta property="og:description" content="1.  docker build -t demo-8-app .    
-### 创建镜像，注意最后的标点符号，跟jar包和Dockerfile一个目录
-### docker run -e TZ=Asia/Shanghai --restart=always -v /root/demo8:/root -d -p 44444:33333 demo-8-app  
-### 启动容器,定时任务需要指定时区，端口44444为宿主机端口，33333为容器内的端口，路径类推
+<meta property="og:description" content="1. 创建镜像，注意最后的标点符号，跟jar包和Dockerfile一个目录
+  - docker build -t demo-8-app .    
+2. 启动容器,定时任务需要指定时区，端口44444为宿主机端口，33333为容器内的端口，路径类推
+- docker run -e TZ=Asia/Shanghai --restart=always -v /root/demo8:/root -d -p 44444:33333 demo-8-app  
+
 ### docker logs  
 ### 通过上个命令返回的id，查看镜像
 
@@ -125,11 +127,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><ol>
-<li>docker build -t demo-8-app .</li>
+<li>创建镜像，注意最后的标点符号，跟jar包和Dockerfile一个目录</li>
 </ol>
-<h3>创建镜像，注意最后的标点符号，跟jar包和Dockerfile一个目录</h3>
-<h3>docker run -e TZ=Asia/Shanghai --restart=always -v /root/demo8:/root -d -p 44444:33333 demo-8-app</h3>
-<h3>启动容器,定时任务需要指定时区，端口44444为宿主机端口，33333为容器内的端口，路径类推</h3>
+<ul>
+<li>docker build -t demo-8-app .</li>
+</ul>
+<ol start="2">
+<li>启动容器,定时任务需要指定时区，端口44444为宿主机端口，33333为容器内的端口，路径类推</li>
+</ol>
+<ul>
+<li>docker run -e TZ=Asia/Shanghai --restart=always -v /root/demo8:/root -d -p 44444:33333 demo-8-app</li>
+</ul>
 <h3>docker logs</h3>
 <h3>通过上个命令返回的id，查看镜像</h3>
 <h3>docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker stop</h3>
