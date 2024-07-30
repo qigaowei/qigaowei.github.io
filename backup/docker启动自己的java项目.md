@@ -2,19 +2,15 @@
   - docker build -t demo-8-app .    
 2. 启动容器,定时任务需要指定时区，端口44444为宿主机端口，33333为容器内的端口，路径类推
 - docker run -e TZ=Asia/Shanghai --restart=always -v /root/demo8:/root -d -p 44444:33333 demo-8-app  
-
-### docker logs  
-### 通过上个命令返回的id，查看镜像
-
-### docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker stop 
-### 停止容器
-### docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker rm 
-### 删除容器
-### docker images -a | grep demo-8-app | awk '{print $1}'| xargs docker rmi 
-### 删除镜像
---------------------------------------------------------------------------------
-
-## Dockerfile内容，创建一个名字为Dockerfile，无扩展名的文件
+3. 通过上个命令返回的id，查看镜像
+- docker logs  
+4.  停止容器
+- docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker stop
+5. 删除容器
+- docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker rm
+7. 删除镜像
+- docker images -a | grep demo-8-app | awk '{print $1}'| xargs docker rmi
+8. Dockerfile内容，创建一个名字为Dockerfile，无扩展名的文件
 ```
 # 使用官方的Java基础镜像
 FROM openjdk:8-jre-alpine
