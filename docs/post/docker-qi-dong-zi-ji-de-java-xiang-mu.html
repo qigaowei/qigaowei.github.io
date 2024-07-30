@@ -10,14 +10,20 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="### docker build -t demo-8-app .    创建镜像，注意最后的标点符号，跟jar包和Dockerfile一个目录
-### docker run -e TZ=Asia/Shanghai --restart=always -v /root/demo8:/root -d -p 44444:33333 demo-8-app  启动容器,定时任务需要指定时区，端口44444为宿主机端口，33333为容器内的端口，路径类推
-### docker logs  通过上个命令返回的id，查看镜像
+<meta name="description" content="### docker build -t demo-8-app .    
+### 创建镜像，注意最后的标点符号，跟jar包和Dockerfile一个目录
+### docker run -e TZ=Asia/Shanghai --restart=always -v /root/demo8:/root -d -p 44444:33333 demo-8-app  
+### 启动容器,定时任务需要指定时区，端口44444为宿主机端口，33333为容器内的端口，路径类推
+### docker logs  
+### 通过上个命令返回的id，查看镜像
 
-### docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker stop 停止容器
-### docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker rm 删除容器
-### docker images -a | grep demo-8-app | awk '{print $1}'| xargs docker rmi 删除镜像
-
+### docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker stop 
+### 停止容器
+### docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker rm 
+### 删除容器
+### docker images -a | grep demo-8-app | awk '{print $1}'| xargs docker rmi 
+### 删除镜像
+--------------------------------------------------------------------------------
 
 ## Dockerfile内容，创建一个名字为Dockerfile，无扩展名的文件
 ```
@@ -32,14 +38,20 @@ CMD ['java', '-jar', '/demo-0.0.1-SNAPSHOT.jar']
 ```
 。">
 <meta property="og:title" content="docker启动自己的java项目">
-<meta property="og:description" content="### docker build -t demo-8-app .    创建镜像，注意最后的标点符号，跟jar包和Dockerfile一个目录
-### docker run -e TZ=Asia/Shanghai --restart=always -v /root/demo8:/root -d -p 44444:33333 demo-8-app  启动容器,定时任务需要指定时区，端口44444为宿主机端口，33333为容器内的端口，路径类推
-### docker logs  通过上个命令返回的id，查看镜像
+<meta property="og:description" content="### docker build -t demo-8-app .    
+### 创建镜像，注意最后的标点符号，跟jar包和Dockerfile一个目录
+### docker run -e TZ=Asia/Shanghai --restart=always -v /root/demo8:/root -d -p 44444:33333 demo-8-app  
+### 启动容器,定时任务需要指定时区，端口44444为宿主机端口，33333为容器内的端口，路径类推
+### docker logs  
+### 通过上个命令返回的id，查看镜像
 
-### docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker stop 停止容器
-### docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker rm 删除容器
-### docker images -a | grep demo-8-app | awk '{print $1}'| xargs docker rmi 删除镜像
-
+### docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker stop 
+### 停止容器
+### docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker rm 
+### 删除容器
+### docker images -a | grep demo-8-app | awk '{print $1}'| xargs docker rmi 
+### 删除镜像
+--------------------------------------------------------------------------------
 
 ## Dockerfile内容，创建一个名字为Dockerfile，无扩展名的文件
 ```
@@ -112,12 +124,19 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h3>docker build -t demo-8-app .    创建镜像，注意最后的标点符号，跟jar包和Dockerfile一个目录</h3>
-<h3>docker run -e TZ=Asia/Shanghai --restart=always -v /root/demo8:/root -d -p 44444:33333 demo-8-app  启动容器,定时任务需要指定时区，端口44444为宿主机端口，33333为容器内的端口，路径类推</h3>
-<h3>docker logs  通过上个命令返回的id，查看镜像</h3>
-<h3>docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker stop 停止容器</h3>
-<h3>docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker rm 删除容器</h3>
-<h3>docker images -a | grep demo-8-app | awk '{print $1}'| xargs docker rmi 删除镜像</h3>
+<div class="markdown-body" id="postBody"><h3>docker build -t demo-8-app .</h3>
+<h3>创建镜像，注意最后的标点符号，跟jar包和Dockerfile一个目录</h3>
+<h3>docker run -e TZ=Asia/Shanghai --restart=always -v /root/demo8:/root -d -p 44444:33333 demo-8-app</h3>
+<h3>启动容器,定时任务需要指定时区，端口44444为宿主机端口，33333为容器内的端口，路径类推</h3>
+<h3>docker logs</h3>
+<h3>通过上个命令返回的id，查看镜像</h3>
+<h3>docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker stop</h3>
+<h3>停止容器</h3>
+<h3>docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker rm</h3>
+<h3>删除容器</h3>
+<h3>docker images -a | grep demo-8-app | awk '{print $1}'| xargs docker rmi</h3>
+<h3>删除镜像</h3>
+<hr>
 <h2>Dockerfile内容，创建一个名字为Dockerfile，无扩展名的文件</h2>
 <pre class="notranslate"><code class="notranslate"># 使用官方的Java基础镜像
 FROM openjdk:8-jre-alpine
