@@ -18,11 +18,11 @@
  ``` 
    List<Object> getList(@Param('nameList')String[] nameList);  
 ```
-### 优化接口，使用union，
-### 加上索引，提高接口响应速度
-### in有数量限制，可能不走索引
-### EXISTS也可以，但是union的写法最简单
-### UNION ALL会有重复数据。">
+- 优化接口，使用union，
+- 加上索引，提高接口响应速度
+-  in有数量限制，可能不走索引
+- EXISTS也可以，但是union的写法最简单
+- UNION ALL会有重复数据。">
 <meta property="og:title" content="Mybatis union 循环">
 <meta property="og:description" content="```
 <foreach collection='nameList' item='name' separator='union'>
@@ -32,11 +32,11 @@
  ``` 
    List<Object> getList(@Param('nameList')String[] nameList);  
 ```
-### 优化接口，使用union，
-### 加上索引，提高接口响应速度
-### in有数量限制，可能不走索引
-### EXISTS也可以，但是union的写法最简单
-### UNION ALL会有重复数据。">
+- 优化接口，使用union，
+- 加上索引，提高接口响应速度
+-  in有数量限制，可能不走索引
+- EXISTS也可以，但是union的写法最简单
+- UNION ALL会有重复数据。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/Mybatis%20union%20-xun-huan.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -102,11 +102,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </code></pre>
 <pre class="notranslate"><code class="notranslate">  List&lt;Object&gt; getList(@Param("nameList")String[] nameList);  
 </code></pre>
-<h3>优化接口，使用union，</h3>
-<h3>加上索引，提高接口响应速度</h3>
-<h3>in有数量限制，可能不走索引</h3>
-<h3>EXISTS也可以，但是union的写法最简单</h3>
-<h3>UNION ALL会有重复数据</h3></div>
+<ul>
+<li>优化接口，使用union，</li>
+<li>加上索引，提高接口响应速度</li>
+<li>in有数量限制，可能不走索引</li>
+<li>EXISTS也可以，但是union的写法最简单</li>
+<li>UNION ALL会有重复数据</li>
+</ul></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
