@@ -10,9 +10,13 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="CURRENT_IP=$(ip addr | grep inet |grep -v '127.0.0.1' |grep -v inet6|awk '{print $2}'|awk -F '/' '{print $1}'| head -1)。">
+<meta name="description" content="```
+CURRENT_IP=$(ip addr | grep inet |grep -v '127.0.0.1' |grep -v inet6|awk '{print $2}'|awk -F '/' '{print $1}'| head -1)
+```。">
 <meta property="og:title" content="linux命令获取内网ip">
-<meta property="og:description" content="CURRENT_IP=$(ip addr | grep inet |grep -v '127.0.0.1' |grep -v inet6|awk '{print $2}'|awk -F '/' '{print $1}'| head -1)。">
+<meta property="og:description" content="```
+CURRENT_IP=$(ip addr | grep inet |grep -v '127.0.0.1' |grep -v inet6|awk '{print $2}'|awk -F '/' '{print $1}'| head -1)
+```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/linux-ming-ling-huo-qu-nei-wang-ip.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -72,7 +76,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>CURRENT_IP=$(ip addr | grep inet |grep -v "127.0.0.1" |grep -v inet6|awk '{print $2}'|awk -F "/" '{print $1}'| head -1)</p></div>
+<div class="markdown-body" id="postBody"><pre class="notranslate"><code class="notranslate">CURRENT_IP=$(ip addr | grep inet |grep -v "127.0.0.1" |grep -v inet6|awk '{print $2}'|awk -F "/" '{print $1}'| head -1)
+</code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
