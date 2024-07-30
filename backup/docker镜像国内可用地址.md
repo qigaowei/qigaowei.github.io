@@ -1,2 +1,2 @@
-### https://github.com/docker-practice/docker-registry-cn-mirror-test
-### 测试结果请到 Actions 标签详情页查看
+- https://github.com/docker-practice/docker-registry-cn-mirror-test
+- 测试结果请到 Actions 标签详情页查看
