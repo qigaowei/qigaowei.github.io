@@ -11,11 +11,13 @@
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
 <meta name="description" content="```sql
-COMMENT ON COLUMN TABLE_NAME.green_channel_flag IS '备注';
+COMMENT ON COLUMN TABLE_NAME.green_channel_flag IS '字段备注';
+COMMENT ON TABLE TABLE_NAME IS '表名备注';
 ```。">
 <meta property="og:title" content="oracle对字段添加备注">
 <meta property="og:description" content="```sql
-COMMENT ON COLUMN TABLE_NAME.green_channel_flag IS '备注';
+COMMENT ON COLUMN TABLE_NAME.green_channel_flag IS '字段备注';
+COMMENT ON TABLE TABLE_NAME IS '表名备注';
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/oracle-dui-zi-duan-tian-jia-bei-zhu.html">
@@ -76,7 +78,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><div class="highlight highlight-source-sql"><pre class="notranslate"><span class="pl-k">COMMENT ON COLUMN TABLE_NAME.green_channel_flag IS </span><span class="pl-s"><span class="pl-pds">'</span>备注<span class="pl-pds">'</span></span>;</pre></div></div>
+<div class="markdown-body" id="postBody"><div class="highlight highlight-source-sql"><pre class="notranslate"><span class="pl-k">COMMENT ON COLUMN TABLE_NAME.green_channel_flag IS </span><span class="pl-s"><span class="pl-pds">'</span>字段备注<span class="pl-pds">'</span></span>;
+<span class="pl-k">COMMENT ON TABLE TABLE_NAME IS </span><span class="pl-s"><span class="pl-pds">'</span>表名备注<span class="pl-pds">'</span></span>;</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
