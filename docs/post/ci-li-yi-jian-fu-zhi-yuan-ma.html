@@ -10,7 +10,7 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="```
+<meta name="description" content="```java
  @PostMapping('/magnet')
     @ResponseBody
     public String magnet(@RequestBody QueryVo vo) throws Exception{
@@ -66,7 +66,7 @@
         private Integer page;
     }
 ```
-```
+```xml
  <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
@@ -78,9 +78,9 @@
             <version>1.16.1</version>
         </dependency>
 ```
-### html引用clipboard.min.js就可以实现一键复制。">
+- html引用clipboard.min.js就可以实现一键复制。">
 <meta property="og:title" content="磁力一键复制源码">
-<meta property="og:description" content="```
+<meta property="og:description" content="```java
  @PostMapping('/magnet')
     @ResponseBody
     public String magnet(@RequestBody QueryVo vo) throws Exception{
@@ -136,7 +136,7 @@
         private Integer page;
     }
 ```
-```
+```xml
  <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
@@ -148,12 +148,12 @@
             <version>1.16.1</version>
         </dependency>
 ```
-### html引用clipboard.min.js就可以实现一键复制。">
+- html引用clipboard.min.js就可以实现一键复制。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/ci-li-yi-jian-fu-zhi-yuan-ma.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>磁力一键复制源码</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -208,73 +208,73 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre class="notranslate"><code class="notranslate"> @PostMapping("/magnet")
-    @ResponseBody
-    public String magnet(@RequestBody QueryVo vo) throws Exception{
-        StringBuffer magnets=new StringBuffer("");
-        if(vo.getPage()==null){
-            vo.setPage(0);
+<div class="markdown-body" id="postBody"><div class="highlight highlight-source-java"><pre class="notranslate"> <span class="pl-c1">@</span><span class="pl-c1">PostMapping</span>(<span class="pl-s">"/magnet"</span>)
+    <span class="pl-c1">@</span><span class="pl-c1">ResponseBody</span>
+    <span class="pl-k">public</span> <span class="pl-smi">String</span> <span class="pl-s1">magnet</span>(<span class="pl-c1">@</span><span class="pl-c1">RequestBody</span> <span class="pl-smi">QueryVo</span> <span class="pl-s1">vo</span>) <span class="pl-k">throws</span> <span class="pl-s1">Exception</span>{
+        <span class="pl-smi">StringBuffer</span> <span class="pl-s1">magnets</span>=<span class="pl-k">new</span> <span class="pl-smi">StringBuffer</span>(<span class="pl-s">""</span>);
+        <span class="pl-k">if</span>(<span class="pl-s1">vo</span>.<span class="pl-en">getPage</span>()==<span class="pl-c1">null</span>){
+            <span class="pl-s1">vo</span>.<span class="pl-en">setPage</span>(<span class="pl-c1">0</span>);
         }
-        String html=HttpRequest.get("https://doc.htmcdn.com:39988/search?word="+vo.getKey()+"&amp;sort=&amp;page="+vo.getPage()+"")
-                .header("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7")
-                .header("Accept-Encoding", "gzip, deflate, br, zstd")
-                .header("Accept-Language", "zh")
-                .header("Cache-Control", "no-cache")
-                .header("Pragma", "no-cache")
-                .header("Priority", "u=0, i")
-                .header("Referer", "https://doc.htmcdn.com:39988/search?")
-                .header("Sec-Ch-Ua", "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"")
-                .header("Sec-Ch-Ua-Mobile", "?0")
-                .header("Sec-Ch-Ua-Platform", "\"Windows\"")
-                .header("Sec-Fetch-Dest", "iframe")
-                .header("Sec-Fetch-Mode", "navigate")
-                .header("Sec-Fetch-Site", "same-origin")
-                .header("Sec-Fetch-User", "?1")
-                .header("Upgrade-Insecure-Requests", "1")
-                .header("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
-                .execute().body();
-        Document doc=Jsoup.parse(html);
-        Elements elements=doc.select("body &gt; div.wrapper &gt; div.p-wrapper &gt; div:nth-child(6) &gt; div");
-        if(CollUtil.isNotEmpty(elements)){
-            int i=0;
-            for(Element e:elements){
-                i++;
-                String magnet=doc.select(
-                        "body &gt; div.wrapper &gt; div.p-wrapper &gt; div:nth-child(6) &gt; div:nth-child("+i+") &gt; div.sbar &gt; span:nth-child(1) &gt; a").get(0).attr("href");
-                magnets.append(magnet+"\n");
-                doc.select(
-                        "body &gt; div.wrapper &gt; div.p-wrapper &gt; div:nth-child(6) &gt; div:nth-child("+i+")").append("&lt;button class=\"btn\" data-clipboard-demo=\"\" " +
-                        "data-clipboard-action=\"copy\" data-clipboard-text=\""
-                        +magnet+"\"&gt;点击复制磁力链接&lt;/button&gt;&lt;br&gt;\n");
+        <span class="pl-smi">String</span> <span class="pl-s1">html</span>=<span class="pl-smi">HttpRequest</span>.<span class="pl-en">get</span>(<span class="pl-s">"https://doc.htmcdn.com:39988/search?word="</span>+<span class="pl-s1">vo</span>.<span class="pl-en">getKey</span>()+<span class="pl-s">"&amp;sort=&amp;page="</span>+<span class="pl-s1">vo</span>.<span class="pl-en">getPage</span>()+<span class="pl-s">""</span>)
+                .<span class="pl-en">header</span>(<span class="pl-s">"Accept"</span>, <span class="pl-s">"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"</span>)
+                .<span class="pl-en">header</span>(<span class="pl-s">"Accept-Encoding"</span>, <span class="pl-s">"gzip, deflate, br, zstd"</span>)
+                .<span class="pl-en">header</span>(<span class="pl-s">"Accept-Language"</span>, <span class="pl-s">"zh"</span>)
+                .<span class="pl-en">header</span>(<span class="pl-s">"Cache-Control"</span>, <span class="pl-s">"no-cache"</span>)
+                .<span class="pl-en">header</span>(<span class="pl-s">"Pragma"</span>, <span class="pl-s">"no-cache"</span>)
+                .<span class="pl-en">header</span>(<span class="pl-s">"Priority"</span>, <span class="pl-s">"u=0, i"</span>)
+                .<span class="pl-en">header</span>(<span class="pl-s">"Referer"</span>, <span class="pl-s">"https://doc.htmcdn.com:39988/search?"</span>)
+                .<span class="pl-en">header</span>(<span class="pl-s">"Sec-Ch-Ua"</span>, <span class="pl-s">"<span class="pl-cce">\"</span>Not/A)Brand<span class="pl-cce">\"</span>;v=<span class="pl-cce">\"</span>8<span class="pl-cce">\"</span>, <span class="pl-cce">\"</span>Chromium<span class="pl-cce">\"</span>;v=<span class="pl-cce">\"</span>126<span class="pl-cce">\"</span>, <span class="pl-cce">\"</span>Google Chrome<span class="pl-cce">\"</span>;v=<span class="pl-cce">\"</span>126<span class="pl-cce">\"</span>"</span>)
+                .<span class="pl-en">header</span>(<span class="pl-s">"Sec-Ch-Ua-Mobile"</span>, <span class="pl-s">"?0"</span>)
+                .<span class="pl-en">header</span>(<span class="pl-s">"Sec-Ch-Ua-Platform"</span>, <span class="pl-s">"<span class="pl-cce">\"</span>Windows<span class="pl-cce">\"</span>"</span>)
+                .<span class="pl-en">header</span>(<span class="pl-s">"Sec-Fetch-Dest"</span>, <span class="pl-s">"iframe"</span>)
+                .<span class="pl-en">header</span>(<span class="pl-s">"Sec-Fetch-Mode"</span>, <span class="pl-s">"navigate"</span>)
+                .<span class="pl-en">header</span>(<span class="pl-s">"Sec-Fetch-Site"</span>, <span class="pl-s">"same-origin"</span>)
+                .<span class="pl-en">header</span>(<span class="pl-s">"Sec-Fetch-User"</span>, <span class="pl-s">"?1"</span>)
+                .<span class="pl-en">header</span>(<span class="pl-s">"Upgrade-Insecure-Requests"</span>, <span class="pl-s">"1"</span>)
+                .<span class="pl-en">header</span>(<span class="pl-s">"User-Agent"</span>, <span class="pl-s">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"</span>)
+                .<span class="pl-en">execute</span>().<span class="pl-en">body</span>();
+        <span class="pl-smi">Document</span> <span class="pl-s1">doc</span>=<span class="pl-smi">Jsoup</span>.<span class="pl-en">parse</span>(<span class="pl-s1">html</span>);
+        <span class="pl-smi">Elements</span> <span class="pl-s1">elements</span>=<span class="pl-s1">doc</span>.<span class="pl-en">select</span>(<span class="pl-s">"body &gt; div.wrapper &gt; div.p-wrapper &gt; div:nth-child(6) &gt; div"</span>);
+        <span class="pl-k">if</span>(<span class="pl-smi">CollUtil</span>.<span class="pl-en">isNotEmpty</span>(<span class="pl-s1">elements</span>)){
+            <span class="pl-smi">int</span> <span class="pl-s1">i</span>=<span class="pl-c1">0</span>;
+            <span class="pl-k">for</span>(<span class="pl-smi">Element</span> <span class="pl-s1">e</span>:<span class="pl-s1">elements</span>){
+                <span class="pl-s1">i</span>++;
+                <span class="pl-smi">String</span> <span class="pl-s1">magnet</span>=<span class="pl-s1">doc</span>.<span class="pl-en">select</span>(
+                        <span class="pl-s">"body &gt; div.wrapper &gt; div.p-wrapper &gt; div:nth-child(6) &gt; div:nth-child("</span>+<span class="pl-s1">i</span>+<span class="pl-s">") &gt; div.sbar &gt; span:nth-child(1) &gt; a"</span>).<span class="pl-en">get</span>(<span class="pl-c1">0</span>).<span class="pl-en">attr</span>(<span class="pl-s">"href"</span>);
+                <span class="pl-s1">magnets</span>.<span class="pl-en">append</span>(<span class="pl-s1">magnet</span>+<span class="pl-s">"<span class="pl-cce">\n</span>"</span>);
+                <span class="pl-s1">doc</span>.<span class="pl-en">select</span>(
+                        <span class="pl-s">"body &gt; div.wrapper &gt; div.p-wrapper &gt; div:nth-child(6) &gt; div:nth-child("</span>+<span class="pl-s1">i</span>+<span class="pl-s">")"</span>).<span class="pl-en">append</span>(<span class="pl-s">"&lt;button class=<span class="pl-cce">\"</span>btn<span class="pl-cce">\"</span> data-clipboard-demo=<span class="pl-cce">\"</span><span class="pl-cce">\"</span> "</span> +
+                        <span class="pl-s">"data-clipboard-action=<span class="pl-cce">\"</span>copy<span class="pl-cce">\"</span> data-clipboard-text=<span class="pl-cce">\"</span>"</span>
+                        +<span class="pl-s1">magnet</span>+<span class="pl-s">"<span class="pl-cce">\"</span>&gt;点击复制磁力链接&lt;/button&gt;&lt;br&gt;<span class="pl-cce">\n</span>"</span>);
             }
-            doc.select(
-                    "body &gt; div.wrapper &gt; div.p-wrapper &gt; div:nth-child(6) &gt; div:nth-child("+i+")").append("&lt;button class=\"btn\" data-clipboard-demo=\"\" " +
-                    "data-clipboard-action=\"copy\" data-clipboard-text=\""
-                    +magnets.toString()+"\"&gt;点击复制本页所有磁力链接&lt;/button&gt;&lt;br&gt;\n");
-        }else{
-            doc.append("&lt;font size=\"3\" color=\"red\"&gt;无资源&lt;/font&gt;&lt;br&gt;\n");
+            <span class="pl-s1">doc</span>.<span class="pl-en">select</span>(
+                    <span class="pl-s">"body &gt; div.wrapper &gt; div.p-wrapper &gt; div:nth-child(6) &gt; div:nth-child("</span>+<span class="pl-s1">i</span>+<span class="pl-s">")"</span>).<span class="pl-en">append</span>(<span class="pl-s">"&lt;button class=<span class="pl-cce">\"</span>btn<span class="pl-cce">\"</span> data-clipboard-demo=<span class="pl-cce">\"</span><span class="pl-cce">\"</span> "</span> +
+                    <span class="pl-s">"data-clipboard-action=<span class="pl-cce">\"</span>copy<span class="pl-cce">\"</span> data-clipboard-text=<span class="pl-cce">\"</span>"</span>
+                    +<span class="pl-s1">magnets</span>.<span class="pl-en">toString</span>()+<span class="pl-s">"<span class="pl-cce">\"</span>&gt;点击复制本页所有磁力链接&lt;/button&gt;&lt;br&gt;<span class="pl-cce">\n</span>"</span>);
+        }<span class="pl-k">else</span>{
+            <span class="pl-s1">doc</span>.<span class="pl-en">append</span>(<span class="pl-s">"&lt;font size=<span class="pl-cce">\"</span>3<span class="pl-cce">\"</span> color=<span class="pl-cce">\"</span>red<span class="pl-cce">\"</span>&gt;无资源&lt;/font&gt;&lt;br&gt;<span class="pl-cce">\n</span>"</span>);
         }
-        return doc.select("body &gt; div.wrapper &gt; div.p-wrapper &gt; div:nth-child(6)").html();
+        <span class="pl-k">return</span> <span class="pl-s1">doc</span>.<span class="pl-en">select</span>(<span class="pl-s">"body &gt; div.wrapper &gt; div.p-wrapper &gt; div:nth-child(6)"</span>).<span class="pl-en">html</span>();
     }
-  @Data
-    public static class QueryVo {
-        private String key;
-        private String url;
-        private Integer page;
-    }
-</code></pre>
-<pre class="notranslate"><code class="notranslate"> &lt;dependency&gt;
-            &lt;groupId&gt;cn.hutool&lt;/groupId&gt;
-            &lt;artifactId&gt;hutool-all&lt;/artifactId&gt;
-            &lt;version&gt;5.7.14&lt;/version&gt;
-        &lt;/dependency&gt;
- &lt;dependency&gt;
-            &lt;groupId&gt;org.jsoup&lt;/groupId&gt;
-            &lt;artifactId&gt;jsoup&lt;/artifactId&gt;
-            &lt;version&gt;1.16.1&lt;/version&gt;
-        &lt;/dependency&gt;
-</code></pre>
-<h3>html引用clipboard.min.js就可以实现一键复制</h3></div>
+  <span class="pl-c1">@</span><span class="pl-c1">Data</span>
+    <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-k">class</span> <span class="pl-smi">QueryVo</span> {
+        <span class="pl-k">private</span> <span class="pl-smi">String</span> <span class="pl-s1">key</span>;
+        <span class="pl-k">private</span> <span class="pl-smi">String</span> <span class="pl-s1">url</span>;
+        <span class="pl-k">private</span> <span class="pl-smi">Integer</span> <span class="pl-s1">page</span>;
+    }</pre></div>
+<div class="highlight highlight-text-xml"><pre class="notranslate"> &lt;<span class="pl-ent">dependency</span>&gt;
+            &lt;<span class="pl-ent">groupId</span>&gt;cn.hutool&lt;/<span class="pl-ent">groupId</span>&gt;
+            &lt;<span class="pl-ent">artifactId</span>&gt;hutool-all&lt;/<span class="pl-ent">artifactId</span>&gt;
+            &lt;<span class="pl-ent">version</span>&gt;5.7.14&lt;/<span class="pl-ent">version</span>&gt;
+        &lt;/<span class="pl-ent">dependency</span>&gt;
+ &lt;<span class="pl-ent">dependency</span>&gt;
+            &lt;<span class="pl-ent">groupId</span>&gt;org.jsoup&lt;/<span class="pl-ent">groupId</span>&gt;
+            &lt;<span class="pl-ent">artifactId</span>&gt;jsoup&lt;/<span class="pl-ent">artifactId</span>&gt;
+            &lt;<span class="pl-ent">version</span>&gt;1.16.1&lt;/<span class="pl-ent">version</span>&gt;
+        &lt;/<span class="pl-ent">dependency</span>&gt;</pre></div>
+<ul>
+<li>html引用clipboard.min.js就可以实现一键复制</li>
+</ul></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
