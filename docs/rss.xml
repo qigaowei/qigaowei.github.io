@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Wed, 31 Jul 2024 00:21:02 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>指定jdk17启动springboot项目</title><link>https://qigaowei.github.io/post/zhi-ding-jdk17-qi-dong-springboot-xiang-mu.html</link><description>创建一个如下的shell脚本&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Wed, 31 Jul 2024 08:20:47 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>指定jdk17启动springboot项目</title><link>https://qigaowei.github.io/post/zhi-ding-jdk17-qi-dong-springboot-xiang-mu.html</link><description>创建一个如下的shell脚本&#13;
 ``` shell&#13;
 #!/bin/bash&#13;
 &#13;
@@ -233,7 +233,7 @@ WHStyle = ref({&#13;
 ```&#13;
  width='100%'&#13;
 ```&#13;
-。</description><guid isPermaLink="true">https://qigaowei.github.io/post/js-yu-vue-zong-jie.html</guid><pubDate>Wed, 24 Jul 2024 06:56:33 +0000</pubDate></item><item><title>采用AIGC，极大提升工作效率</title><link>https://qigaowei.github.io/post/cai-yong-AIGC%EF%BC%8C-ji-da-ti-sheng-gong-zuo-xiao-lv.html</link><description>- 如通义千问，生成建表sql&#13;
+6. 新增删除以后，要刷新分页，要不删除会报错，找不到id。</description><guid isPermaLink="true">https://qigaowei.github.io/post/js-yu-vue-zong-jie.html</guid><pubDate>Wed, 24 Jul 2024 06:56:33 +0000</pubDate></item><item><title>采用AIGC，极大提升工作效率</title><link>https://qigaowei.github.io/post/cai-yong-AIGC%EF%BC%8C-ji-da-ti-sheng-gong-zuo-xiao-lv.html</link><description>- 如通义千问，生成建表sql&#13;
 - 通过上传原型图生成oracle表sql和备注，&#13;
 - 对于字段比较多的表，&#13;
 - 节省时间20分钟以上。</description><guid isPermaLink="true">https://qigaowei.github.io/post/cai-yong-AIGC%EF%BC%8C-ji-da-ti-sheng-gong-zuo-xiao-lv.html</guid><pubDate>Wed, 17 Jul 2024 06:51:38 +0000</pubDate></item><item><title>采用idea的JRebel插件，极大提升工作效率</title><link>https://qigaowei.github.io/post/cai-yong-idea-de-JRebel-cha-jian-%EF%BC%8C-ji-da-ti-sheng-gong-zuo-xiao-lv.html</link><description>1. &#13;
