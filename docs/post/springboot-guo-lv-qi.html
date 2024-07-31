@@ -10,7 +10,7 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="```
+<meta name="description" content="```java
 package com.abc.bigdata.riskmanagement.filter;
 
 import lombok.extern.slf4j.Slf4j;
@@ -43,7 +43,7 @@ public class ThirdFilter extends OncePerRequestFilter {
 ```
 
 1.  springboot启动类要加入注解
-```
+```java
 @ServletComponentScan(basePackages = {'com.abc.bigdata.riskmanagement.filter'})
 ```
 
@@ -51,7 +51,7 @@ public class ThirdFilter extends OncePerRequestFilter {
 
 。">
 <meta property="og:title" content="springboot过滤器">
-<meta property="og:description" content="```
+<meta property="og:description" content="```java
 package com.abc.bigdata.riskmanagement.filter;
 
 import lombok.extern.slf4j.Slf4j;
@@ -84,7 +84,7 @@ public class ThirdFilter extends OncePerRequestFilter {
 ```
 
 1.  springboot启动类要加入注解
-```
+```java
 @ServletComponentScan(basePackages = {'com.abc.bigdata.riskmanagement.filter'})
 ```
 
@@ -95,7 +95,7 @@ public class ThirdFilter extends OncePerRequestFilter {
 <meta property="og:url" content="https://qigaowei.github.io/post/springboot-guo-lv-qi.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>springboot过滤器</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -150,41 +150,39 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre class="notranslate"><code class="notranslate">package com.abc.bigdata.riskmanagement.filter;
+<div class="markdown-body" id="postBody"><div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-k">package</span> <span class="pl-s1">com</span>.<span class="pl-s1">abc</span>.<span class="pl-s1">bigdata</span>.<span class="pl-s1">riskmanagement</span>.<span class="pl-s1">filter</span>;
 
-import lombok.extern.slf4j.Slf4j;
-import org.apache.skywalking.apm.toolkit.trace.TraceContext;
-import org.springframework.web.filter.OncePerRequestFilter;
+<span class="pl-k">import</span> <span class="pl-s1">lombok</span>.<span class="pl-s1">extern</span>.<span class="pl-s1">slf4j</span>.<span class="pl-s1">Slf4j</span>;
+<span class="pl-k">import</span> <span class="pl-s1">org</span>.<span class="pl-s1">apache</span>.<span class="pl-s1">skywalking</span>.<span class="pl-s1">apm</span>.<span class="pl-s1">toolkit</span>.<span class="pl-s1">trace</span>.<span class="pl-s1">TraceContext</span>;
+<span class="pl-k">import</span> <span class="pl-s1">org</span>.<span class="pl-s1">springframework</span>.<span class="pl-s1">web</span>.<span class="pl-s1">filter</span>.<span class="pl-s1">OncePerRequestFilter</span>;
 
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebFilter;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+<span class="pl-k">import</span> <span class="pl-s1">javax</span>.<span class="pl-s1">servlet</span>.<span class="pl-s1">FilterChain</span>;
+<span class="pl-k">import</span> <span class="pl-s1">javax</span>.<span class="pl-s1">servlet</span>.<span class="pl-s1">ServletException</span>;
+<span class="pl-k">import</span> <span class="pl-s1">javax</span>.<span class="pl-s1">servlet</span>.<span class="pl-s1">annotation</span>.<span class="pl-s1">WebFilter</span>;
+<span class="pl-k">import</span> <span class="pl-s1">javax</span>.<span class="pl-s1">servlet</span>.<span class="pl-s1">http</span>.<span class="pl-s1">HttpServletRequest</span>;
+<span class="pl-k">import</span> <span class="pl-s1">javax</span>.<span class="pl-s1">servlet</span>.<span class="pl-s1">http</span>.<span class="pl-s1">HttpServletResponse</span>;
+<span class="pl-k">import</span> <span class="pl-s1">java</span>.<span class="pl-s1">io</span>.<span class="pl-s1">IOException</span>;
 
-@Slf4j
-@WebFilter(filterName = "thirdFilter",urlPatterns = {"/value/tycCompanyBase"
+<span class="pl-c1">@</span><span class="pl-c1">Slf4j</span>
+<span class="pl-c1">@</span><span class="pl-c1">WebFilter</span>(<span class="pl-s1">filterName</span> = <span class="pl-s">"thirdFilter"</span>,<span class="pl-s1">urlPatterns</span> = {<span class="pl-s">"/value/tycCompanyBase"</span>
 })
-public class ThirdFilter extends OncePerRequestFilter {
+<span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-smi">ThirdFilter</span> <span class="pl-k">extends</span> <span class="pl-smi">OncePerRequestFilter</span> {
 
-    @Override
-    protected void doFilterInternal(HttpServletRequest request,
-                                    HttpServletResponse response,
-                                    FilterChain chain) throws IOException, ServletException {
-        String url=request.getServletPath();
-        String traceId= TraceContext.traceId();
-        log.error(url+traceId);
-        chain.doFilter(request, response);
+    <span class="pl-c1">@</span><span class="pl-c1">Override</span>
+    <span class="pl-k">protected</span> <span class="pl-smi">void</span> <span class="pl-en">doFilterInternal</span>(<span class="pl-smi">HttpServletRequest</span> <span class="pl-s1">request</span>,
+                                    <span class="pl-smi">HttpServletResponse</span> <span class="pl-s1">response</span>,
+                                    <span class="pl-smi">FilterChain</span> <span class="pl-s1">chain</span>) <span class="pl-k">throws</span> <span class="pl-smi">IOException</span>, <span class="pl-smi">ServletException</span> {
+        <span class="pl-smi">String</span> <span class="pl-s1">url</span>=<span class="pl-s1">request</span>.<span class="pl-en">getServletPath</span>();
+        <span class="pl-smi">String</span> <span class="pl-s1">traceId</span>= <span class="pl-smi">TraceContext</span>.<span class="pl-en">traceId</span>();
+        <span class="pl-s1">log</span>.<span class="pl-en">error</span>(<span class="pl-s1">url</span>+<span class="pl-s1">traceId</span>);
+        <span class="pl-s1">chain</span>.<span class="pl-en">doFilter</span>(<span class="pl-s1">request</span>, <span class="pl-s1">response</span>);
     }
 
-}
-</code></pre>
+}</pre></div>
 <ol>
 <li>springboot启动类要加入注解</li>
 </ol>
-<pre class="notranslate"><code class="notranslate">@ServletComponentScan(basePackages = {"com.abc.bigdata.riskmanagement.filter"})
-</code></pre>
+<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-c1">@</span><span class="pl-c1">ServletComponentScan</span>(<span class="pl-s1">basePackages</span> = {<span class="pl-s">"com.abc.bigdata.riskmanagement.filter"</span>})</pre></div>
 <ol start="2">
 <li>过滤器注册为<a class="user-mention notranslate" data-hovercard-type="organization" data-hovercard-url="/orgs/component/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/component">@component</a>导致urlPatterns不生效,应该为<a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/webfilter/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/webfilter">@webfilter</a></li>
 </ol></div>

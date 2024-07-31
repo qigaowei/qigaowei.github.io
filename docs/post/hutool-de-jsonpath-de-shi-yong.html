@@ -10,12 +10,12 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="```
+<meta name="description" content="```java
 JSON res = JSONUtil.parse(str);
 String imageUrl = JSONUtil.getByPath(res, 'data.video.cover').toString();
 ```。">
 <meta property="og:title" content="hutool的jsonpath的使用">
-<meta property="og:description" content="```
+<meta property="og:description" content="```java
 JSON res = JSONUtil.parse(str);
 String imageUrl = JSONUtil.getByPath(res, 'data.video.cover').toString();
 ```。">
@@ -23,7 +23,7 @@ String imageUrl = JSONUtil.getByPath(res, 'data.video.cover').toString();
 <meta property="og:url" content="https://qigaowei.github.io/post/hutool-de-jsonpath-de-shi-yong.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>hutool的jsonpath的使用</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -78,9 +78,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre class="notranslate"><code class="notranslate">JSON res = JSONUtil.parse(str);
-String imageUrl = JSONUtil.getByPath(res, "data.video.cover").toString();
-</code></pre></div>
+<div class="markdown-body" id="postBody"><div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-smi">JSON</span> <span class="pl-s1">res</span> = <span class="pl-smi">JSONUtil</span>.<span class="pl-en">parse</span>(<span class="pl-s1">str</span>);
+<span class="pl-smi">String</span> <span class="pl-s1">imageUrl</span> = <span class="pl-smi">JSONUtil</span>.<span class="pl-en">getByPath</span>(<span class="pl-s1">res</span>, <span class="pl-s">"data.video.cover"</span>).<span class="pl-en">toString</span>();</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

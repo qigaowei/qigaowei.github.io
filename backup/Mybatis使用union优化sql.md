@@ -1,9 +1,9 @@
-```
+```xml
 <foreach collection="nameList" item="name" separator="union">
 		select id  from table where name = #{name}
 	</foreach>
 ```
- ``` 
+ ``` java
    List<Object> getList(@Param("nameList")String[] nameList);  
 ```
 - 优化接口，使用union，

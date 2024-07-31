@@ -10,7 +10,7 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="```
+<meta name="description" content="```xml
 <dependency>
             <groupId>commons-net</groupId>
             <artifactId>commons-net</artifactId>
@@ -18,7 +18,7 @@
         </dependency>
 ```
 
-```
+```java
           private static List<String> cidrToIpList(String cidr){
         SubnetUtils utils = new SubnetUtils(cidr);
         String[] adress = utils.getInfo().getAllAddresses();
@@ -26,7 +26,7 @@
     }
 ```。">
 <meta property="og:title" content="将子网转为ip范围">
-<meta property="og:description" content="```
+<meta property="og:description" content="```xml
 <dependency>
             <groupId>commons-net</groupId>
             <artifactId>commons-net</artifactId>
@@ -34,7 +34,7 @@
         </dependency>
 ```
 
-```
+```java
           private static List<String> cidrToIpList(String cidr){
         SubnetUtils utils = new SubnetUtils(cidr);
         String[] adress = utils.getInfo().getAllAddresses();
@@ -45,7 +45,7 @@
 <meta property="og:url" content="https://qigaowei.github.io/post/jiang-zi-wang-zhuan-wei-ip-fan-wei.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>将子网转为ip范围</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -100,18 +100,16 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre class="notranslate"><code class="notranslate">&lt;dependency&gt;
-            &lt;groupId&gt;commons-net&lt;/groupId&gt;
-            &lt;artifactId&gt;commons-net&lt;/artifactId&gt;
-            &lt;version&gt;3.6&lt;/version&gt;
-        &lt;/dependency&gt;
-</code></pre>
-<pre class="notranslate"><code class="notranslate">          private static List&lt;String&gt; cidrToIpList(String cidr){
-        SubnetUtils utils = new SubnetUtils(cidr);
-        String[] adress = utils.getInfo().getAllAddresses();
-        return Arrays.asList(adress);
-    }
-</code></pre></div>
+<div class="markdown-body" id="postBody"><div class="highlight highlight-text-xml"><pre class="notranslate">&lt;<span class="pl-ent">dependency</span>&gt;
+            &lt;<span class="pl-ent">groupId</span>&gt;commons-net&lt;/<span class="pl-ent">groupId</span>&gt;
+            &lt;<span class="pl-ent">artifactId</span>&gt;commons-net&lt;/<span class="pl-ent">artifactId</span>&gt;
+            &lt;<span class="pl-ent">version</span>&gt;3.6&lt;/<span class="pl-ent">version</span>&gt;
+        &lt;/<span class="pl-ent">dependency</span>&gt;</pre></div>
+<div class="highlight highlight-source-java"><pre class="notranslate">          <span class="pl-k">private</span> <span class="pl-k">static</span> <span class="pl-smi">List</span>&lt;<span class="pl-smi">String</span>&gt; <span class="pl-s1">cidrToIpList</span>(<span class="pl-smi">String</span> <span class="pl-s1">cidr</span>){
+        <span class="pl-smi">SubnetUtils</span> <span class="pl-s1">utils</span> = <span class="pl-k">new</span> <span class="pl-smi">SubnetUtils</span>(<span class="pl-s1">cidr</span>);
+        <span class="pl-smi">String</span>[] <span class="pl-s1">adress</span> = <span class="pl-s1">utils</span>.<span class="pl-en">getInfo</span>().<span class="pl-en">getAllAddresses</span>();
+        <span class="pl-k">return</span> <span class="pl-smi">Arrays</span>.<span class="pl-en">asList</span>(<span class="pl-s1">adress</span>);
+    }</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

@@ -1,4 +1,4 @@
-```
+```java
 package com.abc.bigdata.riskmanagement.filter;
 
 import lombok.extern.slf4j.Slf4j;
@@ -31,7 +31,7 @@ public class ThirdFilter extends OncePerRequestFilter {
 ```
 
 1.  springboot启动类要加入注解
-```
+```java
 @ServletComponentScan(basePackages = {"com.abc.bigdata.riskmanagement.filter"})
 ```
 

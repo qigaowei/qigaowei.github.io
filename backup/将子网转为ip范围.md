@@ -1,4 +1,4 @@
-```
+```xml
 <dependency>
             <groupId>commons-net</groupId>
             <artifactId>commons-net</artifactId>
@@ -6,7 +6,7 @@
         </dependency>
 ```
 
-```
+```java
           private static List<String> cidrToIpList(String cidr){
         SubnetUtils utils = new SubnetUtils(cidr);
         String[] adress = utils.getInfo().getAllAddresses();

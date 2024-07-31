@@ -10,7 +10,7 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="```
+<meta name="description" content="```java
 import com.vladsch.flexmark.util.ast.Node;
 import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
@@ -27,7 +27,7 @@ import com.vladsch.flexmark.util.data.MutableDataSet;
         Node document = parser.parse(content);
         String html = renderer.render(document);
 ```
-```
+```xml
  <dependency>
             <groupId>com.vladsch.flexmark</groupId>
             <artifactId>flexmark</artifactId>
@@ -35,7 +35,7 @@ import com.vladsch.flexmark.util.data.MutableDataSet;
         </dependency>
 ```
 下面这种jar包体积会很大，建议上面这种
-```
+```xml
 <dependency>
             <groupId>com.vladsch.flexmark</groupId>
             <artifactId>flexmark-all</artifactId>
@@ -43,7 +43,7 @@ import com.vladsch.flexmark.util.data.MutableDataSet;
         </dependency>
 ```。">
 <meta property="og:title" content="markdown转html，示例和优化">
-<meta property="og:description" content="```
+<meta property="og:description" content="```java
 import com.vladsch.flexmark.util.ast.Node;
 import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
@@ -60,7 +60,7 @@ import com.vladsch.flexmark.util.data.MutableDataSet;
         Node document = parser.parse(content);
         String html = renderer.render(document);
 ```
-```
+```xml
  <dependency>
             <groupId>com.vladsch.flexmark</groupId>
             <artifactId>flexmark</artifactId>
@@ -68,7 +68,7 @@ import com.vladsch.flexmark.util.data.MutableDataSet;
         </dependency>
 ```
 下面这种jar包体积会很大，建议上面这种
-```
+```xml
 <dependency>
             <groupId>com.vladsch.flexmark</groupId>
             <artifactId>flexmark-all</artifactId>
@@ -79,7 +79,7 @@ import com.vladsch.flexmark.util.data.MutableDataSet;
 <meta property="og:url" content="https://qigaowei.github.io/post/markdown-zhuan-html%EF%BC%8C-shi-li-he-you-hua.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>markdown转html，示例和优化</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -134,35 +134,32 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre class="notranslate"><code class="notranslate">import com.vladsch.flexmark.util.ast.Node;
-import com.vladsch.flexmark.html.HtmlRenderer;
-import com.vladsch.flexmark.parser.Parser;
-import com.vladsch.flexmark.util.data.MutableDataSet;
+<div class="markdown-body" id="postBody"><div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">com</span>.<span class="pl-s1">vladsch</span>.<span class="pl-s1">flexmark</span>.<span class="pl-s1">util</span>.<span class="pl-s1">ast</span>.<span class="pl-s1">Node</span>;
+<span class="pl-k">import</span> <span class="pl-s1">com</span>.<span class="pl-s1">vladsch</span>.<span class="pl-s1">flexmark</span>.<span class="pl-s1">html</span>.<span class="pl-s1">HtmlRenderer</span>;
+<span class="pl-k">import</span> <span class="pl-s1">com</span>.<span class="pl-s1">vladsch</span>.<span class="pl-s1">flexmark</span>.<span class="pl-s1">parser</span>.<span class="pl-s1">Parser</span>;
+<span class="pl-k">import</span> <span class="pl-s1">com</span>.<span class="pl-s1">vladsch</span>.<span class="pl-s1">flexmark</span>.<span class="pl-s1">util</span>.<span class="pl-s1">data</span>.<span class="pl-s1">MutableDataSet</span>;
 
- // 配置选项
-        MutableDataSet options = new MutableDataSet();
+ <span class="pl-c">// 配置选项</span>
+        <span class="pl-smi">MutableDataSet</span> <span class="pl-s1">options</span> = <span class="pl-k">new</span> <span class="pl-smi">MutableDataSet</span>();
 
-        // 创建解析器和渲染器
-        Parser parser = Parser.builder(options).build();
-        HtmlRenderer renderer = HtmlRenderer.builder(options).build();
+        <span class="pl-c">// 创建解析器和渲染器</span>
+        <span class="pl-smi">Parser</span> <span class="pl-s1">parser</span> = <span class="pl-smi">Parser</span>.<span class="pl-en">builder</span>(<span class="pl-s1">options</span>).<span class="pl-en">build</span>();
+        <span class="pl-smi">HtmlRenderer</span> <span class="pl-s1">renderer</span> = <span class="pl-smi">HtmlRenderer</span>.<span class="pl-en">builder</span>(<span class="pl-s1">options</span>).<span class="pl-en">build</span>();
 
-        // 解析并渲染Markdown
-        Node document = parser.parse(content);
-        String html = renderer.render(document);
-</code></pre>
-<pre class="notranslate"><code class="notranslate"> &lt;dependency&gt;
-            &lt;groupId&gt;com.vladsch.flexmark&lt;/groupId&gt;
-            &lt;artifactId&gt;flexmark&lt;/artifactId&gt;
-            &lt;version&gt;0.62.2&lt;/version&gt;
-        &lt;/dependency&gt;
-</code></pre>
+        <span class="pl-c">// 解析并渲染Markdown</span>
+        <span class="pl-smi">Node</span> <span class="pl-s1">document</span> = <span class="pl-s1">parser</span>.<span class="pl-en">parse</span>(<span class="pl-s1">content</span>);
+        <span class="pl-smi">String</span> <span class="pl-s1">html</span> = <span class="pl-s1">renderer</span>.<span class="pl-en">render</span>(<span class="pl-s1">document</span>);</pre></div>
+<div class="highlight highlight-text-xml"><pre class="notranslate"> &lt;<span class="pl-ent">dependency</span>&gt;
+            &lt;<span class="pl-ent">groupId</span>&gt;com.vladsch.flexmark&lt;/<span class="pl-ent">groupId</span>&gt;
+            &lt;<span class="pl-ent">artifactId</span>&gt;flexmark&lt;/<span class="pl-ent">artifactId</span>&gt;
+            &lt;<span class="pl-ent">version</span>&gt;0.62.2&lt;/<span class="pl-ent">version</span>&gt;
+        &lt;/<span class="pl-ent">dependency</span>&gt;</pre></div>
 <p>下面这种jar包体积会很大，建议上面这种</p>
-<pre class="notranslate"><code class="notranslate">&lt;dependency&gt;
-            &lt;groupId&gt;com.vladsch.flexmark&lt;/groupId&gt;
-            &lt;artifactId&gt;flexmark-all&lt;/artifactId&gt;
-            &lt;version&gt;0.62.2&lt;/version&gt;
-        &lt;/dependency&gt;
-</code></pre></div>
+<div class="highlight highlight-text-xml"><pre class="notranslate">&lt;<span class="pl-ent">dependency</span>&gt;
+            &lt;<span class="pl-ent">groupId</span>&gt;com.vladsch.flexmark&lt;/<span class="pl-ent">groupId</span>&gt;
+            &lt;<span class="pl-ent">artifactId</span>&gt;flexmark-all&lt;/<span class="pl-ent">artifactId</span>&gt;
+            &lt;<span class="pl-ent">version</span>&gt;0.62.2&lt;/<span class="pl-ent">version</span>&gt;
+        &lt;/<span class="pl-ent">dependency</span>&gt;</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

@@ -10,18 +10,18 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="```
+<meta name="description" content="```sql
 COMMENT ON COLUMN TABLE_NAME.green_channel_flag IS '备注';
 ```。">
 <meta property="og:title" content="oracle对字段添加备注">
-<meta property="og:description" content="```
+<meta property="og:description" content="```sql
 COMMENT ON COLUMN TABLE_NAME.green_channel_flag IS '备注';
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/oracle-dui-zi-duan-tian-jia-bei-zhu.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>oracle对字段添加备注</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -76,8 +76,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre class="notranslate"><code class="notranslate">COMMENT ON COLUMN TABLE_NAME.green_channel_flag IS '备注';
-</code></pre></div>
+<div class="markdown-body" id="postBody"><div class="highlight highlight-source-sql"><pre class="notranslate"><span class="pl-k">COMMENT ON COLUMN TABLE_NAME.green_channel_flag IS </span><span class="pl-s"><span class="pl-pds">'</span>备注<span class="pl-pds">'</span></span>;</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
