@@ -1,11 +1,11 @@
-```
+```sql
 CREATE TABLE `partner_company` (
   `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '数据库主键',
   `model_credit_grade` varchar(32) DEFAULT NULL COMMENT '最近一次模型结果信用评级',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2669 DEFAULT CHARSET=utf8mb3;
 ```
-```
+```sql
 INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('1', 'AAA');
 INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('2', 'AA');
 INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('3', 'A');
@@ -18,7 +18,7 @@ INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('7', NULL);
 
 
 
-```
+```sql
 SELECT
 	model_credit_grade
 FROM
@@ -41,7 +41,7 @@ ORDER BY
 
 	下面sql为null值排最前
 
-```
+```sql
 SELECT
 	model_credit_grade
 FROM

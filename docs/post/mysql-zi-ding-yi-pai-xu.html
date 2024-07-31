@@ -10,14 +10,14 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="```
+<meta name="description" content="```sql
 CREATE TABLE `partner_company` (
   `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '数据库主键',
   `model_credit_grade` varchar(32) DEFAULT NULL COMMENT '最近一次模型结果信用评级',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2669 DEFAULT CHARSET=utf8mb3;
 ```
-```
+```sql
 INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('1', 'AAA');
 INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('2', 'AA');
 INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('3', 'A');
@@ -30,7 +30,7 @@ INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('7', NULL);
 
 
 
-```
+```sql
 SELECT
 	model_credit_grade
 FROM
@@ -53,7 +53,7 @@ ORDER BY
 
 	下面sql为null值排最前
 
-```
+```sql
 SELECT
 	model_credit_grade
 FROM
@@ -77,14 +77,14 @@ ORDER BY
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/6be349d2deac436d87c5108608d30179.png)。">
 <meta property="og:title" content="mysql自定义排序">
-<meta property="og:description" content="```
+<meta property="og:description" content="```sql
 CREATE TABLE `partner_company` (
   `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '数据库主键',
   `model_credit_grade` varchar(32) DEFAULT NULL COMMENT '最近一次模型结果信用评级',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2669 DEFAULT CHARSET=utf8mb3;
 ```
-```
+```sql
 INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('1', 'AAA');
 INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('2', 'AA');
 INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('3', 'A');
@@ -97,7 +97,7 @@ INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('7', NULL);
 
 
 
-```
+```sql
 SELECT
 	model_credit_grade
 FROM
@@ -120,7 +120,7 @@ ORDER BY
 
 	下面sql为null值排最前
 
-```
+```sql
 SELECT
 	model_credit_grade
 FROM
@@ -147,7 +147,7 @@ ORDER BY
 <meta property="og:url" content="https://qigaowei.github.io/post/mysql-zi-ding-yi-pai-xu.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>mysql自定义排序</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -202,58 +202,54 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre class="notranslate"><code class="notranslate">CREATE TABLE `partner_company` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '数据库主键',
-  `model_credit_grade` varchar(32) DEFAULT NULL COMMENT '最近一次模型结果信用评级',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2669 DEFAULT CHARSET=utf8mb3;
-</code></pre>
-<pre class="notranslate"><code class="notranslate">INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('1', 'AAA');
-INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('2', 'AA');
-INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('3', 'A');
-INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('4', 'BBB');
-INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('5', 'BB');
-INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('6', 'B');
-INSERT INTO `partner_company` (`id`, `model_credit_grade`) VALUES ('7', NULL);
-</code></pre>
+<div class="markdown-body" id="postBody"><div class="highlight highlight-source-sql"><pre class="notranslate"><span class="pl-k">CREATE</span> <span class="pl-k">TABLE</span> `<span class="pl-en">partner_company</span>` (
+  <span class="pl-s"><span class="pl-pds">`</span>id<span class="pl-pds">`</span></span> <span class="pl-k">int</span> unsigned <span class="pl-k">NOT NULL</span> AUTO_INCREMENT COMMENT <span class="pl-s"><span class="pl-pds">'</span>数据库主键<span class="pl-pds">'</span></span>,
+  <span class="pl-s"><span class="pl-pds">`</span>model_credit_grade<span class="pl-pds">`</span></span> <span class="pl-k">varchar</span>(<span class="pl-c1">32</span>) DEFAULT <span class="pl-k">NULL</span> COMMENT <span class="pl-s"><span class="pl-pds">'</span>最近一次模型结果信用评级<span class="pl-pds">'</span></span>,
+  <span class="pl-k">PRIMARY KEY</span> (<span class="pl-s"><span class="pl-pds">`</span>id<span class="pl-pds">`</span></span>)
+) ENGINE<span class="pl-k">=</span>InnoDB AUTO_INCREMENT<span class="pl-k">=</span><span class="pl-c1">2669</span> DEFAULT CHARSET<span class="pl-k">=</span>utf8mb3;</pre></div>
+<div class="highlight highlight-source-sql"><pre class="notranslate"><span class="pl-k">INSERT INTO</span> <span class="pl-s"><span class="pl-pds">`</span>partner_company<span class="pl-pds">`</span></span> (<span class="pl-s"><span class="pl-pds">`</span>id<span class="pl-pds">`</span></span>, <span class="pl-s"><span class="pl-pds">`</span>model_credit_grade<span class="pl-pds">`</span></span>) <span class="pl-k">VALUES</span> (<span class="pl-s"><span class="pl-pds">'</span>1<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>AAA<span class="pl-pds">'</span></span>);
+<span class="pl-k">INSERT INTO</span> <span class="pl-s"><span class="pl-pds">`</span>partner_company<span class="pl-pds">`</span></span> (<span class="pl-s"><span class="pl-pds">`</span>id<span class="pl-pds">`</span></span>, <span class="pl-s"><span class="pl-pds">`</span>model_credit_grade<span class="pl-pds">`</span></span>) <span class="pl-k">VALUES</span> (<span class="pl-s"><span class="pl-pds">'</span>2<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>AA<span class="pl-pds">'</span></span>);
+<span class="pl-k">INSERT INTO</span> <span class="pl-s"><span class="pl-pds">`</span>partner_company<span class="pl-pds">`</span></span> (<span class="pl-s"><span class="pl-pds">`</span>id<span class="pl-pds">`</span></span>, <span class="pl-s"><span class="pl-pds">`</span>model_credit_grade<span class="pl-pds">`</span></span>) <span class="pl-k">VALUES</span> (<span class="pl-s"><span class="pl-pds">'</span>3<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>A<span class="pl-pds">'</span></span>);
+<span class="pl-k">INSERT INTO</span> <span class="pl-s"><span class="pl-pds">`</span>partner_company<span class="pl-pds">`</span></span> (<span class="pl-s"><span class="pl-pds">`</span>id<span class="pl-pds">`</span></span>, <span class="pl-s"><span class="pl-pds">`</span>model_credit_grade<span class="pl-pds">`</span></span>) <span class="pl-k">VALUES</span> (<span class="pl-s"><span class="pl-pds">'</span>4<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>BBB<span class="pl-pds">'</span></span>);
+<span class="pl-k">INSERT INTO</span> <span class="pl-s"><span class="pl-pds">`</span>partner_company<span class="pl-pds">`</span></span> (<span class="pl-s"><span class="pl-pds">`</span>id<span class="pl-pds">`</span></span>, <span class="pl-s"><span class="pl-pds">`</span>model_credit_grade<span class="pl-pds">`</span></span>) <span class="pl-k">VALUES</span> (<span class="pl-s"><span class="pl-pds">'</span>5<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>BB<span class="pl-pds">'</span></span>);
+<span class="pl-k">INSERT INTO</span> <span class="pl-s"><span class="pl-pds">`</span>partner_company<span class="pl-pds">`</span></span> (<span class="pl-s"><span class="pl-pds">`</span>id<span class="pl-pds">`</span></span>, <span class="pl-s"><span class="pl-pds">`</span>model_credit_grade<span class="pl-pds">`</span></span>) <span class="pl-k">VALUES</span> (<span class="pl-s"><span class="pl-pds">'</span>6<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>B<span class="pl-pds">'</span></span>);
+<span class="pl-k">INSERT INTO</span> <span class="pl-s"><span class="pl-pds">`</span>partner_company<span class="pl-pds">`</span></span> (<span class="pl-s"><span class="pl-pds">`</span>id<span class="pl-pds">`</span></span>, <span class="pl-s"><span class="pl-pds">`</span>model_credit_grade<span class="pl-pds">`</span></span>) <span class="pl-k">VALUES</span> (<span class="pl-s"><span class="pl-pds">'</span>7<span class="pl-pds">'</span></span>, <span class="pl-k">NULL</span>);</pre></div>
 <p>下面sql为null值排最后</p>
-<pre class="notranslate"><code class="notranslate">SELECT
+<div class="highlight highlight-source-sql"><pre class="notranslate"><span class="pl-k">SELECT</span>
 	model_credit_grade
-FROM
+<span class="pl-k">FROM</span>
 	partner_company
-ORDER BY
-	ISNULL(model_credit_grade) || model_credit_grade = '',
+<span class="pl-k">ORDER BY</span>
+	ISNULL(model_credit_grade) <span class="pl-k">||</span> model_credit_grade <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>,
 	field(
 		model_credit_grade,
-		'AAA',
-		'AA',
-		'A',
-		'BBB',
-		'BB',
-		'B',
-		''
-	)
-</code></pre>
+		<span class="pl-s"><span class="pl-pds">'</span>AAA<span class="pl-pds">'</span></span>,
+		<span class="pl-s"><span class="pl-pds">'</span>AA<span class="pl-pds">'</span></span>,
+		<span class="pl-s"><span class="pl-pds">'</span>A<span class="pl-pds">'</span></span>,
+		<span class="pl-s"><span class="pl-pds">'</span>BBB<span class="pl-pds">'</span></span>,
+		<span class="pl-s"><span class="pl-pds">'</span>BB<span class="pl-pds">'</span></span>,
+		<span class="pl-s"><span class="pl-pds">'</span>B<span class="pl-pds">'</span></span>,
+		<span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>
+	)</pre></div>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c4f499881aab9e1ace3272276bde8855a204b7281dd4b7d53925a5e0bc1ca9c8/68747470733a2f2f696d672d626c6f672e6373646e696d672e636e2f37306234363033613564363334353930393163623237613531623239643437302e706e67"><img src="https://camo.githubusercontent.com/c4f499881aab9e1ace3272276bde8855a204b7281dd4b7d53925a5e0bc1ca9c8/68747470733a2f2f696d672d626c6f672e6373646e696d672e636e2f37306234363033613564363334353930393163623237613531623239643437302e706e67" alt="在这里插入图片描述" data-canonical-src="https://img-blog.csdnimg.cn/70b4603a5d63459091cb27a51b29d470.png" style="max-width: 100%;"></a></p>
 <pre class="notranslate"><code class="notranslate">下面sql为null值排最前
 </code></pre>
-<pre class="notranslate"><code class="notranslate">SELECT
+<div class="highlight highlight-source-sql"><pre class="notranslate"><span class="pl-k">SELECT</span>
 	model_credit_grade
-FROM
+<span class="pl-k">FROM</span>
 	partner_company
-ORDER BY
+<span class="pl-k">ORDER BY</span>
 	field(
 		model_credit_grade,
-		'',
-		'B',
-		'BB',
-		'BBB',
-		'A',
-		'AA',
-		'AAA'
+		<span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>,
+		<span class="pl-s"><span class="pl-pds">'</span>B<span class="pl-pds">'</span></span>,
+		<span class="pl-s"><span class="pl-pds">'</span>BB<span class="pl-pds">'</span></span>,
+		<span class="pl-s"><span class="pl-pds">'</span>BBB<span class="pl-pds">'</span></span>,
+		<span class="pl-s"><span class="pl-pds">'</span>A<span class="pl-pds">'</span></span>,
+		<span class="pl-s"><span class="pl-pds">'</span>AA<span class="pl-pds">'</span></span>,
+		<span class="pl-s"><span class="pl-pds">'</span>AAA<span class="pl-pds">'</span></span>
 	),
-	ISNULL(model_credit_grade) || model_credit_grade = ''
-</code></pre>
+	ISNULL(model_credit_grade) <span class="pl-k">||</span> model_credit_grade <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span></pre></div>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/995908495b09b32e4486a109dea1bbcf7663648ba0f62c3b39542a81eaed97e7/68747470733a2f2f696d672d626c6f672e6373646e696d672e636e2f36626533343964326465616334333664383763353130383630386433303137392e706e67"><img src="https://camo.githubusercontent.com/995908495b09b32e4486a109dea1bbcf7663648ba0f62c3b39542a81eaed97e7/68747470733a2f2f696d672d626c6f672e6373646e696d672e636e2f36626533343964326465616334333664383763353130383630386433303137392e706e67" alt="在这里插入图片描述" data-canonical-src="https://img-blog.csdnimg.cn/6be349d2deac436d87c5108608d30179.png" style="max-width: 100%;"></a></p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
