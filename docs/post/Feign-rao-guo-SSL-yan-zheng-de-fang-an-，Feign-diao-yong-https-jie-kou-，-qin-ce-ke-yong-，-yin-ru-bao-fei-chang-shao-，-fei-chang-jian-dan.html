@@ -10,7 +10,7 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="```
+<meta name="description" content="```java
 import feign.Client;
 import feign.Feign;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
@@ -80,7 +80,7 @@ public class FeignConfiguration {
 
 }
 ```
-```
+```xml
   <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
@@ -91,13 +91,13 @@ public class FeignConfiguration {
             <version>4.5.13</version>
         </dependency>
 ```
-```
+```java
 @Component
 @FeignClient(name = 'NgfwApiFeign', url = 'https://fakeAIMASKurl', configuration = FeignConfiguration.class)
 public interface NgfwApiFeign {
 ```。">
 <meta property="og:title" content="Feign绕过SSL验证的方案，Feign调用https接口，亲测可用，引入包非常少，非常简单">
-<meta property="og:description" content="```
+<meta property="og:description" content="```java
 import feign.Client;
 import feign.Feign;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
@@ -167,7 +167,7 @@ public class FeignConfiguration {
 
 }
 ```
-```
+```xml
   <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
@@ -178,7 +178,7 @@ public class FeignConfiguration {
             <version>4.5.13</version>
         </dependency>
 ```
-```
+```java
 @Component
 @FeignClient(name = 'NgfwApiFeign', url = 'https://fakeAIMASKurl', configuration = FeignConfiguration.class)
 public interface NgfwApiFeign {
@@ -187,7 +187,7 @@ public interface NgfwApiFeign {
 <meta property="og:url" content="https://qigaowei.github.io/post/Feign-rao-guo-SSL-yan-zheng-de-fang-an-%EF%BC%8CFeign-diao-yong-https-jie-kou-%EF%BC%8C-qin-ce-ke-yong-%EF%BC%8C-yin-ru-bao-fei-chang-shao-%EF%BC%8C-fei-chang-jian-dan.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>Feign绕过SSL验证的方案，Feign调用https接口，亲测可用，引入包非常少，非常简单</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -242,89 +242,86 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre class="notranslate"><code class="notranslate">import feign.Client;
-import feign.Feign;
-import org.apache.http.conn.ssl.NoopHostnameVerifier;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+<div class="markdown-body" id="postBody"><div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">feign</span>.<span class="pl-s1">Client</span>;
+<span class="pl-k">import</span> <span class="pl-s1">feign</span>.<span class="pl-s1">Feign</span>;
+<span class="pl-k">import</span> <span class="pl-s1">org</span>.<span class="pl-s1">apache</span>.<span class="pl-s1">http</span>.<span class="pl-s1">conn</span>.<span class="pl-s1">ssl</span>.<span class="pl-s1">NoopHostnameVerifier</span>;
+<span class="pl-k">import</span> <span class="pl-s1">org</span>.<span class="pl-s1">springframework</span>.<span class="pl-s1">context</span>.<span class="pl-s1">annotation</span>.<span class="pl-s1">Bean</span>;
+<span class="pl-k">import</span> <span class="pl-s1">org</span>.<span class="pl-s1">springframework</span>.<span class="pl-s1">context</span>.<span class="pl-s1">annotation</span>.<span class="pl-s1">Configuration</span>;
 
-import javax.net.ssl.*;
+<span class="pl-k">import</span> <span class="pl-s1">javax</span>.<span class="pl-s1">net</span>.<span class="pl-s1">ssl</span>.*;
 
-/**
- * Feign配置，使其支持https
- */
-@Configuration
-public class FeignConfiguration {
+<span class="pl-c">/**</span>
+<span class="pl-c"> * Feign配置，使其支持https</span>
+<span class="pl-c"> */</span>
+<span class="pl-c1">@</span><span class="pl-c1">Configuration</span>
+<span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-smi">FeignConfiguration</span> {
 
-    @Bean
-    public Feign.Builder feignBuilder() {
-        final Client trustSSLSockets = client();
-        return Feign.builder().client(trustSSLSockets);
+    <span class="pl-c1">@</span><span class="pl-c1">Bean</span>
+    <span class="pl-k">public</span> <span class="pl-smi">Feign</span>.<span class="pl-smi">Builder</span> <span class="pl-en">feignBuilder</span>() {
+        <span class="pl-k">final</span> <span class="pl-smi">Client</span> <span class="pl-s1">trustSSLSockets</span> = <span class="pl-en">client</span>();
+        <span class="pl-k">return</span> <span class="pl-smi">Feign</span>.<span class="pl-en">builder</span>().<span class="pl-en">client</span>(<span class="pl-s1">trustSSLSockets</span>);
     }
 
-    public static SSLSocketFactory feignTrustingSSLSocketFactory = null;
+    <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-smi">SSLSocketFactory</span> <span class="pl-s1">feignTrustingSSLSocketFactory</span> = <span class="pl-c1">null</span>;
 
-    @Bean
-    public Client client() {
-        if(feignTrustingSSLSocketFactory==null){
-            try {
-                feignTrustingSSLSocketFactory = getFeignTrustingSSLSocketFactory();
-            } catch (Exception e) {
-                e.printStackTrace();
+    <span class="pl-c1">@</span><span class="pl-c1">Bean</span>
+    <span class="pl-k">public</span> <span class="pl-smi">Client</span> <span class="pl-en">client</span>() {
+        <span class="pl-k">if</span>(<span class="pl-s1">feignTrustingSSLSocketFactory</span>==<span class="pl-c1">null</span>){
+            <span class="pl-k">try</span> {
+                <span class="pl-s1">feignTrustingSSLSocketFactory</span> = <span class="pl-en">getFeignTrustingSSLSocketFactory</span>();
+            } <span class="pl-k">catch</span> (<span class="pl-smi">Exception</span> <span class="pl-s1">e</span>) {
+                <span class="pl-s1">e</span>.<span class="pl-en">printStackTrace</span>();
             }
         }
-        Client client= new Client.Default(feignTrustingSSLSocketFactory, new NoopHostnameVerifier());
-        return client;
+        <span class="pl-smi">Client</span> <span class="pl-s1">client</span>= <span class="pl-k">new</span> <span class="pl-smi">Client</span>.<span class="pl-smi">Default</span>(<span class="pl-s1">feignTrustingSSLSocketFactory</span>, <span class="pl-k">new</span> <span class="pl-smi">NoopHostnameVerifier</span>());
+        <span class="pl-k">return</span> <span class="pl-s1">client</span>;
     }
 
-    public static SSLSocketFactory getFeignTrustingSSLSocketFactory() throws Exception {
-        javax.net.ssl.TrustManager[] trustAllCerts = new javax.net.ssl.TrustManager[1];
-        javax.net.ssl.TrustManager tm = new miTM();
-        trustAllCerts[0] = tm;
-        javax.net.ssl.SSLContext sc = javax.net.ssl.SSLContext.getInstance("SSL");
-        sc.init(null, trustAllCerts, null);
-        return sc.getSocketFactory();
+    <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-smi">SSLSocketFactory</span> <span class="pl-en">getFeignTrustingSSLSocketFactory</span>() <span class="pl-k">throws</span> <span class="pl-smi">Exception</span> {
+        <span class="pl-smi">javax</span>.<span class="pl-smi">net</span>.<span class="pl-smi">ssl</span>.<span class="pl-smi">TrustManager</span>[] <span class="pl-s1">trustAllCerts</span> = <span class="pl-k">new</span> <span class="pl-smi">javax</span>.<span class="pl-smi">net</span>.<span class="pl-smi">ssl</span>.<span class="pl-smi">TrustManager</span>[<span class="pl-c1">1</span>];
+        <span class="pl-smi">javax</span>.<span class="pl-smi">net</span>.<span class="pl-smi">ssl</span>.<span class="pl-smi">TrustManager</span> <span class="pl-s1">tm</span> = <span class="pl-k">new</span> <span class="pl-smi">miTM</span>();
+        <span class="pl-s1">trustAllCerts</span>[<span class="pl-c1">0</span>] = <span class="pl-s1">tm</span>;
+        <span class="pl-smi">javax</span>.<span class="pl-smi">net</span>.<span class="pl-smi">ssl</span>.<span class="pl-smi">SSLContext</span> <span class="pl-s1">sc</span> = <span class="pl-s1">javax</span>.<span class="pl-s1">net</span>.<span class="pl-s1">ssl</span>.<span class="pl-s1">SSLContext</span>.<span class="pl-en">getInstance</span>(<span class="pl-s">"SSL"</span>);
+        <span class="pl-s1">sc</span>.<span class="pl-en">init</span>(<span class="pl-c1">null</span>, <span class="pl-s1">trustAllCerts</span>, <span class="pl-c1">null</span>);
+        <span class="pl-k">return</span> <span class="pl-s1">sc</span>.<span class="pl-en">getSocketFactory</span>();
     }
-    static class miTM implements javax.net.ssl.TrustManager, javax.net.ssl.X509TrustManager {
-        public java.security.cert.X509Certificate[] getAcceptedIssuers() {
-            return null;
+    <span class="pl-k">static</span> <span class="pl-k">class</span> <span class="pl-smi">miTM</span> <span class="pl-k">implements</span> <span class="pl-smi">javax</span>.<span class="pl-smi">net</span>.<span class="pl-smi">ssl</span>.<span class="pl-smi">TrustManager</span>, <span class="pl-smi">javax</span>.<span class="pl-smi">net</span>.<span class="pl-smi">ssl</span>.<span class="pl-smi">X509TrustManager</span> {
+        <span class="pl-k">public</span> <span class="pl-smi">java</span>.<span class="pl-smi">security</span>.<span class="pl-smi">cert</span>.<span class="pl-smi">X509Certificate</span>[] <span class="pl-en">getAcceptedIssuers</span>() {
+            <span class="pl-k">return</span> <span class="pl-c1">null</span>;
         }
 
-        public boolean isServerTrusted(java.security.cert.X509Certificate[] certs) {
-            return true;
+        <span class="pl-k">public</span> <span class="pl-smi">boolean</span> <span class="pl-en">isServerTrusted</span>(<span class="pl-smi">java</span>.<span class="pl-smi">security</span>.<span class="pl-smi">cert</span>.<span class="pl-smi">X509Certificate</span>[] <span class="pl-s1">certs</span>) {
+            <span class="pl-k">return</span> <span class="pl-c1">true</span>;
         }
 
-        public boolean isClientTrusted(java.security.cert.X509Certificate[] certs) {
-            return true;
+        <span class="pl-k">public</span> <span class="pl-smi">boolean</span> <span class="pl-en">isClientTrusted</span>(<span class="pl-smi">java</span>.<span class="pl-smi">security</span>.<span class="pl-smi">cert</span>.<span class="pl-smi">X509Certificate</span>[] <span class="pl-s1">certs</span>) {
+            <span class="pl-k">return</span> <span class="pl-c1">true</span>;
         }
 
-        public void checkServerTrusted(java.security.cert.X509Certificate[] certs, String authType)
-                throws java.security.cert.CertificateException {
-            return;
+        <span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-en">checkServerTrusted</span>(<span class="pl-smi">java</span>.<span class="pl-smi">security</span>.<span class="pl-smi">cert</span>.<span class="pl-smi">X509Certificate</span>[] <span class="pl-s1">certs</span>, <span class="pl-smi">String</span> <span class="pl-s1">authType</span>)
+                <span class="pl-k">throws</span> <span class="pl-smi">java</span>.<span class="pl-smi">security</span>.<span class="pl-smi">cert</span>.<span class="pl-smi">CertificateException</span> {
+            <span class="pl-k">return</span>;
         }
 
-        public void checkClientTrusted(java.security.cert.X509Certificate[] certs, String authType)
-                throws java.security.cert.CertificateException {
-            return;
+        <span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-en">checkClientTrusted</span>(<span class="pl-smi">java</span>.<span class="pl-smi">security</span>.<span class="pl-smi">cert</span>.<span class="pl-smi">X509Certificate</span>[] <span class="pl-s1">certs</span>, <span class="pl-smi">String</span> <span class="pl-s1">authType</span>)
+                <span class="pl-k">throws</span> <span class="pl-smi">java</span>.<span class="pl-smi">security</span>.<span class="pl-smi">cert</span>.<span class="pl-smi">CertificateException</span> {
+            <span class="pl-k">return</span>;
         }
     }
 
-}
-</code></pre>
-<pre class="notranslate"><code class="notranslate">  &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
-            &lt;artifactId&gt;spring-cloud-starter-openfeign&lt;/artifactId&gt;
-        &lt;/dependency&gt;
-&lt;dependency&gt;
-            &lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;
-            &lt;artifactId&gt;httpclient&lt;/artifactId&gt;
-            &lt;version&gt;4.5.13&lt;/version&gt;
-        &lt;/dependency&gt;
-</code></pre>
-<pre class="notranslate"><code class="notranslate">@Component
-@FeignClient(name = "NgfwApiFeign", url = "https://fakeAIMASKurl", configuration = FeignConfiguration.class)
-public interface NgfwApiFeign {
-</code></pre></div>
+}</pre></div>
+<div class="highlight highlight-text-xml"><pre class="notranslate">  &lt;<span class="pl-ent">dependency</span>&gt;
+            &lt;<span class="pl-ent">groupId</span>&gt;org.springframework.cloud&lt;/<span class="pl-ent">groupId</span>&gt;
+            &lt;<span class="pl-ent">artifactId</span>&gt;spring-cloud-starter-openfeign&lt;/<span class="pl-ent">artifactId</span>&gt;
+        &lt;/<span class="pl-ent">dependency</span>&gt;
+&lt;<span class="pl-ent">dependency</span>&gt;
+            &lt;<span class="pl-ent">groupId</span>&gt;org.apache.httpcomponents&lt;/<span class="pl-ent">groupId</span>&gt;
+            &lt;<span class="pl-ent">artifactId</span>&gt;httpclient&lt;/<span class="pl-ent">artifactId</span>&gt;
+            &lt;<span class="pl-ent">version</span>&gt;4.5.13&lt;/<span class="pl-ent">version</span>&gt;
+        &lt;/<span class="pl-ent">dependency</span>&gt;</pre></div>
+<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-c1">@</span><span class="pl-c1">Component</span>
+<span class="pl-c1">@</span><span class="pl-c1">FeignClient</span>(<span class="pl-s1">name</span> = <span class="pl-s">"NgfwApiFeign"</span>, <span class="pl-s1">url</span> = <span class="pl-s">"https://fakeAIMASKurl"</span>, <span class="pl-s1">configuration</span> = <span class="pl-smi">FeignConfiguration</span>.<span class="pl-k">class</span>)
+<span class="pl-k">public</span> <span class="pl-k">interface</span> <span class="pl-smi">NgfwApiFeign</span> {</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

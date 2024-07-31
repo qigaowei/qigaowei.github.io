@@ -1,4 +1,4 @@
-```
+```java
 import feign.Client;
 import feign.Feign;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
@@ -68,7 +68,7 @@ public class FeignConfiguration {
 
 }
 ```
-```
+```xml
   <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
@@ -79,7 +79,7 @@ public class FeignConfiguration {
             <version>4.5.13</version>
         </dependency>
 ```
-```
+```java
 @Component
 @FeignClient(name = "NgfwApiFeign", url = "https://fakeAIMASKurl", configuration = FeignConfiguration.class)
 public interface NgfwApiFeign {
