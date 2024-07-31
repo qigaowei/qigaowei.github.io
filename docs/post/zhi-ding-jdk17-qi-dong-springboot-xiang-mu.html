@@ -11,7 +11,7 @@
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
 <meta name="description" content="创建一个如下的shell脚本
-```
+``` shell
 #!/bin/bash
 
 export JAVA_HOME=/usr/local/jdk-17.0.8/
@@ -24,7 +24,7 @@ nohup java -jar chatgpt-0.0.1-SNAPSHOT.jar > /dev/null 2>&1 &
 。">
 <meta property="og:title" content="指定jdk17启动springboot项目">
 <meta property="og:description" content="创建一个如下的shell脚本
-```
+``` shell
 #!/bin/bash
 
 export JAVA_HOME=/usr/local/jdk-17.0.8/
@@ -39,7 +39,7 @@ nohup java -jar chatgpt-0.0.1-SNAPSHOT.jar > /dev/null 2>&1 &
 <meta property="og:url" content="https://qigaowei.github.io/post/zhi-ding-jdk17-qi-dong-springboot-xiang-mu.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>指定jdk17启动springboot项目</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -95,15 +95,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><p>创建一个如下的shell脚本</p>
-<pre class="notranslate"><code class="notranslate">#!/bin/bash
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#!</span>/bin/bash</span>
 
-export JAVA_HOME=/usr/local/jdk-17.0.8/
-export JRE_HOME=${JAVA_HOME}/jre
-export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
-export PATH=.:${JAVA_HOME}/bin:$PATH
+<span class="pl-k">export</span> JAVA_HOME=/usr/local/jdk-17.0.8/
+<span class="pl-k">export</span> JRE_HOME=<span class="pl-smi">${JAVA_HOME}</span>/jre
+<span class="pl-k">export</span> CLASSPATH=.:<span class="pl-smi">${JAVA_HOME}</span>/lib:<span class="pl-smi">${JRE_HOME}</span>/lib
+<span class="pl-k">export</span> PATH=.:<span class="pl-smi">${JAVA_HOME}</span>/bin:<span class="pl-smi">$PATH</span>
 
-nohup java -jar chatgpt-0.0.1-SNAPSHOT.jar &gt; /dev/null 2&gt;&amp;1 &amp;
-</code></pre></div>
+nohup java -jar chatgpt-0.0.1-SNAPSHOT.jar <span class="pl-k">&gt;</span> /dev/null <span class="pl-k">2&gt;&amp;1</span> <span class="pl-k">&amp;</span></pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

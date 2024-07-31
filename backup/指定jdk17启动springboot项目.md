@@ -1,5 +1,5 @@
 创建一个如下的shell脚本
-```
+``` shell
 #!/bin/bash
 
 export JAVA_HOME=/usr/local/jdk-17.0.8/
