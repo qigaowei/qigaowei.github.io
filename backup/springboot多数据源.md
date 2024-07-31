@@ -1,4 +1,4 @@
-```   
+```xml   
       <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
@@ -19,7 +19,7 @@ spring.datasource.dynamic.datasource.second.password=A123456
 spring.datasource.dynamic.datasource.second.driver-class-name=com.mysql.cj.jdbc.Driver
 ```
 
-```
+```java
 @Service
 @DS("master")
 public class EnterpriseBasicInfoServiceImpl extends ServiceImpl<EnterpriseBasicInfoMapper, EnterpriseBasicInfo>{

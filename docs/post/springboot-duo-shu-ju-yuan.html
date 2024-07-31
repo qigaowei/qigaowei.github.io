@@ -10,7 +10,7 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="```   
+<meta name="description" content="```xml   
       <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
@@ -31,14 +31,14 @@ spring.datasource.dynamic.datasource.second.password=A123456
 spring.datasource.dynamic.datasource.second.driver-class-name=com.mysql.cj.jdbc.Driver
 ```
 
-```
+```java
 @Service
 @DS('master')
 public class EnterpriseBasicInfoServiceImpl extends ServiceImpl<EnterpriseBasicInfoMapper, EnterpriseBasicInfo>{
 ```
  -    DS('master')这个注解的意思就是指定数据库连接为master的数据连接。">
 <meta property="og:title" content="springboot多数据源">
-<meta property="og:description" content="```   
+<meta property="og:description" content="```xml   
       <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
@@ -59,7 +59,7 @@ spring.datasource.dynamic.datasource.second.password=A123456
 spring.datasource.dynamic.datasource.second.driver-class-name=com.mysql.cj.jdbc.Driver
 ```
 
-```
+```java
 @Service
 @DS('master')
 public class EnterpriseBasicInfoServiceImpl extends ServiceImpl<EnterpriseBasicInfoMapper, EnterpriseBasicInfo>{
@@ -69,7 +69,7 @@ public class EnterpriseBasicInfoServiceImpl extends ServiceImpl<EnterpriseBasicI
 <meta property="og:url" content="https://qigaowei.github.io/post/springboot-duo-shu-ju-yuan.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>springboot多数据源</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -124,12 +124,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre class="notranslate"><code class="notranslate">      &lt;dependency&gt;
-            &lt;groupId&gt;com.baomidou&lt;/groupId&gt;
-            &lt;artifactId&gt;dynamic-datasource-spring-boot-starter&lt;/artifactId&gt;
-            &lt;version&gt;3.4.1&lt;/version&gt;
-        &lt;/dependency&gt;
-</code></pre>
+<div class="markdown-body" id="postBody"><div class="highlight highlight-text-xml"><pre class="notranslate">      &lt;<span class="pl-ent">dependency</span>&gt;
+            &lt;<span class="pl-ent">groupId</span>&gt;com.baomidou&lt;/<span class="pl-ent">groupId</span>&gt;
+            &lt;<span class="pl-ent">artifactId</span>&gt;dynamic-datasource-spring-boot-starter&lt;/<span class="pl-ent">artifactId</span>&gt;
+            &lt;<span class="pl-ent">version</span>&gt;3.4.1&lt;/<span class="pl-ent">version</span>&gt;
+        &lt;/<span class="pl-ent">dependency</span>&gt;</pre></div>
 <pre class="notranslate"><code class="notranslate">spring.datasource.dynamic.primary=master 
 spring.datasource.dynamic.strict=true
 spring.datasource.dynamic.datasource.master.url=jdbc:mysql://10.1.1.160:3306/account_gateway?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=GMT%2B8
@@ -141,10 +140,9 @@ spring.datasource.dynamic.datasource.second.username=root
 spring.datasource.dynamic.datasource.second.password=A123456
 spring.datasource.dynamic.datasource.second.driver-class-name=com.mysql.cj.jdbc.Driver
 </code></pre>
-<pre class="notranslate"><code class="notranslate">@Service
-@DS("master")
-public class EnterpriseBasicInfoServiceImpl extends ServiceImpl&lt;EnterpriseBasicInfoMapper, EnterpriseBasicInfo&gt;{
-</code></pre>
+<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-c1">@</span><span class="pl-c1">Service</span>
+<span class="pl-c1">@</span><span class="pl-c1">DS</span>(<span class="pl-s">"master"</span>)
+<span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-smi">EnterpriseBasicInfoServiceImpl</span> <span class="pl-k">extends</span> <span class="pl-smi">ServiceImpl</span>&lt;<span class="pl-smi">EnterpriseBasicInfoMapper</span>, <span class="pl-smi">EnterpriseBasicInfo</span>&gt;{</pre></div>
 <ul>
 <li>DS("master")这个注解的意思就是指定数据库连接为master的数据连接</li>
 </ul></div>
