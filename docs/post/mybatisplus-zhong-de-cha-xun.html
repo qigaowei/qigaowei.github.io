@@ -10,13 +10,13 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="```
+<meta name="description" content="```java
 LambdaQueryWrapper<NsAbc> lambdaQueryWrapper = Wrappers.lambdaQuery();
 		lambdaQueryWrapper.eq(NsAbc::getId,dto.getId());
 		List<NsAbc> nsAbcs=nsAbcMapper.selectList(lambdaQueryWrapper);
 ```。">
 <meta property="og:title" content="mybatisplus中的查询">
-<meta property="og:description" content="```
+<meta property="og:description" content="```java
 LambdaQueryWrapper<NsAbc> lambdaQueryWrapper = Wrappers.lambdaQuery();
 		lambdaQueryWrapper.eq(NsAbc::getId,dto.getId());
 		List<NsAbc> nsAbcs=nsAbcMapper.selectList(lambdaQueryWrapper);
@@ -25,7 +25,7 @@ LambdaQueryWrapper<NsAbc> lambdaQueryWrapper = Wrappers.lambdaQuery();
 <meta property="og:url" content="https://qigaowei.github.io/post/mybatisplus-zhong-de-cha-xun.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>mybatisplus中的查询</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -80,10 +80,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre class="notranslate"><code class="notranslate">LambdaQueryWrapper&lt;NsAbc&gt; lambdaQueryWrapper = Wrappers.lambdaQuery();
-		lambdaQueryWrapper.eq(NsAbc::getId,dto.getId());
-		List&lt;NsAbc&gt; nsAbcs=nsAbcMapper.selectList(lambdaQueryWrapper);
-</code></pre></div>
+<div class="markdown-body" id="postBody"><div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-smi">LambdaQueryWrapper</span>&lt;<span class="pl-smi">NsAbc</span>&gt; <span class="pl-s1">lambdaQueryWrapper</span> = <span class="pl-smi">Wrappers</span>.<span class="pl-en">lambdaQuery</span>();
+		<span class="pl-s1">lambdaQueryWrapper</span>.<span class="pl-en">eq</span>(<span class="pl-smi">NsAbc</span>::<span class="pl-s1">getId</span>,<span class="pl-s1">dto</span>.<span class="pl-en">getId</span>());
+		<span class="pl-smi">List</span>&lt;<span class="pl-smi">NsAbc</span>&gt; <span class="pl-s1">nsAbcs</span>=<span class="pl-s1">nsAbcMapper</span>.<span class="pl-en">selectList</span>(<span class="pl-s1">lambdaQueryWrapper</span>);</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
