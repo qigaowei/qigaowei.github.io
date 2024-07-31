@@ -10,10 +10,10 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="```】
-DateUtil.parse(DateUtil.format(dto.getInsDatetimeTo(),'yyyyMMdd235959'))
+<meta name="description" content="```java
+DateUtil.parse(DateUtil.format(new Date(),'yyyyMMdd235959'))
 ```
-```
+```xml
  <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
@@ -21,10 +21,10 @@ DateUtil.parse(DateUtil.format(dto.getInsDatetimeTo(),'yyyyMMdd235959'))
         </dependency>
 ```。">
 <meta property="og:title" content="获取当天指定时分秒的简单方法">
-<meta property="og:description" content="```】
-DateUtil.parse(DateUtil.format(dto.getInsDatetimeTo(),'yyyyMMdd235959'))
+<meta property="og:description" content="```java
+DateUtil.parse(DateUtil.format(new Date(),'yyyyMMdd235959'))
 ```
-```
+```xml
  <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
@@ -35,7 +35,7 @@ DateUtil.parse(DateUtil.format(dto.getInsDatetimeTo(),'yyyyMMdd235959'))
 <meta property="og:url" content="https://qigaowei.github.io/post/huo-qu-dang-tian-zhi-ding-shi-fen-miao-de-jian-dan-fang-fa.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>获取当天指定时分秒的简单方法</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -90,14 +90,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre lang="】" class="notranslate"><code class="notranslate">DateUtil.parse(DateUtil.format(dto.getInsDatetimeTo(),"yyyyMMdd235959"))
-</code></pre>
-<pre class="notranslate"><code class="notranslate"> &lt;dependency&gt;
-            &lt;groupId&gt;cn.hutool&lt;/groupId&gt;
-            &lt;artifactId&gt;hutool-all&lt;/artifactId&gt;
-            &lt;version&gt;5.7.14&lt;/version&gt;
-        &lt;/dependency&gt;
-</code></pre></div>
+<div class="markdown-body" id="postBody"><div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-smi">DateUtil</span>.<span class="pl-en">parse</span>(<span class="pl-smi">DateUtil</span>.<span class="pl-en">format</span>(<span class="pl-k">new</span> <span class="pl-smi">Date</span>(),<span class="pl-s">"yyyyMMdd235959"</span>))</pre></div>
+<div class="highlight highlight-text-xml"><pre class="notranslate"> &lt;<span class="pl-ent">dependency</span>&gt;
+            &lt;<span class="pl-ent">groupId</span>&gt;cn.hutool&lt;/<span class="pl-ent">groupId</span>&gt;
+            &lt;<span class="pl-ent">artifactId</span>&gt;hutool-all&lt;/<span class="pl-ent">artifactId</span>&gt;
+            &lt;<span class="pl-ent">version</span>&gt;5.7.14&lt;/<span class="pl-ent">version</span>&gt;
+        &lt;/<span class="pl-ent">dependency</span>&gt;</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
