@@ -18,7 +18,7 @@
         if(vo.getPage()==null){
             vo.setPage(0);
         }
-        String html=HttpRequest.get('https://doc.htmcdn.com:39988/search?word='+vo.getKey()+'&sort=&page='+vo.getPage()+'')
+        String html=HttpRequest.get('https://doc2.htmcdn.com:39988/search?word='+vo.getKey()+'&sort=&page='+vo.getPage()+'')
                 .header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7')
                 .header('Accept-Encoding', 'gzip, deflate, br, zstd')
                 .header('Accept-Language', 'zh')
@@ -88,7 +88,7 @@
         if(vo.getPage()==null){
             vo.setPage(0);
         }
-        String html=HttpRequest.get('https://doc.htmcdn.com:39988/search?word='+vo.getKey()+'&sort=&page='+vo.getPage()+'')
+        String html=HttpRequest.get('https://doc2.htmcdn.com:39988/search?word='+vo.getKey()+'&sort=&page='+vo.getPage()+'')
                 .header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7')
                 .header('Accept-Encoding', 'gzip, deflate, br, zstd')
                 .header('Accept-Language', 'zh')
@@ -215,7 +215,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         <span class="pl-k">if</span>(<span class="pl-s1">vo</span>.<span class="pl-en">getPage</span>()==<span class="pl-c1">null</span>){
             <span class="pl-s1">vo</span>.<span class="pl-en">setPage</span>(<span class="pl-c1">0</span>);
         }
-        <span class="pl-smi">String</span> <span class="pl-s1">html</span>=<span class="pl-smi">HttpRequest</span>.<span class="pl-en">get</span>(<span class="pl-s">"https://doc.htmcdn.com:39988/search?word="</span>+<span class="pl-s1">vo</span>.<span class="pl-en">getKey</span>()+<span class="pl-s">"&amp;sort=&amp;page="</span>+<span class="pl-s1">vo</span>.<span class="pl-en">getPage</span>()+<span class="pl-s">""</span>)
+        <span class="pl-smi">String</span> <span class="pl-s1">html</span>=<span class="pl-smi">HttpRequest</span>.<span class="pl-en">get</span>(<span class="pl-s">"https://doc2.htmcdn.com:39988/search?word="</span>+<span class="pl-s1">vo</span>.<span class="pl-en">getKey</span>()+<span class="pl-s">"&amp;sort=&amp;page="</span>+<span class="pl-s1">vo</span>.<span class="pl-en">getPage</span>()+<span class="pl-s">""</span>)
                 .<span class="pl-en">header</span>(<span class="pl-s">"Accept"</span>, <span class="pl-s">"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"</span>)
                 .<span class="pl-en">header</span>(<span class="pl-s">"Accept-Encoding"</span>, <span class="pl-s">"gzip, deflate, br, zstd"</span>)
                 .<span class="pl-en">header</span>(<span class="pl-s">"Accept-Language"</span>, <span class="pl-s">"zh"</span>)
