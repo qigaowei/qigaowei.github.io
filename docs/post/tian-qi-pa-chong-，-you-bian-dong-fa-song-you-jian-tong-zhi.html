@@ -47,7 +47,7 @@ public void china(String city,String code,String time){
             }
             String str=FileUtil.readString(tianqi,Charset.forName('UTF-8'));
             if(j>0&&!(StrUtil.isNotBlank(str)&&str.equals(sb.toString()))){
-               //发送邮件
+               //发送邮件，自己编写
                 FileUtil.writeBytes(new byte[0], tianqi);
                 FileUtil.appendString(sb.toString(),tianqi, Charset.forName('UTF-8'));
             }
@@ -99,7 +99,7 @@ public void china(String city,String code,String time){
             }
             String str=FileUtil.readString(tianqi,Charset.forName('UTF-8'));
             if(j>0&&!(StrUtil.isNotBlank(str)&&str.equals(sb.toString()))){
-               //发送邮件
+               //发送邮件，自己编写
                 FileUtil.writeBytes(new byte[0], tianqi);
                 FileUtil.appendString(sb.toString(),tianqi, Charset.forName('UTF-8'));
             }
@@ -208,7 +208,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
             }
             <span class="pl-smi">String</span> <span class="pl-s1">str</span>=<span class="pl-smi">FileUtil</span>.<span class="pl-en">readString</span>(<span class="pl-s1">tianqi</span>,<span class="pl-smi">Charset</span>.<span class="pl-en">forName</span>(<span class="pl-s">"UTF-8"</span>));
             <span class="pl-k">if</span>(<span class="pl-s1">j</span>&gt;<span class="pl-c1">0</span>&amp;&amp;!(<span class="pl-smi">StrUtil</span>.<span class="pl-en">isNotBlank</span>(<span class="pl-s1">str</span>)&amp;&amp;<span class="pl-s1">str</span>.<span class="pl-en">equals</span>(<span class="pl-s1">sb</span>.<span class="pl-en">toString</span>()))){
-               <span class="pl-c">//发送邮件</span>
+               <span class="pl-c">//发送邮件，自己编写</span>
                 <span class="pl-smi">FileUtil</span>.<span class="pl-en">writeBytes</span>(<span class="pl-k">new</span> <span class="pl-smi">byte</span>[<span class="pl-c1">0</span>], <span class="pl-s1">tianqi</span>);
                 <span class="pl-smi">FileUtil</span>.<span class="pl-en">appendString</span>(<span class="pl-s1">sb</span>.<span class="pl-en">toString</span>(),<span class="pl-s1">tianqi</span>, <span class="pl-smi">Charset</span>.<span class="pl-en">forName</span>(<span class="pl-s">"UTF-8"</span>));
             }

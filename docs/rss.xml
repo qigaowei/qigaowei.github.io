@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Sun, 04 Aug 2024 02:17:34 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>天气爬虫，有变动发送邮件通知</title><link>https://qigaowei.github.io/post/tian-qi-pa-chong-%EF%BC%8C-you-bian-dong-fa-song-you-jian-tong-zhi.html</link><description>```java&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Mon, 05 Aug 2024 01:13:53 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>天气爬虫，有变动发送邮件通知</title><link>https://qigaowei.github.io/post/tian-qi-pa-chong-%EF%BC%8C-you-bian-dong-fa-song-you-jian-tong-zhi.html</link><description>```java&#13;
 public void china(String city,String code,String time){&#13;
         StringBuffer sb=new StringBuffer();&#13;
         String html=HttpUtil.&#13;
@@ -36,7 +36,7 @@ public void china(String city,String code,String time){&#13;
             }&#13;
             String str=FileUtil.readString(tianqi,Charset.forName('UTF-8'));&#13;
             if(j&gt;0&amp;&amp;!(StrUtil.isNotBlank(str)&amp;&amp;str.equals(sb.toString()))){&#13;
-               //发送邮件&#13;
+               //发送邮件，自己编写&#13;
                 FileUtil.writeBytes(new byte[0], tianqi);&#13;
                 FileUtil.appendString(sb.toString(),tianqi, Charset.forName('UTF-8'));&#13;
             }&#13;
