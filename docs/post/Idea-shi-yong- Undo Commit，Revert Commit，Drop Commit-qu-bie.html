@@ -11,16 +11,16 @@
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
 <meta name="description" content="
-是否删除对代码的修改 | 是否删除Commit记录 | 是否会新增Commit记录
--- | -- | --
+-|是否删除对代码的修改 | 是否删除Commit记录 | 是否会新增Commit记录
+-|-- | -- | --
 Undo Commit | 不会 | 未Push会，已Push不会 | 不会
 Revert Commit | 会 | 不会 | 会
 Drop Commit | 会 | 未Push会，已Push不会 | 不会
 。">
 <meta property="og:title" content="Idea使用 Undo Commit，Revert Commit，Drop Commit区别">
 <meta property="og:description" content="
-是否删除对代码的修改 | 是否删除Commit记录 | 是否会新增Commit记录
--- | -- | --
+-|是否删除对代码的修改 | 是否删除Commit记录 | 是否会新增Commit记录
+-|-- | -- | --
 Undo Commit | 不会 | 未Push会，已Push不会 | 不会
 Revert Commit | 会 | 不会 | 会
 Drop Commit | 会 | 未Push会，已Push不会 | 不会
@@ -68,7 +68,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
-    <a href="https://github.com/qigaowei/qigaowei.github.io/issues/42" target="_blank" class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/qigaowei/qigaowei.github.io/issues/43" target="_blank" class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -87,6 +87,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
+<th>-</th>
 <th>是否删除对代码的修改</th>
 <th>是否删除Commit记录</th>
 <th>是否会新增Commit记录</th>
@@ -97,16 +98,19 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <td>Undo Commit</td>
 <td>不会</td>
 <td>未Push会，已Push不会</td>
+<td>不会</td>
 </tr>
 <tr>
 <td>Revert Commit</td>
 <td>会</td>
 <td>不会</td>
+<td>会</td>
 </tr>
 <tr>
 <td>Drop Commit</td>
 <td>会</td>
 <td>未Push会，已Push不会</td>
+<td>不会</td>
 </tr>
 </tbody>
 </table></markdown-accessiblity-table></div>
