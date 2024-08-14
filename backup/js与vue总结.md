@@ -24,3 +24,10 @@ WHStyle = ref({
  width="100%"
 ```
 6. 新增删除以后，要刷新分页，要不删除会报错，找不到id
+7.  动态生成表头，vue页面里面，必须要有对应表头的如下代码
+```
+<template #execShowName_default="{ row }">
+                  <span
+                  >{{ row.showName }}</span>
+                </template>
+```
