@@ -31,3 +31,8 @@ WHStyle = ref({
                   >{{ row.showName }}</span>
                 </template>
 ```
+8.  值得注意的写法
+```
+const typeList = ref([]);
+typeList.value[0]
+```
