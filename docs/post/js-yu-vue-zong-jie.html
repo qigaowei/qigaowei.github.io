@@ -43,10 +43,26 @@ WHStyle = ref({
                   >{{ row.showName }}</span>
                 </template>
 ```
-8.  值得注意的写法
+8.  值得注意的写法,获取数组的第一个元素
 ```
 const typeList = ref([]);
 typeList.value[0]
+```
+9.  实现按顺序加载方法，所有的方法都要加
+```
+onMounted(async () => {
+  await getSurveyTypeList();
+  await getList();
+});
+async function getList(){
+  await getSpecialSelectedList();
+  await getSpecialUnselectedList();
+}
+async function getSpecialSelectedList() {
+  await listArea({checkType:nmTypeCode.value}).then((response) => {
+    specialSelectedList.value = response.rows;
+  });
+}
 ```。">
 <meta property="og:title" content="js与vue总结">
 <meta property="og:description" content="1. const checkedRows = ref([])
@@ -82,10 +98,26 @@ WHStyle = ref({
                   >{{ row.showName }}</span>
                 </template>
 ```
-8.  值得注意的写法
+8.  值得注意的写法,获取数组的第一个元素
 ```
 const typeList = ref([]);
 typeList.value[0]
+```
+9.  实现按顺序加载方法，所有的方法都要加
+```
+onMounted(async () => {
+  await getSurveyTypeList();
+  await getList();
+});
+async function getList(){
+  await getSpecialSelectedList();
+  await getSpecialUnselectedList();
+}
+async function getSpecialSelectedList() {
+  await listArea({checkType:nmTypeCode.value}).then((response) => {
+    specialSelectedList.value = response.rows;
+  });
+}
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/js-yu-vue-zong-jie.html">
@@ -192,10 +224,27 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
                 &lt;/template&gt;
 </code></pre>
 <ol start="8">
-<li>值得注意的写法</li>
+<li>值得注意的写法,获取数组的第一个元素</li>
 </ol>
 <pre class="notranslate"><code class="notranslate">const typeList = ref([]);
 typeList.value[0]
+</code></pre>
+<ol start="9">
+<li>实现按顺序加载方法，所有的方法都要加</li>
+</ol>
+<pre class="notranslate"><code class="notranslate">onMounted(async () =&gt; {
+  await getSurveyTypeList();
+  await getList();
+});
+async function getList(){
+  await getSpecialSelectedList();
+  await getSpecialUnselectedList();
+}
+async function getSpecialSelectedList() {
+  await listArea({checkType:nmTypeCode.value}).then((response) =&gt; {
+    specialSelectedList.value = response.rows;
+  });
+}
 </code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 

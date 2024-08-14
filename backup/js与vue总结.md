@@ -31,8 +31,24 @@ WHStyle = ref({
                   >{{ row.showName }}</span>
                 </template>
 ```
-8.  值得注意的写法
+8.  值得注意的写法,获取数组的第一个元素
 ```
 const typeList = ref([]);
 typeList.value[0]
+```
+9.  实现按顺序加载方法，所有的方法都要加
+```
+onMounted(async () => {
+  await getSurveyTypeList();
+  await getList();
+});
+async function getList(){
+  await getSpecialSelectedList();
+  await getSpecialUnselectedList();
+}
+async function getSpecialSelectedList() {
+  await listArea({checkType:nmTypeCode.value}).then((response) => {
+    specialSelectedList.value = response.rows;
+  });
+}
 ```
