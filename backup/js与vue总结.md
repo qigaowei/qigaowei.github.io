@@ -36,7 +36,7 @@ WHStyle = ref({
 const typeList = ref([]);
 typeList.value[0]
 ```
-9.  实现按顺序加载方法，所有的方法都要加
+9.  实现按顺序加载方法，所有的方法都要加async和await 
 ```
 onMounted(async () => {
   await getSurveyTypeList();
