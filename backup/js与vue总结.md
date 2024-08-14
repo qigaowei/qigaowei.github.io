@@ -23,7 +23,11 @@ WHStyle = ref({
 ```
  width="100%"
 ```
-6. 新增删除以后，要刷新分页，要不删除会报错，找不到id
+6.  值得注意的写法,获取数组的第一个元素
+```
+const typeList = ref([]);
+typeList.value[0]
+```
 7.  动态生成表头，vue页面里面，必须要有对应表头的如下代码
 ```
 <template #execShowName_default="{ row }">
@@ -31,12 +35,7 @@ WHStyle = ref({
                   >{{ row.showName }}</span>
                 </template>
 ```
-8.  值得注意的写法,获取数组的第一个元素
-```
-const typeList = ref([]);
-typeList.value[0]
-```
-9.  实现按顺序加载方法，所有的方法都要加async和await 
+8. 实现按顺序加载方法，所有的方法都要加async和await 
 ```
 onMounted(async () => {
   await getSurveyTypeList();
