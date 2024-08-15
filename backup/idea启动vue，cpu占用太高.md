@@ -1,5 +1,5 @@
 - idea启动vue，cpu占用太高
 - vscode也会占用cpu，内存
-- 我直接使用git bash启动
-- 修改前端代码后，不用重启
+- 我直接使用git bash，npm run dev启动
+- 修改前端代码后，也不用重启
 - 电脑性能不行的悲哀

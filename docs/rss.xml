@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Thu, 15 Aug 2024 03:12:43 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>idea启动vue，cpu占用太高</title><link>https://qigaowei.github.io/post/idea-qi-dong-vue%EF%BC%8Ccpu-zhan-yong-tai-gao.html</link><description>- idea启动vue，cpu占用太高&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Thu, 15 Aug 2024 06:25:08 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>idea启动vue，cpu占用太高</title><link>https://qigaowei.github.io/post/idea-qi-dong-vue%EF%BC%8Ccpu-zhan-yong-tai-gao.html</link><description>- idea启动vue，cpu占用太高&#13;
 - vscode也会占用cpu，内存&#13;
-- 我直接使用git bash启动&#13;
-- 修改前端代码后，不用重启&#13;
+- 我直接使用git bash，npm run dev启动&#13;
+- 修改前端代码后，也不用重启&#13;
 - 电脑性能不行的悲哀。</description><guid isPermaLink="true">https://qigaowei.github.io/post/idea-qi-dong-vue%EF%BC%8Ccpu-zhan-yong-tai-gao.html</guid><pubDate>Wed, 14 Aug 2024 04:00:33 +0000</pubDate></item><item><title>Idea使用 Undo Commit，Revert Commit，Drop Commit区别</title><link>https://qigaowei.github.io/post/Idea-shi-yong-%20Undo%20Commit%EF%BC%8CRevert%20Commit%EF%BC%8CDrop%20Commit-qu-bie.html</link><description>&#13;
 -|是否删除对代码的修改 | 是否删除Commit记录 | 是否会新增Commit记录&#13;
 -|-- | -- | --&#13;
