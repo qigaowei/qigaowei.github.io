@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Thu, 15 Aug 2024 07:39:00 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>一个小bug</title><link>https://qigaowei.github.io/post/yi-ge-xiao-bug.html</link><description>- 目的是如果handoverRecordDetailsVo的大小小于30，就给他填充到30，实际不是这样的效果&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Fri, 16 Aug 2024 06:23:34 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>一个小bug</title><link>https://qigaowei.github.io/post/yi-ge-xiao-bug.html</link><description>- 目的是如果handoverRecordDetailsVo的大小小于30，就给他填充到30，实际不是这样的效果&#13;
 ```java&#13;
 List handoverRecordDetailsVo = new ArrayList();&#13;
 if(handoverRecordDetailsVo.size()&lt;30){&#13;
@@ -284,6 +284,7 @@ ORDER BY RAND()&#13;
 ![image](https://github.com/user-attachments/assets/704e25f6-ff7a-4298-8b72-ddb038f75fc9)&#13;
 。</description><guid isPermaLink="true">https://qigaowei.github.io/post/ci-li-yi-jian-fu-zhi-yuan-ma.html</guid><pubDate>Fri, 26 Jul 2024 00:28:28 +0000</pubDate></item><item><title>各种在线视频下载-简单免费</title><link>https://qigaowei.github.io/post/ge-zhong-zai-xian-shi-pin-xia-zai---jian-dan-mian-fei.html</link><description>1. 获取m3u8地址&#13;
 - 谷歌浏览器搜插件Video DownloadHelper&#13;
+- https://www.downloadhelper.net/&#13;
 2. 下载工具&#13;
 - https://github.com/nilaoda/N_m3u8DL-CLI&#13;
 。</description><guid isPermaLink="true">https://qigaowei.github.io/post/ge-zhong-zai-xian-shi-pin-xia-zai---jian-dan-mian-fei.html</guid><pubDate>Thu, 25 Jul 2024 09:12:54 +0000</pubDate></item><item><title>docker镜像国内可用地址</title><link>https://qigaowei.github.io/post/docker-jing-xiang-guo-nei-ke-yong-di-zhi.html</link><description>- https://github.com/docker-practice/docker-registry-cn-mirror-test&#13;
