@@ -1,5 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Fri, 16 Aug 2024 06:41:28 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>一个小bug</title><link>https://qigaowei.github.io/post/yi-ge-xiao-bug.html</link><description>- 目的是如果handoverRecordDetailsVo的大小小于30，就给他填充到30，实际不是这样的效果&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Wed, 21 Aug 2024 03:52:05 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>oracle只比较日期，不比较时分秒</title><link>https://qigaowei.github.io/post/oracle-zhi-bi-jiao-ri-qi-%EF%BC%8C-bu-bi-jiao-shi-fen-miao.html</link><description>```sql&#13;
+SELECT &#13;
+	op.OPERATION_TIME&#13;
+FROM&#13;
+	his_nurse.NS_OPERATION_RECORD op&#13;
+WHERE&#13;
+	TO_CHAR(op.OPERATION_DATE, 'YYYY-MM-DD') = '2024-08-21'&#13;
+```&#13;
+- 上面正确，下面不正确&#13;
+```sql&#13;
+SELECT &#13;
+	op.OPERATION_TIME&#13;
+FROM&#13;
+	his_nurse.NS_OPERATION_RECORD op&#13;
+WHERE&#13;
+	TO_DATE(op.OPERATION_DATE, 'YYYY-MM-DD') = '2024-08-21'&#13;
+```。</description><guid isPermaLink="true">https://qigaowei.github.io/post/oracle-zhi-bi-jiao-ri-qi-%EF%BC%8C-bu-bi-jiao-shi-fen-miao.html</guid><pubDate>Wed, 21 Aug 2024 03:51:43 +0000</pubDate></item><item><title>一个小bug</title><link>https://qigaowei.github.io/post/yi-ge-xiao-bug.html</link><description>- 目的是如果handoverRecordDetailsVo的大小小于30，就给他填充到30，实际不是这样的效果&#13;
 ```java&#13;
 List handoverRecordDetailsVo = new ArrayList();&#13;
 if(handoverRecordDetailsVo.size()&lt;30){&#13;
