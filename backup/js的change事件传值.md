@@ -7,4 +7,5 @@ function changeS(e){
   });
 ```
 
--  要用e获取值，而不是checkType:checkType.value，原来的定义为let checkType= ref('');。
+-  要用e获取值，而不是checkType:checkType.value，
+- 原来的定义为let checkType= ref('');。
