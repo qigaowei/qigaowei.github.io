@@ -20,6 +20,14 @@ function changeS(e){
 ```
 
 -  要用e获取值，而不是checkType:checkType.value，
+ ```JavaScript
+@change='changeS'
+
+function changeS(){
+  listGroup({checkType:checkType.value}).then((response) => {
+    specialSelectedList.value = response.data;
+  });
+```
 - 原来的定义为let checkType= ref('');。">
 <meta property="og:title" content="vue的change事件传值">
 <meta property="og:description" content="```JavaScript
@@ -32,6 +40,14 @@ function changeS(e){
 ```
 
 -  要用e获取值，而不是checkType:checkType.value，
+ ```JavaScript
+@change='changeS'
+
+function changeS(){
+  listGroup({checkType:checkType.value}).then((response) => {
+    specialSelectedList.value = response.data;
+  });
+```
 - 原来的定义为let checkType= ref('');。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/vue-de-change-shi-jian-chuan-zhi.html">
@@ -111,6 +127,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
   <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span><span class="pl-kos"></span></pre></div>
 <ul>
 <li>要用e获取值，而不是checkType:checkType.value，</li>
+</ul>
+<div class="highlight highlight-source-js"><pre class="notranslate">@<span class="pl-s1">change</span><span class="pl-c1">=</span>"<span class="pl-s1">changeS</span>"
+
+<span class="pl-k">function</span> <span class="pl-en">changeS</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">{</span>
+ <span class="pl-en">listGroup</span><span class="pl-kos">(</span><span class="pl-kos">{</span><span class="pl-c1">checkType</span>:<span class="pl-s1">checkType</span><span class="pl-kos">.</span><span class="pl-c1">value</span><span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">.</span><span class="pl-en">then</span><span class="pl-kos">(</span><span class="pl-kos">(</span><span class="pl-s1">response</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">{</span>
+   <span class="pl-s1">specialSelectedList</span><span class="pl-kos">.</span><span class="pl-c1">value</span> <span class="pl-c1">=</span> <span class="pl-s1">response</span><span class="pl-kos">.</span><span class="pl-c1">data</span><span class="pl-kos">;</span>
+ <span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span><span class="pl-kos"></span></pre></div>
+<ul>
 <li>原来的定义为let checkType= ref('');。</li>
 </ul></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
