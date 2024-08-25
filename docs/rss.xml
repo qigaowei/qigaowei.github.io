@@ -1,5 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Thu, 22 Aug 2024 03:58:52 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>vue的change事件传值</title><link>https://qigaowei.github.io/post/vue-de-change-shi-jian-chuan-zhi.html</link><description>```JavaScript&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Sun, 25 Aug 2024 11:53:28 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>PC端打开多个微信</title><link>https://qigaowei.github.io/post/PC-duan-da-kai-duo-ge-wei-xin.html</link><description>```shell&#13;
+@echo off&#13;
+start '' 'D:\Program Files\Tencent\WeChat\WeChat.exe' &#13;
+start '' 'D:\Program Files\Tencent\WeChat\WeChat.exe'&#13;
+exit&#13;
+```&#13;
+- 把上述保存到bat格式文件里面&#13;
+- 把地址换成自己的程序路径。</description><guid isPermaLink="true">https://qigaowei.github.io/post/PC-duan-da-kai-duo-ge-wei-xin.html</guid><pubDate>Sun, 25 Aug 2024 11:53:07 +0000</pubDate></item><item><title>vue的change事件传值</title><link>https://qigaowei.github.io/post/vue-de-change-shi-jian-chuan-zhi.html</link><description>```JavaScript&#13;
 @change='changeS'&#13;
 &#13;
 function changeS(e){&#13;
