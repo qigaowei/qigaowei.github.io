@@ -1,5 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Mon, 26 Aug 2024 06:59:30 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>不换行样式</title><link>https://qigaowei.github.io/post/bu-huan-xing-yang-shi.html</link><description>```html   &#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Mon, 26 Aug 2024 07:53:10 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>使用arthas，得出jrebel占用cpu特别严重</title><link>https://qigaowei.github.io/post/shi-yong-arthas%EF%BC%8C-de-chu-jrebel-zhan-yong-cpu-te-bie-yan-zhong.html</link><description>- 1CMD输入命令&#13;
+```shell&#13;
+ 'C:\Program Files\Java\jdk-1.8\bin\java.exe' -jar arthas-boot.jar 25760&#13;
+ thread -n 8&#13;
+```&#13;
+- 2发现占用cpu最高的是如下线程&#13;
+```java&#13;
+'rebel-fsnotify-OutputReader' Id=31 cpuUsage=6.2% deltaTime=15ms time=6718ms RUNNABLE&#13;
+    at java.io.FileInputStream.readBytes(FileInputStream.java)&#13;
+    at java.io.FileInputStream.read(FileInputStream.java:255)&#13;
+    at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)&#13;
+    at java.io.BufferedInputStream.read(BufferedInputStream.java:345)&#13;
+    at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)&#13;
+    at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)&#13;
+    at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)&#13;
+    at java.io.InputStreamReader.read(InputStreamReader.java:184)&#13;
+    at java.io.BufferedReader.fill(BufferedReader.java:161)&#13;
+    at java.io.BufferedReader.readLine(BufferedReader.java:324)&#13;
+    at java.io.BufferedReader.readLine(BufferedReader.java:389)&#13;
+    at org.zeroturnaround.jrebel.intellij.OutputReader.run(OutputReader.java:55)&#13;
+    at java.lang.Thread.run(Thread.java:750)&#13;
+&#13;
+```。</description><guid isPermaLink="true">https://qigaowei.github.io/post/shi-yong-arthas%EF%BC%8C-de-chu-jrebel-zhan-yong-cpu-te-bie-yan-zhong.html</guid><pubDate>Mon, 26 Aug 2024 07:52:44 +0000</pubDate></item><item><title>不换行样式</title><link>https://qigaowei.github.io/post/bu-huan-xing-yang-shi.html</link><description>```html   &#13;
 &lt;div class='flex'&gt; &lt;/div&gt;&#13;
 ```。</description><guid isPermaLink="true">https://qigaowei.github.io/post/bu-huan-xing-yang-shi.html</guid><pubDate>Mon, 26 Aug 2024 06:59:10 +0000</pubDate></item><item><title>三种宽度样式</title><link>https://qigaowei.github.io/post/san-zhong-kuan-du-yang-shi.html</link><description>- style='width: 60px'&#13;
 - width='60'&#13;
