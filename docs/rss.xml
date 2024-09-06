@@ -1,5 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Fri, 06 Sep 2024 01:32:12 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>Windows系统后台运行java程序（关闭命令行窗口执行）</title><link>https://qigaowei.github.io/post/Windows-xi-tong-hou-tai-yun-xing-java-cheng-xu-%EF%BC%88-guan-bi-ming-ling-xing-chuang-kou-zhi-xing-%EF%BC%89.html</link><description>```cmd&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Fri, 06 Sep 2024 01:42:08 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>mybatis动态传入order by(排序字段) 和 sort(排序方式) 防止注入</title><link>https://qigaowei.github.io/post/mybatis-dong-tai-chuan-ru-order%20by%28-pai-xu-zi-duan-%29%20-he-%20sort%28-pai-xu-fang-shi-%29%20-fang-zhi-zhu-ru.html</link><description>- $ 方式会传入一个不改变的字符串，不能够防止注入&#13;
+如：order by #{orderBy}，如果传入的是 update_time，则会被解析为 order by update_time&#13;
+- 下面这种可以防止注入&#13;
+```xml&#13;
+SELECT &lt;include refid='Base_Column_List'/&gt; &#13;
+FROM alarm_list_info_view as m&#13;
+&lt;where&gt;&#13;
+     &lt;if test='param.orderBy== 'begin_time''&gt;&#13;
+    	order by begin_time&#13;
+     &lt;/if&gt;&#13;
+     &lt;if test='param.orderBy== 'update_time''&gt;&#13;
+        order by update_time&#13;
+     &lt;/if&gt;&#13;
+&lt;/where&gt;&#13;
+```。</description><guid isPermaLink="true">https://qigaowei.github.io/post/mybatis-dong-tai-chuan-ru-order%20by%28-pai-xu-zi-duan-%29%20-he-%20sort%28-pai-xu-fang-shi-%29%20-fang-zhi-zhu-ru.html</guid><pubDate>Fri, 06 Sep 2024 01:41:40 +0000</pubDate></item><item><title>Windows系统后台运行java程序（关闭命令行窗口执行）</title><link>https://qigaowei.github.io/post/Windows-xi-tong-hou-tai-yun-xing-java-cheng-xu-%EF%BC%88-guan-bi-ming-ling-xing-chuang-kou-zhi-xing-%EF%BC%89.html</link><description>```cmd&#13;
 @echo off&#13;
 start javaw -jar urp.jar&#13;
 exit&#13;
