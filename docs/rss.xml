@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Fri, 06 Sep 2024 01:42:08 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>mybatis动态传入order by(排序字段) 和 sort(排序方式) 防止注入</title><link>https://qigaowei.github.io/post/mybatis-dong-tai-chuan-ru-order%20by%28-pai-xu-zi-duan-%29%20-he-%20sort%28-pai-xu-fang-shi-%29%20-fang-zhi-zhu-ru.html</link><description>- $ 方式会传入一个不改变的字符串，不能够防止注入&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Sat, 07 Sep 2024 03:40:00 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>Could not connect to SMTP host: smtp.163.com, port: 465；</title><link>https://qigaowei.github.io/post/Could%20not%20connect%20to%20SMTP%20host-%20smtp.163.com%2C%20port-%20465%EF%BC%9B.html</link><description>- 打开 C:\Program Files\Java\jre-1.8\lib\security\java.security&#13;
+- 搜索jdk.tls.disabledAlgorithms&#13;
+- 删除 SSLv3, TLSv1, TLSv1.1, &#13;
+- 结果如下&#13;
+```&#13;
+jdk.tls.disabledAlgorithms=RC4, DES, MD5withRSA, \&#13;
+    DH keySize &lt; 1024, EC keySize &lt; 224, 3DES_EDE_CBC, anon, NULL, \&#13;
+    include jdk.disabled.namedCurves&#13;
+```。</description><guid isPermaLink="true">https://qigaowei.github.io/post/Could%20not%20connect%20to%20SMTP%20host-%20smtp.163.com%2C%20port-%20465%EF%BC%9B.html</guid><pubDate>Sat, 07 Sep 2024 03:39:34 +0000</pubDate></item><item><title>mybatis动态传入order by(排序字段) 和 sort(排序方式) 防止注入</title><link>https://qigaowei.github.io/post/mybatis-dong-tai-chuan-ru-order%20by%28-pai-xu-zi-duan-%29%20-he-%20sort%28-pai-xu-fang-shi-%29%20-fang-zhi-zhu-ru.html</link><description>- $ 方式会传入一个不改变的字符串，不能够防止注入&#13;
 如：order by #{orderBy}，如果传入的是 update_time，则会被解析为 order by update_time&#13;
 - 下面这种可以防止注入&#13;
 ```xml&#13;
