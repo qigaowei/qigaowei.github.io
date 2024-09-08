@@ -7,3 +7,4 @@ jdk.tls.disabledAlgorithms=RC4, DES, MD5withRSA, \
     DH keySize < 1024, EC keySize < 224, 3DES_EDE_CBC, anon, NULL, \
     include jdk.disabled.namedCurves
 ```
+- 最后，别忘了重启SpringBoot
