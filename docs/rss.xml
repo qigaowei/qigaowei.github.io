@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Tue, 10 Sep 2024 08:03:47 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>idea非常卡的原因，通过arthas分析</title><link>https://qigaowei.github.io/post/idea-fei-chang-qia-de-yuan-yin-%EF%BC%8C-tong-guo-arthas-fen-xi.html</link><description>&#13;
-```java&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Tue, 10 Sep 2024 08:26:47 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>idea非常卡的原因，通过arthas分析</title><link>https://qigaowei.github.io/post/idea-fei-chang-qia-de-yuan-yin-%EF%BC%8C-tong-guo-arthas-fen-xi.html</link><description>```java&#13;
 'FilePageCache housekeeper' Id=103 cpuUsage=7.69% deltaTime=15ms time=990859ms TIMED_WAITING on java.lang.Object@23242b16&#13;
     at java.base@17.0.10/java.lang.Object.wait(Native Method)&#13;
     -  waiting on java.lang.Object@23242b16&#13;
@@ -9,7 +8,8 @@
     at java.base@17.0.10/java.lang.Thread.run(Thread.java:840)&#13;
 ```&#13;
 - https://youtrack.jetbrains.com/issue/IJPL-2248&#13;
-- 241 trully fixed it. Now Remote Development works perfect. Thank you all!。</description><guid isPermaLink="true">https://qigaowei.github.io/post/idea-fei-chang-qia-de-yuan-yin-%EF%BC%8C-tong-guo-arthas-fen-xi.html</guid><pubDate>Mon, 09 Sep 2024 08:05:32 +0000</pubDate></item><item><title>Could not connect to SMTP host: smtp.163.com, port: 465；</title><link>https://qigaowei.github.io/post/Could%20not%20connect%20to%20SMTP%20host-%20smtp.163.com%2C%20port-%20465%EF%BC%9B.html</link><description>- 打开 C:\Program Files\Java\jre-1.8\lib\security\java.security&#13;
+- 241 trully fixed it. Now Remote Development works perfect. Thank you all!&#13;
+- 更新下新版本好些。</description><guid isPermaLink="true">https://qigaowei.github.io/post/idea-fei-chang-qia-de-yuan-yin-%EF%BC%8C-tong-guo-arthas-fen-xi.html</guid><pubDate>Mon, 09 Sep 2024 08:05:32 +0000</pubDate></item><item><title>Could not connect to SMTP host: smtp.163.com, port: 465；</title><link>https://qigaowei.github.io/post/Could%20not%20connect%20to%20SMTP%20host-%20smtp.163.com%2C%20port-%20465%EF%BC%9B.html</link><description>- 打开 C:\Program Files\Java\jre-1.8\lib\security\java.security&#13;
 - 搜索jdk.tls.disabledAlgorithms&#13;
 - 删除 SSLv3, TLSv1, TLSv1.1, &#13;
 - 结果如下&#13;
