@@ -1,6 +1,6 @@
 1. mybatis跳转到xml的
 - https://plugins.jetbrains.com/plugin/18617-free-mybatis-tool
-2. 一键生成get set
+2. 一键生成get set，不是实体类的
 - https://plugins.jetbrains.com/plugin/9360-generateallsetter
 3. 免重启，更新代码
 - https://plugins.jetbrains.com/plugin/4441-jrebel-and-xrebel
