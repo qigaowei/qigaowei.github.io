@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Wed, 11 Sep 2024 06:06:10 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>idea插件推荐</title><link>https://qigaowei.github.io/post/idea-cha-jian-tui-jian.html</link><description>1. mybatis跳转到xml的&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Thu, 12 Sep 2024 03:02:24 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>nodejs使用</title><link>https://qigaowei.github.io/post/nodejs-shi-yong.html</link><description>1. 先设置镜像地址&#13;
+- npm config set registry https://registry.npmmirror.com&#13;
+2. 查看镜像地址是否成功&#13;
+- npm config get registry &#13;
+3. 安装pnpm&#13;
+- npm install -g pnpm。</description><guid isPermaLink="true">https://qigaowei.github.io/post/nodejs-shi-yong.html</guid><pubDate>Thu, 12 Sep 2024 03:02:03 +0000</pubDate></item><item><title>idea插件推荐</title><link>https://qigaowei.github.io/post/idea-cha-jian-tui-jian.html</link><description>1. mybatis跳转到xml的&#13;
 - https://plugins.jetbrains.com/plugin/18617-free-mybatis-tool&#13;
 2. 一键生成get set，不是实体类的&#13;
 - https://plugins.jetbrains.com/plugin/9360-generateallsetter&#13;
