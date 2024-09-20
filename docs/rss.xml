@@ -1,5 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Sat, 14 Sep 2024 09:32:57 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>idea初始化设置，加快速度</title><link>https://qigaowei.github.io/post/idea-chu-shi-hua-she-zhi-%EF%BC%8C-jia-kuai-su-du.html</link><description>- 自动换行&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Fri, 20 Sep 2024 06:24:22 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>vue使用map提取数据后，引起的bug</title><link>https://qigaowei.github.io/post/vue-shi-yong-map-ti-qu-shu-ju-hou-%EF%BC%8C-yin-qi-de-bug.html</link><description>```js&#13;
+console.log('response.data.members-------1-',response.data.members)&#13;
+var temp=response.data.members;&#13;
+form.value.members= response.data.members.map(student =&gt; student.internshipStudentsId);&#13;
+console.log('response.data.members-------2-',response.data.members)&#13;
+form.value.membersName=temp.map(student =&gt; student.internshipStudentsName).join(',')&#13;
+```&#13;
+- 打印如下&#13;
+![image](https://github.com/user-attachments/assets/21009b77-5da2-4b46-a332-d4e784912e04)&#13;
+&#13;
+- internshipStudentsName消失了&#13;
+- 所以用var temp=response.data.members;，先保存起来。</description><guid isPermaLink="true">https://qigaowei.github.io/post/vue-shi-yong-map-ti-qu-shu-ju-hou-%EF%BC%8C-yin-qi-de-bug.html</guid><pubDate>Fri, 20 Sep 2024 06:23:54 +0000</pubDate></item><item><title>idea初始化设置，加快速度</title><link>https://qigaowei.github.io/post/idea-chu-shi-hua-she-zhi-%EF%BC%8C-jia-kuai-su-du.html</link><description>- 自动换行&#13;
 - 关闭部分信息提示&#13;
 - 设置快捷键&#13;
 - 字体大小。</description><guid isPermaLink="true">https://qigaowei.github.io/post/idea-chu-shi-hua-she-zhi-%EF%BC%8C-jia-kuai-su-du.html</guid><pubDate>Sat, 14 Sep 2024 09:32:28 +0000</pubDate></item><item><title>装机必备软件</title><link>https://qigaowei.github.io/post/zhuang-ji-bi-bei-ruan-jian.html</link><description>- [idea](https://www.jetbrains.com.cn/idea/download/other.html)&#13;
