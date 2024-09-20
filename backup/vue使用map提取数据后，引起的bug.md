@@ -9,4 +9,4 @@ form.value.membersName=temp.map(student => student.internshipStudentsName).join(
 ![image](https://github.com/user-attachments/assets/21009b77-5da2-4b46-a332-d4e784912e04)
 
 - internshipStudentsName消失了
-- 所以用var temp=response.data.members;，先保存起来
+- 所以用var temp=response.data.members;先保存起来
