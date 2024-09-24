@@ -10,25 +10,39 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="```java
+<meta name="description" content="- java.util.ArrayList#ArrayList(java.util.Collection<? extends E>)
+```java
 LambdaQueryWrapper<NmTransferAreaUsers> lambdaQueryWrapper
               = Wrappers.lambdaQuery();
       lambdaQueryWrapper.in(NmTransferAreaUsers::getNurseId, new ArrayList<>(ids));
 ```
-- 下面这种会报错
+- 下面这种会报错 java.util.Arrays.ArrayList
 ```java
 lambdaQueryWrapper.in(NmTransferAreaUsers::getNurseId, Arrays.asList(ids));
-```。">
+```
+- 报错信息
+```java
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='ew.paramNameValuePairs.MPGENVAL1', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: 无效的列类型
+```
+
+。">
 <meta property="og:title" content="mybatisplus中in的写法中的易错点">
-<meta property="og:description" content="```java
+<meta property="og:description" content="- java.util.ArrayList#ArrayList(java.util.Collection<? extends E>)
+```java
 LambdaQueryWrapper<NmTransferAreaUsers> lambdaQueryWrapper
               = Wrappers.lambdaQuery();
       lambdaQueryWrapper.in(NmTransferAreaUsers::getNurseId, new ArrayList<>(ids));
 ```
-- 下面这种会报错
+- 下面这种会报错 java.util.Arrays.ArrayList
 ```java
 lambdaQueryWrapper.in(NmTransferAreaUsers::getNurseId, Arrays.asList(ids));
-```。">
+```
+- 报错信息
+```java
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='ew.paramNameValuePairs.MPGENVAL1', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: 无效的列类型
+```
+
+。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/mybatisplus-zhong-in-de-xie-fa-zhong-de-yi-cuo-dian.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -99,13 +113,20 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-smi">LambdaQueryWrapper</span>&lt;<span class="pl-smi">NmTransferAreaUsers</span>&gt; <span class="pl-s1">lambdaQueryWrapper</span>
+<div class="markdown-body" id="postBody"><ul>
+<li>java.util.ArrayList#ArrayList(java.util.Collection&lt;? extends E&gt;)</li>
+</ul>
+<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-smi">LambdaQueryWrapper</span>&lt;<span class="pl-smi">NmTransferAreaUsers</span>&gt; <span class="pl-s1">lambdaQueryWrapper</span>
               = <span class="pl-smi">Wrappers</span>.<span class="pl-en">lambdaQuery</span>();
       <span class="pl-s1">lambdaQueryWrapper</span>.<span class="pl-en">in</span>(<span class="pl-smi">NmTransferAreaUsers</span>::<span class="pl-s1">getNurseId</span>, <span class="pl-k">new</span> <span class="pl-smi">ArrayList</span>&lt;&gt;(<span class="pl-s1">ids</span>));</pre></div>
 <ul>
-<li>下面这种会报错</li>
+<li>下面这种会报错 java.util.Arrays.ArrayList</li>
 </ul>
-<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-s1">lambdaQueryWrapper</span>.<span class="pl-en">in</span>(<span class="pl-smi">NmTransferAreaUsers</span>::<span class="pl-s1">getNurseId</span>, <span class="pl-smi">Arrays</span>.<span class="pl-en">asList</span>(<span class="pl-s1">ids</span>));</pre></div></div>
+<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-s1">lambdaQueryWrapper</span>.<span class="pl-en">in</span>(<span class="pl-smi">NmTransferAreaUsers</span>::<span class="pl-s1">getNurseId</span>, <span class="pl-smi">Arrays</span>.<span class="pl-en">asList</span>(<span class="pl-s1">ids</span>));</pre></div>
+<ul>
+<li>报错信息</li>
+</ul>
+<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-smi">org</span>.<span class="pl-smi">mybatis</span>.<span class="pl-smi">spring</span>.<span class="pl-smi">MyBatisSystemException</span>: <span class="pl-s1">nested</span> <span class="pl-s1">exception</span> <span class="pl-s1">is</span> <span class="pl-smi">org</span>.<span class="pl-smi">apache</span>.<span class="pl-smi">ibatis</span>.<span class="pl-smi">type</span>.<span class="pl-smi">TypeException</span>: <span class="pl-s1">Could</span> <span class="pl-s1">not</span> <span class="pl-s1">set</span> <span class="pl-smi">parameters</span> <span class="pl-s1">for</span> <span class="pl-s1">mapping</span>: <span class="pl-smi">ParameterMapping</span>{<span class="pl-s1">property</span>=<span class="pl-s">'ew.paramNameValuePairs.MPGENVAL1'</span>, <span class="pl-s1">mode</span>=<span class="pl-c1">IN</span>, <span class="pl-s1">javaType</span>=<span class="pl-smi">class</span> <span class="pl-s1">java</span>.<span class="pl-s1">lang</span>.<span class="pl-s1">Object</span>, <span class="pl-s1">jdbcType</span>=<span class="pl-c1">null</span>, <span class="pl-s1">numericScale</span>=<span class="pl-c1">null</span>, <span class="pl-s1">resultMapId</span>=<span class="pl-s">'null'</span>, <span class="pl-s1">jdbcTypeName</span>=<span class="pl-s">'null'</span>, <span class="pl-s1">expression</span>=<span class="pl-s">'null'</span>}. <span class="pl-s1">Cause</span>: <span class="pl-smi">org</span>.<span class="pl-smi">apache</span>.<span class="pl-smi">ibatis</span>.<span class="pl-smi">type</span>.<span class="pl-smi">TypeException</span>: <span class="pl-s1">Error</span> <span class="pl-s1">setting</span> <span class="pl-s1">non</span> <span class="pl-c1">null</span> <span class="pl-s1">for</span> <span class="pl-s1">parameter</span> #<span class="pl-c1">1</span> <span class="pl-s1">with</span> <span class="pl-smi">JdbcType</span> <span class="pl-c1">null</span> . <span class="pl-s1">Try</span> <span class="pl-smi">setting</span> <span class="pl-s1">a</span> <span class="pl-smi">different</span> <span class="pl-s1">JdbcType</span> <span class="pl-s1">for</span> <span class="pl-smi">this</span> <span class="pl-s1">parameter</span> <span class="pl-s1">or</span> <span class="pl-s1">a</span> <span class="pl-s1">different</span> <span class="pl-s1">configuration</span> <span class="pl-smi">property</span>. <span class="pl-smi">Cause</span>: <span class="pl-s1">org</span>.<span class="pl-s1">apache</span>.<span class="pl-s1">ibatis</span>.<span class="pl-s1">type</span>.<span class="pl-s1">TypeException</span>: <span class="pl-s1">Error</span> <span class="pl-s1">setting</span> <span class="pl-s1">non</span> <span class="pl-s1">null</span> <span class="pl-k">for</span> <span class="pl-s1">parameter</span> #<span class="pl-c1">1</span> <span class="pl-k">with</span> <span class="pl-s1">JdbcType</span> <span class="pl-c1">null</span> . <span class="pl-s1">Try</span> <span class="pl-smi">setting</span> <span class="pl-s1">a</span> <span class="pl-smi">different</span> <span class="pl-s1">JdbcType</span> <span class="pl-s1">for</span> <span class="pl-smi">this</span> <span class="pl-s1">parameter</span> <span class="pl-s1">or</span> <span class="pl-s1">a</span> <span class="pl-s1">different</span> <span class="pl-s1">configuration</span> <span class="pl-smi">property</span>. <span class="pl-smi">Cause</span>: <span class="pl-s1">java</span>.<span class="pl-s1">sql</span>.<span class="pl-s1">SQLException</span>: 无效的列类型</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
