@@ -1,5 +1,6 @@
 - java.util.ArrayList#ArrayList(java.util.Collection<? extends E>)
 ```java
+Set<Long> ids=new HashSet<>();
 LambdaQueryWrapper<NmTransferAreaUsers> lambdaQueryWrapper
               = Wrappers.lambdaQuery();
       lambdaQueryWrapper.in(NmTransferAreaUsers::getNurseId, new ArrayList<>(ids));

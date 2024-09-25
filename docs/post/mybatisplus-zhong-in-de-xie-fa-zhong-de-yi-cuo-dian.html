@@ -12,6 +12,7 @@
     </script>
 <meta name="description" content="- java.util.ArrayList#ArrayList(java.util.Collection<? extends E>)
 ```java
+Set<Long> ids=new HashSet<>();
 LambdaQueryWrapper<NmTransferAreaUsers> lambdaQueryWrapper
               = Wrappers.lambdaQuery();
       lambdaQueryWrapper.in(NmTransferAreaUsers::getNurseId, new ArrayList<>(ids));
@@ -31,6 +32,7 @@ org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis
 <meta property="og:title" content="mybatisplus中in的写法中的易错点">
 <meta property="og:description" content="- java.util.ArrayList#ArrayList(java.util.Collection<? extends E>)
 ```java
+Set<Long> ids=new HashSet<>();
 LambdaQueryWrapper<NmTransferAreaUsers> lambdaQueryWrapper
               = Wrappers.lambdaQuery();
       lambdaQueryWrapper.in(NmTransferAreaUsers::getNurseId, new ArrayList<>(ids));
@@ -120,7 +122,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><ul>
 <li>java.util.ArrayList#ArrayList(java.util.Collection&lt;? extends E&gt;)</li>
 </ul>
-<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-smi">LambdaQueryWrapper</span>&lt;<span class="pl-smi">NmTransferAreaUsers</span>&gt; <span class="pl-s1">lambdaQueryWrapper</span>
+<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-smi">Set</span>&lt;<span class="pl-smi">Long</span>&gt; <span class="pl-s1">ids</span>=<span class="pl-k">new</span> <span class="pl-smi">HashSet</span>&lt;&gt;();
+<span class="pl-smi">LambdaQueryWrapper</span>&lt;<span class="pl-smi">NmTransferAreaUsers</span>&gt; <span class="pl-s1">lambdaQueryWrapper</span>
               = <span class="pl-smi">Wrappers</span>.<span class="pl-en">lambdaQuery</span>();
       <span class="pl-s1">lambdaQueryWrapper</span>.<span class="pl-en">in</span>(<span class="pl-smi">NmTransferAreaUsers</span>::<span class="pl-s1">getNurseId</span>, <span class="pl-k">new</span> <span class="pl-smi">ArrayList</span>&lt;&gt;(<span class="pl-s1">ids</span>));</pre></div>
 <ul>
