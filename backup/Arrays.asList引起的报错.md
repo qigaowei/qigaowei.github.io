@@ -15,4 +15,5 @@ org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis
 ```
 - 这个是个元素为set的list
 ![image](https://github.com/user-attachments/assets/019f44a0-7d8e-434d-8134-20b0fff1f9a1)
+- 总结：能用new ArrayList<>就用
 
