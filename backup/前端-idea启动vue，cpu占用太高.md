@@ -1,0 +1,6 @@
+- idea启动vue，cpu占用太高
+- vscode也会占用cpu，内存
+- 我直接使用git bash，npm run dev启动
+- 修改前端代码后，也不用重启
+- 电脑性能不行的悲哀
+- 新建一个内容为npm run dev的bat文件放到前端代码目录下，将快捷方式放到桌面上，更省时间
