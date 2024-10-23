@@ -2,3 +2,4 @@
 - 简单来说，想返回全部数据条件放on里面
 - 过滤数据条件放where里面
 - inner join会全部过滤，不分where和on
+- 使用left join时，忘记写where，可能会有问题
