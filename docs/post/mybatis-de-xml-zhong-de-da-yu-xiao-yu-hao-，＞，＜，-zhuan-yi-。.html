@@ -10,11 +10,11 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="- <![CDATA[ >= ]]> #{startDate}
-- <![CDATA[ <= ]]> #{endDate}。">
+<meta name="description" content="- \<![CDATA[ >= ]]> #{startDate}
+- \<![CDATA[ <= ]]> #{endDate}。">
 <meta property="og:title" content="mybatis的xml中的大于小于号，＞，＜，转义。">
-<meta property="og:description" content="- <![CDATA[ >= ]]> #{startDate}
-- <![CDATA[ <= ]]> #{endDate}。">
+<meta property="og:description" content="- \<![CDATA[ >= ]]> #{startDate}
+- \<![CDATA[ <= ]]> #{endDate}。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/mybatis-de-xml-zhong-de-da-yu-xiao-yu-hao-%EF%BC%8C%EF%BC%9E%EF%BC%8C%EF%BC%9C%EF%BC%8C-zhuan-yi-%E3%80%82.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -76,12 +76,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><ul>
-<li>
-= ]]&gt; #{startDate}
-</li>
-<li>
- #{endDate}
-</li>
+<li>&lt;![CDATA[ &gt;= ]]&gt; #{startDate}</li>
+<li>&lt;![CDATA[ &lt;= ]]&gt; #{endDate}</li>
 </ul></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
