@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Mon, 28 Oct 2024 07:53:25 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>支持2^3这种表达式的解析</title><link>https://qigaowei.github.io/post/zhi-chi-2%5E3-zhe-zhong-biao-da-shi-de-jie-xi.html</link><description>```xml&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Tue, 29 Oct 2024 09:00:37 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>支持2^3这种表达式的解析</title><link>https://qigaowei.github.io/post/zhi-chi-2%5E3-zhe-zhong-biao-da-shi-de-jie-xi.html</link><description>```xml&#13;
 &lt;dependency&gt;&#13;
     &lt;groupId&gt;net.objecthunter&lt;/groupId&gt;&#13;
     &lt;artifactId&gt;exp4j&lt;/artifactId&gt;&#13;
@@ -425,10 +425,10 @@ import com.vladsch.flexmark.util.data.MutableDataSet;&#13;
             &lt;artifactId&gt;flexmark-all&lt;/artifactId&gt;&#13;
             &lt;version&gt;0.62.2&lt;/version&gt;&#13;
         &lt;/dependency&gt;&#13;
-```。</description><guid isPermaLink="true">https://qigaowei.github.io/post/markdown-zhuan-html%EF%BC%8C-shi-li-he-you-hua.html</guid><pubDate>Fri, 26 Jul 2024 07:26:27 +0000</pubDate></item><item><title>url中+号的处理</title><link>https://qigaowei.github.io/post/url-zhong-%2B-hao-de-chu-li.html</link><description>- URLEncoder.encode(url)&#13;
+```。</description><guid isPermaLink="true">https://qigaowei.github.io/post/markdown-zhuan-html%EF%BC%8C-shi-li-he-you-hua.html</guid><pubDate>Fri, 26 Jul 2024 07:26:27 +0000</pubDate></item><item><title>爬虫时，特殊符号的处理，比如url中+号</title><link>https://qigaowei.github.io/post/pa-chong-shi-%EF%BC%8C-te-shu-fu-hao-de-chu-li-%EF%BC%8C-bi-ru-url-zhong-%2B-hao.html</link><description>- URLEncoder.encode(url)&#13;
 - 若含有+号&#13;
 - 必须转义才能正确访问&#13;
-- HttpRequest.get(url)。</description><guid isPermaLink="true">https://qigaowei.github.io/post/url-zhong-%2B-hao-de-chu-li.html</guid><pubDate>Fri, 26 Jul 2024 02:53:16 +0000</pubDate></item><item><title>springboot多数据源</title><link>https://qigaowei.github.io/post/springboot-duo-shu-ju-yuan.html</link><description>```xml   &#13;
+- HttpRequest.get(url)。</description><guid isPermaLink="true">https://qigaowei.github.io/post/pa-chong-shi-%EF%BC%8C-te-shu-fu-hao-de-chu-li-%EF%BC%8C-bi-ru-url-zhong-%2B-hao.html</guid><pubDate>Fri, 26 Jul 2024 02:53:16 +0000</pubDate></item><item><title>springboot多数据源</title><link>https://qigaowei.github.io/post/springboot-duo-shu-ju-yuan.html</link><description>```xml   &#13;
       &lt;dependency&gt;&#13;
             &lt;groupId&gt;com.baomidou&lt;/groupId&gt;&#13;
             &lt;artifactId&gt;dynamic-datasource-spring-boot-starter&lt;/artifactId&gt;&#13;
