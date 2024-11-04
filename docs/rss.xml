@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Mon, 04 Nov 2024 06:01:46 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>使代码更易读技巧</title><link>https://qigaowei.github.io/post/shi-dai-ma-geng-yi-du-ji-qiao.html</link><description>- 代码A&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Mon, 04 Nov 2024 06:10:25 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>使代码更易读技巧</title><link>https://qigaowei.github.io/post/shi-dai-ma-geng-yi-du-ji-qiao.html</link><description>- 代码A&#13;
 ```java&#13;
 orderInfo.setOrderStopDoctor(checkInfo.getApplyDoctor());&#13;
 orderInfo.setOrderStopDoctorName(checkInfo.getApplyDoctorName());&#13;
@@ -912,7 +912,8 @@ git push -f&#13;
 1&#13;
 2&#13;
 4&#13;
-。</description><guid isPermaLink="true">https://qigaowei.github.io/post/cong-List-shan-chu-yuan-su-%EF%BC%8C-xu-yao-zhu-yi-de-dian.html</guid><pubDate>Wed, 17 Jul 2024 06:33:53 +0000</pubDate></item><item><title>git从主干拉取新分支</title><link>https://qigaowei.github.io/post/git-cong-zhu-gan-la-qu-xin-fen-zhi.html</link><description>```&#13;
+&#13;
+- 这样删除会有问题，可以复制有用的到新的list。</description><guid isPermaLink="true">https://qigaowei.github.io/post/cong-List-shan-chu-yuan-su-%EF%BC%8C-xu-yao-zhu-yi-de-dian.html</guid><pubDate>Wed, 17 Jul 2024 06:33:53 +0000</pubDate></item><item><title>git从主干拉取新分支</title><link>https://qigaowei.github.io/post/git-cong-zhu-gan-la-qu-xin-fen-zhi.html</link><description>```&#13;
 git checkout master&#13;
 git checkout -b enterprise1.2.1&#13;
 git push origin enterprise1.2.1:enterprise1.2.1&#13;
