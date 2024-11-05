@@ -1,2 +1,2 @@
-- @Transactional修饰的方法，都是可以正常回滚
-- 结果是可以回滚。
+- @Transactional修饰的方法，本身都是可以正常回滚
+- 调用private方法，结果也是可以回滚。
