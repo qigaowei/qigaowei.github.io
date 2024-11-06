@@ -16,6 +16,7 @@
 4. 跟踪代码中calendar.setTime(a)的位置的参数，发现a为null
 5. 写个测试用例，发现空指针，代码在下面
 6. 排查结束
+7. e.printStackTrace();   正式环境不要用这个代码，这样写只会往控制台打印，用 log.error('', e)
 ```java
    Calendar calendar = Calendar.getInstance();
         calendar.setTime(null);
@@ -38,6 +39,7 @@
 4. 跟踪代码中calendar.setTime(a)的位置的参数，发现a为null
 5. 写个测试用例，发现空指针，代码在下面
 6. 排查结束
+7. e.printStackTrace();   正式环境不要用这个代码，这样写只会往控制台打印，用 log.error('', e)
 ```java
    Calendar calendar = Calendar.getInstance();
         calendar.setTime(null);
@@ -130,6 +132,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>跟踪代码中calendar.setTime(a)的位置的参数，发现a为null</li>
 <li>写个测试用例，发现空指针，代码在下面</li>
 <li>排查结束</li>
+<li>e.printStackTrace();   正式环境不要用这个代码，这样写只会往控制台打印，用 log.error("", e)</li>
 </ol>
 <div class="highlight highlight-source-java"><pre class="notranslate">   <span class="pl-smi">Calendar</span> <span class="pl-s1">calendar</span> = <span class="pl-smi">Calendar</span>.<span class="pl-en">getInstance</span>();
         <span class="pl-s1">calendar</span>.<span class="pl-en">setTime</span>(<span class="pl-c1">null</span>);
