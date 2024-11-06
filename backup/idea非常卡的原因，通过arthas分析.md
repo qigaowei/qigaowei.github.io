@@ -8,4 +8,4 @@
 ```
 - https://youtrack.jetbrains.com/issue/IJPL-2248
 - 241 trully fixed it. Now Remote Development works perfect. Thank you all!
-- 更新下新版本好些
+- 原来是idea的bug，更新下新版本好些
