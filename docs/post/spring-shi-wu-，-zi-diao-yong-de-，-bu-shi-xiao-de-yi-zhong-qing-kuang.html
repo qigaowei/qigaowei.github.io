@@ -10,11 +10,13 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="- @Transactional修饰的方法，调用同一个类的private方法，发生异常，事务会回滚吗
+<meta name="description" content="1. 不失效
+- @Transactional修饰的方法，调用同一个类的private方法，发生异常，事务会回滚吗
 - @Transactional修饰的方法，本身都是可以正常回滚
 - 调用private方法（没有注解），结果也是可以回滚。">
 <meta property="og:title" content="spring事务，自调用的，不失效的一种情况">
-<meta property="og:description" content="- @Transactional修饰的方法，调用同一个类的private方法，发生异常，事务会回滚吗
+<meta property="og:description" content="1. 不失效
+- @Transactional修饰的方法，调用同一个类的private方法，发生异常，事务会回滚吗
 - @Transactional修饰的方法，本身都是可以正常回滚
 - 调用private方法（没有注解），结果也是可以回滚。">
 <meta property="og:type" content="article">
@@ -87,7 +89,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><ul>
+<div class="markdown-body" id="postBody"><ol>
+<li>不失效</li>
+</ol>
+<ul>
 <li><a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/transactional/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/transactional">@transactional</a>修饰的方法，调用同一个类的private方法，发生异常，事务会回滚吗</li>
 <li><a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/transactional/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/transactional">@transactional</a>修饰的方法，本身都是可以正常回滚</li>
 <li>调用private方法（没有注解），结果也是可以回滚。</li>
@@ -101,7 +106,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 }</pre></div>
 <ul>
 <li>只要入口方法是由aop代理调用的，事务传播机制在同一个事务里，就不失效</li>
-</ul></div>
+</ul>
+<ol start="2">
+<li>失效</li>
+</ol>
+<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-s1">a</span>(){
+<span class="pl-en">b</span>();
+}
+
+<span class="pl-c1">@</span><span class="pl-c1">Transactional</span>(<span class="pl-s1">rollbackFor</span> = <span class="pl-smi">Exception</span>.<span class="pl-k">class</span>)
+<span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-s1">b</span>(){
+}</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
