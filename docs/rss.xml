@@ -1,5 +1,25 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Wed, 06 Nov 2024 05:56:50 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>场景题-200万白名单用户如何优化</title><link>https://qigaowei.github.io/post/chang-jing-ti--200-wan-bai-ming-dan-yong-hu-ru-he-you-hua.html</link><description>1. 这题的误区可能想到用布隆过滤器，&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Wed, 06 Nov 2024 06:30:08 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>问题排查小计</title><link>https://qigaowei.github.io/post/wen-ti-pai-cha-xiao-ji.html</link><description>1. 发现事务回滚了，又没有明显的报错代码&#13;
+2. 跟踪日志，发现到了一个位置，往下的日志没了，怀疑问题出现在这&#13;
+3. 发现这段代码基本都是get，只有一个地方是数据处理的&#13;
+4. 跟踪代码中calendar.setTime(a)的位置的参数，发现a为null&#13;
+5. 写个测试用例，发现空指针&#13;
+6. 排查结束&#13;
+```java&#13;
+   Calendar calendar = Calendar.getInstance();&#13;
+        calendar.setTime(null);&#13;
+        try {&#13;
+            String[] tems = '11:41'.split(':');&#13;
+            calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(tems[0]));&#13;
+            calendar.set(Calendar.MINUTE, Integer.parseInt(tems[1]));&#13;
+            calendar.set(Calendar.SECOND, 0);&#13;
+        } catch (NumberFormatException e) {&#13;
+            e.printStackTrace();&#13;
+            calendar.set(Calendar.HOUR_OF_DAY, 8);&#13;
+            calendar.set(Calendar.MINUTE, 0);&#13;
+            calendar.set(Calendar.SECOND, 0);&#13;
+        }&#13;
+```。</description><guid isPermaLink="true">https://qigaowei.github.io/post/wen-ti-pai-cha-xiao-ji.html</guid><pubDate>Wed, 06 Nov 2024 06:29:42 +0000</pubDate></item><item><title>场景题-200万白名单用户如何优化</title><link>https://qigaowei.github.io/post/chang-jing-ti--200-wan-bai-ming-dan-yong-hu-ru-he-you-hua.html</link><description>1. 这题的误区可能想到用布隆过滤器，&#13;
  1.1. 但是布隆过滤器只能判断可能存在和一定不存在，比较适合黑名单。</description><guid isPermaLink="true">https://qigaowei.github.io/post/chang-jing-ti--200-wan-bai-ming-dan-yong-hu-ru-he-you-hua.html</guid><pubDate>Wed, 06 Nov 2024 05:56:12 +0000</pubDate></item><item><title>有种业务场景，对用户来说是只读的</title><link>https://qigaowei.github.io/post/you-zhong-ye-wu-chang-jing-%EF%BC%8C-dui-yong-hu-lai-shuo-shi-zhi-du-de.html</link><description>1. 以前公司做的企业工商信息业务&#13;
 2. 购买别人T+1的数据，数据解析后，存在es中&#13;
 3. 用户只能读，不能有其他操作&#13;
