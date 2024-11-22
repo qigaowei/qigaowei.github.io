@@ -43,3 +43,5 @@ public class TableDataInfoOther<T> implements Serializable {
     }
 }
 ```
+
+5. 不是自己创建的项目也没事，也正常使用
