@@ -1,6 +1,6 @@
 1. 
   -  公司使用apifox给前端提供接口文档，
-  -  我先通过http://localhost:9604/v2/api-docs导出swagger的json格式，
+  -  我先通过[localhost](http://localhost:9604/v2/api-docs),导出swagger的json格式，
   -  然后再导入到apifox，
   -  结果接口返回值的泛型里面的字段不显示。
 2. 
