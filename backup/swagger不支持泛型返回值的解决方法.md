@@ -16,16 +16,13 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Data
 public class TableDataInfoOther<T> implements Serializable {
     private static final long serialVersionUID = 1L;
     @ApiModelProperty(value = "total")
     private long total;
-    private Map<String, Object> aggregateResult = new HashMap<>();
     @ApiModelProperty(value = "rows")
     private List<T> rows;
     @ApiModelProperty(value = "code")

@@ -122,16 +122,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-k">import</span> <span class="pl-s1">lombok</span>.<span class="pl-s1">Data</span>;
 
 <span class="pl-k">import</span> <span class="pl-s1">java</span>.<span class="pl-s1">io</span>.<span class="pl-s1">Serializable</span>;
-<span class="pl-k">import</span> <span class="pl-s1">java</span>.<span class="pl-s1">util</span>.<span class="pl-s1">HashMap</span>;
 <span class="pl-k">import</span> <span class="pl-s1">java</span>.<span class="pl-s1">util</span>.<span class="pl-s1">List</span>;
-<span class="pl-k">import</span> <span class="pl-s1">java</span>.<span class="pl-s1">util</span>.<span class="pl-s1">Map</span>;
 
 <span class="pl-c1">@</span><span class="pl-c1">Data</span>
 <span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-smi">TableDataInfoOther</span>&lt;<span class="pl-smi">T</span>&gt; <span class="pl-k">implements</span> <span class="pl-smi">Serializable</span> {
     <span class="pl-k">private</span> <span class="pl-k">static</span> <span class="pl-k">final</span> <span class="pl-smi">long</span> <span class="pl-s1">serialVersionUID</span> = <span class="pl-c1">1L</span>;
     <span class="pl-c1">@</span><span class="pl-c1">ApiModelProperty</span>(<span class="pl-s1">value</span> = <span class="pl-s">"total"</span>)
     <span class="pl-k">private</span> <span class="pl-smi">long</span> <span class="pl-s1">total</span>;
-    <span class="pl-k">private</span> <span class="pl-smi">Map</span>&lt;<span class="pl-smi">String</span>, <span class="pl-smi">Object</span>&gt; <span class="pl-s1">aggregateResult</span> = <span class="pl-k">new</span> <span class="pl-smi">HashMap</span>&lt;&gt;();
     <span class="pl-c1">@</span><span class="pl-c1">ApiModelProperty</span>(<span class="pl-s1">value</span> = <span class="pl-s">"rows"</span>)
     <span class="pl-k">private</span> <span class="pl-smi">List</span>&lt;<span class="pl-smi">T</span>&gt; <span class="pl-s1">rows</span>;
     <span class="pl-c1">@</span><span class="pl-c1">ApiModelProperty</span>(<span class="pl-s1">value</span> = <span class="pl-s">"code"</span>)
