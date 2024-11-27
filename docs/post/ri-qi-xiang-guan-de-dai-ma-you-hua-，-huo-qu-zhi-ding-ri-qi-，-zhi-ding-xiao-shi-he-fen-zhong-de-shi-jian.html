@@ -10,7 +10,8 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="- time为11:24
+<meta name="description" content="1.  源代码
+- time为11:24
 ```java
 private Date generationFreqTime(Date execDate, String time) {
 		Calendar calendar = Calendar.getInstance();
@@ -29,6 +30,7 @@ private Date generationFreqTime(Date execDate, String time) {
 		return calendar.getTime();
 	}
 ```
+2. 优化后
 -上面优化前，下面优化后
 ```java
 private Date generationFreqTime(Date execDate, String time) {
@@ -41,9 +43,23 @@ private Date generationFreqTime(Date execDate, String time) {
             <artifactId>hutool-all</artifactId>
             <version>5.7.14</version>
         </dependency>
+```
+
+3. 应用,A股的时间
+```java
+Date date=new Date();
+        Date time9=DateUtil.parse(DateUtil.format(date,'yyyyMMdd093000'));
+        Date time11=DateUtil.parse(DateUtil.format(date,'yyyyMMdd113000'));
+        Date time13=DateUtil.parse(DateUtil.format(date,'yyyyMMdd130000'));
+        Date time15=DateUtil.parse(DateUtil.format(date,'yyyyMMdd150000'));
+        if((date.after(time9)&&date.before(time11))
+        ||(date.after(time13)&&date.before(time15))){
+
+}
 ```。">
 <meta property="og:title" content="日期相关的代码优化，获取指定日期，指定小时和分钟的时间">
-<meta property="og:description" content="- time为11:24
+<meta property="og:description" content="1.  源代码
+- time为11:24
 ```java
 private Date generationFreqTime(Date execDate, String time) {
 		Calendar calendar = Calendar.getInstance();
@@ -62,6 +78,7 @@ private Date generationFreqTime(Date execDate, String time) {
 		return calendar.getTime();
 	}
 ```
+2. 优化后
 -上面优化前，下面优化后
 ```java
 private Date generationFreqTime(Date execDate, String time) {
@@ -74,6 +91,19 @@ private Date generationFreqTime(Date execDate, String time) {
             <artifactId>hutool-all</artifactId>
             <version>5.7.14</version>
         </dependency>
+```
+
+3. 应用,A股的时间
+```java
+Date date=new Date();
+        Date time9=DateUtil.parse(DateUtil.format(date,'yyyyMMdd093000'));
+        Date time11=DateUtil.parse(DateUtil.format(date,'yyyyMMdd113000'));
+        Date time13=DateUtil.parse(DateUtil.format(date,'yyyyMMdd130000'));
+        Date time15=DateUtil.parse(DateUtil.format(date,'yyyyMMdd150000'));
+        if((date.after(time9)&&date.before(time11))
+        ||(date.after(time13)&&date.before(time15))){
+
+}
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/ri-qi-xiang-guan-de-dai-ma-you-hua-%EF%BC%8C-huo-qu-zhi-ding-ri-qi-%EF%BC%8C-zhi-ding-xiao-shi-he-fen-zhong-de-shi-jian.html">
@@ -145,7 +175,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><ul>
+<div class="markdown-body" id="postBody"><ol>
+<li>源代码</li>
+</ol>
+<ul>
 <li>time为11:24</li>
 </ul>
 <div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-k">private</span> <span class="pl-smi">Date</span> <span class="pl-s1">generationFreqTime</span>(<span class="pl-smi">Date</span> <span class="pl-s1">execDate</span>, <span class="pl-smi">String</span> <span class="pl-s1">time</span>) {
@@ -164,7 +197,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 		}
 		<span class="pl-k">return</span> <span class="pl-s1">calendar</span>.<span class="pl-en">getTime</span>();
 	}</pre></div>
-<p>-上面优化前，下面优化后</p>
+<ol start="2">
+<li>优化后<br>
+-上面优化前，下面优化后</li>
+</ol>
 <div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-k">private</span> <span class="pl-smi">Date</span> <span class="pl-s1">generationFreqTime</span>(<span class="pl-smi">Date</span> <span class="pl-s1">execDate</span>, <span class="pl-smi">String</span> <span class="pl-s1">time</span>) {
 	<span class="pl-k">return</span> <span class="pl-smi">DateUtil</span>.<span class="pl-en">parse</span>(<span class="pl-smi">DateUtil</span>.<span class="pl-en">format</span>(<span class="pl-s1">execDate</span>,<span class="pl-s">"yyyyMMdd"</span>+<span class="pl-s1">time</span>.<span class="pl-en">replace</span>(<span class="pl-s">":"</span>)+<span class="pl-s">"00"</span>));
 }</pre></div>
@@ -172,7 +208,19 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
             &lt;<span class="pl-s1">groupId</span>&gt;<span class="pl-smi">cn</span>.<span class="pl-smi">hutool</span>&lt;/<span class="pl-smi">groupId</span>&gt;
             &lt;<span class="pl-s1">artifactId</span>&gt;<span class="pl-s1">hutool</span>-<span class="pl-s1">all</span>&lt;/<span class="pl-s1">artifactId</span>&gt;
             &lt;<span class="pl-s1">version</span>&gt;<span class="pl-c1">5.7</span>.<span class="pl-c1">14</span>&lt;/<span class="pl-smi">version</span>&gt;
-        &lt;/<span class="pl-s1">dependency</span>&gt;</pre></div></div>
+        &lt;/<span class="pl-s1">dependency</span>&gt;</pre></div>
+<ol start="3">
+<li>应用,A股的时间</li>
+</ol>
+<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-smi">Date</span> <span class="pl-s1">date</span>=<span class="pl-k">new</span> <span class="pl-smi">Date</span>();
+        <span class="pl-smi">Date</span> <span class="pl-s1">time9</span>=<span class="pl-smi">DateUtil</span>.<span class="pl-en">parse</span>(<span class="pl-smi">DateUtil</span>.<span class="pl-en">format</span>(<span class="pl-s1">date</span>,<span class="pl-s">"yyyyMMdd093000"</span>));
+        <span class="pl-smi">Date</span> <span class="pl-s1">time11</span>=<span class="pl-smi">DateUtil</span>.<span class="pl-en">parse</span>(<span class="pl-smi">DateUtil</span>.<span class="pl-en">format</span>(<span class="pl-s1">date</span>,<span class="pl-s">"yyyyMMdd113000"</span>));
+        <span class="pl-smi">Date</span> <span class="pl-s1">time13</span>=<span class="pl-smi">DateUtil</span>.<span class="pl-en">parse</span>(<span class="pl-smi">DateUtil</span>.<span class="pl-en">format</span>(<span class="pl-s1">date</span>,<span class="pl-s">"yyyyMMdd130000"</span>));
+        <span class="pl-smi">Date</span> <span class="pl-s1">time15</span>=<span class="pl-smi">DateUtil</span>.<span class="pl-en">parse</span>(<span class="pl-smi">DateUtil</span>.<span class="pl-en">format</span>(<span class="pl-s1">date</span>,<span class="pl-s">"yyyyMMdd150000"</span>));
+        <span class="pl-k">if</span>((<span class="pl-s1">date</span>.<span class="pl-en">after</span>(<span class="pl-s1">time9</span>)&amp;&amp;<span class="pl-s1">date</span>.<span class="pl-en">before</span>(<span class="pl-s1">time11</span>))
+        ||(<span class="pl-s1">date</span>.<span class="pl-en">after</span>(<span class="pl-s1">time13</span>)&amp;&amp;<span class="pl-s1">date</span>.<span class="pl-en">before</span>(<span class="pl-s1">time15</span>))){
+
+}</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
