@@ -181,7 +181,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <ul>
 <li>time为11:24</li>
 </ul>
-<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-k">private</span> <span class="pl-smi">Date</span> <span class="pl-s1">generationFreqTime</span>(<span class="pl-smi">Date</span> <span class="pl-s1">execDate</span>, <span class="pl-smi">String</span> <span class="pl-s1">time</span>) {
+<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-k">private</span> <span class="pl-smi">Date</span> <span class="pl-en">generationFreqTime</span>(<span class="pl-smi">Date</span> <span class="pl-s1">execDate</span>, <span class="pl-smi">String</span> <span class="pl-s1">time</span>) {
 		<span class="pl-smi">Calendar</span> <span class="pl-s1">calendar</span> = <span class="pl-smi">Calendar</span>.<span class="pl-en">getInstance</span>();
 		<span class="pl-s1">calendar</span>.<span class="pl-en">setTime</span>(<span class="pl-s1">execDate</span>);
 		<span class="pl-k">try</span> {
@@ -201,13 +201,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>优化后<br>
 -上面优化前，下面优化后</li>
 </ol>
-<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-k">private</span> <span class="pl-smi">Date</span> <span class="pl-s1">generationFreqTime</span>(<span class="pl-smi">Date</span> <span class="pl-s1">execDate</span>, <span class="pl-smi">String</span> <span class="pl-s1">time</span>) {
+<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-k">private</span> <span class="pl-smi">Date</span> <span class="pl-en">generationFreqTime</span>(<span class="pl-smi">Date</span> <span class="pl-s1">execDate</span>, <span class="pl-smi">String</span> <span class="pl-s1">time</span>) {
 	<span class="pl-k">return</span> <span class="pl-smi">DateUtil</span>.<span class="pl-en">parse</span>(<span class="pl-smi">DateUtil</span>.<span class="pl-en">format</span>(<span class="pl-s1">execDate</span>,<span class="pl-s">"yyyyMMdd"</span>+<span class="pl-s1">time</span>.<span class="pl-en">replace</span>(<span class="pl-s">":"</span>)+<span class="pl-s">"00"</span>));
 }</pre></div>
-<div class="highlight highlight-source-java"><pre class="notranslate"> &lt;<span class="pl-s1">dependency</span>&gt;
-            &lt;<span class="pl-s1">groupId</span>&gt;<span class="pl-smi">cn</span>.<span class="pl-smi">hutool</span>&lt;/<span class="pl-smi">groupId</span>&gt;
-            &lt;<span class="pl-s1">artifactId</span>&gt;<span class="pl-s1">hutool</span>-<span class="pl-s1">all</span>&lt;/<span class="pl-s1">artifactId</span>&gt;
-            &lt;<span class="pl-s1">version</span>&gt;<span class="pl-c1">5.7</span>.<span class="pl-c1">14</span>&lt;/<span class="pl-smi">version</span>&gt;
+<div class="highlight highlight-source-java"><pre class="notranslate"> &lt;<span class="pl-smi">dependency</span>&gt;
+            &lt;<span class="pl-smi">groupId</span>&gt;<span class="pl-smi">cn</span>.<span class="pl-smi">hutool</span>&lt;/<span class="pl-smi">groupId</span>&gt;
+            &lt;<span class="pl-smi">artifactId</span>&gt;<span class="pl-s1">hutool</span>-<span class="pl-s1">all</span>&lt;/<span class="pl-s1">artifactId</span>&gt;
+            &lt;<span class="pl-smi">version</span>&gt;<span class="pl-c1">5.7</span><span class="pl-c1">.14</span>&lt;/<span class="pl-s1">version</span>&gt;
         &lt;/<span class="pl-s1">dependency</span>&gt;</pre></div>
 <ol start="3">
 <li>应用,A股的时间</li>

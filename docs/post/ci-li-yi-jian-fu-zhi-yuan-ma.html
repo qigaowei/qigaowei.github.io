@@ -231,7 +231,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <div class="markdown-body" id="postBody"><div class="highlight highlight-source-java"><pre class="notranslate"> <span class="pl-c1">@</span><span class="pl-c1">PostMapping</span>(<span class="pl-s">"/magnet"</span>)
     <span class="pl-c1">@</span><span class="pl-c1">ResponseBody</span>
-    <span class="pl-k">public</span> <span class="pl-smi">String</span> <span class="pl-s1">magnet</span>(<span class="pl-c1">@</span><span class="pl-c1">RequestBody</span> <span class="pl-smi">QueryVo</span> <span class="pl-s1">vo</span>) <span class="pl-k">throws</span> <span class="pl-s1">Exception</span>{
+    <span class="pl-k">public</span> <span class="pl-smi">String</span> <span class="pl-en">magnet</span>(<span class="pl-c1">@</span><span class="pl-c1">RequestBody</span> <span class="pl-smi">QueryVo</span> <span class="pl-s1">vo</span>) <span class="pl-k">throws</span> <span class="pl-smi">Exception</span>{
         <span class="pl-smi">StringBuffer</span> <span class="pl-s1">magnets</span>=<span class="pl-k">new</span> <span class="pl-smi">StringBuffer</span>(<span class="pl-s">""</span>);
         <span class="pl-k">if</span>(<span class="pl-s1">vo</span>.<span class="pl-en">getPage</span>()==<span class="pl-c1">null</span>){
             <span class="pl-s1">vo</span>.<span class="pl-en">setPage</span>(<span class="pl-c1">0</span>);

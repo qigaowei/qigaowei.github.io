@@ -98,11 +98,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>调用private方法（没有注解），结果也是可以回滚。</li>
 </ul>
 <div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-c1">@</span><span class="pl-c1">Transactional</span>(<span class="pl-s1">rollbackFor</span> = <span class="pl-smi">Exception</span>.<span class="pl-k">class</span>)
-<span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-s1">a</span>(){
+<span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-en">a</span>(){
 <span class="pl-en">b</span>();
 }
 
-<span class="pl-k">private</span> <span class="pl-smi">void</span> <span class="pl-s1">b</span>(){
+<span class="pl-k">private</span> <span class="pl-smi">void</span> <span class="pl-en">b</span>(){
 }</pre></div>
 <ul>
 <li>只要入口方法是由aop代理调用的，事务传播机制在同一个事务里，就不失效</li>
@@ -110,12 +110,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <ol start="2">
 <li>失效</li>
 </ol>
-<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-s1">a</span>(){
+<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-en">a</span>(){
 <span class="pl-en">b</span>();
 }
 
 <span class="pl-c1">@</span><span class="pl-c1">Transactional</span>(<span class="pl-s1">rollbackFor</span> = <span class="pl-smi">Exception</span>.<span class="pl-k">class</span>)
-<span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-s1">b</span>(){
+<span class="pl-k">public</span> <span class="pl-smi">void</span> <span class="pl-en">b</span>(){
 }</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 

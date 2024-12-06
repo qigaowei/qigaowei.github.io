@@ -116,7 +116,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
             &lt;<span class="pl-ent">artifactId</span>&gt;commons-net&lt;/<span class="pl-ent">artifactId</span>&gt;
             &lt;<span class="pl-ent">version</span>&gt;3.6&lt;/<span class="pl-ent">version</span>&gt;
         &lt;/<span class="pl-ent">dependency</span>&gt;</pre></div>
-<div class="highlight highlight-source-java"><pre class="notranslate">          <span class="pl-k">private</span> <span class="pl-k">static</span> <span class="pl-smi">List</span>&lt;<span class="pl-smi">String</span>&gt; <span class="pl-s1">cidrToIpList</span>(<span class="pl-smi">String</span> <span class="pl-s1">cidr</span>){
+<div class="highlight highlight-source-java"><pre class="notranslate">          <span class="pl-k">private</span> <span class="pl-k">static</span> <span class="pl-smi">List</span>&lt;<span class="pl-smi">String</span>&gt; <span class="pl-en">cidrToIpList</span>(<span class="pl-smi">String</span> <span class="pl-s1">cidr</span>){
         <span class="pl-smi">SubnetUtils</span> <span class="pl-s1">utils</span> = <span class="pl-k">new</span> <span class="pl-smi">SubnetUtils</span>(<span class="pl-s1">cidr</span>);
         <span class="pl-smi">String</span>[] <span class="pl-s1">adress</span> = <span class="pl-s1">utils</span>.<span class="pl-en">getInfo</span>().<span class="pl-en">getAllAddresses</span>();
         <span class="pl-k">return</span> <span class="pl-smi">Arrays</span>.<span class="pl-en">asList</span>(<span class="pl-s1">adress</span>);

@@ -112,7 +112,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><div class="highlight highlight-text-xml"><pre class="notranslate">&lt;<span class="pl-ent">foreach</span> <span class="pl-e">collection</span>=<span class="pl-s"><span class="pl-pds">"</span>nameList<span class="pl-pds">"</span></span> <span class="pl-e">item</span>=<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span> <span class="pl-e">separator</span>=<span class="pl-s"><span class="pl-pds">"</span>union<span class="pl-pds">"</span></span>&gt;
 		select id  from table where name = #{name}
 	&lt;/<span class="pl-ent">foreach</span>&gt;</pre></div>
-<div class="highlight highlight-source-java"><pre class="notranslate">  <span class="pl-s1">List</span>&lt;<span class="pl-s1">Object</span>&gt; <span class="pl-s1">getList</span>(<span class="pl-c1">@</span><span class="pl-c1">Param</span>(<span class="pl-s">"nameList"</span>)<span class="pl-smi">String</span>[] <span class="pl-s1">nameList</span>);  </pre></div>
+<div class="highlight highlight-source-java"><pre class="notranslate">  <span class="pl-smi">List</span>&lt;<span class="pl-smi">Object</span>&gt; <span class="pl-en">getList</span>(<span class="pl-c1">@</span><span class="pl-c1">Param</span>(<span class="pl-s">"nameList"</span>)<span class="pl-smi">String</span>[] <span class="pl-s1">nameList</span>);  </pre></div>
 <ul>
 <li>优化接口，使用union，</li>
 <li>加上索引，提高接口响应速度</li>
