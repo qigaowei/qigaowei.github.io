@@ -1,5 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Mon, 02 Dec 2024 16:23:55 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>类似Excel的表格的页面，最好前端传回全部数据</title><link>https://qigaowei.github.io/post/lei-si-Excel-de-biao-ge-de-ye-mian-%EF%BC%8C-zui-hao-qian-duan-chuan-hui-quan-bu-shu-ju.html</link><description>- 这种页面的功能，有可能是把一个位置的数据，移动到另一个位置&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Tue, 10 Dec 2024 09:08:07 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>new FileOutputStream(file)不能作为参数</title><link>https://qigaowei.github.io/post/new%20FileOutputStream%28file%29-bu-neng-zuo-wei-can-shu.html</link><description>```java&#13;
+e.start(new FileOutputStream(file));&#13;
+```&#13;
+- 这样写，无法close();&#13;
+- 正确的如下&#13;
+```java&#13;
+try {&#13;
+            out=new FileOutputStream(file);&#13;
+            e.start(out);&#13;
+        } catch (Exception ex) {&#13;
+            log.error('',ex);&#13;
+        }finally {&#13;
+            e.finish();&#13;
+            out.close();&#13;
+        }&#13;
+```。</description><guid isPermaLink="true">https://qigaowei.github.io/post/new%20FileOutputStream%28file%29-bu-neng-zuo-wei-can-shu.html</guid><pubDate>Tue, 10 Dec 2024 09:07:41 +0000</pubDate></item><item><title>类似Excel的表格的页面，最好前端传回全部数据</title><link>https://qigaowei.github.io/post/lei-si-Excel-de-biao-ge-de-ye-mian-%EF%BC%8C-zui-hao-qian-duan-chuan-hui-quan-bu-shu-ju.html</link><description>- 这种页面的功能，有可能是把一个位置的数据，移动到另一个位置&#13;
 - 最好操作这一系列的数据以后，点保存后，将全部的数据一次性传给后端&#13;
 - 后端可以使用先删除后新增&#13;
 - 这种前后端，逻辑都很简单。</description><guid isPermaLink="true">https://qigaowei.github.io/post/lei-si-Excel-de-biao-ge-de-ye-mian-%EF%BC%8C-zui-hao-qian-duan-chuan-hui-quan-bu-shu-ju.html</guid><pubDate>Mon, 02 Dec 2024 00:28:26 +0000</pubDate></item><item><title>mysql-网址怎么创建索引</title><link>https://qigaowei.github.io/post/mysql--wang-zhi-zen-me-chuang-jian-suo-yin.html</link><description>- 可以存一份网址的原文&#13;
