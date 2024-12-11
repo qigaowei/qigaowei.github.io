@@ -10,32 +10,50 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="- 打开 C:\Program Files\Java\jre-1.8\lib\security\java.security
-- 搜索jdk.tls.disabledAlgorithms
-- 删除 SSLv3, TLSv1, TLSv1.1, 
-- 结果如下
-```
-jdk.tls.disabledAlgorithms=RC4, DES, MD5withRSA, \
-    DH keySize < 1024, EC keySize < 224, 3DES_EDE_CBC, anon, NULL, \
-    include jdk.disabled.namedCurves
-```
-- 最后，别忘了重启SpringBoot。">
+<meta name="description" content="1. 方法，不推荐
+    - 打开 C:\Program Files\Java\jre-1.8\lib\security\java.security
+    - 搜索jdk.tls.disabledAlgorithms
+    - 删除 SSLv3, TLSv1, TLSv1.1, 
+    - 结果如下
+    ```
+    jdk.tls.disabledAlgorithms=RC4, DES, MD5withRSA, \
+        DH keySize < 1024, EC keySize < 224, 3DES_EDE_CBC, anon, NULL, \
+        include jdk.disabled.namedCurves
+    ```
+    - 最后，别忘了重启SpringBoot
+  2. 把javax.mail的包换成com.sun.mail
+  ```xml
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+```。">
 <meta property="og:title" content="Could not connect to SMTP host: smtp.163.com, port: 465；">
-<meta property="og:description" content="- 打开 C:\Program Files\Java\jre-1.8\lib\security\java.security
-- 搜索jdk.tls.disabledAlgorithms
-- 删除 SSLv3, TLSv1, TLSv1.1, 
-- 结果如下
-```
-jdk.tls.disabledAlgorithms=RC4, DES, MD5withRSA, \
-    DH keySize < 1024, EC keySize < 224, 3DES_EDE_CBC, anon, NULL, \
-    include jdk.disabled.namedCurves
-```
-- 最后，别忘了重启SpringBoot。">
+<meta property="og:description" content="1. 方法，不推荐
+    - 打开 C:\Program Files\Java\jre-1.8\lib\security\java.security
+    - 搜索jdk.tls.disabledAlgorithms
+    - 删除 SSLv3, TLSv1, TLSv1.1, 
+    - 结果如下
+    ```
+    jdk.tls.disabledAlgorithms=RC4, DES, MD5withRSA, \
+        DH keySize < 1024, EC keySize < 224, 3DES_EDE_CBC, anon, NULL, \
+        include jdk.disabled.namedCurves
+    ```
+    - 最后，别忘了重启SpringBoot
+  2. 把javax.mail的包换成com.sun.mail
+  ```xml
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/Could%20not%20connect%20to%20SMTP%20host-%20smtp.163.com%2C%20port-%20465%EF%BC%9B.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
 <title>Could not connect to SMTP host: smtp.163.com, port: 465；</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -101,7 +119,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><ul>
+<div class="markdown-body" id="postBody"><ol>
+<li>方法，不推荐
+<ul>
 <li>打开 C:\Program Files\Java\jre-1.8\lib\security\java.security</li>
 <li>搜索jdk.tls.disabledAlgorithms</li>
 <li>删除 SSLv3, TLSv1, TLSv1.1,</li>
@@ -113,7 +133,15 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </code></pre>
 <ul>
 <li>最后，别忘了重启SpringBoot</li>
-</ul></div>
+</ul>
+</li>
+<li>把javax.mail的包换成com.sun.mail</li>
+</ol>
+<div class="highlight highlight-text-xml"><pre class="notranslate">      &lt;<span class="pl-ent">dependency</span>&gt;
+          &lt;<span class="pl-ent">groupId</span>&gt;com.sun.mail&lt;/<span class="pl-ent">groupId</span>&gt;
+          &lt;<span class="pl-ent">artifactId</span>&gt;javax.mail&lt;/<span class="pl-ent">artifactId</span>&gt;
+          &lt;<span class="pl-ent">version</span>&gt;1.6.2&lt;/<span class="pl-ent">version</span>&gt;
+      &lt;/<span class="pl-ent">dependency</span>&gt;</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
