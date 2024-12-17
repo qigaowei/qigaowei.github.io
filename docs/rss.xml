@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Wed, 11 Dec 2024 06:04:31 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>new FileOutputStream(file)不能作为参数</title><link>https://qigaowei.github.io/post/new%20FileOutputStream%28file%29-bu-neng-zuo-wei-can-shu.html</link><description>```java&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Tue, 17 Dec 2024 08:53:07 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>参数以t为开头，引起的无法复制的bug</title><link>https://qigaowei.github.io/post/can-shu-yi-t-wei-kai-tou-%EF%BC%8C-yin-qi-de-wu-fa-fu-zhi-de-bug.html</link><description>```java&#13;
+   private List&lt;THdMonitorDtl&gt; tHdMonitorDtls;&#13;
+   private List&lt;THdMonitorDtl&gt; hdMonitorDtls;&#13;
+```&#13;
+&#13;
+- 第一个无法赋值。</description><guid isPermaLink="true">https://qigaowei.github.io/post/can-shu-yi-t-wei-kai-tou-%EF%BC%8C-yin-qi-de-wu-fa-fu-zhi-de-bug.html</guid><pubDate>Tue, 17 Dec 2024 08:52:36 +0000</pubDate></item><item><title>new FileOutputStream(file)不能作为参数</title><link>https://qigaowei.github.io/post/new%20FileOutputStream%28file%29-bu-neng-zuo-wei-can-shu.html</link><description>```java&#13;
 e.start(new FileOutputStream(file));&#13;
 ```&#13;
 - 这样写，无法close();&#13;
