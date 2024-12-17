@@ -11,21 +11,25 @@
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
 <meta name="description" content="```java
+import lombok.Data;
+@Data
    private List<THdMonitorDtl> tHdMonitorDtls;
    private List<THdMonitorDtl> hdMonitorDtls;
    private Long kCon;
    private Long kaCon;
 ```
-
+- 
 - 都是第一个无法赋值。">
 <meta property="og:title" content="参数以单字母开头的驼峰，引起的无法赋值的bug">
 <meta property="og:description" content="```java
+import lombok.Data;
+@Data
    private List<THdMonitorDtl> tHdMonitorDtls;
    private List<THdMonitorDtl> hdMonitorDtls;
    private Long kCon;
    private Long kaCon;
 ```
-
+- 
 - 都是第一个无法赋值。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/can-shu-yi-dan-zi-mu-kai-tou-de-tuo-feng-%EF%BC%8C-yin-qi-de-wu-fa-fu-zhi-de-bug.html">
@@ -97,11 +101,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><div class="highlight highlight-source-java"><pre class="notranslate">   <span class="pl-k">private</span> <span class="pl-smi">List</span>&lt;<span class="pl-smi">THdMonitorDtl</span>&gt; <span class="pl-s1">tHdMonitorDtls</span>;
+<div class="markdown-body" id="postBody"><div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">lombok</span>.<span class="pl-s1">Data</span>;
+<span class="pl-c1">@</span><span class="pl-c1">Data</span>
+   <span class="pl-k">private</span> <span class="pl-smi">List</span>&lt;<span class="pl-smi">THdMonitorDtl</span>&gt; <span class="pl-s1">tHdMonitorDtls</span>;
    <span class="pl-k">private</span> <span class="pl-smi">List</span>&lt;<span class="pl-smi">THdMonitorDtl</span>&gt; <span class="pl-s1">hdMonitorDtls</span>;
    <span class="pl-k">private</span> <span class="pl-smi">Long</span> <span class="pl-s1">kCon</span>;
    <span class="pl-k">private</span> <span class="pl-smi">Long</span> <span class="pl-s1">kaCon</span>;</pre></div>
 <ul>
+<li></li>
 <li>都是第一个无法赋值。。。。</li>
 <li>估计跟getset有关系</li>
 <li>前端的值 传不过来</li>

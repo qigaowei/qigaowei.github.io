@@ -1,11 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Tue, 17 Dec 2024 09:04:27 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>参数以单字母开头的驼峰，引起的无法赋值的bug</title><link>https://qigaowei.github.io/post/can-shu-yi-dan-zi-mu-kai-tou-de-tuo-feng-%EF%BC%8C-yin-qi-de-wu-fa-fu-zhi-de-bug.html</link><description>```java&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Tue, 17 Dec 2024 09:33:37 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>参数以单字母开头的驼峰，引起的无法赋值的bug</title><link>https://qigaowei.github.io/post/can-shu-yi-dan-zi-mu-kai-tou-de-tuo-feng-%EF%BC%8C-yin-qi-de-wu-fa-fu-zhi-de-bug.html</link><description>```java&#13;
+import lombok.Data;&#13;
+@Data&#13;
    private List&lt;THdMonitorDtl&gt; tHdMonitorDtls;&#13;
    private List&lt;THdMonitorDtl&gt; hdMonitorDtls;&#13;
    private Long kCon;&#13;
    private Long kaCon;&#13;
 ```&#13;
-&#13;
+- &#13;
 - 都是第一个无法赋值。</description><guid isPermaLink="true">https://qigaowei.github.io/post/can-shu-yi-dan-zi-mu-kai-tou-de-tuo-feng-%EF%BC%8C-yin-qi-de-wu-fa-fu-zhi-de-bug.html</guid><pubDate>Tue, 17 Dec 2024 08:52:36 +0000</pubDate></item><item><title>new FileOutputStream(file)不能作为参数</title><link>https://qigaowei.github.io/post/new%20FileOutputStream%28file%29-bu-neng-zuo-wei-can-shu.html</link><description>```java&#13;
 e.start(new FileOutputStream(file));&#13;
 ```&#13;
