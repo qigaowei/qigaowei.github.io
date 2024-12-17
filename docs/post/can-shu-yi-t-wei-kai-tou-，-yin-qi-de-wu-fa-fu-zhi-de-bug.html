@@ -13,16 +13,20 @@
 <meta name="description" content="```java
    private List<THdMonitorDtl> tHdMonitorDtls;
    private List<THdMonitorDtl> hdMonitorDtls;
+   private Long kCon;
+   private Long kaCon;
 ```
 
-- 第一个无法赋值。">
+- 都是第一个无法赋值。">
 <meta property="og:title" content="参数以t为开头，引起的无法复制的bug">
 <meta property="og:description" content="```java
    private List<THdMonitorDtl> tHdMonitorDtls;
    private List<THdMonitorDtl> hdMonitorDtls;
+   private Long kCon;
+   private Long kaCon;
 ```
 
-- 第一个无法赋值。">
+- 都是第一个无法赋值。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/can-shu-yi-t-wei-kai-tou-%EF%BC%8C-yin-qi-de-wu-fa-fu-zhi-de-bug.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -94,9 +98,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><div class="highlight highlight-source-java"><pre class="notranslate">   <span class="pl-k">private</span> <span class="pl-smi">List</span>&lt;<span class="pl-smi">THdMonitorDtl</span>&gt; <span class="pl-s1">tHdMonitorDtls</span>;
-   <span class="pl-k">private</span> <span class="pl-smi">List</span>&lt;<span class="pl-smi">THdMonitorDtl</span>&gt; <span class="pl-s1">hdMonitorDtls</span>;</pre></div>
+   <span class="pl-k">private</span> <span class="pl-smi">List</span>&lt;<span class="pl-smi">THdMonitorDtl</span>&gt; <span class="pl-s1">hdMonitorDtls</span>;
+   <span class="pl-k">private</span> <span class="pl-smi">Long</span> <span class="pl-s1">kCon</span>;
+   <span class="pl-k">private</span> <span class="pl-smi">Long</span> <span class="pl-s1">kaCon</span>;</pre></div>
 <ul>
-<li>第一个无法赋值。。。。</li>
+<li>都是第一个无法赋值。。。。</li>
 <li>估计跟getset有关系</li>
 </ul></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
