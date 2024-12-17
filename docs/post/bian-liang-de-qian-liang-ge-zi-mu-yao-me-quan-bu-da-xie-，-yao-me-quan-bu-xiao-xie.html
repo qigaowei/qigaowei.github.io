@@ -18,7 +18,7 @@ import lombok.Data;
    private Long kCon;
    private Long kaCon;
 ```
-- 
+
 - 都是第一个无法赋值。">
 <meta property="og:title" content="变量的前两个字母要么全部大写，要么全部小写">
 <meta property="og:description" content="```java
@@ -29,7 +29,7 @@ import lombok.Data;
    private Long kCon;
    private Long kaCon;
 ```
-- 
+
 - 都是第一个无法赋值。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/bian-liang-de-qian-liang-ge-zi-mu-yao-me-quan-bu-da-xie-%EF%BC%8C-yao-me-quan-bu-xiao-xie.html">
@@ -108,10 +108,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
    <span class="pl-k">private</span> <span class="pl-smi">Long</span> <span class="pl-s1">kCon</span>;
    <span class="pl-k">private</span> <span class="pl-smi">Long</span> <span class="pl-s1">kaCon</span>;</pre></div>
 <ul>
-<li></li>
 <li>都是第一个无法赋值。。。。</li>
 <li>估计跟getset有关系</li>
 <li>前端的值 传不过来</li>
+<li>一般情况下。Java的属性变量名都已小写字母开头，如：userName,showMessage等，但也存在着特殊情况，考虑到一些特定的有意思的英文缩略词如(USA,XML等),JavaBean也允许大写字母起头的属性变量名，不过必须满足“变量的前两个字母要么全部大写，要么全部小写”的要求,如:IDCode、ICCard、idCode等属性变量名是合法的，而iC、iCcard、iDCode等属性变量名是非法的。</li>
+<li><a href="https://www.cnblogs.com/lldsgj/p/10801278.html" rel="nofollow">https://www.cnblogs.com/lldsgj/p/10801278.html</a></li>
 </ul></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
