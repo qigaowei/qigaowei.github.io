@@ -11,7 +11,10 @@
 -   跟swagger的版本没有关系，跟swagger的注解有关系
 4. 返回值也要支持泛型
 ```java
-import com.github.pagehelper.PageInfo;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.page.PageMethod;
+import com.zjrj.common.core.web.page.PageDomain;
+import com.zjrj.common.core.web.page.TableSupport;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -20,6 +23,7 @@ import java.util.List;
 
 @Data
 public class TableDataInfoOther<T> implements Serializable {
+    protected static final ThreadLocal<Page> LOCAL_PAGE = new ThreadLocal();
     private static final long serialVersionUID = 1L;
     @ApiModelProperty(value = "total")
     private long total;
@@ -35,8 +39,18 @@ public class TableDataInfoOther<T> implements Serializable {
         rspData.setCode(200);
         rspData.setRows(list);
         rspData.setMsg("查询成功");
-        rspData.setTotal((new PageInfo(list)).getTotal());
+        rspData.setTotal(LOCAL_PAGE.get().getTotal());
+        LOCAL_PAGE.remove();
         return rspData;
+    }
+
+    public static Page getPage() {
+        PageDomain pageDomain = TableSupport.buildPageRequest();
+        Integer pageNum = pageDomain.getPageNum();
+        Integer pageSize = pageDomain.getPageSize();
+        Page page= PageMethod.startPage(pageNum,pageSize);
+        LOCAL_PAGE.set(page);
+        return page;
     }
 }
 ```

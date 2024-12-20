@@ -117,7 +117,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <ol start="4">
 <li>返回值也要支持泛型</li>
 </ol>
-<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">com</span>.<span class="pl-s1">github</span>.<span class="pl-s1">pagehelper</span>.<span class="pl-s1">PageInfo</span>;
+<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">com</span>.<span class="pl-s1">github</span>.<span class="pl-s1">pagehelper</span>.<span class="pl-s1">Page</span>;
+<span class="pl-k">import</span> <span class="pl-s1">com</span>.<span class="pl-s1">github</span>.<span class="pl-s1">pagehelper</span>.<span class="pl-s1">page</span>.<span class="pl-s1">PageMethod</span>;
+<span class="pl-k">import</span> <span class="pl-s1">com</span>.<span class="pl-s1">zjrj</span>.<span class="pl-s1">common</span>.<span class="pl-s1">core</span>.<span class="pl-s1">web</span>.<span class="pl-s1">page</span>.<span class="pl-s1">PageDomain</span>;
+<span class="pl-k">import</span> <span class="pl-s1">com</span>.<span class="pl-s1">zjrj</span>.<span class="pl-s1">common</span>.<span class="pl-s1">core</span>.<span class="pl-s1">web</span>.<span class="pl-s1">page</span>.<span class="pl-s1">TableSupport</span>;
 <span class="pl-k">import</span> <span class="pl-s1">io</span>.<span class="pl-s1">swagger</span>.<span class="pl-s1">annotations</span>.<span class="pl-s1">ApiModelProperty</span>;
 <span class="pl-k">import</span> <span class="pl-s1">lombok</span>.<span class="pl-s1">Data</span>;
 
@@ -126,6 +129,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <span class="pl-c1">@</span><span class="pl-c1">Data</span>
 <span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-smi">TableDataInfoOther</span>&lt;<span class="pl-smi">T</span>&gt; <span class="pl-k">implements</span> <span class="pl-smi">Serializable</span> {
+    <span class="pl-k">protected</span> <span class="pl-k">static</span> <span class="pl-k">final</span> <span class="pl-smi">ThreadLocal</span>&lt;<span class="pl-smi">Page</span>&gt; <span class="pl-c1">LOCAL_PAGE</span> = <span class="pl-k">new</span> <span class="pl-smi">ThreadLocal</span>();
     <span class="pl-k">private</span> <span class="pl-k">static</span> <span class="pl-k">final</span> <span class="pl-smi">long</span> <span class="pl-s1">serialVersionUID</span> = <span class="pl-c1">1L</span>;
     <span class="pl-c1">@</span><span class="pl-c1">ApiModelProperty</span>(<span class="pl-s1">value</span> = <span class="pl-s">"total"</span>)
     <span class="pl-k">private</span> <span class="pl-smi">long</span> <span class="pl-s1">total</span>;
@@ -141,8 +145,18 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         <span class="pl-s1">rspData</span>.<span class="pl-en">setCode</span>(<span class="pl-c1">200</span>);
         <span class="pl-s1">rspData</span>.<span class="pl-en">setRows</span>(<span class="pl-s1">list</span>);
         <span class="pl-s1">rspData</span>.<span class="pl-en">setMsg</span>(<span class="pl-s">"查询成功"</span>);
-        <span class="pl-s1">rspData</span>.<span class="pl-en">setTotal</span>((<span class="pl-k">new</span> <span class="pl-smi">PageInfo</span>(<span class="pl-s1">list</span>)).<span class="pl-en">getTotal</span>());
+        <span class="pl-s1">rspData</span>.<span class="pl-en">setTotal</span>(<span class="pl-c1">LOCAL_PAGE</span>.<span class="pl-en">get</span>().<span class="pl-en">getTotal</span>());
+        <span class="pl-c1">LOCAL_PAGE</span>.<span class="pl-en">remove</span>();
         <span class="pl-k">return</span> <span class="pl-s1">rspData</span>;
+    }
+
+    <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-smi">Page</span> <span class="pl-en">getPage</span>() {
+        <span class="pl-smi">PageDomain</span> <span class="pl-s1">pageDomain</span> = <span class="pl-smi">TableSupport</span>.<span class="pl-en">buildPageRequest</span>();
+        <span class="pl-smi">Integer</span> <span class="pl-s1">pageNum</span> = <span class="pl-s1">pageDomain</span>.<span class="pl-en">getPageNum</span>();
+        <span class="pl-smi">Integer</span> <span class="pl-s1">pageSize</span> = <span class="pl-s1">pageDomain</span>.<span class="pl-en">getPageSize</span>();
+        <span class="pl-smi">Page</span> <span class="pl-s1">page</span>= <span class="pl-smi">PageMethod</span>.<span class="pl-en">startPage</span>(<span class="pl-s1">pageNum</span>,<span class="pl-s1">pageSize</span>);
+        <span class="pl-c1">LOCAL_PAGE</span>.<span class="pl-en">set</span>(<span class="pl-s1">page</span>);
+        <span class="pl-k">return</span> <span class="pl-s1">page</span>;
     }
 }</pre></div>
 <ol start="5">
