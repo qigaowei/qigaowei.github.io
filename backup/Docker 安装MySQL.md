@@ -28,3 +28,5 @@ docker exec -it mysql bash
 > exit
 
 ```
+
+参考https://www.cnblogs.com/johnnyzen/p/18077425
