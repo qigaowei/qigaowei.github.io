@@ -23,6 +23,7 @@
 -  in有数量限制，MySQL和oracle都有1000个限制
 - in里面数据太多，可能不走索引
 - EXISTS也可以，但是union的写法最简单
+- EXISTS适合list不是传过来，而是一条语句查询完的
 - UNION ALL会有重复数据。">
 <meta property="og:title" content="Mybatis使用union优化sql">
 <meta property="og:description" content="```xml
@@ -38,6 +39,7 @@
 -  in有数量限制，MySQL和oracle都有1000个限制
 - in里面数据太多，可能不走索引
 - EXISTS也可以，但是union的写法最简单
+- EXISTS适合list不是传过来，而是一条语句查询完的
 - UNION ALL会有重复数据。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/Mybatis-shi-yong-union-you-hua-sql.html">
@@ -119,6 +121,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>in有数量限制，MySQL和oracle都有1000个限制</li>
 <li>in里面数据太多，可能不走索引</li>
 <li>EXISTS也可以，但是union的写法最简单</li>
+<li>EXISTS适合list不是传过来，而是一条语句查询完的</li>
 <li>UNION ALL会有重复数据</li>
 </ul></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
