@@ -102,7 +102,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 		<span class="pl-c1">&lt;</span><span class="pl-s1">span</span> <span class="pl-c1">style</span><span class="pl-c1">=</span><span class="pl-s">"text-decoration: line-through;"</span><span class="pl-c1">&gt;</span><span class="pl-kos">{</span><span class="pl-kos">{</span>val<span class="pl-kos"></span><span class="pl-kos">.</span><span class="pl-c1">orderShowName</span> <span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span><span class="pl-kos">&lt;/</span><span class="pl-s1">span</span><span class="pl-c1">&gt;</span>
 		<span class="pl-kos">{</span><span class="pl-kos">{</span>else<span class="pl-kos">}</span><span class="pl-kos">}</span>
 			<span class="pl-kos">{</span><span class="pl-kos">{</span>val<span class="pl-kos"></span><span class="pl-kos">.</span><span class="pl-c1">orderShowName</span> <span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span>
-			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span>if}}
+			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span><span class="pl-s">i</span><span class="pl-s">f</span><span class="pl-s">}</span><span class="pl-s">}</span>
 
 	<span class="pl-kos">&lt;/</span><span class="pl-s1">td</span><span class="pl-c1">&gt;</span>
 	<span class="pl-c1">&lt;</span><span class="pl-s1">td</span> <span class="pl-c1">style</span><span class="pl-c1">=</span><span class="pl-s">"font-size:14px;border: 1px solid red;border-left:none;line-height:14px;"</span><span class="pl-c1">&gt;</span>
@@ -114,7 +114,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 		<span class="pl-c1">&lt;</span><span class="pl-s1">image</span> <span class="pl-c1">style</span><span class="pl-c1">=</span><span class="pl-s">"height:23px;width:48px"</span> <span class="pl-c1">src</span><span class="pl-c1">=</span><span class="pl-s">"/his/hisfile{{val.startDoctSign || ''}}"</span> <span class="pl-kos">/&gt;</span>
 		<span class="pl-kos">{</span><span class="pl-kos">{</span>else<span class="pl-kos">}</span><span class="pl-kos">}</span>
 			<span class="pl-kos">{</span><span class="pl-kos">{</span>val<span class="pl-kos"></span><span class="pl-kos">.</span><span class="pl-c1">startDoctName</span> <span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span>
-			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span>if}}
+			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span><span class="pl-s">i</span><span class="pl-s">f</span><span class="pl-s">}</span><span class="pl-s">}</span>
 	&lt;/<span class="pl-s1">td</span><span class="pl-c1">&gt;</span>
 	<span class="pl-c1">&lt;</span><span class="pl-s1">td</span> <span class="pl-c1">style</span><span class="pl-c1">=</span><span class="pl-s">"font-size: 12px;border: 1px solid red;"</span><span class="pl-c1">&gt;</span><span class="pl-kos">{</span><span class="pl-kos">{</span>val<span class="pl-kos"></span><span class="pl-kos">.</span><span class="pl-c1">endShowDate</span> <span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span><span class="pl-kos">&lt;/</span><span class="pl-s1">td</span><span class="pl-c1">&gt;</span>
 	<span class="pl-c1">&lt;</span><span class="pl-s1">td</span> <span class="pl-s1">style</span><span class="pl-c1">=</span><span class="pl-s">"font-size: 12px;border: 1px solid red;"</span><span class="pl-c1">&gt;</span><span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-s1">val</span><span class="pl-kos">.</span><span class="pl-c1">endShowTime</span> <span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span><span class="pl-kos">&lt;/</span><span class="pl-s1">td</span><span class="pl-c1">&gt;</span>
@@ -125,7 +125,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 		<span class="pl-c1">&lt;</span><span class="pl-s1">image</span> <span class="pl-c1">style</span><span class="pl-c1">=</span><span class="pl-s">"height:23px;width:48px"</span> <span class="pl-c1">src</span><span class="pl-c1">=</span><span class="pl-s">"/his/hisfile{{val.startNurseSign || ''}}"</span> <span class="pl-kos">/&gt;</span>
 		<span class="pl-kos">{</span><span class="pl-kos">{</span>else<span class="pl-kos">}</span><span class="pl-kos">}</span>
 			<span class="pl-kos">{</span><span class="pl-kos">{</span>val<span class="pl-kos"></span><span class="pl-kos">.</span><span class="pl-c1">startNurseName</span> <span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span>
-			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span>if}}
+			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span><span class="pl-s">i</span><span class="pl-s">f</span><span class="pl-s">}</span><span class="pl-s">}</span>
 
 	<span class="pl-kos">&lt;/</span><span class="pl-s1">td</span><span class="pl-c1">&gt;</span>
 <span class="pl-kos">&lt;/</span><span class="pl-s1">tr</span><span class="pl-c1">&gt;</span>
@@ -142,7 +142,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 		<span class="pl-c1">&lt;</span><span class="pl-s1">span</span> <span class="pl-c1">style</span><span class="pl-c1">=</span><span class="pl-s">"text-decoration: line-through;"</span><span class="pl-c1">&gt;</span><span class="pl-kos">{</span><span class="pl-kos">{</span>valh<span class="pl-kos"></span><span class="pl-kos">.</span><span class="pl-c1">orderShowName</span> <span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span><span class="pl-kos">&lt;/</span><span class="pl-s1">span</span><span class="pl-c1">&gt;</span>
 		<span class="pl-kos">{</span><span class="pl-kos">{</span>else<span class="pl-kos">}</span><span class="pl-kos">}</span>
 			<span class="pl-kos">{</span><span class="pl-kos">{</span>valh<span class="pl-kos"></span><span class="pl-kos">.</span><span class="pl-c1">orderShowName</span> <span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span>
-			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span>if}}
+			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span><span class="pl-s">i</span><span class="pl-s">f</span><span class="pl-s">}</span><span class="pl-s">}</span>
 
 	<span class="pl-kos">&lt;/</span><span class="pl-s1">td</span><span class="pl-c1">&gt;</span>
 	<span class="pl-c1">&lt;</span><span class="pl-s1">td</span> <span class="pl-c1">style</span><span class="pl-c1">=</span><span class="pl-s">"font-size:14px;border: 1px solid red;border-left:none;line-height:14px;"</span><span class="pl-c1">&gt;</span>
@@ -155,7 +155,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 		<span class="pl-kos">{</span><span class="pl-kos">{</span>else<span class="pl-kos">}</span><span class="pl-kos">}</span>
 			<span class="pl-kos">{</span><span class="pl-kos">{</span>valh<span class="pl-kos"></span><span class="pl-kos">.</span><span class="pl-c1">startDoctName</span> <span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span>
 
-			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span>if}}
+			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span><span class="pl-s">i</span><span class="pl-s">f</span><span class="pl-s">}</span><span class="pl-s">}</span>
 	&lt;/<span class="pl-s1">td</span><span class="pl-c1">&gt;</span>
 	<span class="pl-c1">&lt;</span><span class="pl-s1">td</span> <span class="pl-c1">style</span><span class="pl-c1">=</span><span class="pl-s">"font-size: 12px;border: 1px solid red;"</span><span class="pl-c1">&gt;</span><span class="pl-kos">{</span><span class="pl-kos">{</span>valh<span class="pl-kos"></span><span class="pl-kos">.</span><span class="pl-c1">endShowDate</span> <span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span><span class="pl-kos">&lt;/</span><span class="pl-s1">td</span><span class="pl-c1">&gt;</span>
 	<span class="pl-c1">&lt;</span><span class="pl-s1">td</span> <span class="pl-s1">style</span><span class="pl-c1">=</span><span class="pl-s">"font-size: 12px;border: 1px solid red;"</span><span class="pl-c1">&gt;</span><span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-s1">valh</span><span class="pl-kos">.</span><span class="pl-c1">endShowTime</span> <span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span><span class="pl-kos">&lt;/</span><span class="pl-s1">td</span><span class="pl-c1">&gt;</span>
@@ -165,13 +165,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 		<span class="pl-kos">{</span><span class="pl-kos">{</span>else<span class="pl-kos">}</span><span class="pl-kos">}</span>
 			<span class="pl-kos">{</span><span class="pl-kos">{</span>valh<span class="pl-kos"></span><span class="pl-kos">.</span><span class="pl-c1">startNurseName</span><span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span>
 
-			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span>if}}
+			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span><span class="pl-s">i</span><span class="pl-s">f</span><span class="pl-s">}</span><span class="pl-s">}</span>
 	<span class="pl-kos">&lt;/</span><span class="pl-s1">td</span><span class="pl-c1">&gt;</span>
 <span class="pl-kos">&lt;/</span><span class="pl-s1">tr</span><span class="pl-c1">&gt;</span>
 
-<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-pds"><span class="pl-c1">/</span>each}}</span>
+<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-pds"><span class="pl-c1">/</span><span class="pl-s">e</span><span class="pl-s">a</span><span class="pl-s">c</span><span class="pl-s">h</span><span class="pl-s">}</span><span class="pl-s">}</span></span>
 <span class="pl-pds"><span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span>if</span><span class="pl-kos">}</span><span class="pl-kos">}</span>
-<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span>each}}</pre></div>
+<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span><span class="pl-s">e</span><span class="pl-s">a</span><span class="pl-s">c</span><span class="pl-s">h</span><span class="pl-s">}</span><span class="pl-s">}</span></pre></div>
 <ol start="2">
 <li>优化后的html</li>
 </ol>
@@ -186,7 +186,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 		<span class="pl-c1">&lt;</span><span class="pl-s1">span</span> <span class="pl-c1">style</span><span class="pl-c1">=</span><span class="pl-s">"text-decoration: line-through;"</span><span class="pl-c1">&gt;</span><span class="pl-kos">{</span><span class="pl-kos">{</span>val<span class="pl-kos"></span><span class="pl-kos">.</span><span class="pl-c1">orderShowName</span> <span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span><span class="pl-kos">&lt;/</span><span class="pl-s1">span</span><span class="pl-c1">&gt;</span>
 		<span class="pl-kos">{</span><span class="pl-kos">{</span>else<span class="pl-kos">}</span><span class="pl-kos">}</span>
 			<span class="pl-kos">{</span><span class="pl-kos">{</span>val<span class="pl-kos"></span><span class="pl-kos">.</span><span class="pl-c1">orderShowName</span> <span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span>
-			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span>if}}
+			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span><span class="pl-s">i</span><span class="pl-s">f</span><span class="pl-s">}</span><span class="pl-s">}</span>
 
 	<span class="pl-kos">&lt;/</span><span class="pl-s1">td</span><span class="pl-c1">&gt;</span>
 	<span class="pl-c1">&lt;</span><span class="pl-s1">td</span> <span class="pl-c1">style</span><span class="pl-c1">=</span><span class="pl-s">"font-size:14px;border: 1px solid red;border-left:none;line-height:14px;"</span><span class="pl-c1">&gt;</span>
@@ -198,7 +198,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 		<span class="pl-c1">&lt;</span><span class="pl-s1">image</span> <span class="pl-c1">style</span><span class="pl-c1">=</span><span class="pl-s">"height:23px;width:48px"</span> <span class="pl-c1">src</span><span class="pl-c1">=</span><span class="pl-s">"/his/hisfile{{val.startDoctSign || ''}}"</span> <span class="pl-kos">/&gt;</span>
 		<span class="pl-kos">{</span><span class="pl-kos">{</span>else<span class="pl-kos">}</span><span class="pl-kos">}</span>
 			<span class="pl-kos">{</span><span class="pl-kos">{</span>val<span class="pl-kos"></span><span class="pl-kos">.</span><span class="pl-c1">startDoctName</span> <span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span>
-			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span>if}}
+			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span><span class="pl-s">i</span><span class="pl-s">f</span><span class="pl-s">}</span><span class="pl-s">}</span>
 	&lt;/<span class="pl-s1">td</span><span class="pl-c1">&gt;</span>
 	<span class="pl-c1">&lt;</span><span class="pl-s1">td</span> <span class="pl-c1">style</span><span class="pl-c1">=</span><span class="pl-s">"font-size: 12px;border: 1px solid red;"</span><span class="pl-c1">&gt;</span><span class="pl-kos">{</span><span class="pl-kos">{</span>val<span class="pl-kos"></span><span class="pl-kos">.</span><span class="pl-c1">endShowDate</span> <span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span><span class="pl-kos">&lt;/</span><span class="pl-s1">td</span><span class="pl-c1">&gt;</span>
 	<span class="pl-c1">&lt;</span><span class="pl-s1">td</span> <span class="pl-s1">style</span><span class="pl-c1">=</span><span class="pl-s">"font-size: 12px;border: 1px solid red;"</span><span class="pl-c1">&gt;</span><span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-s1">val</span><span class="pl-kos">.</span><span class="pl-c1">endShowTime</span> <span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span><span class="pl-kos">&lt;/</span><span class="pl-s1">td</span><span class="pl-c1">&gt;</span>
@@ -209,12 +209,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 		<span class="pl-c1">&lt;</span><span class="pl-s1">image</span> <span class="pl-c1">style</span><span class="pl-c1">=</span><span class="pl-s">"height:23px;width:48px"</span> <span class="pl-c1">src</span><span class="pl-c1">=</span><span class="pl-s">"/his/hisfile{{val.startNurseSign || ''}}"</span> <span class="pl-kos">/&gt;</span>
 		<span class="pl-kos">{</span><span class="pl-kos">{</span>else<span class="pl-kos">}</span><span class="pl-kos">}</span>
 			<span class="pl-kos">{</span><span class="pl-kos">{</span>val<span class="pl-kos"></span><span class="pl-kos">.</span><span class="pl-c1">startNurseName</span> <span class="pl-c1">||</span> <span class="pl-s">''</span><span class="pl-kos">}</span><span class="pl-kos">}</span>
-			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span>if}}
+			<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span><span class="pl-s">i</span><span class="pl-s">f</span><span class="pl-s">}</span><span class="pl-s">}</span>
 
 	<span class="pl-kos">&lt;/</span><span class="pl-s1">td</span><span class="pl-c1">&gt;</span>
 <span class="pl-kos">&lt;/</span><span class="pl-s1">tr</span><span class="pl-c1">&gt;</span>
 
-<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span>each}}</pre></div>
+<span class="pl-kos">{</span><span class="pl-kos">{</span><span class="pl-c1">/</span><span class="pl-s">e</span><span class="pl-s">a</span><span class="pl-s">c</span><span class="pl-s">h</span><span class="pl-s">}</span><span class="pl-s">}</span></pre></div>
 <ol start="3">
 <li>优化前的js</li>
 </ol>
