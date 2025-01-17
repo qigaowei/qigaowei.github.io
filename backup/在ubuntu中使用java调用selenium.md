@@ -23,8 +23,6 @@ options.setBinary("/opt/google/chrome/chrome");
  System.setProperty("webdriver.chrome.driver", "/usr/local/share/chromedriver");
 options.addArguments("--headless"); //使用无头模式
 options.addArguments("--disable-javascript");
-options.addArguments("--user-data-dir=/tmp/");
-options.addArguments("--no-sandbox");//没有这个可能会报错
 ```
 
 参考网站

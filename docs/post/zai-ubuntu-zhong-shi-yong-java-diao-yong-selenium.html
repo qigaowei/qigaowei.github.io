@@ -35,8 +35,6 @@ options.setBinary('/opt/google/chrome/chrome');
  System.setProperty('webdriver.chrome.driver', '/usr/local/share/chromedriver');
 options.addArguments('--headless'); //使用无头模式
 options.addArguments('--disable-javascript');
-options.addArguments('--user-data-dir=/tmp/');
-options.addArguments('--no-sandbox');//没有这个可能会报错
 ```
 
 参考网站
@@ -69,8 +67,6 @@ options.setBinary('/opt/google/chrome/chrome');
  System.setProperty('webdriver.chrome.driver', '/usr/local/share/chromedriver');
 options.addArguments('--headless'); //使用无头模式
 options.addArguments('--disable-javascript');
-options.addArguments('--user-data-dir=/tmp/');
-options.addArguments('--no-sandbox');//没有这个可能会报错
 ```
 
 参考网站
@@ -172,9 +168,7 @@ chromedriver --version</pre></div>
 <div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-s1">options</span>.<span class="pl-en">setBinary</span>(<span class="pl-s">"/opt/google/chrome/chrome"</span>);
  <span class="pl-smi">System</span>.<span class="pl-en">setProperty</span>(<span class="pl-s">"webdriver.chrome.driver"</span>, <span class="pl-s">"/usr/local/share/chromedriver"</span>);
 <span class="pl-s1">options</span>.<span class="pl-en">addArguments</span>(<span class="pl-s">"--headless"</span>); <span class="pl-c">//使用无头模式</span>
-<span class="pl-s1">options</span>.<span class="pl-en">addArguments</span>(<span class="pl-s">"--disable-javascript"</span>);
-<span class="pl-s1">options</span>.<span class="pl-en">addArguments</span>(<span class="pl-s">"--user-data-dir=/tmp/"</span>);
-<span class="pl-s1">options</span>.<span class="pl-en">addArguments</span>(<span class="pl-s">"--no-sandbox"</span>);<span class="pl-c">//没有这个可能会报错</span></pre></div>
+<span class="pl-s1">options</span>.<span class="pl-en">addArguments</span>(<span class="pl-s">"--disable-javascript"</span>);</pre></div>
 <p>参考网站</p>
 <ul>
 <li><a href="https://blog.csdn.net/weixin_44184990/article/details/123590435" rel="nofollow">https://blog.csdn.net/weixin_44184990/article/details/123590435</a></li>
