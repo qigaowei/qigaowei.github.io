@@ -1,5 +1,37 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Fri, 17 Jan 2025 02:38:05 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>Ubuntu安装docker</title><link>https://qigaowei.github.io/post/Ubuntu-an-zhuang-docker.html</link><description>1. 
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Fri, 17 Jan 2025 08:32:17 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>在ubuntu中使用java调用selenium</title><link>https://qigaowei.github.io/post/zai-ubuntu-zhong-shi-yong-java-diao-yong-selenium.html</link><description>1. 安装 Chrome
+```shell
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+# 检查版本
+google-chrome --version
+```
+2. 无法安装使用
+```shell
+sudo apt-get install -f
+```
+3. 安装chromedriver 
+```shell
+unzip chromedriver_linux64.zip
+sudo mv -f chromedriver /usr/local/share/chromedriver
+sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
+chromedriver --version
+```
+4. java配置
+```java
+options.setBinary('/opt/google/chrome/chrome');
+ System.setProperty('webdriver.chrome.driver', '/usr/local/share/chromedriver');
+options.addArguments('--headless'); //使用无头模式
+options.addArguments('--disable-javascript');
+options.addArguments('--user-data-dir=/tmp/');
+options.addArguments('--no-sandbox');//没有这个可能会报错
+```
+
+参考网站
+- https://blog.csdn.net/weixin_44184990/article/details/123590435
+
+。</description><guid isPermaLink="true">https://qigaowei.github.io/post/zai-ubuntu-zhong-shi-yong-java-diao-yong-selenium.html</guid><pubDate>Fri, 17 Jan 2025 08:31:56 +0000</pubDate></item><item><title>Ubuntu安装docker</title><link>https://qigaowei.github.io/post/Ubuntu-an-zhuang-docker.html</link><description>1. 
 ```shell
 curl -fsSL https://test.docker.com/ -o test-docker.sh
  sudo sh test-docker.sh
