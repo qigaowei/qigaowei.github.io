@@ -1,5 +1,36 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Tue, 07 Jan 2025 07:37:06 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>医疗测试时-不能把病人诊断为伤寒等传染病</title><link>https://qigaowei.github.io/post/yi-liao-ce-shi-shi---bu-neng-ba-bing-ren-zhen-duan-wei-shang-han-deng-chuan-ran-bing.html</link><guid isPermaLink="true">https://qigaowei.github.io/post/yi-liao-ce-shi-shi---bu-neng-ba-bing-ren-zhen-duan-wei-shang-han-deng-chuan-ran-bing.html</guid><pubDate>Tue, 07 Jan 2025 07:36:38 +0000</pubDate></item><item><title>Docker 安装MySQL</title><link>https://qigaowei.github.io/post/Docker%20-an-zhuang-MySQL.html</link><description>```shell&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Fri, 17 Jan 2025 02:38:05 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>Ubuntu安装docker</title><link>https://qigaowei.github.io/post/Ubuntu-an-zhuang-docker.html</link><description>1. 
+```shell
+curl -fsSL https://test.docker.com/ -o test-docker.sh
+ sudo sh test-docker.sh
+# 创建目录
+sudo mkdir -p /etc/docker
+# 写入配置文件
+sudo tee /etc/docker/daemon.json &lt;&lt;-'EOF'
+{
+
+    'registry-mirrors': [
+
+    'http://cf-workers-docker-io-2cl.pages.dev/',
+'http://dockerhub.timeweb.cloud/',
+'http://docker.ketches.cn/',
+'http://docker.m.daocloud.io/'
+
+    ]
+
+}
+
+EOF
+# 重启docker服务
+sudo systemctl daemon-reload 
+# 等一会再执行
+ sudo systemctl restart docker
+```
+2. 出问题查看日志
+```shell
+sudo journalctl -u docker.service
+```
+3. /etc/docker/daemon.json配置文件一定包含http://。</description><guid isPermaLink="true">https://qigaowei.github.io/post/Ubuntu-an-zhuang-docker.html</guid><pubDate>Fri, 17 Jan 2025 02:37:35 +0000</pubDate></item><item><title>医疗测试时-不能把病人诊断为伤寒等传染病</title><link>https://qigaowei.github.io/post/yi-liao-ce-shi-shi---bu-neng-ba-bing-ren-zhen-duan-wei-shang-han-deng-chuan-ran-bing.html</link><guid isPermaLink="true">https://qigaowei.github.io/post/yi-liao-ce-shi-shi---bu-neng-ba-bing-ren-zhen-duan-wei-shang-han-deng-chuan-ran-bing.html</guid><pubDate>Tue, 07 Jan 2025 07:36:38 +0000</pubDate></item><item><title>Docker 安装MySQL</title><link>https://qigaowei.github.io/post/Docker%20-an-zhuang-MySQL.html</link><description>```shell&#13;
 docker pull mysql:5.7&#13;
 # docker pull mysql:8&#13;
 &#13;
