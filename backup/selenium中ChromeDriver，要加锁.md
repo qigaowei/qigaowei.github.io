@@ -1,8 +1,3 @@
-- 只能new一次
-- 所有链接用一个ChromeDriver 
-```java
-public static ChromeDriver CHROME_DRIVER;
-new ChromeDriver(options);
-```
-- 要不各种bug
+- 所有链接用一个ChromeDriver 就行了
+- 但是要加锁，要不session和窗口容易冲突
 
