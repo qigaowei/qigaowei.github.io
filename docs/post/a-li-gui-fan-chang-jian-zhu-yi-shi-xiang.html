@@ -97,7 +97,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <ol start="2">
 <li>long或者Long初始赋值时，必须使用大写的L，不能是小写的l，小写容易跟数字1混淆，造成误解</li>
 <li>在if/else/for/while/do语句中必须使用大括号，即使只有一行代码，</li>
-</ol></div>
+<li>所有的覆写方法，必须加<a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/OverRide/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/OverRide">@OverRide</a>注解。</li>
+</ol>
+<ul>
+<li>反例：getObject()与get0bject()的问题。一个是字母的O，一个是数字的0，加<a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/OverRide/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/OverRide">@OverRide</a>可以准确判断是否覆盖成功。另外，如果在抽象类中对方法签名进行修改，其实现类会马上编译报错。</li>
+</ul></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
