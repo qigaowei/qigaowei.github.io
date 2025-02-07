@@ -60,3 +60,7 @@ org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'applic
 	at java.base/java.lang.Thread.run(Thread.java:1583)
 ```
 - 解决方法使用‘com.fasterxml.jackson.annotation.JsonIgnore’注解，java.awt.Font
+```java
+@JsonIgnore
+    private Font font;
+```

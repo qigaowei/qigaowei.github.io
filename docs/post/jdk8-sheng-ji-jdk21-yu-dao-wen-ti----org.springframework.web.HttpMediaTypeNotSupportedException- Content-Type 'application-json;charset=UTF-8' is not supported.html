@@ -71,7 +71,11 @@ org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'applic
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
 ```
-- 解决方法使用‘com.fasterxml.jackson.annotation.JsonIgnore’注解，java.awt.Font。">
+- 解决方法使用‘com.fasterxml.jackson.annotation.JsonIgnore’注解，java.awt.Font
+```java
+@JsonIgnore
+    private Font font;
+```。">
 <meta property="og:title" content="jdk8升级jdk21遇到问题---org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/json;charset=UTF-8' is not supported">
 <meta property="og:description" content="```java
 2025-02-07 09:34:06.582  WARN 13592 --- [io-33333-exec-9] .c.j.MappingJackson2HttpMessageConverter : Failed to evaluate Jackson deserialization for type [[simple type, class com.demo.vo.GifQueryVo]]: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Invalid type definition for type `java.awt.Font`: Failed to call `setAccess()` on Field 'name' (of class `java.awt.Font`) due to `java.lang.reflect.InaccessibleObjectException`, problem: Unable to make field protected java.lang.String java.awt.Font.name accessible: module java.desktop does not 'opens java.awt' to unnamed module @236e3f4e
@@ -134,7 +138,11 @@ org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'applic
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
 ```
-- 解决方法使用‘com.fasterxml.jackson.annotation.JsonIgnore’注解，java.awt.Font。">
+- 解决方法使用‘com.fasterxml.jackson.annotation.JsonIgnore’注解，java.awt.Font
+```java
+@JsonIgnore
+    private Font font;
+```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/jdk8-sheng-ji-jdk21-yu-dao-wen-ti----org.springframework.web.HttpMediaTypeNotSupportedException-%20Content-Type%20%27application-json%3Bcharset%3DUTF-8%27%20is%20not%20supported.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -266,7 +274,9 @@ org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'applic
 	at java.base/java.lang.Thread.run(Thread.java:1583)</pre></div>
 <ul>
 <li>解决方法使用‘com.fasterxml.jackson.annotation.JsonIgnore’注解，java.awt.Font</li>
-</ul></div>
+</ul>
+<div class="highlight highlight-source-java"><pre class="notranslate"><span class="pl-c1">@</span><span class="pl-c1">JsonIgnore</span>
+    <span class="pl-k">private</span> <span class="pl-smi">Font</span> <span class="pl-s1">font</span>;</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
