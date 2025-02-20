@@ -1,5 +1,33 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Wed, 12 Feb 2025 02:40:36 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>访问被封禁的网络，可以参考此方法</title><link>https://qigaowei.github.io/post/fang-wen-bei-feng-jin-de-wang-luo-%EF%BC%8C-ke-yi-can-kao-ci-fang-fa.html</link><description>https://github.com/u3c3/BT-btt/blob/master/PC%E7%AB%AF%E5%85%8D%E8%B2%BB%E6%B0%B8%E4%B9%85%E8%A8%AA%E5%95%8F%E6%96%B9%E6%B3%95。</description><guid isPermaLink="true">https://qigaowei.github.io/post/fang-wen-bei-feng-jin-de-wang-luo-%EF%BC%8C-ke-yi-can-kao-ci-fang-fa.html</guid><pubDate>Mon, 10 Feb 2025 09:28:38 +0000</pubDate></item><item><title>Ubuntu中的docker中的java，连接宿主机Ubuntu的redis</title><link>https://qigaowei.github.io/post/Ubuntu-zhong-de-docker-zhong-de-java%EF%BC%8C-lian-jie-su-zhu-ji-Ubuntu-de-redis.html</link><description>使用 Docker Network 配置
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Thu, 20 Feb 2025 00:31:35 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>MyBatisPlus使用时报错Invalid value type for attribute ‘factoryBeanObjectType‘</title><link>https://qigaowei.github.io/post/MyBatisPlus-shi-yong-shi-bao-cuo-Invalid%20value%20type%20for%20attribute%20%E2%80%98factoryBeanObjectType%E2%80%98.html</link><description>```xml
+&lt;dependency&gt;
+            &lt;groupId&gt;com.baomidou&lt;/groupId&gt;
+            &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;
+            &lt;version&gt;3.5.10&lt;/version&gt;
+        &lt;/dependency&gt;
+```
+改为
+```xml
+&lt;dependency&gt;
+            &lt;groupId&gt;com.baomidou&lt;/groupId&gt;
+            &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;
+            &lt;version&gt;3.5.10&lt;/version&gt;
+            &lt;exclusions&gt;
+                &lt;exclusion&gt;
+                    &lt;groupId&gt;org.mybatis&lt;/groupId&gt;
+                    &lt;artifactId&gt;mybatis-spring&lt;/artifactId&gt;
+                &lt;/exclusion&gt;
+            &lt;/exclusions&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.mybatis&lt;/groupId&gt;
+            &lt;artifactId&gt;mybatis-spring&lt;/artifactId&gt;
+            &lt;version&gt;3.0.3&lt;/version&gt;
+        &lt;/dependency&gt;
+```
+
+
+。</description><guid isPermaLink="true">https://qigaowei.github.io/post/MyBatisPlus-shi-yong-shi-bao-cuo-Invalid%20value%20type%20for%20attribute%20%E2%80%98factoryBeanObjectType%E2%80%98.html</guid><pubDate>Thu, 20 Feb 2025 00:31:02 +0000</pubDate></item><item><title>访问被封禁的网络，可以参考此方法</title><link>https://qigaowei.github.io/post/fang-wen-bei-feng-jin-de-wang-luo-%EF%BC%8C-ke-yi-can-kao-ci-fang-fa.html</link><description>https://github.com/u3c3/BT-btt/blob/master/PC%E7%AB%AF%E5%85%8D%E8%B2%BB%E6%B0%B8%E4%B9%85%E8%A8%AA%E5%95%8F%E6%96%B9%E6%B3%95。</description><guid isPermaLink="true">https://qigaowei.github.io/post/fang-wen-bei-feng-jin-de-wang-luo-%EF%BC%8C-ke-yi-can-kao-ci-fang-fa.html</guid><pubDate>Mon, 10 Feb 2025 09:28:38 +0000</pubDate></item><item><title>Ubuntu中的docker中的java，连接宿主机Ubuntu的redis</title><link>https://qigaowei.github.io/post/Ubuntu-zhong-de-docker-zhong-de-java%EF%BC%8C-lian-jie-su-zhu-ji-Ubuntu-de-redis.html</link><description>使用 Docker Network 配置
 ```shell
 docker run --network host your-docker-image
 ```
