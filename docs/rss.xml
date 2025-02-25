@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Thu, 20 Feb 2025 04:40:31 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>Failed to instantiate [com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean]</title><link>https://qigaowei.github.io/post/Failed%20to%20instantiate%20%5Bcom.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean%5D.html</link><description>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Tue, 25 Feb 2025 07:26:11 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>Failed to instantiate [com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean]</title><link>https://qigaowei.github.io/post/Failed%20to%20instantiate%20%5Bcom.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean%5D.html</link><description>
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'magnetService': Unsatisfied dependency expressed through field 'magnetMapper': Error creating bean with name 'magnetMapper' defined in file [C:\code\magnet\target\classes\com\demo\mapper\MagnetMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory': Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/demo/config/MyBatisConfig.class]: Failed to instantiate [com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean]: Factory method 'sqlSessionFactory' threw exception with message: org/springframework/core/NestedIOException
 
 解决办法增加配置文件
@@ -493,21 +493,22 @@ form.value.membersName=temp.map(student =&gt; student.internshipStudentsName).jo
 - 所以用var temp=response.data.members;先保存起来。</description><guid isPermaLink="true">https://qigaowei.github.io/post/vue-shi-yong-map-ti-qu-shu-ju-hou-%EF%BC%8C-yin-qi-de-bug.html</guid><pubDate>Fri, 20 Sep 2024 06:23:54 +0000</pubDate></item><item><title>idea初始化设置，加快运行速度</title><link>https://qigaowei.github.io/post/idea-chu-shi-hua-she-zhi-%EF%BC%8C-jia-kuai-yun-xing-su-du.html</link><description>- 全局自动换行 https://blog.csdn.net/u011675334/article/details/108795519&#13;
 - 关闭部分不必要信息提示（比如函数形参提示） https://blog.csdn.net/crossfire_sli/article/details/126997889&#13;
 - 设置快捷键 &#13;
-- 字体大小，越大越有益于眼睛。</description><guid isPermaLink="true">https://qigaowei.github.io/post/idea-chu-shi-hua-she-zhi-%EF%BC%8C-jia-kuai-yun-xing-su-du.html</guid><pubDate>Sat, 14 Sep 2024 09:32:28 +0000</pubDate></item><item><title>程序员装机必备软件</title><link>https://qigaowei.github.io/post/cheng-xu-yuan-zhuang-ji-bi-bei-ruan-jian.html</link><description>- [idea](https://www.jetbrains.com.cn/idea/download/other.html)&#13;
--  [git](https://git-scm.com/downloads)&#13;
-- wps&#13;
-- [v2rayn](https://github.com/2dust/v2rayN)&#13;
-- 微信&#13;
-- 微信输入法（搜狗广告太多）&#13;
-- notepad++&#13;
-- [mpc播放器，无广告，也不会更新版本了](https://github.com/mpc-hc/mpc-hc/releases/tag/1.7.13)&#13;
-- [谷歌浏览器](https://www.google.com/intl/zh-CN/chrome/)&#13;
-- [everything](https://www.voidtools.com/)&#13;
-- [treesize](https://www.jam-software.com/treesize_free)&#13;
-- [7zip](https://7-zip.org/download.html)&#13;
-- [dbeaver](https://dbeaver.io/download/) &#13;
-- [用这个Navicat Premium Lite，官方推出的免费版  功能少一点,每个公司只能5个用户](https://www.navicat.com/en/products/navicat-premium-lite)&#13;
-- [LogViewPro.zip查看大文本必备，可直接下载](https://github.com/user-attachments/files/17613553/LogViewPro.zip)&#13;
+- 字体大小，越大越有益于眼睛。</description><guid isPermaLink="true">https://qigaowei.github.io/post/idea-chu-shi-hua-she-zhi-%EF%BC%8C-jia-kuai-yun-xing-su-du.html</guid><pubDate>Sat, 14 Sep 2024 09:32:28 +0000</pubDate></item><item><title>程序员装机必备软件</title><link>https://qigaowei.github.io/post/cheng-xu-yuan-zhuang-ji-bi-bei-ruan-jian.html</link><description>- [idea](https://www.jetbrains.com.cn/idea/download/other.html)
+-  [git](https://git-scm.com/downloads)
+- wps
+- [v2rayn](https://github.com/2dust/v2rayN)
+- 微信
+- 微信输入法（搜狗广告太多）
+- notepad++
+- [mpc播放器，无广告，也不会更新版本了](https://github.com/mpc-hc/mpc-hc/releases/tag/1.7.13)
+- [谷歌浏览器](https://www.google.com/intl/zh-CN/chrome/)
+- [everything](https://www.voidtools.com/)
+- [treesize](https://www.jam-software.com/treesize_free)
+- [7zip](https://7-zip.org/download.html)
+- [dbeaver](https://dbeaver.io/download/) 
+- [用这个Navicat Premium Lite，官方推出的免费版  功能少一点,每个公司只能5个用户](https://www.navicat.com/en/products/navicat-premium-lite)
+- [LogViewPro.zip查看大文本必备，可直接下载](https://github.com/user-attachments/files/17613553/LogViewPro.zip)
+- [MobaXterm](https://mobaxterm.mobatek.net/download.html) 
 。</description><guid isPermaLink="true">https://qigaowei.github.io/post/cheng-xu-yuan-zhuang-ji-bi-bei-ruan-jian.html</guid><pubDate>Thu, 12 Sep 2024 13:34:45 +0000</pubDate></item><item><title>nodejs镜像地址</title><link>https://qigaowei.github.io/post/nodejs-jing-xiang-di-zhi.html</link><description>1. 先设置镜像地址&#13;
 - npm config set registry https://registry.npmmirror.com&#13;
 2. 查看镜像地址是否成功&#13;
