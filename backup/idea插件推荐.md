@@ -1,4 +1,4 @@
-1. mybatis跳转到xml的
+1. mybatis跳转到xml的,收费版才能用
 - https://plugins.jetbrains.com/plugin/18617-free-mybatis-tool
 2. 一键生成get set，不是实体类的
 - https://plugins.jetbrains.com/plugin/9360-generateallsetter
