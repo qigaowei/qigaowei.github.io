@@ -91,7 +91,10 @@ RUN mvn clean compile exec:java -Dexec.mainClass=<span class="pl-s"><span class=
 <ol start="2">
 <li>如果希望在运行容器时执行 Maven 命令而不是在构建时执行，可以使用 CMD 或 ENTRYPOINT 指令：</li>
 </ol>
-<div class="highlight highlight-source-shell"><pre class="notranslate">CMD [<span class="pl-s"><span class="pl-pds">"</span>mvn<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>clean<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>compile<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>exec:java<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>-Dexec.mainClass=com.demo.MagnetApplication<span class="pl-pds">"</span></span>]</pre></div></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">CMD [<span class="pl-s"><span class="pl-pds">"</span>mvn<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>clean<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>compile<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>exec:java<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>-Dexec.mainClass=com.demo.MagnetApplication<span class="pl-pds">"</span></span>]</pre></div>
+<ol start="3">
+<li>CMD只能有一个</li>
+</ol></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

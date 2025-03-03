@@ -7,3 +7,4 @@ RUN mvn clean compile exec:java -Dexec.mainClass="com.demo.MagnetApplication"
 ```shell
 CMD ["mvn", "clean", "compile", "exec:java", "-Dexec.mainClass=com.demo.MagnetApplication"]
 ```
+3. CMD只能有一个
