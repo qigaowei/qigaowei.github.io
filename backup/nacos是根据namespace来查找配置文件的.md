@@ -15,4 +15,4 @@ spring:
 ```
 
 对应的配置文件nngame-goods-business-test1.yaml
-spring.application.name
+spring.application.name不对也不行
