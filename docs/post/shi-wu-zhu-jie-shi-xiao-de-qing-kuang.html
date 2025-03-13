@@ -10,13 +10,13 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="TODO
-threadlocal来实现
-编程式事务能解决大部分问题。">
+<meta name="description" content="1. 异常被捕获
+2. 事务中用了多线程，threadlocal来实现
+3. 编程式事务能解决大部分问题。">
 <meta property="og:title" content="事务注解失效的情况">
-<meta property="og:description" content="TODO
-threadlocal来实现
-编程式事务能解决大部分问题。">
+<meta property="og:description" content="1. 异常被捕获
+2. 事务中用了多线程，threadlocal来实现
+3. 编程式事务能解决大部分问题。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/shi-wu-zhu-jie-shi-xiao-de-qing-kuang.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -77,9 +77,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>TODO<br>
-threadlocal来实现<br>
-编程式事务能解决大部分问题</p></div>
+<div class="markdown-body" id="postBody"><ol>
+<li>异常被捕获</li>
+<li>事务中用了多线程，threadlocal来实现</li>
+<li>编程式事务能解决大部分问题</li>
+</ol></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
