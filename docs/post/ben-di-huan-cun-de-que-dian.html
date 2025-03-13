@@ -17,7 +17,8 @@
 2. 解决方案
 可以不使用本地缓存,
 将redis的副本跟springboot部署在一台机器上
-减少网络开销。">
+减少网络开销
+3. 对于变化不频繁的数据，才会考虑放到本地缓存中。">
 <meta property="og:title" content="本地缓存的缺点">
 <meta property="og:description" content="1. 缺点
 本地缓存很难保证一致性，
@@ -26,7 +27,8 @@
 2. 解决方案
 可以不使用本地缓存,
 将redis的副本跟springboot部署在一台机器上
-减少网络开销。">
+减少网络开销
+3. 对于变化不频繁的数据，才会考虑放到本地缓存中。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/ben-di-huan-cun-de-que-dian.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -96,6 +98,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 可以不使用本地缓存,<br>
 将redis的副本跟springboot部署在一台机器上<br>
 减少网络开销</li>
+<li>对于变化不频繁的数据，才会考虑放到本地缓存中。</li>
+<li>基于业务上能接受的时长设置失效时长，比如业务上可以接受10分钟的延迟，那么我们可以设置个8分钟的超时时间。这样到期之后这个缓存的内容就会自动失效。</li>
 </ol></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
