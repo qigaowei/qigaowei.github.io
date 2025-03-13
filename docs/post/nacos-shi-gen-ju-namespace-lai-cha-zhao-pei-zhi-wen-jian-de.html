@@ -11,22 +11,40 @@
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
 <meta name="description" content="```
+spring:
+  application:
+    name: nngame-goods-business
+  main:
+    allow-bean-definition-overriding: true
   cloud:
     nacos:
       config:
-        server-addr: 172.31.4.12:8848
+        server-addr: 10.178.100.10:8848
         file-extension: yaml
-        namespace: 182
-```。">
+        namespace: 183
+  profiles:
+    active: dev
+```
+
+对应的配置文件nngame-goods-business-test1.yaml。">
 <meta property="og:title" content="nacos是根据namespace来查找配置文件的">
 <meta property="og:description" content="```
+spring:
+  application:
+    name: nngame-goods-business
+  main:
+    allow-bean-definition-overriding: true
   cloud:
     nacos:
       config:
-        server-addr: 172.31.4.12:8848
+        server-addr: 10.178.100.10:8848
         file-extension: yaml
-        namespace: 182
-```。">
+        namespace: 183
+  profiles:
+    active: dev
+```
+
+对应的配置文件nngame-goods-business-test1.yaml。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/nacos-shi-gen-ju-namespace-lai-cha-zhao-pei-zhi-wen-jian-de.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -97,13 +115,21 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre class="notranslate"><code class="notranslate">  cloud:
+<div class="markdown-body" id="postBody"><pre class="notranslate"><code class="notranslate">spring:
+  application:
+    name: nngame-goods-business
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
     nacos:
       config:
-        server-addr: 172.31.4.12:8848
+        server-addr: 10.178.100.10:8848
         file-extension: yaml
-        namespace: 182
-</code></pre></div>
+        namespace: 183
+  profiles:
+    active: dev
+</code></pre>
+<p>对应的配置文件nngame-goods-business-test1.yaml</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
