@@ -15,3 +15,4 @@ spring:
 ```
 
 对应的配置文件nngame-goods-business-test1.yaml
+spring.application.name
