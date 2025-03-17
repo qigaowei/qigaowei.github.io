@@ -18,5 +18,5 @@
 - https://plugins.jetbrains.com/plugin/2162-string-manipulation
 9. 不同颜色，显示代码的括号和大括号的层级关系 
 - https://plugins.jetbrains.com/plugin/20710-rainbow-brackets-lite--free-and-opensource
-10. 教你使用快捷键
+10. 教你使用快捷键，操作的时候，会提示你对应的快捷键是什么
 - https://plugins.jetbrains.com/plugin/9792-key-promoter-x
