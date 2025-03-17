@@ -10,10 +10,12 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="性能很差  
+<meta name="description" content="两阶段提交的性能很差  
+所有都在一个事务中
 适合资金的场景。">
 <meta property="og:title" content="什么时候使用两阶段提交">
-<meta property="og:description" content="性能很差  
+<meta property="og:description" content="两阶段提交的性能很差  
+所有都在一个事务中
 适合资金的场景。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/shen-me-shi-hou-shi-yong-liang-jie-duan-ti-jiao.html">
@@ -75,7 +77,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>性能很差<br>
+<div class="markdown-body" id="postBody"><p>两阶段提交的性能很差<br>
+所有都在一个事务中<br>
 适合资金的场景</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
