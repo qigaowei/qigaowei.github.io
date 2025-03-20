@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Thu, 20 Mar 2025 06:13:47 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>项目多个modules的问题</title><link>https://qigaowei.github.io/post/xiang-mu-duo-ge-modules-de-wen-ti.html</link><description> 1. 父pom里面定义的
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Thu, 20 Mar 2025 07:26:05 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>mybatisplus使用in的时候</title><link>https://qigaowei.github.io/post/mybatisplus-shi-yong-in-de-shi-hou.html</link><description>```java
+import org.apache.ibatis.annotations.Select;
+@Select('SELECT * from tableA WHERE id in (${ids})')
+```
+参数为'1,2,3',必须使用$,不能用#;。</description><guid isPermaLink="true">https://qigaowei.github.io/post/mybatisplus-shi-yong-in-de-shi-hou.html</guid><pubDate>Thu, 20 Mar 2025 07:25:42 +0000</pubDate></item><item><title>项目多个modules的问题</title><link>https://qigaowei.github.io/post/xiang-mu-duo-ge-modules-de-wen-ti.html</link><description> 1. 父pom里面定义的
 ```xml
 &lt;modules&gt;
        &lt;module&gt;nngame-goods-api&lt;/module&gt;
