@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Thu, 20 Mar 2025 07:26:05 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>mybatisplus使用in的时候</title><link>https://qigaowei.github.io/post/mybatisplus-shi-yong-in-de-shi-hou.html</link><description>```java
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Mon, 24 Mar 2025 01:31:30 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>TCC的空回滚和悬挂是什么？如何解决？</title><link>https://qigaowei.github.io/post/TCC-de-kong-hui-gun-he-xuan-gua-shi-shen-me-%EF%BC%9F-ru-he-jie-jue-%EF%BC%9F.html</link><description>1. 空回滚
+没用try成功，又需要cancel
+解决：需要在业务中做好对空回滚的识别和处理
+2. 悬挂
+先接到cancel，再接收try，结果一直try
+解决：表里有try记录，才能candel
+。</description><guid isPermaLink="true">https://qigaowei.github.io/post/TCC-de-kong-hui-gun-he-xuan-gua-shi-shen-me-%EF%BC%9F-ru-he-jie-jue-%EF%BC%9F.html</guid><pubDate>Mon, 24 Mar 2025 01:31:05 +0000</pubDate></item><item><title>mybatisplus使用in的时候</title><link>https://qigaowei.github.io/post/mybatisplus-shi-yong-in-de-shi-hou.html</link><description>```java
 import org.apache.ibatis.annotations.Select;
 @Select('SELECT * from tableA WHERE id in (${ids})')
 ```
