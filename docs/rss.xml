@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Mon, 24 Mar 2025 01:53:40 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>Threadlocal在开源项目中的应用</title><link>https://qigaowei.github.io/post/Threadlocal-zai-kai-yuan-xiang-mu-zhong-de-ying-yong.html</link><description>几乎所有的项目，都用。</description><guid isPermaLink="true">https://qigaowei.github.io/post/Threadlocal-zai-kai-yuan-xiang-mu-zhong-de-ying-yong.html</guid><pubDate>Mon, 24 Mar 2025 01:53:18 +0000</pubDate></item><item><title>Threadlocal跨线程</title><link>https://qigaowei.github.io/post/Threadlocal-kua-xian-cheng.html</link><description> itl，java自带的 
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Mon, 24 Mar 2025 08:46:10 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>Threadlocal在开源项目中的应用</title><link>https://qigaowei.github.io/post/Threadlocal-zai-kai-yuan-xiang-mu-zhong-de-ying-yong.html</link><description>几乎所有的项目，都用。</description><guid isPermaLink="true">https://qigaowei.github.io/post/Threadlocal-zai-kai-yuan-xiang-mu-zhong-de-ying-yong.html</guid><pubDate>Mon, 24 Mar 2025 01:53:18 +0000</pubDate></item><item><title>Threadlocal跨线程</title><link>https://qigaowei.github.io/post/Threadlocal-kua-xian-cheng.html</link><description> itl，java自带的 
 ttl，阿里出品。</description><guid isPermaLink="true">https://qigaowei.github.io/post/Threadlocal-kua-xian-cheng.html</guid><pubDate>Mon, 24 Mar 2025 01:52:42 +0000</pubDate></item><item><title>Feign的负载均衡要依赖其他的组件</title><link>https://qigaowei.github.io/post/Feign-de-fu-zai-jun-heng-yao-yi-lai-qi-ta-de-zu-jian.html</link><guid isPermaLink="true">https://qigaowei.github.io/post/Feign-de-fu-zai-jun-heng-yao-yi-lai-qi-ta-de-zu-jian.html</guid><pubDate>Mon, 24 Mar 2025 01:47:42 +0000</pubDate></item><item><title>mysql，select for update和select区别</title><link>https://qigaowei.github.io/post/mysql%EF%BC%8Cselect%20for%20update-he-select-qu-bie.html</link><description>  select for update 当前读 
  select 快照读。</description><guid isPermaLink="true">https://qigaowei.github.io/post/mysql%EF%BC%8Cselect%20for%20update-he-select-qu-bie.html</guid><pubDate>Mon, 24 Mar 2025 01:47:15 +0000</pubDate></item><item><title>秒杀，redis挂了，需要做限流</title><link>https://qigaowei.github.io/post/miao-sha-%EF%BC%8Credis-gua-le-%EF%BC%8C-xu-yao-zuo-xian-liu.html</link><guid isPermaLink="true">https://qigaowei.github.io/post/miao-sha-%EF%BC%8Credis-gua-le-%EF%BC%8C-xu-yao-zuo-xian-liu.html</guid><pubDate>Mon, 24 Mar 2025 01:45:58 +0000</pubDate></item><item><title>技术热情，技术好奇心，非常加分</title><link>https://qigaowei.github.io/post/ji-shu-re-qing-%EF%BC%8C-ji-shu-hao-qi-xin-%EF%BC%8C-fei-chang-jia-fen.html</link><description>博客可以证明
 学习新的东西，非常加分
@@ -627,20 +627,21 @@ ScriptEngine engine = manager.getEngineByName('JavaScript');&#13;
 - 简单来说，想返回全部数据条件放on里面&#13;
 - 过滤数据条件放where里面&#13;
 - inner join会全部过滤，不分where和on&#13;
-- 使用left join时，忘记写where，直接写and，可能会有问题。</description><guid isPermaLink="true">https://qigaowei.github.io/post/left%20join%20on-hou-mian-%20-jia-tiao-jian-%20-yu-%20where-hou-mian-jia-tiao-jian-de-qu-bie.html</guid><pubDate>Tue, 22 Oct 2024 09:10:48 +0000</pubDate></item><item><title>数据库管理软件，不自动提交事务。。。。</title><link>https://qigaowei.github.io/post/shu-ju-ku-guan-li-ruan-jian-%EF%BC%8C-bu-zi-dong-ti-jiao-shi-wu-%E3%80%82%E3%80%82%E3%80%82%E3%80%82.html</link><description>- 好处是，可以看数据变更的条数。</description><guid isPermaLink="true">https://qigaowei.github.io/post/shu-ju-ku-guan-li-ruan-jian-%EF%BC%8C-bu-zi-dong-ti-jiao-shi-wu-%E3%80%82%E3%80%82%E3%80%82%E3%80%82.html</guid><pubDate>Tue, 22 Oct 2024 02:43:16 +0000</pubDate></item><item><title>使用thymeleaf，get请求只会返回html页面</title><link>https://qigaowei.github.io/post/shi-yong-thymeleaf%EF%BC%8Cget-qing-qiu-zhi-hui-fan-hui-html-ye-mian.html</link><description>```xml&#13;
-&lt;dependency&gt;&#13;
-            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#13;
-            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;&#13;
-        &lt;/dependency&gt;&#13;
-```&#13;
-```java&#13;
-@GetMapping(value = '/gif')&#13;
-    public String mumu2(javax.servlet.http.HttpServletRequest request, Model model) throws Exception{&#13;
-        return 'gif';&#13;
-    }&#13;
-```&#13;
-- 前端返回的路径，会是\src\main\resources\templates\gif.html的内容&#13;
-- 返回数据，可以全部用post。</description><guid isPermaLink="true">https://qigaowei.github.io/post/shi-yong-thymeleaf%EF%BC%8Cget-qing-qiu-zhi-hui-fan-hui-html-ye-mian.html</guid><pubDate>Mon, 21 Oct 2024 02:56:35 +0000</pubDate></item><item><title>配置打印模板的心得，分页失败的原因分析</title><link>https://qigaowei.github.io/post/pei-zhi-da-yin-mo-ban-de-xin-de-%EF%BC%8C-fen-ye-shi-bai-de-yuan-yin-fen-xi.html</link><description>- 背景，数据结构为数组中含有子数组。</description><guid isPermaLink="true">https://qigaowei.github.io/post/pei-zhi-da-yin-mo-ban-de-xin-de-%EF%BC%8C-fen-ye-shi-bai-de-yuan-yin-fen-xi.html</guid><pubDate>Sat, 12 Oct 2024 03:45:49 +0000</pubDate></item><item><title>前端{{if}}</title><link>https://qigaowei.github.io/post/qian-duan-%7B%7Bif%7D%7D.html</link><description>```js&#13;
+- 使用left join时，忘记写where，直接写and，可能会有问题。</description><guid isPermaLink="true">https://qigaowei.github.io/post/left%20join%20on-hou-mian-%20-jia-tiao-jian-%20-yu-%20where-hou-mian-jia-tiao-jian-de-qu-bie.html</guid><pubDate>Tue, 22 Oct 2024 09:10:48 +0000</pubDate></item><item><title>数据库管理软件，不自动提交事务。。。。</title><link>https://qigaowei.github.io/post/shu-ju-ku-guan-li-ruan-jian-%EF%BC%8C-bu-zi-dong-ti-jiao-shi-wu-%E3%80%82%E3%80%82%E3%80%82%E3%80%82.html</link><description>- 好处是，可以看数据变更的条数。</description><guid isPermaLink="true">https://qigaowei.github.io/post/shu-ju-ku-guan-li-ruan-jian-%EF%BC%8C-bu-zi-dong-ti-jiao-shi-wu-%E3%80%82%E3%80%82%E3%80%82%E3%80%82.html</guid><pubDate>Tue, 22 Oct 2024 02:43:16 +0000</pubDate></item><item><title>使用thymeleaf，get请求只会返回html页面</title><link>https://qigaowei.github.io/post/shi-yong-thymeleaf%EF%BC%8Cget-qing-qiu-zhi-hui-fan-hui-html-ye-mian.html</link><description>1. 前端返回的路径，会是\src\main\resources\templates\gif.html的内容
+```xml
+&lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+```
+```java
+@GetMapping(value = '/gif')
+    public String mumu2(javax.servlet.http.HttpServletRequest request, Model model) throws Exception{
+        return 'gif';
+    }
+```
+2. 返回数据，可以全部用post
+3. 必须使用get请求返回数据，可以把文本放到gif.html里面。</description><guid isPermaLink="true">https://qigaowei.github.io/post/shi-yong-thymeleaf%EF%BC%8Cget-qing-qiu-zhi-hui-fan-hui-html-ye-mian.html</guid><pubDate>Mon, 21 Oct 2024 02:56:35 +0000</pubDate></item><item><title>配置打印模板的心得，分页失败的原因分析</title><link>https://qigaowei.github.io/post/pei-zhi-da-yin-mo-ban-de-xin-de-%EF%BC%8C-fen-ye-shi-bai-de-yuan-yin-fen-xi.html</link><description>- 背景，数据结构为数组中含有子数组。</description><guid isPermaLink="true">https://qigaowei.github.io/post/pei-zhi-da-yin-mo-ban-de-xin-de-%EF%BC%8C-fen-ye-shi-bai-de-yuan-yin-fen-xi.html</guid><pubDate>Sat, 12 Oct 2024 03:45:49 +0000</pubDate></item><item><title>前端{{if}}</title><link>https://qigaowei.github.io/post/qian-duan-%7B%7Bif%7D%7D.html</link><description>```js&#13;
  {{if val.orderVoidFlag == '1'}}&#13;
 	     &lt;span style='text-decoration: line-through;'&gt;{{val.orderShowName || ''}}&lt;/span&gt;&#13;
 	  {{else}}&#13;

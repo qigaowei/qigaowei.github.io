@@ -1,3 +1,4 @@
+1. 前端返回的路径，会是\src\main\resources\templates\gif.html的内容
 ```xml
 <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -10,5 +11,5 @@
         return "gif";
     }
 ```
-- 前端返回的路径，会是\src\main\resources\templates\gif.html的内容
-- 返回数据，可以全部用post
+2. 返回数据，可以全部用post
+3. 必须使用get请求返回数据，可以把文本放到gif.html里面。不过有点局限性

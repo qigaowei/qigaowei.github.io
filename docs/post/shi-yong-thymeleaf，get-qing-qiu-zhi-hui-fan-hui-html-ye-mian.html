@@ -10,7 +10,8 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="```xml
+<meta name="description" content="1. 前端返回的路径，会是\src\main\resources\templates\gif.html的内容
+```xml
 <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -22,10 +23,11 @@
         return 'gif';
     }
 ```
-- 前端返回的路径，会是\src\main\resources\templates\gif.html的内容
-- 返回数据，可以全部用post。">
+2. 返回数据，可以全部用post
+3. 必须使用get请求返回数据，可以把文本放到gif.html里面。">
 <meta property="og:title" content="使用thymeleaf，get请求只会返回html页面">
-<meta property="og:description" content="```xml
+<meta property="og:description" content="1. 前端返回的路径，会是\src\main\resources\templates\gif.html的内容
+```xml
 <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -37,8 +39,8 @@
         return 'gif';
     }
 ```
-- 前端返回的路径，会是\src\main\resources\templates\gif.html的内容
-- 返回数据，可以全部用post。">
+2. 返回数据，可以全部用post
+3. 必须使用get请求返回数据，可以把文本放到gif.html里面。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/shi-yong-thymeleaf%EF%BC%8Cget-qing-qiu-zhi-hui-fan-hui-html-ye-mian.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -109,7 +111,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><div class="highlight highlight-text-xml"><pre class="notranslate">&lt;<span class="pl-ent">dependency</span>&gt;
+<div class="markdown-body" id="postBody"><ol>
+<li>前端返回的路径，会是\src\main\resources\templates\gif.html的内容</li>
+</ol>
+<div class="highlight highlight-text-xml"><pre class="notranslate">&lt;<span class="pl-ent">dependency</span>&gt;
             &lt;<span class="pl-ent">groupId</span>&gt;org.springframework.boot&lt;/<span class="pl-ent">groupId</span>&gt;
             &lt;<span class="pl-ent">artifactId</span>&gt;spring-boot-starter-thymeleaf&lt;/<span class="pl-ent">artifactId</span>&gt;
         &lt;/<span class="pl-ent">dependency</span>&gt;</pre></div>
@@ -117,10 +122,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <span class="pl-k">public</span> <span class="pl-smi">String</span> <span class="pl-en">mumu2</span>(<span class="pl-smi">javax</span>.<span class="pl-smi">servlet</span>.<span class="pl-smi">http</span>.<span class="pl-smi">HttpServletRequest</span> <span class="pl-s1">request</span>, <span class="pl-smi">Model</span> <span class="pl-s1">model</span>) <span class="pl-k">throws</span> <span class="pl-smi">Exception</span>{
         <span class="pl-k">return</span> <span class="pl-s">"gif"</span>;
     }</pre></div>
-<ul>
-<li>前端返回的路径，会是\src\main\resources\templates\gif.html的内容</li>
+<ol start="2">
 <li>返回数据，可以全部用post</li>
-</ul></div>
+<li>必须使用get请求返回数据，可以把文本放到gif.html里面。不过有点局限性</li>
+</ol></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
