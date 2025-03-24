@@ -17,7 +17,7 @@ SQL的顺序与事务提交顺序一致
 
 
 两个SQL,一个删除，一个插入
-由于 READ COMMITTED 的隔离级别，Session 2 的插入操作不会看到 Session 1 的删除操作，
+由于 READ COMMITTED 的隔离级别，Session 2 的插入操作不会被 Session 1 的删除操作影响，
 看不到，SQL的顺序由事务提交顺序决定
 
 。">
@@ -29,7 +29,7 @@ SQL的顺序与事务提交顺序一致
 
 
 两个SQL,一个删除，一个插入
-由于 READ COMMITTED 的隔离级别，Session 2 的插入操作不会看到 Session 1 的删除操作，
+由于 READ COMMITTED 的隔离级别，Session 2 的插入操作不会被 Session 1 的删除操作影响，
 看不到，SQL的顺序由事务提交顺序决定
 
 。">
@@ -98,7 +98,7 @@ SQL的顺序与事务提交顺序一致<br>
 如果没有加GAP锁和临键锁（只有RR有）<br>
 可能结果不完全一样</p>
 <p>两个SQL,一个删除，一个插入<br>
-由于 READ COMMITTED 的隔离级别，Session 2 的插入操作不会看到 Session 1 的删除操作，<br>
+由于 READ COMMITTED 的隔离级别，Session 2 的插入操作不会被 Session 1 的删除操作影响，<br>
 看不到，SQL的顺序由事务提交顺序决定</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
