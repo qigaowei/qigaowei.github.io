@@ -5,6 +5,8 @@ SQL的顺序与事务提交顺序一致
 
 
 两个SQL,一个删除，一个插入
-由于 READ COMMITTED 的隔离级别，Session 2 的插入操作不会被 Session 1 的删除操作影响，
+由于 READ COMMITTED 的隔离级别，
+Session 2 的插入操作不会被 Session 1 的删除操作影响，
+两个事务不会互相影响
 看不到，SQL的顺序由事务提交顺序决定
 
