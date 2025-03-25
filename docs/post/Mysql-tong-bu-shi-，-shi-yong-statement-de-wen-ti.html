@@ -10,11 +10,13 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="statement存的是SQL原文
+<meta name="description" content="1. 背景
+statement存的是SQL原文
 SQL的顺序与事务提交顺序一致
 如果没有加GAP锁和临键锁（只有RR有）
 可能结果不完全一样
 
+2. 案例
 Session 1删除事务后提交，Session 2 的插入先提交
 两个SQL,一个删除，一个插入
 由于 READ COMMITTED 的隔离级别，
@@ -27,13 +29,15 @@ Session 2 的插入操作不会被 Session 1 的删除操作影响，
 到了子库就是先增后删
 插入的数据就没了
 
-。">
+3. 其实GAP锁和临键锁，使两个事务有了关联和制约。">
 <meta property="og:title" content="Mysql同步时，使用statement的问题">
-<meta property="og:description" content="statement存的是SQL原文
+<meta property="og:description" content="1. 背景
+statement存的是SQL原文
 SQL的顺序与事务提交顺序一致
 如果没有加GAP锁和临键锁（只有RR有）
 可能结果不完全一样
 
+2. 案例
 Session 1删除事务后提交，Session 2 的插入先提交
 两个SQL,一个删除，一个插入
 由于 READ COMMITTED 的隔离级别，
@@ -46,7 +50,7 @@ Session 2 的插入操作不会被 Session 1 的删除操作影响，
 到了子库就是先增后删
 插入的数据就没了
 
-。">
+3. 其实GAP锁和临键锁，使两个事务有了关联和制约。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://qigaowei.github.io/post/Mysql-tong-bu-shi-%EF%BC%8C-shi-yong-statement-de-wen-ti.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -107,19 +111,31 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>statement存的是SQL原文<br>
+<div class="markdown-body" id="postBody"><ol>
+<li>
+<p>背景<br>
+statement存的是SQL原文<br>
 SQL的顺序与事务提交顺序一致<br>
 如果没有加GAP锁和临键锁（只有RR有）<br>
 可能结果不完全一样</p>
-<p>Session 1删除事务后提交，Session 2 的插入先提交<br>
+</li>
+<li>
+<p>案例<br>
+Session 1删除事务后提交，Session 2 的插入先提交<br>
 两个SQL,一个删除，一个插入<br>
 由于 READ COMMITTED 的隔离级别，<br>
 Session 2 的插入操作不会被 Session 1 的删除操作影响，<br>
 两个事务不会互相影响<br>
 插入会成功</p>
+</li>
+</ol>
 <p>而SQL的顺序由事务提交顺序决定<br>
 到了子库就是先增后删<br>
-插入的数据就没了</p></div>
+插入的数据就没了</p>
+<ol start="3">
+<li>其实GAP锁和临键锁，使两个事务有了关联和制约。<br>
+而GAP锁和临键锁只有RR有，RC没有</li>
+</ol></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
