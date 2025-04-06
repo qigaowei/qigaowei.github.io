@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Sun, 06 Apr 2025 06:07:19 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>Mysql热点更新到底是CPU扛不住还是内存，io之类的</title><link>https://qigaowei.github.io/post/Mysql-re-dian-geng-xin-dao-di-shi-CPU-kang-bu-zhu-huan-shi-nei-cun-%EF%BC%8Cio-zhi-lei-de.html</link><description>是cpu
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Sun, 06 Apr 2025 06:07:42 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>Mysql热点更新到底是CPU扛不住还是内存，io之类的</title><link>https://qigaowei.github.io/post/Mysql-re-dian-geng-xin-dao-di-shi-CPU-kang-bu-zhu-huan-shi-nei-cun-%EF%BC%8Cio-zhi-lei-de.html</link><description>是cpu
 死锁检测 自旋  
 cpu太高。</description><guid isPermaLink="true">https://qigaowei.github.io/post/Mysql-re-dian-geng-xin-dao-di-shi-CPU-kang-bu-zhu-huan-shi-nei-cun-%EF%BC%8Cio-zhi-lei-de.html</guid><pubDate>Sun, 06 Apr 2025 06:07:01 +0000</pubDate></item><item><title>架构书籍推荐</title><link>https://qigaowei.github.io/post/jia-gou-shu-ji-tui-jian.html</link><description>架构整洁之道  bob
 极客时间  许世伟
@@ -51,7 +51,8 @@ Zk锁，客户端断了，临时节点就会被删除。</description><guid isPe
 - 设置过期时间。</description><guid isPermaLink="true">https://qigaowei.github.io/post/ru-he-bi-mian-si-suo.html</guid><pubDate>Sun, 06 Apr 2025 05:54:58 +0000</pubDate></item><item><title>设计一个分布式锁，要注意什么</title><link>https://qigaowei.github.io/post/she-ji-yi-ge-fen-bu-shi-suo-%EF%BC%8C-yao-zhu-yi-shen-me.html</link><description>互斥
 死锁
 可靠性
-可重入。</description><guid isPermaLink="true">https://qigaowei.github.io/post/she-ji-yi-ge-fen-bu-shi-suo-%EF%BC%8C-yao-zhu-yi-shen-me.html</guid><pubDate>Sun, 06 Apr 2025 05:54:28 +0000</pubDate></item><item><title>千万级数据删除</title><link>https://qigaowei.github.io/post/qian-wan-ji-shu-ju-shan-chu.html</link><description>- 出现什么问题
+可重入
+阻塞非阻塞。</description><guid isPermaLink="true">https://qigaowei.github.io/post/she-ji-yi-ge-fen-bu-shi-suo-%EF%BC%8C-yao-zhu-yi-shen-me.html</guid><pubDate>Sun, 06 Apr 2025 05:54:28 +0000</pubDate></item><item><title>千万级数据删除</title><link>https://qigaowei.github.io/post/qian-wan-ji-shu-ju-shan-chu.html</link><description>- 出现什么问题
 binlog长度
 io太频繁
 碎片，可以配置
