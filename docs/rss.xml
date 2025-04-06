@@ -1,5 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Sun, 06 Apr 2025 05:56:51 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>红锁是一种算法</title><link>https://qigaowei.github.io/post/hong-suo-shi-yi-zhong-suan-fa.html</link><description>- 红锁是一种算法
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Sun, 06 Apr 2025 05:58:44 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>单元化架构-  金融级别</title><link>https://qigaowei.github.io/post/dan-yuan-hua-jia-gou--%20%20-jin-rong-ji-bie.html</link><description>
+- 多个单元  一个中心  
+单个单元所有服务  数据库  中间件都一样
+- 多机房，一个数据库   
+ 单元化是一个数据库
+- 多地部署  
+- 定期双向同步
+- 单元化接口  普通接口
+ 比如买家id  卖家id做路由
+- 天然隔离性。</description><guid isPermaLink="true">https://qigaowei.github.io/post/dan-yuan-hua-jia-gou--%20%20-jin-rong-ji-bie.html</guid><pubDate>Sun, 06 Apr 2025 05:58:20 +0000</pubDate></item><item><title>红锁是一种算法</title><link>https://qigaowei.github.io/post/hong-suo-shi-yi-zhong-suan-fa.html</link><description>- 红锁是一种算法
 只存在面试中
 为了解决单点故障
 新master没有锁的数据
