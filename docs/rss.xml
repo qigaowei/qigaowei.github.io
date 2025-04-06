@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Sun, 06 Apr 2025 05:55:57 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>Redis锁比zk锁的好处</title><link>https://qigaowei.github.io/post/Redis-suo-bi-zk-suo-de-hao-chu.html</link><description>Redis锁，过期了才能删除
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Sun, 06 Apr 2025 05:56:51 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>红锁是一种算法</title><link>https://qigaowei.github.io/post/hong-suo-shi-yi-zhong-suan-fa.html</link><description>- 红锁是一种算法
+只存在面试中
+为了解决单点故障
+新master没有锁的数据
+半数以上成功，才认为成功
+拜占庭协议，大部分分布式应用都用这种
+
+- 不用红锁
+通过数据库唯一索引，兜底。</description><guid isPermaLink="true">https://qigaowei.github.io/post/hong-suo-shi-yi-zhong-suan-fa.html</guid><pubDate>Sun, 06 Apr 2025 05:56:29 +0000</pubDate></item><item><title>Redis锁比zk锁的好处</title><link>https://qigaowei.github.io/post/Redis-suo-bi-zk-suo-de-hao-chu.html</link><description>Redis锁，过期了才能删除
 Zk锁，客户端断了，临时节点就会被删除。</description><guid isPermaLink="true">https://qigaowei.github.io/post/Redis-suo-bi-zk-suo-de-hao-chu.html</guid><pubDate>Sun, 06 Apr 2025 05:55:35 +0000</pubDate></item><item><title>如何避免死锁</title><link>https://qigaowei.github.io/post/ru-he-bi-mian-si-suo.html</link><description>- 粒度  
 - 设置过期时间。</description><guid isPermaLink="true">https://qigaowei.github.io/post/ru-he-bi-mian-si-suo.html</guid><pubDate>Sun, 06 Apr 2025 05:54:58 +0000</pubDate></item><item><title>设计一个分布式锁，要注意什么</title><link>https://qigaowei.github.io/post/she-ji-yi-ge-fen-bu-shi-suo-%EF%BC%8C-yao-zhu-yi-shen-me.html</link><description>互斥
 死锁
