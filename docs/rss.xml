@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Mon, 07 Apr 2025 02:39:35 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>压测没问题，线上有问题，为啥</title><link>https://qigaowei.github.io/post/ya-ce-mei-wen-ti-%EF%BC%8C-xian-shang-you-wen-ti-%EF%BC%8C-wei-sha.html</link><description>网络，
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Mon, 07 Apr 2025 02:44:18 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>怎么做压测</title><link>https://qigaowei.github.io/post/zen-me-zuo-ya-ce.html</link><description>1. 目标，那个接口，300qps
+2. 计划  时间  环境  
+3. 脚本 
+4. 压，使用Jmeter
+5. 指标  qps rt  失败率  cpu load 内存  频繁gc ，告警秒级  其他分钟级
+6. 总结 ，注意保存现场。</description><guid isPermaLink="true">https://qigaowei.github.io/post/zen-me-zuo-ya-ce.html</guid><pubDate>Mon, 07 Apr 2025 02:43:50 +0000</pubDate></item><item><title>压测没问题，线上有问题，为啥</title><link>https://qigaowei.github.io/post/ya-ce-mei-wen-ti-%EF%BC%8C-xian-shang-you-wen-ti-%EF%BC%8C-wei-sha.html</link><description>网络，
 磁盘，
 机器内存，
 冷启动，缓存还没有预热，
