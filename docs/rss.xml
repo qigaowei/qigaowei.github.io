@@ -1,5 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Mon, 07 Apr 2025 02:37:59 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>对账，最好的做法是什么</title><link>https://qigaowei.github.io/post/dui-zhang-%EF%BC%8C-zui-hao-de-zuo-fa-shi-shen-me.html</link><description>一般使用数仓，
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Mon, 07 Apr 2025 02:39:35 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>压测没问题，线上有问题，为啥</title><link>https://qigaowei.github.io/post/ya-ce-mei-wen-ti-%EF%BC%8C-xian-shang-you-wen-ti-%EF%BC%8C-wei-sha.html</link><description>网络，
+磁盘，
+机器内存，
+冷启动，缓存还没有预热，
+定时任务，
+全链路压测，
+慢sql，
+其他接口，
+数据倾斜（有一个用户数据量太大，变成慢sql），
+压测环境（环境差异太大），
+其他基础设施（单机500，集群能2000吗？不一定。</description><guid isPermaLink="true">https://qigaowei.github.io/post/ya-ce-mei-wen-ti-%EF%BC%8C-xian-shang-you-wen-ti-%EF%BC%8C-wei-sha.html</guid><pubDate>Mon, 07 Apr 2025 02:39:16 +0000</pubDate></item><item><title>对账，最好的做法是什么</title><link>https://qigaowei.github.io/post/dui-zhang-%EF%BC%8C-zui-hao-de-zuo-fa-shi-shen-me.html</link><description>一般使用数仓，
 对线上没有影响，
 而不是定时任务查询生产数据库。</description><guid isPermaLink="true">https://qigaowei.github.io/post/dui-zhang-%EF%BC%8C-zui-hao-de-zuo-fa-shi-shen-me.html</guid><pubDate>Mon, 07 Apr 2025 02:37:33 +0000</pubDate></item><item><title>分表后，数据倾斜，怎么办</title><link>https://qigaowei.github.io/post/fen-biao-hou-%EF%BC%8C-shu-ju-qing-xie-%EF%BC%8C-zen-me-ban.html</link><description>- 直接加配置，cpu，内存等。</description><guid isPermaLink="true">https://qigaowei.github.io/post/fen-biao-hou-%EF%BC%8C-shu-ju-qing-xie-%EF%BC%8C-zen-me-ban.html</guid><pubDate>Mon, 07 Apr 2025 02:36:32 +0000</pubDate></item><item><title>大厂的缓存命中率90%左右</title><link>https://qigaowei.github.io/post/da-chang-de-huan-cun-ming-zhong-lv-90%25-zuo-you.html</link><guid isPermaLink="true">https://qigaowei.github.io/post/da-chang-de-huan-cun-ming-zhong-lv-90%25-zuo-you.html</guid><pubDate>Sun, 06 Apr 2025 06:13:18 +0000</pubDate></item><item><title>外卖配送时间怎么预测的</title><link>https://qigaowei.github.io/post/wai-mai-pei-song-shi-jian-zen-me-yu-ce-de.html</link><description>- 根据前一天的某个店铺的配送距离和时间比如14点的数据，15点的数据
    预测今天的
