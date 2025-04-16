@@ -1,5 +1,89 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Fri, 11 Apr 2025 06:04:46 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>@Autowired的一个用法</title><link>https://qigaowei.github.io/post/%40Autowired-de-yi-ge-yong-fa.html</link><description>```java
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小七的博客</title><link>https://qigaowei.github.io</link><description>Blog description</description><copyright>小七的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://qigaowei.github.io</link></image><lastBuildDate>Wed, 16 Apr 2025 07:25:53 +0000</lastBuildDate><managingEditor>小七的博客</managingEditor><ttl>60</ttl><webMaster>小七的博客</webMaster><item><title>要不要跳槽，需要考虑什么</title><link>https://qigaowei.github.io/post/yao-bu-yao-tiao-cao-%EF%BC%8C-xu-yao-kao-lv-shen-me.html</link><description>- 钱  
+- 技术成长  
+- 能躺平。</description><guid isPermaLink="true">https://qigaowei.github.io/post/yao-bu-yao-tiao-cao-%EF%BC%8C-xu-yao-kao-lv-shen-me.html</guid><pubDate>Wed, 16 Apr 2025 07:14:47 +0000</pubDate></item><item><title>SpringEvent适合什么样的场景</title><link>https://qigaowei.github.io/post/SpringEvent-shi-he-shen-me-yang-de-chang-jing.html</link><description>适合同步转异步，
+先落盘，存mysql
+再发个事件
+但是需要定时任务兜底。</description><guid isPermaLink="true">https://qigaowei.github.io/post/SpringEvent-shi-he-shen-me-yang-de-chang-jing.html</guid><pubDate>Wed, 16 Apr 2025 07:14:13 +0000</pubDate></item><item><title>Async注解有什么坑</title><link>https://qigaowei.github.io/post/Async-zhu-jie-you-shen-me-keng.html</link><description>Async默认单线程线程池
+需要单独写个线程池。</description><guid isPermaLink="true">https://qigaowei.github.io/post/Async-zhu-jie-you-shen-me-keng.html</guid><pubDate>Wed, 16 Apr 2025 07:13:07 +0000</pubDate></item><item><title>MQ中的接收确认收货消息先于发货消息，需要怎么避免</title><link>https://qigaowei.github.io/post/MQ-zhong-de-jie-shou-que-ren-shou-huo-xiao-xi-xian-yu-fa-huo-xiao-xi-%EF%BC%8C-xu-yao-zen-me-bi-mian.html</link><description>1. 需要自己排序
+2. 先存Mysql和redis
+3. 下个消息来了，先去redis查。</description><guid isPermaLink="true">https://qigaowei.github.io/post/MQ-zhong-de-jie-shou-que-ren-shou-huo-xiao-xi-xian-yu-fa-huo-xiao-xi-%EF%BC%8C-xu-yao-zen-me-bi-mian.html</guid><pubDate>Wed, 16 Apr 2025 07:12:26 +0000</pubDate></item><item><title>本地消息表需要那些字段</title><link>https://qigaowei.github.io/post/ben-di-xiao-xi-biao-xu-yao-na-xie-zi-duan.html</link><description>1. 执行次数
+    - 考虑消息堆积，只查执行次数小于10次的消息，
+    - 超过10次，可以人工处理
+ 2. 时间
+   大于10天的消息，需要另一个定时任务处理，避免原来的定时任务查询不到
+3.  上次失败的原因，非常有用
+     不用看日志，text类型
+。</description><guid isPermaLink="true">https://qigaowei.github.io/post/ben-di-xiao-xi-biao-xu-yao-na-xie-zi-duan.html</guid><pubDate>Wed, 16 Apr 2025 07:10:34 +0000</pubDate></item><item><title>什么是Spring无法初始化</title><link>https://qigaowei.github.io/post/shen-me-shi-Spring-wu-fa-chu-shi-hua.html</link><description>循环依赖导致无法初始化。</description><guid isPermaLink="true">https://qigaowei.github.io/post/shen-me-shi-Spring-wu-fa-chu-shi-hua.html</guid><pubDate>Wed, 16 Apr 2025 07:07:43 +0000</pubDate></item><item><title>区分度不高的字段能加索引吗</title><link>https://qigaowei.github.io/post/qu-fen-du-bu-gao-de-zi-duan-neng-jia-suo-yin-ma.html</link><description>1. 可以
+2. 比如状态
+   失败的状态很少
+3. 比如性别
+   我的粉丝都是男粉，查女粉，效率就很高。</description><guid isPermaLink="true">https://qigaowei.github.io/post/qu-fen-du-bu-gao-de-zi-duan-neng-jia-suo-yin-ma.html</guid><pubDate>Wed, 16 Apr 2025 07:07:19 +0000</pubDate></item><item><title>问你Spring实例化的过程，真的考察你能不能答出来吗</title><link>https://qigaowei.github.io/post/wen-ni-Spring-shi-li-hua-de-guo-cheng-%EF%BC%8C-zhen-de-kao-cha-ni-neng-bu-neng-da-chu-lai-ma.html</link><description>考察的是不是纯背 
+而是考察你是否真的看过 
+比如是否知道类名和方法名。</description><guid isPermaLink="true">https://qigaowei.github.io/post/wen-ni-Spring-shi-li-hua-de-guo-cheng-%EF%BC%8C-zhen-de-kao-cha-ni-neng-bu-neng-da-chu-lai-ma.html</guid><pubDate>Wed, 16 Apr 2025 07:06:07 +0000</pubDate></item><item><title>HR小姐姐问你有没有offer，怎么回答</title><link>https://qigaowei.github.io/post/HR-xiao-jie-jie-wen-ni-you-mei-you-offer%EF%BC%8C-zen-me-hui-da.html</link><description>1. 有offer，但是要说优先考虑贵公司
+2. 没offer
+   - 说有的在流程中，有的到了HR面
+   - 还要说更优先考虑贵公司。</description><guid isPermaLink="true">https://qigaowei.github.io/post/HR-xiao-jie-jie-wen-ni-you-mei-you-offer%EF%BC%8C-zen-me-hui-da.html</guid><pubDate>Wed, 16 Apr 2025 07:04:50 +0000</pubDate></item><item><title>tomcat本身有200个线程</title><link>https://qigaowei.github.io/post/tomcat-ben-shen-you-200-ge-xian-cheng.html</link><guid isPermaLink="true">https://qigaowei.github.io/post/tomcat-ben-shen-you-200-ge-xian-cheng.html</guid><pubDate>Wed, 16 Apr 2025 07:03:10 +0000</pubDate></item><item><title>MQ消息中，先删后增再增，需要注意什么</title><link>https://qigaowei.github.io/post/MQ-xiao-xi-zhong-%EF%BC%8C-xian-shan-hou-zeng-zai-zeng-%EF%BC%8C-xu-yao-zhu-yi-shen-me.html</link><description>为避免乱序
+需要把上次的状态带过来
+。</description><guid isPermaLink="true">https://qigaowei.github.io/post/MQ-xiao-xi-zhong-%EF%BC%8C-xian-shan-hou-zeng-zai-zeng-%EF%BC%8C-xu-yao-zhu-yi-shen-me.html</guid><pubDate>Wed, 16 Apr 2025 07:02:47 +0000</pubDate></item><item><title>程序员有很多出路，但是要满足一个条件</title><link>https://qigaowei.github.io/post/cheng-xu-yuan-you-hen-duo-chu-lu-%EF%BC%8C-dan-shi-yao-man-zu-yi-ge-tiao-jian.html</link><description>要先达到技术专家P7以上
+才能做cto，啥的。</description><guid isPermaLink="true">https://qigaowei.github.io/post/cheng-xu-yuan-you-hen-duo-chu-lu-%EF%BC%8C-dan-shi-yao-man-zu-yi-ge-tiao-jian.html</guid><pubDate>Wed, 16 Apr 2025 07:02:02 +0000</pubDate></item><item><title>toc的交易 支付  营销  互动 ，这些方向比较好</title><link>https://qigaowei.github.io/post/toc-de-jiao-yi-%20-zhi-fu-%20%20-ying-xiao-%20%20-hu-dong-%20%EF%BC%8C-zhe-xie-fang-xiang-bi-jiao-hao.html</link><guid isPermaLink="true">https://qigaowei.github.io/post/toc-de-jiao-yi-%20-zhi-fu-%20%20-ying-xiao-%20%20-hu-dong-%20%EF%BC%8C-zhe-xie-fang-xiang-bi-jiao-hao.html</guid><pubDate>Wed, 16 Apr 2025 07:01:02 +0000</pubDate></item><item><title>技术面试官不会反馈能不能过</title><link>https://qigaowei.github.io/post/ji-shu-mian-shi-guan-bu-hui-fan-kui-neng-bu-neng-guo.html</link><guid isPermaLink="true">https://qigaowei.github.io/post/ji-shu-mian-shi-guan-bu-hui-fan-kui-neng-bu-neng-guo.html</guid><pubDate>Wed, 16 Apr 2025 07:00:40 +0000</pubDate></item><item><title>为什么问八股，为什么不纯问八股</title><link>https://qigaowei.github.io/post/wei-shen-me-wen-ba-gu-%EF%BC%8C-wei-shen-me-bu-chun-wen-ba-gu.html</link><description>避免直接问八股，
+纯问八股不太行，
+会结合项目场景，
+考察解决问题的能力，这是重点。</description><guid isPermaLink="true">https://qigaowei.github.io/post/wei-shen-me-wen-ba-gu-%EF%BC%8C-wei-shen-me-bu-chun-wen-ba-gu.html</guid><pubDate>Wed, 16 Apr 2025 07:00:22 +0000</pubDate></item><item><title>阿里招人的标准</title><link>https://qigaowei.github.io/post/a-li-zhao-ren-de-biao-zhun.html</link><description>- 聪明  
+- 乐观  
+- 皮实  
+- 自省。</description><guid isPermaLink="true">https://qigaowei.github.io/post/a-li-zhao-ren-de-biao-zhun.html</guid><pubDate>Wed, 16 Apr 2025 06:59:20 +0000</pubDate></item><item><title>信任不是一天练成的，也不是一天没有的</title><link>https://qigaowei.github.io/post/xin-ren-bu-shi-yi-tian-lian-cheng-de-%EF%BC%8C-ye-bu-shi-yi-tian-mei-you-de.html</link><guid isPermaLink="true">https://qigaowei.github.io/post/xin-ren-bu-shi-yi-tian-lian-cheng-de-%EF%BC%8C-ye-bu-shi-yi-tian-mei-you-de.html</guid><pubDate>Wed, 16 Apr 2025 06:58:47 +0000</pubDate></item><item><title>空降的领导怎么成为他的嫡系</title><link>https://qigaowei.github.io/post/kong-jiang-de-ling-dao-zen-me-cheng-wei-ta-de-di-xi.html</link><description>1. 比他年纪大的，大概率不会变成他的人
+2. 空降，需要有人给他干活
+3. 可以含蓄表达，有什么事情帮你做，尽量帮你做
+4. 表现出支持他，努力上进
+5. 领导空降，领导还没人，跟领导还熟。</description><guid isPermaLink="true">https://qigaowei.github.io/post/kong-jiang-de-ling-dao-zen-me-cheng-wei-ta-de-di-xi.html</guid><pubDate>Wed, 16 Apr 2025 06:58:12 +0000</pubDate></item><item><title>为什么都在做智能客服</title><link>https://qigaowei.github.io/post/wei-shen-me-du-zai-zuo-zhi-neng-ke-fu.html</link><description>智能客服是
+ai落地的比较好
+比较明确的方向。</description><guid isPermaLink="true">https://qigaowei.github.io/post/wei-shen-me-du-zai-zuo-zhi-neng-ke-fu.html</guid><pubDate>Wed, 16 Apr 2025 06:56:25 +0000</pubDate></item><item><title>大厂没有全栈工程师的岗位</title><link>https://qigaowei.github.io/post/da-chang-mei-you-quan-zhan-gong-cheng-shi-de-gang-wei.html</link><description>简单的前端页面
+比如内部管理系统
+后端可以用ai自己写。</description><guid isPermaLink="true">https://qigaowei.github.io/post/da-chang-mei-you-quan-zhan-gong-cheng-shi-de-gang-wei.html</guid><pubDate>Wed, 16 Apr 2025 06:55:41 +0000</pubDate></item><item><title>测试工具开发，效能工具开发可能是？</title><link>https://qigaowei.github.io/post/ce-shi-gong-ju-kai-fa-%EF%BC%8C-xiao-neng-gong-ju-kai-fa-ke-neng-shi-%EF%BC%9F.html</link><description>最垃圾的方向。</description><guid isPermaLink="true">https://qigaowei.github.io/post/ce-shi-gong-ju-kai-fa-%EF%BC%8C-xiao-neng-gong-ju-kai-fa-ke-neng-shi-%EF%BC%9F.html</guid><pubDate>Wed, 16 Apr 2025 06:54:50 +0000</pubDate></item><item><title>独角兽跟中厂差不多,比如滴滴</title><link>https://qigaowei.github.io/post/du-jiao-shou-gen-zhong-chang-cha-bu-duo-%2C-bi-ru-di-di.html</link><guid isPermaLink="true">https://qigaowei.github.io/post/du-jiao-shou-gen-zhong-chang-cha-bu-duo-%2C-bi-ru-di-di.html</guid><pubDate>Wed, 16 Apr 2025 06:54:21 +0000</pubDate></item><item><title>sku和spu的区别，不知道真可以回家了</title><link>https://qigaowei.github.io/post/sku-he-spu-de-qu-bie-%EF%BC%8C-bu-zhi-dao-zhen-ke-yi-hui-jia-le.html</link><description>1. 定义不同
+
+SKU是指为了管理和追踪库存而分配给每个商品的少数编码。</description><guid isPermaLink="true">https://qigaowei.github.io/post/sku-he-spu-de-qu-bie-%EF%BC%8C-bu-zhi-dao-zhen-ke-yi-hui-jia-le.html</guid><pubDate>Wed, 16 Apr 2025 06:53:51 +0000</pubDate></item><item><title>上传后异步处理，前端怎么轮询</title><link>https://qigaowei.github.io/post/shang-chuan-hou-yi-bu-chu-li-%EF%BC%8C-qian-duan-zen-me-lun-xun.html</link><description>先有个任务表  
+任务id返回给前端
+让前端轮询。</description><guid isPermaLink="true">https://qigaowei.github.io/post/shang-chuan-hou-yi-bu-chu-li-%EF%BC%8C-qian-duan-zen-me-lun-xun.html</guid><pubDate>Wed, 16 Apr 2025 06:49:34 +0000</pubDate></item><item><title>easyexcel的最大特点是什么</title><link>https://qigaowei.github.io/post/easyexcel-de-zui-da-te-dian-shi-shen-me.html</link><description>就是节省内存。</description><guid isPermaLink="true">https://qigaowei.github.io/post/easyexcel-de-zui-da-te-dian-shi-shen-me.html</guid><pubDate>Wed, 16 Apr 2025 06:49:00 +0000</pubDate></item><item><title>es模糊查询快</title><link>https://qigaowei.github.io/post/es-mo-hu-cha-xun-kuai.html</link><description>Mysql模糊查询比较慢。</description><guid isPermaLink="true">https://qigaowei.github.io/post/es-mo-hu-cha-xun-kuai.html</guid><pubDate>Wed, 16 Apr 2025 06:48:26 +0000</pubDate></item><item><title>数据量多大才需要用es做宽表</title><link>https://qigaowei.github.io/post/shu-ju-liang-duo-da-cai-xu-yao-yong-es-zuo-kuan-biao.html</link><description>怎么也要上千万吧。</description><guid isPermaLink="true">https://qigaowei.github.io/post/shu-ju-liang-duo-da-cai-xu-yao-yong-es-zuo-kuan-biao.html</guid><pubDate>Wed, 16 Apr 2025 06:47:56 +0000</pubDate></item><item><title>es中text和keyword的区别</title><link>https://qigaowei.github.io/post/es-zhong-text-he-keyword-de-qu-bie.html</link><description>1.  模糊查询
+      - text支持 
+      - keyword不支持
+      - 相似的词不能用text，查询不够精准
+2. 数字不能用keyword
+ 比如价格，需要范围查询。</description><guid isPermaLink="true">https://qigaowei.github.io/post/es-zhong-text-he-keyword-de-qu-bie.html</guid><pubDate>Wed, 16 Apr 2025 06:46:47 +0000</pubDate></item><item><title>敏感词过滤</title><link>https://qigaowei.github.io/post/min-gan-ci-guo-lv.html</link><description>1. 前缀树
+2. 状态机
+3. dfa。</description><guid isPermaLink="true">https://qigaowei.github.io/post/min-gan-ci-guo-lv.html</guid><pubDate>Wed, 16 Apr 2025 06:44:04 +0000</pubDate></item><item><title>feign接口是声明式的</title><link>https://qigaowei.github.io/post/feign-jie-kou-shi-sheng-ming-shi-de.html</link><description>定义好参数，返回值，post或get这些
+按规则调用。</description><guid isPermaLink="true">https://qigaowei.github.io/post/feign-jie-kou-shi-sheng-ming-shi-de.html</guid><pubDate>Wed, 16 Apr 2025 06:43:21 +0000</pubDate></item><item><title>负载均衡分为客户端和服务端</title><link>https://qigaowei.github.io/post/fu-zai-jun-heng-fen-wei-ke-hu-duan-he-fu-wu-duan.html</link><description>1. 客户端负载均衡  
+ 请求时ip已经确定了
+比如nacos，client包有负载均衡策略
+比如feign
+2. 服务端负载均衡
+ 比如nginx，请求时不知道ip
+。</description><guid isPermaLink="true">https://qigaowei.github.io/post/fu-zai-jun-heng-fen-wei-ke-hu-duan-he-fu-wu-duan.html</guid><pubDate>Wed, 16 Apr 2025 06:41:31 +0000</pubDate></item><item><title>使用决策引擎需要注意的点</title><link>https://qigaowei.github.io/post/shi-yong-jue-ce-yin-qing-xu-yao-zhu-yi-de-dian.html</link><description>新策略是否老兼容 
+ 结果满足预期  
+灰度  
+回滚  
+回放，通过相同的参数回放。</description><guid isPermaLink="true">https://qigaowei.github.io/post/shi-yong-jue-ce-yin-qing-xu-yao-zhu-yi-de-dian.html</guid><pubDate>Wed, 16 Apr 2025 06:39:49 +0000</pubDate></item><item><title>风控比较悲观，需要多次校验</title><link>https://qigaowei.github.io/post/feng-kong-bi-jiao-bei-guan-%EF%BC%8C-xu-yao-duo-ci-xiao-yan.html</link><description>特殊的场景，比如异步  
+用户状态可能变了 
+ 需要再次检验。</description><guid isPermaLink="true">https://qigaowei.github.io/post/feng-kong-bi-jiao-bei-guan-%EF%BC%8C-xu-yao-duo-ci-xiao-yan.html</guid><pubDate>Wed, 16 Apr 2025 06:38:49 +0000</pubDate></item><item><title>Mysql千万不要讲锁表</title><link>https://qigaowei.github.io/post/Mysql-qian-wan-bu-yao-jiang-suo-biao.html</link><description>完全黑盒   
+谁也讲不明白什么情况下，一定加表级锁
+任何都可能不锁表。</description><guid isPermaLink="true">https://qigaowei.github.io/post/Mysql-qian-wan-bu-yao-jiang-suo-biao.html</guid><pubDate>Wed, 16 Apr 2025 06:38:09 +0000</pubDate></item><item><title>慢sql问题排查</title><link>https://qigaowei.github.io/post/man-sql-wen-ti-pai-cha.html</link><description>1. 用到了索引，但是也有filesort
+   - sql大概为：有in，order by id和另一个字段
+   - C字段用了in ，就乱序了，因为in是范围值
+   - 联合索引，C字段以后的字段，就乱了
+
+2. 数据量不一样，执行计划也不一样。</description><guid isPermaLink="true">https://qigaowei.github.io/post/man-sql-wen-ti-pai-cha.html</guid><pubDate>Wed, 16 Apr 2025 06:37:17 +0000</pubDate></item><item><title>出现线上故障——追责是最不重要的</title><link>https://qigaowei.github.io/post/chu-xian-xian-shang-gu-zhang-%E2%80%94%E2%80%94-zhui-ze-shi-zui-bu-zhong-yao-de.html</link><description>1. 技术风险，每个人都会犯错
+2. 但是底线  要遵守流程   
+   - 可监控  可灰度  可回滚
+   - 不遵守流程就拜拜。</description><guid isPermaLink="true">https://qigaowei.github.io/post/chu-xian-xian-shang-gu-zhang-%E2%80%94%E2%80%94-zhui-ze-shi-zui-bu-zhong-yao-de.html</guid><pubDate>Wed, 16 Apr 2025 06:34:38 +0000</pubDate></item><item><title>如果你事先不知道谁被晋升</title><link>https://qigaowei.github.io/post/ru-guo-ni-shi-xian-bu-zhi-dao-shui-bei-jin-sheng.html</link><description>那说明你连晋升的资格都没有。</description><guid isPermaLink="true">https://qigaowei.github.io/post/ru-guo-ni-shi-xian-bu-zhi-dao-shui-bei-jin-sheng.html</guid><pubDate>Wed, 16 Apr 2025 06:33:04 +0000</pubDate></item><item><title>面试需要注意的点</title><link>https://qigaowei.github.io/post/mian-shi-xu-yao-zhu-yi-de-dian.html</link><description>1. 技术热情 比如经常写博客
+2. 谦虚，不要变现的太叼
+3. 不要让别人觉得自己好难搞  事多。</description><guid isPermaLink="true">https://qigaowei.github.io/post/mian-shi-xu-yao-zhu-yi-de-dian.html</guid><pubDate>Wed, 16 Apr 2025 06:32:19 +0000</pubDate></item><item><title>招人很简单，有一个原则</title><link>https://qigaowei.github.io/post/zhao-ren-hen-jian-dan-%EF%BC%8C-you-yi-ge-yuan-ze.html</link><description>只要这个人，你愿意跟他并肩作战 
+ 就可以招进来  不会拖后腿
+当然更好的是 比你当年优秀。</description><guid isPermaLink="true">https://qigaowei.github.io/post/zhao-ren-hen-jian-dan-%EF%BC%8C-you-yi-ge-yuan-ze.html</guid><pubDate>Wed, 16 Apr 2025 06:31:08 +0000</pubDate></item><item><title>端侧ai-手机端的ai软件，在本地运算</title><link>https://qigaowei.github.io/post/duan-ce-ai--shou-ji-duan-de-ai-ruan-jian-%EF%BC%8C-zai-ben-di-yun-suan.html</link><description>手机端
+硬件影响，硬件性能不强
+数据不能传回数据库
+类似边缘计算。</description><guid isPermaLink="true">https://qigaowei.github.io/post/duan-ce-ai--shou-ji-duan-de-ai-ruan-jian-%EF%BC%8C-zai-ben-di-yun-suan.html</guid><pubDate>Wed, 16 Apr 2025 06:29:46 +0000</pubDate></item><item><title>算法，第一学历必须985</title><link>https://qigaowei.github.io/post/suan-fa-%EF%BC%8C-di-yi-xue-li-bi-xu-985.html</link><description>如果不是，硕士清北也不行。</description><guid isPermaLink="true">https://qigaowei.github.io/post/suan-fa-%EF%BC%8C-di-yi-xue-li-bi-xu-985.html</guid><pubDate>Wed, 16 Apr 2025 06:28:32 +0000</pubDate></item><item><title>多线程是一个事务吗</title><link>https://qigaowei.github.io/post/duo-xian-cheng-shi-yi-ge-shi-wu-ma.html</link><description>多线程不是一个事务，没办法回滚
+单线程事务的上下文存在Threadlocal中
+每个线程，单独的数据库连接。</description><guid isPermaLink="true">https://qigaowei.github.io/post/duo-xian-cheng-shi-yi-ge-shi-wu-ma.html</guid><pubDate>Wed, 16 Apr 2025 06:28:07 +0000</pubDate></item><item><title>@Autowired的一个用法</title><link>https://qigaowei.github.io/post/%40Autowired-de-yi-ge-yong-fa.html</link><description>```java
  @Autowired
     public void injectionPayServices(List&lt;OrderPayService&gt; serviceList) {
       if (serviceList != null) {
