@@ -119,64 +119,65 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>mybatis跳转到xml的,收费版才能用</li>
 </ol>
 <ul>
-<li><a href="https://plugins.jetbrains.com/plugin/18617-free-mybatis-tool" rel="nofollow">https://plugins.jetbrains.com/plugin/18617-free-mybatis-tool</a></li>
+<li>https://plugins.jetbrains.com/plugin/18617-free-mybatis-tool</li>
 </ul>
 <ol start="2">
 <li>一键生成get set，不是实体类的</li>
 </ol>
 <ul>
-<li><a href="https://plugins.jetbrains.com/plugin/9360-generateallsetter" rel="nofollow">https://plugins.jetbrains.com/plugin/9360-generateallsetter</a></li>
+<li>https://plugins.jetbrains.com/plugin/9360-generateallsetter</li>
 </ul>
 <ol start="3">
 <li>免重启，更新代码</li>
 </ol>
 <ul>
-<li><a href="https://plugins.jetbrains.com/plugin/4441-jrebel-and-xrebel" rel="nofollow">https://plugins.jetbrains.com/plugin/4441-jrebel-and-xrebel</a></li>
+<li>https://plugins.jetbrains.com/plugin/4441-jrebel-and-xrebel</li>
 </ul>
 <ol start="4">
 <li>免重启，更新mybatis</li>
 </ol>
 <ul>
-<li><a href="https://plugins.jetbrains.com/plugin/12682-jrebel-mybatisplus-extension" rel="nofollow">https://plugins.jetbrains.com/plugin/12682-jrebel-mybatisplus-extension</a></li>
+<li>https://plugins.jetbrains.com/plugin/12682-jrebel-mybatisplus-extension</li>
 </ul>
 <ol start="5">
 <li>查看mybatis的sql</li>
 </ol>
 <ul>
-<li><a href="https://plugins.jetbrains.com/plugin/17898-mybatis-log-free" rel="nofollow">https://plugins.jetbrains.com/plugin/17898-mybatis-log-free</a></li>
+<li>https://plugins.jetbrains.com/plugin/17898-mybatis-log-free</li>
 </ul>
 <ol start="6">
 <li>自动切换输入法</li>
 </ol>
 <ul>
-<li><a href="https://plugins.jetbrains.com/plugin/20575-smart-input" rel="nofollow">https://plugins.jetbrains.com/plugin/20575-smart-input</a></li>
+<li>https://plugins.jetbrains.com/plugin/20575-smart-input</li>
 </ul>
 <ol start="7">
 <li>包含base64，SQL，json，jsonpath等工具</li>
 </ol>
 <ul>
-<li><a href="https://plugins.jetbrains.com/plugin/21904-developer-tools" rel="nofollow">https://plugins.jetbrains.com/plugin/21904-developer-tools</a><br>
+<li>https://plugins.jetbrains.com/plugin/21904-developer-tools
 还有个类似的，在线版</li>
-<li><a href="https://it-tools.tech/%5D(https://it-tools.tech/" rel="nofollow">https://it-tools.tech/](https://it-tools.tech/</a></li>
+<li>https://it-tools.tech/](https://it-tools.tech/</li>
 </ul>
 <ol start="8">
 <li>字符串转驼峰等操作</li>
 </ol>
 <ul>
-<li><a href="https://plugins.jetbrains.com/plugin/2162-string-manipulation" rel="nofollow">https://plugins.jetbrains.com/plugin/2162-string-manipulation</a></li>
+<li>https://plugins.jetbrains.com/plugin/2162-string-manipulation</li>
 </ul>
 <ol start="9">
 <li>不同颜色，显示代码的括号和大括号的层级关系</li>
 </ol>
 <ul>
-<li><a href="https://plugins.jetbrains.com/plugin/20710-rainbow-brackets-lite--free-and-opensource" rel="nofollow">https://plugins.jetbrains.com/plugin/20710-rainbow-brackets-lite--free-and-opensource</a></li>
+<li>https://plugins.jetbrains.com/plugin/20710-rainbow-brackets-lite--free-and-opensource</li>
 </ul>
 <ol start="10">
 <li>教你使用快捷键，操作的时候，会提示你对应的快捷键是什么</li>
 </ol>
 <ul>
-<li><a href="https://plugins.jetbrains.com/plugin/9792-key-promoter-x" rel="nofollow">https://plugins.jetbrains.com/plugin/9792-key-promoter-x</a></li>
-</ul></div>
+<li>https://plugins.jetbrains.com/plugin/9792-key-promoter-x</li>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -241,6 +242,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

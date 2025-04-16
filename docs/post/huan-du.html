@@ -92,17 +92,18 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><ol>
-<li>RR解决99%幻读，<br>
-mvcc快照读，所有的查询都读第一个快照<br>
+<li>RR解决99%幻读，
+mvcc快照读，所有的查询都读第一个快照
 通过间隙锁解决幻读</li>
-<li>未解决的<br>
-2.1 update当前读，快照会更新<br>
-，会更新<br>
-2.2 select for update也会更新快照<br>
+<li>未解决的
+2.1 update当前读，快照会更新
+，会更新
+2.2 select for update也会更新快照
 完全没有幻读</li>
 <li>但是幻读，无伤大雅</li>
 <li>完全没有幻读，串行化</li>
-</ol></div>
+</ol>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -167,6 +168,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

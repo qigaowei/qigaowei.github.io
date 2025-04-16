@@ -79,11 +79,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>确认收货的消息在发货消息前接收到<br>
-1先拒绝<br>
-2先落库，定时任务扫描<br>
-3也是落库，直接执行。<br>
-4落库，redis缓存也存，缓存有，再去mysql查，减少延迟（推荐）</p></div>
+<div class="markdown-body" id="postBody"><p>确认收货的消息在发货消息前接收到
+1先拒绝
+2先落库，定时任务扫描
+3也是落库，直接执行。
+4落库，redis缓存也存，缓存有，再去mysql查，减少延迟（推荐）</p>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -148,6 +149,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

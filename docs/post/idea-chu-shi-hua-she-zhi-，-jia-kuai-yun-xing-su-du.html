@@ -80,11 +80,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><ul>
-<li>全局自动换行 <a href="https://blog.csdn.net/u011675334/article/details/108795519" rel="nofollow">https://blog.csdn.net/u011675334/article/details/108795519</a></li>
-<li>关闭部分不必要信息提示（比如函数形参提示） <a href="https://blog.csdn.net/crossfire_sli/article/details/126997889" rel="nofollow">https://blog.csdn.net/crossfire_sli/article/details/126997889</a></li>
+<li>全局自动换行 https://blog.csdn.net/u011675334/article/details/108795519</li>
+<li>关闭部分不必要信息提示（比如函数形参提示） https://blog.csdn.net/crossfire_sli/article/details/126997889</li>
 <li>设置快捷键</li>
 <li>字体大小，越大越有益于眼睛</li>
-</ul></div>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -149,6 +150,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

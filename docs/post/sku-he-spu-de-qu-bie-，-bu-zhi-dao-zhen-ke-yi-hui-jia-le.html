@@ -90,7 +90,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <ol start="3">
 <li>关系和层级不同</li>
 </ol>
-<p>SKU和SPU之间存在层级关系。一个SPU可以对应多个SKU，而一个SKU只能属于一个SPU。SPU代表着一种商品的整体特征和属性，而SKU则表示这种商品的具体变体或不同选择。通过SPU和SKU的组合，企业可以提供多样化的选择，并满足消费者的个性化需求。</p></div>
+<p>SKU和SPU之间存在层级关系。一个SPU可以对应多个SKU，而一个SKU只能属于一个SPU。SPU代表着一种商品的整体特征和属性，而SKU则表示这种商品的具体变体或不同选择。通过SPU和SKU的组合，企业可以提供多样化的选择，并满足消费者的个性化需求。</p>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -155,6 +156,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

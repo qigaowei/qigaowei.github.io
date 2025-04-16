@@ -76,9 +76,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><ul>
-<li><a href="https://github.com/docker-practice/docker-registry-cn-mirror-test">https://github.com/docker-practice/docker-registry-cn-mirror-test</a></li>
+<li>https://github.com/docker-practice/docker-registry-cn-mirror-test</li>
 <li>测试结果请到 Actions 标签详情页查看</li>
-</ul></div>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -143,6 +144,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

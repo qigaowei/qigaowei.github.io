@@ -90,17 +90,18 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><ol>
-<li>缺点<br>
-本地缓存很难保证一致性，<br>
-这个一致性指的是不同实例的本地缓存的一致性<br>
+<li>缺点
+本地缓存很难保证一致性，
+这个一致性指的是不同实例的本地缓存的一致性
 不是与MySQL的一致性</li>
-<li>解决方案<br>
-可以不使用本地缓存,<br>
-将redis的副本跟springboot部署在一台机器上<br>
+<li>解决方案
+可以不使用本地缓存,
+将redis的副本跟springboot部署在一台机器上
 减少网络开销</li>
 <li>对于变化不频繁的数据，才会考虑放到本地缓存中。</li>
 <li>基于业务上能接受的时长设置失效时长，比如业务上可以接受10分钟的延迟，那么我们可以设置个8分钟的超时时间。这样到期之后这个缓存的内容就会自动失效。</li>
-</ol></div>
+</ol>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -165,6 +166,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

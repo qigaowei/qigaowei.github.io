@@ -86,13 +86,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><ol>
-<li>空回滚<br>
-没用try成功，又需要cancel<br>
+<li>空回滚
+没用try成功，又需要cancel
 解决：需要在业务中做好对空回滚的识别和处理</li>
-<li>悬挂<br>
-先接到cancel，再接收try，结果一直try<br>
+<li>悬挂
+先接到cancel，再接收try，结果一直try
 解决：表里有try记录，才能candel</li>
-</ol></div>
+</ol>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -157,6 +158,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

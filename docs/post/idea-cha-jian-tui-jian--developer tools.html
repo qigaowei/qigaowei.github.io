@@ -83,10 +83,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>包含base64，SQL，json，jsonpath等工具<br>
-<a href="https://plugins.jetbrains.com/plugin/21904-developer-tools" rel="nofollow">https://plugins.jetbrains.com/plugin/21904-developer-tools</a></p>
-<p>还有个类似的，在线版<br>
-<a href="https://it-tools.tech/" rel="nofollow">https://it-tools.tech/</a></p></div>
+<div class="markdown-body" id="postBody"><p>包含base64，SQL，json，jsonpath等工具
+<a href="https://plugins.jetbrains.com/plugin/21904-developer-tools">https://plugins.jetbrains.com/plugin/21904-developer-tools</a></p>
+<p>还有个类似的，在线版
+<a href="https://it-tools.tech/">https://it-tools.tech/</a></p>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -151,6 +152,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

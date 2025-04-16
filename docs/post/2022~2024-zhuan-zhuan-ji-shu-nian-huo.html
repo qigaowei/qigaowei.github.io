@@ -79,10 +79,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>感谢您的关注，2022~2024转转技术年货已上传，欢迎下载和讨论<br>
-2024下载链接: <a href="https://fearch.zhuanstatic.com/zhuanzhuan_tech_2024_m5gkybssmx7.pdf" rel="nofollow">https://fearch.zhuanstatic.com/zhuanzhuan_tech_2024_m5gkybssmx7.pdf</a><br>
-2023下载链接: <a href="https://fearch.zhuanstatic.com/zhuanzhuan_tech_2023_lreiz19og0t.pdf" rel="nofollow">https://fearch.zhuanstatic.com/zhuanzhuan_tech_2023_lreiz19og0t.pdf</a><br>
-2022下载链接: <a href="https://fearch.zhuanstatic.com/zhuanzhuan-tech-2022_lcqfc4e0h77.pdf" rel="nofollow">https://fearch.zhuanstatic.com/zhuanzhuan-tech-2022_lcqfc4e0h77.pdf</a></p></div>
+<div class="markdown-body" id="postBody"><p>感谢您的关注，2022~2024转转技术年货已上传，欢迎下载和讨论
+2024下载链接: https://fearch.zhuanstatic.com/zhuanzhuan_tech_2024_m5gkybssmx7.pdf
+2023下载链接: https://fearch.zhuanstatic.com/zhuanzhuan_tech_2023_lreiz19og0t.pdf
+2022下载链接: https://fearch.zhuanstatic.com/zhuanzhuan-tech-2022_lcqfc4e0h77.pdf</p>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -147,6 +148,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

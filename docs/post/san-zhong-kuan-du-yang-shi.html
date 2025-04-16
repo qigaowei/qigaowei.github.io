@@ -78,10 +78,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><ul>
-<li>style="width: 60px"</li>
-<li>width="60"</li>
-<li>:style="{ width: '10%' }"</li>
-</ul></div>
+<li>style=&quot;width: 60px&quot;</li>
+<li>width=&quot;60&quot;</li>
+<li>:style=&quot;{ width: '10%' }&quot;</li>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -146,6 +147,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

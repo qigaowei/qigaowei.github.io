@@ -82,12 +82,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><ul>
-<li><a href="https://www.cnblogs.com/bluedeblog/p/6654065.html" rel="nofollow">https://www.cnblogs.com/bluedeblog/p/6654065.html</a></li>
+<li>https://www.cnblogs.com/bluedeblog/p/6654065.html</li>
 <li>简单来说，想返回全部数据条件放on里面</li>
 <li>过滤数据条件放where里面</li>
 <li>inner join会全部过滤，不分where和on</li>
 <li>使用left join时，忘记写where，直接写and，可能会有问题</li>
-</ul></div>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -152,6 +153,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

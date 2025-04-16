@@ -106,23 +106,24 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><ul>
-<li><a href="https://www.jetbrains.com.cn/idea/download/other.html" rel="nofollow">idea</a></li>
-<li><a href="https://git-scm.com/downloads" rel="nofollow">git</a></li>
+<li><a href="https://www.jetbrains.com.cn/idea/download/other.html">idea</a></li>
+<li><a href="https://git-scm.com/downloads">git</a></li>
 <li>wps</li>
 <li><a href="https://github.com/2dust/v2rayN">v2rayn</a></li>
 <li>微信</li>
 <li>微信输入法（搜狗广告太多）</li>
 <li>notepad++</li>
 <li><a href="https://github.com/mpc-hc/mpc-hc/releases/tag/1.7.13">mpc播放器，无广告，也不会更新版本了</a></li>
-<li><a href="https://www.google.com/intl/zh-CN/chrome/" rel="nofollow">谷歌浏览器</a></li>
-<li><a href="https://www.voidtools.com/" rel="nofollow">everything</a></li>
-<li><a href="https://www.jam-software.com/treesize_free" rel="nofollow">treesize</a></li>
-<li><a href="https://7-zip.org/download.html" rel="nofollow">7zip</a></li>
-<li><a href="https://dbeaver.io/download/" rel="nofollow">dbeaver</a></li>
-<li><a href="https://www.navicat.com/en/products/navicat-premium-lite" rel="nofollow">用这个Navicat Premium Lite，官方推出的免费版  功能少一点,每个公司只能5个用户</a></li>
+<li><a href="https://www.google.com/intl/zh-CN/chrome/">谷歌浏览器</a></li>
+<li><a href="https://www.voidtools.com/">everything</a></li>
+<li><a href="https://www.jam-software.com/treesize_free">treesize</a></li>
+<li><a href="https://7-zip.org/download.html">7zip</a></li>
+<li><a href="https://dbeaver.io/download/">dbeaver</a></li>
+<li><a href="https://www.navicat.com/en/products/navicat-premium-lite">用这个Navicat Premium Lite，官方推出的免费版  功能少一点,每个公司只能5个用户</a></li>
 <li><a href="https://github.com/user-attachments/files/17613553/LogViewPro.zip">LogViewPro.zip查看大文本必备，可直接下载</a></li>
-<li><a href="https://mobaxterm.mobatek.net/download.html" rel="nofollow">MobaXterm</a></li>
-</ul></div>
+<li><a href="https://mobaxterm.mobatek.net/download.html">MobaXterm</a></li>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -187,6 +188,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

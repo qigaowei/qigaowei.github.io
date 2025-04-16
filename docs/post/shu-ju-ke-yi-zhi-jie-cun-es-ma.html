@@ -86,11 +86,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><ol>
 <li></li>
 </ol>
-<p>不推荐<br>
-很多数据分析，BI等<br>
-这些需要从mysql拉取数据<br>
-mysql更方便<br>
-2.   如果集群部署，一般es不会挂，挂了也是运维的锅</p></div>
+<p>不推荐
+很多数据分析，BI等
+这些需要从mysql拉取数据
+mysql更方便
+2.   如果集群部署，一般es不会挂，挂了也是运维的锅</p>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -155,6 +156,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

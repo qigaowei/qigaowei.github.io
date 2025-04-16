@@ -94,11 +94,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>超过10次，可以人工处理</li>
 </ul>
 </li>
-<li>时间<br>
+<li>时间
 大于10天的消息，需要另一个定时任务处理，避免原来的定时任务查询不到</li>
-<li>上次失败的原因，非常有用<br>
+<li>上次失败的原因，非常有用
 不用看日志，text类型</li>
-</ol></div>
+</ol>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -163,6 +164,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

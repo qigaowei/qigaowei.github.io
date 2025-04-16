@@ -82,9 +82,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><ol>
 <li>MurmurHash算法（32位）</li>
 <li>http 302跳转</li>
-<li>参考<br>
-(<a href="https://blog.csdn.net/Jokers_lin/article/details/136347472)%5Bhttps://blog.csdn.net/Jokers_lin/article/details/136347472%5D" rel="nofollow">https://blog.csdn.net/Jokers_lin/article/details/136347472)[https://blog.csdn.net/Jokers_lin/article/details/136347472]</a></li>
-</ol></div>
+<li>参考
+(https://blog.csdn.net/Jokers_lin/article/details/136347472)[https://blog.csdn.net/Jokers_lin/article/details/136347472]</li>
+</ol>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -149,6 +150,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

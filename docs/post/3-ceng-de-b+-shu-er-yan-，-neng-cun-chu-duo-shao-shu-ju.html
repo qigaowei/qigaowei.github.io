@@ -75,7 +75,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <div class="markdown-body" id="postBody"><p>假设非叶子节点中保存的页索引项，每一项的大小占 16 个字节。对于 16k 的一页而言，大约可以存储 1000(16k/16)条索引项。</p>
 <p>假设叶子节点中保存的每条记录数据的平均大小为 160 个字节。对于 16k 的一页而言，大约可以存储 100(16k/160)条记录。</p>
-<p>综上：对于 3 层的 b+树而言，其所能存储的数据量级：1000 *1000 * 100，大概 10^8 条</p></div>
+<p>综上：对于 3 层的 b+树而言，其所能存储的数据量级：1000 *1000 * 100，大概 10^8 条</p>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -140,6 +141,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");

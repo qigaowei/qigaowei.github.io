@@ -87,7 +87,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>先设置镜像地址</li>
 </ol>
 <ul>
-<li>npm config set registry <a href="https://registry.npmmirror.com" rel="nofollow">https://registry.npmmirror.com</a></li>
+<li>npm config set registry https://registry.npmmirror.com</li>
 </ul>
 <ol start="2">
 <li>查看镜像地址是否成功</li>
@@ -100,7 +100,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </ol>
 <ul>
 <li>npm install -g pnpm</li>
-</ul></div>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -165,6 +166,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");
