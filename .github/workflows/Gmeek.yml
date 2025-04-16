@@ -38,7 +38,7 @@ jobs:
           GMEEK_VERSION=$(jq -r ".GMEEK_VERSION" config.json)
           git clone https://github.com/qigaowei/Gmeek /opt/Gmeek;
           cd /opt/Gmeek/
-          git checkout master;
+          git checkout main;
 
       - name: Install dependencies
         run: |
