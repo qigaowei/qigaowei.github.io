@@ -88,12 +88,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><ol>
-<li>Prepare 阶段
+<li>Prepare 阶段<br /> 
 这个阶段 SQL 已经成功执行并生成 redolog，处于prepare阶段</li>
-<li>BinLog持久化
-binlog 提交，通过 write() 将 binlog 内存日志数据写入文件缓冲区；
+<li>BinLog持久化<br /> 
+binlog 提交，通过 write() 将 binlog 内存日志数据写入文件缓冲区；<br /> 
 通过fsync() 将 binlog 从文件缓冲区永久写入磁盘；</li>
-<li>Commit
+<li>Commit<br /> 
 在执行引擎内部执行事务操作，更新redolog，处于Commit阶段。</li>
 </ol>
 </div>
