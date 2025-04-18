@@ -1,6 +1,6 @@
-# 小七的博客 :link: https://qigaowei.github.io 
-### :page_facing_up: [292](https://qigaowei.github.io/tag.html) 
+# 小七的博客 :link:  
+### :page_facing_up: [292](/tag.html) 
 ### :speech_balloon: 0 
 ### :hibiscus: 73644 
-### :alarm_clock: 2025-04-17 15:50:09 
+### :alarm_clock: 2025-04-18 17:19:50 
 ### Powered by :heart: [Gmeek](https://github.com/Meekdai/Gmeek)
