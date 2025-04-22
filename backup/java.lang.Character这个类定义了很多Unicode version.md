@@ -1,0 +1,1 @@
+[Unicode – The World Standard for Text and Emoji](https://home.unicode.org/)
