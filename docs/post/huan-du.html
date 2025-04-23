@@ -12,7 +12,7 @@
     </script>
 <meta name="description" content="1. RR解决99%幻读，
      mvcc快照读，所有的查询都读第一个快照
-     通过间隙锁解决幻读
+     通过间隙锁解决幻读，只读快照的数据，数据就一样
 2. 未解决的
   2.1 update当前读，快照会更新
   2.2 select for update也会更新快照
@@ -21,7 +21,7 @@
 <meta property="og:title" content="幻读">
 <meta property="og:description" content="1. RR解决99%幻读，
      mvcc快照读，所有的查询都读第一个快照
-     通过间隙锁解决幻读
+     通过间隙锁解决幻读，只读快照的数据，数据就一样
 2. 未解决的
   2.1 update当前读，快照会更新
   2.2 select for update也会更新快照
@@ -90,7 +90,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><ol>
 <li>RR解决99%幻读，<br /> 
 mvcc快照读，所有的查询都读第一个快照<br /> 
-通过间隙锁解决幻读</li>
+通过间隙锁解决幻读，只读快照的数据，数据就一样</li>
 <li>未解决的<br /> 
 2.1 update当前读，快照会更新<br /> 
 2.2 select for update也会更新快照</li>
