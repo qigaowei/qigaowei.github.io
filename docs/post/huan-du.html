@@ -11,24 +11,20 @@
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
 <meta name="description" content="1. RR解决99%幻读，
-mvcc快照读，所有的查询都读第一个快照
-通过间隙锁解决幻读
+     mvcc快照读，所有的查询都读第一个快照
+     通过间隙锁解决幻读
 2. 未解决的
   2.1 update当前读，快照会更新
-  ，会更新
   2.2 select for update也会更新快照
-  完全没有幻读
 3. 但是幻读，无伤大雅
 4. 完全没有幻读，串行化。">
 <meta property="og:title" content="幻读">
 <meta property="og:description" content="1. RR解决99%幻读，
-mvcc快照读，所有的查询都读第一个快照
-通过间隙锁解决幻读
+     mvcc快照读，所有的查询都读第一个快照
+     通过间隙锁解决幻读
 2. 未解决的
   2.1 update当前读，快照会更新
-  ，会更新
   2.2 select for update也会更新快照
-  完全没有幻读
 3. 但是幻读，无伤大雅
 4. 完全没有幻读，串行化。">
 <meta property="og:type" content="article">
@@ -97,9 +93,7 @@ mvcc快照读，所有的查询都读第一个快照<br />
 通过间隙锁解决幻读</li>
 <li>未解决的<br /> 
 2.1 update当前读，快照会更新<br /> 
-，会更新<br /> 
-2.2 select for update也会更新快照<br /> 
-完全没有幻读</li>
+2.2 select for update也会更新快照</li>
 <li>但是幻读，无伤大雅</li>
 <li>完全没有幻读，串行化</li>
 </ol>
