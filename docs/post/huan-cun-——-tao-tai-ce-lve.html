@@ -10,12 +10,14 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="FIFO：First In First Out，先进先出，淘汰最早被缓存的对象；
+<meta name="description" content="1. 解释
+FIFO：First In First Out，先进先出，淘汰最早被缓存的对象；
 LRU：Least Recently Used，淘汰最长时间未被使用的数据，以时间作为参考；
 LFU：Least Frequently Used，淘汰一定时期内被访问次数最少的数据，以次数作为参考；
 这些算法在不同层次的缓存上执行时拥有不同的效率和代价，需根据具体场合选择最合适的一种。">
 <meta property="og:title" content="缓存——淘汰策略">
-<meta property="og:description" content="FIFO：First In First Out，先进先出，淘汰最早被缓存的对象；
+<meta property="og:description" content="1. 解释
+FIFO：First In First Out，先进先出，淘汰最早被缓存的对象；
 LRU：Least Recently Used，淘汰最长时间未被使用的数据，以时间作为参考；
 LFU：Least Frequently Used，淘汰一定时期内被访问次数最少的数据，以次数作为参考；
 这些算法在不同层次的缓存上执行时拥有不同的效率和代价，需根据具体场合选择最合适的一种。">
@@ -79,10 +81,26 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>FIFO：First In First Out，先进先出，淘汰最早被缓存的对象；<br /> 
+<div class="markdown-body" id="postBody"><ol>
+<li>
+<p>解释<br /> 
+FIFO：First In First Out，先进先出，淘汰最早被缓存的对象；<br /> 
 LRU：Least Recently Used，淘汰最长时间未被使用的数据，以时间作为参考；<br /> 
 LFU：Least Frequently Used，淘汰一定时期内被访问次数最少的数据，以次数作为参考；<br /> 
 这些算法在不同层次的缓存上执行时拥有不同的效率和代价，需根据具体场合选择最合适的一种。</p>
+</li>
+<li>
+<p>解释</p>
+</li>
+</ol>
+<p>LRU（The Least Recently Used），最近最少使用，最久未被访问的数据会被最早淘汰。<br /> 
+LFU（Least Frequently Used），最少频次使用，访问次数最少的数据会被最早淘汰。</p>
+<p>LRU只关注数据最近一次被使用时间（时间越久、越容易被淘汰），LFU 只关注数据最近一段时间被使用的次数（次数越少，越<br /> 
+容易被淘汰）。</p>
+<p>假设缓存中数据使用顺序如下（从左到右表示时间从晚到早）：</p>
+<p>A、B、C、D、A、C、C、D</p>
+<p>那么，如果按照LRU 淘汰的是，就淘汰那个最近一次使用时间更早的。即D<br /> 
+如果按照LFU 淘汰的是，就淘汰那个使用次数最少的。即B</p>
 </div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
