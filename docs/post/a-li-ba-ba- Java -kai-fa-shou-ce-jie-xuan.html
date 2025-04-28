@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="一 、编程规约
+
+(一)命名风格
+
+
+3. 【强制】类名使用 UpperCamelCase 风格，必须遵从驼峰形式，但以下情形例外：DO / BO /
+   DTO / VO / AO
+   正例：MarcoPolo / UserDO / XmlService / TcpUdpDeal / TaPromotion
+   反例：macroPolo / UserDo / XMLService / TCPUDPDeal / TAPromotion
+7. 【强制】中括号是数组类型的一部分，数组定义如下：String[] args;
+ 反例：使用 String args[]的方式来定义。">
+<meta property="og:title" content="阿里巴巴 Java 开发手册节选">
+<meta property="og:description" content="一 、编程规约
+
+(一)命名风格
+
+
+3. 【强制】类名使用 UpperCamelCase 风格，必须遵从驼峰形式，但以下情形例外：DO / BO /
+   DTO / VO / AO
+   正例：MarcoPolo / UserDO / XmlService / TcpUdpDeal / TaPromotion
+   反例：macroPolo / UserDo / XMLService / TCPUDPDeal / TAPromotion
+7. 【强制】中括号是数组类型的一部分，数组定义如下：String[] args;
+ 反例：使用 String args[]的方式来定义。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/post/a-li-ba-ba-%20Java%20-kai-fa-shou-ce-jie-xuan.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>阿里巴巴 Java 开发手册节选</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">阿里巴巴 Java 开发手册节选</h1>
+<div class="title-right">
+    <a href="" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/qigaowei/qigaowei.github.io/issues/310" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p>一 、编程规约</p>
+<p>(一)命名风格</p>
+<ol start="3">
+<li>【强制】类名使用 UpperCamelCase 风格，必须遵从驼峰形式，但以下情形例外：DO / BO /<br /> 
+DTO / VO / AO<br /> 
+正例：MarcoPolo / UserDO / XmlService / TcpUdpDeal / TaPromotion<br /> 
+反例：macroPolo / UserDo / XMLService / TCPUDPDeal / TAPromotion</li>
+<li>【强制】中括号是数组类型的一部分，数组定义如下：String[] args;<br /> 
+反例：使用 String args[]的方式来定义。</li>
+<li>【强制】POJO 类中布尔类型的变量，都不要加 is，否则部分框架解析会引起序列化错误。<br /> 
+反例：定义为基本数据类型 Boolean isDeleted；的属性，它的方法也是 isDeleted()，RPC 框架在反向解析的时候，“以为”对应的属性名称是 deleted，导致属性获取不到，进而抛出异常。</li>
+</ol>
+<p>(四)OOP 规约</p>
+<ol start="5">
+<li>【强制】不能使用过时的类或方法。<br /> 
+说明：java.net.URLDecoder 中的方法 decode(String encodeStr) 这个方法已经过时，应该使用双参数 decode(String source, String encode)。接口提供方既然明确是过时接口，那么有义务同时提供新的接口；作为调用方来说，有义务去考证过时方法的新实现是什么</li>
+<li>【强制】所有的相同类型的包装类对象之间值的比较，全部使用 equals 方法比较。说明：对于 Integer var = ? 在-128 至 127 范围内的赋值，Integer 对象是在IntegerCache.cache 产生，会复用已有对象，这个区间内的 Integer 值可以直接使用==进行判断，但是这个区间之外的所有数据，都会在堆上产生，并不会复用已有对象，这是一个大坑，推荐使用 equals 方法进行判断。</li>
+<li>【强制】定义 DO/DTO/VO 等 POJO 类时，不要设定任何属性默认值。<br /> 
+反例：POJO 类的 gmtCreate 默认值为 new Date();但是这个属性在数据提取时并没有置入具体值，在更新其它字段时又附带更新了此字段，导致创建时间被修改成当前时间。</li>
+</ol>
+<p>(五)集合处理</p>
+<ol>
+<li>【强制】关于 hashCode 和 equals 的处理，遵循如下规则：<br /> 
+1） 只要重写 equals，就必须重写 hashCode。<br /> 
+2） 因为 Set 存储的是不重复的对象，依据 hashCode 和 equals 进行判断，所以 Set 存储的对象必须重写这两个方法。<br /> 
+3） 如果自定义对象做为 Map 的键，那么必须重写 hashCode 和 equals。<br /> 
+说明：String 重写了 hashCode 和 equals 方法，所以我们可以非常愉快地使用 String 对象作为 key 来使用。</li>
+<li>【强制】ArrayList的subList结果不可强转成ArrayList，否则会抛出ClassCastException异常，即 java.util.RandomAccessSubList cannot be cast to java.util.ArrayList.<br /> 
+说明：subList 返回的是 ArrayList 的内部类 SubList，并不是 ArrayList ，而是ArrayList 的一个视图，对于 SubList 子列表的所有操作最终会反映到原列表上。</li>
+<li>【强制】在 subList 场景中，高度注意对原集合元素个数的修改，会导致子列表的遍历、增加、删除均会产生 ConcurrentModificationException 异常。</li>
+<li>【强制】使用集合转数组的方法，必须使用集合的 toArray(T[] array)，传入的是类型完全一样的数组，大小就是 list.size()。<br /> 
+说明：使用 toArray 带参方法，入参分配的数组空间不够大时，toArray 方法内部将重新分配内存空间，并返回新数组地址；如果数组元素大于实际所需，下标为[ list.size() ]的数组元素将被置为 null，其它数组元素保持原值，因此最好将方法入参数组大小定义与集合元素个数一致。<br /> 
+正例：</li>
+</ol>
+<pre><code class="language-java">List&lt;String&gt; list = new ArrayList&lt;String&gt;(2); 
+list.add(&quot;guan&quot;); 
+list.add(&quot;bao&quot;);
+String[] array = new String[list.size(); 
+array = list.toArray(array); 
+</code></pre>
+<p>反例：直接使用 toArray 无参方法存在问题，此方法返回值只能是 Object[]类，若强转其它类型数组将出现 ClassCastException 错误。<br /> 
+5. 【强制】使用工具类 Arrays.asList()把数组转换成集合时，不能使用其修改集合相关的方法，它的 add/remove/clear 方法会抛出 UnsupportedOperationException 异常。<br /> 
+说明：asList 的返回对象是一个 Arrays 内部类，并没有实现集合的修改方法。Arrays.asList体现的是适配器模式，只是转换接口，后台的数据仍是数组。</p>
+<pre><code class="language-java">String[] str = new String[] { &quot;you&quot;, &quot;wu&quot; }; 
+List list = Arrays.asList(str);
+</code></pre>
+<p>第一种情况：list.add(&quot;yangguanbao&quot;); 运行时异常。<br /> 
+第二种情况：str[0] = &quot;gujin&quot;; 那么 list.get(0)也会随之修改。<br /> 
+6. 【强制】泛型通配符&lt;? extends T&gt;来接收返回的数据，此写法的泛型集合不能使用 add 方法，而&lt;? super T&gt;不能使用 get 方法，做为接口调用赋值时易出错。<br /> 
+说明：扩展说一下 PECS(Producer Extends Consumer Super)原则：第一、频繁往外读取内容的，适合用&lt;? extends T&gt;。第二、经常往里插入的，适合用&lt;? super T&gt;。<br /> 
+——禁止用于商业用途，违者必究——     10 /35<br /> 
+8. 【强制】 在 JDK7 版本及以上，Comparator 要满足如下三个条件，不然 Arrays.sort，Collections.sort 会报 IllegalArgumentException 异常。<br /> 
+说明：三个条件如下<br /> 
+1） x，y 的比较结果和 y，x 的比较结果相反。<br /> 
+阿里巴巴 Java 开发手册<br /> 
+2） x&gt;y，y&gt;z，则 x&gt;z。<br /> 
+3） x=y，则 x，z 比较结果和 y，z 比较结果相同。<br /> 
+反例：下例中没有处理相等的情况，实际使用中可能会出现异常：</p>
+<pre><code class="language-java">   new Comparator&lt;Student&gt;() {
+   @Override
+   public int compare(Student o1, Student o2) {
+    return o1.getId() &gt; o2.getId() ? 1 : -1;
+   }
+   };
+</code></pre>
+<p>(六)并发处理</p>
+<ol start="2">
+<li>【强制】创建线程或线程池时请指定有意义的线程名称，方便出错时回溯。正例：</li>
+</ol>
+<pre><code class="language-java">   public class TimerTaskThread extends Thread { 
+    public TimerTaskThread() { 
+        super.setName(&quot;TimerTaskThread&quot;);
+   } 
+</code></pre>
+<ol start="4">
+<li>【强制】线程池不允许使用 Executors 去创建，而是通过 ThreadPoolExecutor 的方式，这样的处理方式让写的同学更加明确线程池的运行规则，规避资源耗尽的风险。<br /> 
+说明：Executors 返回的线程池对象的弊端如下：1）FixedThreadPool 和 SingleThreadPool:<br /> 
+允许的请求队列长度为 Integer.MAX_VALUE，可能会堆积大量的请求，从而导致 OOM。2）CachedThreadPool 和 ScheduledThreadPool:<br /> 
+允许的创建线程数量为 Integer.MAX_VALUE，可能会创建大量的线程，从而导致 OOM。</li>
+<li>【强制】SimpleDateFormat 是线程不安全的类，一般不要定义为 static 变量，如果定义为static，必须加锁，或者使用 DateUtils 工具类。</li>
+<li>【强制】对多个资源、数据库表、对象同时加锁时，需要保持一致的加锁顺序，否则可能会造成死锁。<br /> 
+说明：线程一需要对表 A、B、C 依次全部加锁后才可以进行更新操作，那么线程二的加锁顺序也必须是 A、B、C，否则可能出现死锁。</li>
+<li>【强制】多线程并行处理定时任务时，Timer 运行多个 TimeTask 时，只要其中之一没有捕获抛出的异常，其它任务便会自动终止运行，使用 ScheduledExecutorService 则没有这个问题。</li>
+<li>【推荐】使用 CountDownLatch 进行异步转同步操作，每个线程退出前必须调用 countDown方法，线程执行代码注意 catch 异常，确保 countDown 方法被执行到，避免主线程无法执行至 await 方法，直到超时才返回结果。<br /> 
+说明：注意，子线程抛出异常堆栈，不能在主线程 try-catch 到。</li>
+</ol>
+<p>(七)控制语句</p>
+<ol>
+<li>【强制】在一个 switch 块内，每个 case 要么通过 break/return 等来终止，要么注释说明程序将继续执行到哪一个 case 为止；在一个 switch 块内，都必须包含一个 default 语句并且放在最后，即使它什么代码也没有。</li>
+<li>【强制】在 if/else/for/while/do 语句中必须使用大括号。即使只有一行代码，避免采用<br /> 
+单行的编码方式：if (condition) statements;</li>
+</ol>
+<p>(九)其它</p>
+<ol>
+<li>【强制】在使用正则表达式时，利用好其预编译功能，可以有效加快正则匹配速度。<br /> 
+说明：不要在方法体内定义：Pattern pattern = Pattern.compile(规则);</li>
+<li>【强制】注意 Math.random() 这个方法返回是 double 类型，注意取值的范围 0≤x&lt;1（能够取到零值，注意除零异常），如果想获取整数类型的随机数，不要将 x 放大 10 的若干倍然后取整，直接使用 Random 对象的 nextInt 或者 nextLong 方法。</li>
+<li>【强制】获取当前毫秒数 System.currentTimeMillis(); 而不是 new Date().getTime();说明：如果想获取更加精确的纳秒级时间值，使用 System.nanoTime()的方式。在 JDK8 中，针对统计时间等场景，推荐使用 Instant 类。</li>
+</ol>
+<p>二、异常日志</p>
+<p>(一)异常处理</p>
+<ol>
+<li>
+<p>【强制】Java 类库中定义的一类 RuntimeException 可以通过预先检查进行规避，而不应该通过 catch 来处理，比如：IndexOutOfBoundsException，NullPointerException 等等。说明：无法通过预检查的异常除外，如在解析一个外部传来的字符串形式数字时，通过 catchNumberFormatException 来实现。<br /> 
+正例：if (obj != null) {...}<br /> 
+反例：</p>
+<p>try {</p>
+<p>obj.method()</p>
+<p>}</p>
+<p>catch (NullPointerException e)</p>
+<p>{...}</p>
+</li>
+<li>
+<p>【强制】异常不要用来做流程控制，条件控制，因为异常的处理效率比条件分支低。</p>
+</li>
+<li>
+<p>【强制】对大段代码进行 try-catch，这是不负责任的表现。catch 时请分清稳定代码和非稳定代码，稳定代码指的是无论如何不会出错的代码。对于非稳定代码的 catch 尽可能进行区分异常类型，再做对应的异常处理。</p>
+</li>
+<li>
+<p>【强制】捕获异常是为了处理它，不要捕获了却什么都不处理而抛弃之，如果不想处理它，请将该异常抛给它的调用者。最外层的业务使用者，必须处理异常，将其转化为用户可以理解的内容。</p>
+</li>
+<li>
+<p>【强制】有 try 块放到了事务代码中，catch 异常后，如果需要回滚事务，一定要注意手动回滚事务。</p>
+</li>
+<li>
+<p>【强制】不能在 finally 块中使用 return，finally 块中的 return 返回后方法结束执行，不会再执行 try 块中的 return 语句。</p>
+</li>
+</ol>
+<p>(二)日志规约</p>
+<ol start="4">
+<li>【强制】对 trace/debug/info 级别的日志输出，必须使用条件输出形式或者使用占位符的方式。<br /> 
+说明：logger.debug(&quot;Processing trade with id: &quot; + id + &quot; and symbol: &quot; + symbol);如果日志级别是 warn，上述日志不会打印，但是会执行字符串拼接操作，如果 symbol 是对象，会执行 toString()方法，浪费了系统资源，执行了上述操作，最终日志却没有打印。</li>
+</ol>
+<p>正例：（条件）</p>
+<pre><code class="language-java">if (logger.isDebugEnabled()){ 
+    logger.debug(&quot;Processing trade with id: &quot; + id + &quot; and symbol: &quot; + symbol);
+   
+}
+</code></pre>
+<p>正例：（占位符）</p>
+<pre><code class="language-java">  logger.debug(&quot;Processing trade with id: {} and symbol : {} &quot;, id, symbol); 
+</code></pre>
+<ol start="5">
+<li>【强制】避免重复打印日志，浪费磁盘空间，务必在 log4j.xml 中设置 additivity=false。<br /> 
+正例：<logger name="com.taobao.dubbo.config" additivity="false"></li>
+<li>【强制】异常信息应该包括两类信息：案发现场信息和异常堆栈信息。如果不处理，那么通过关键字 throws 往上抛出。<br /> 
+正例：logger.error(各类参数或者对象 toString + &quot;_&quot; + e.getMessage(), e);</li>
+</ol>
+<p>三、单元测试</p>
+<ol>
+<li>
+<p>【强制】好的单元测试必须遵守 AIR 原则。<br /> 
+说明：单元测试在线上运行时，感觉像空气（AIR）一样并不存在，但在测试质量的保障上，却是非常关键的。好的单元测试宏观上来说，具有自动化、独立性、可重复执行的特点。<br /> 
+ A：Automatic（自动化）</p>
+<p> I：Independent（独立性）</p>
+<p> R：Repeatable（可重复）</p>
+</li>
+<li>
+<p>【强制】单元测试应该是全自动执行的，并且非交互式的。测试框架通常是定期执行的，执行过程必须完全自动化才有意义。输出结果需要人工检查的测试不是一个好的单元测试。单元测试中不准使用 System.out 来进行人肉验证，必须使用 assert 来验证。</p>
+</li>
+<li>
+<p>【强制】保持单元测试的独立性。为了保证单元测试稳定可靠且便于维护，单元测试用例之间决不能互相调用，也不能依赖执行的先后次序。<br /> 
+反例：method2 需要依赖 method1 的执行，将执行结果做为 method2 的输入。</p>
+</li>
+<li>
+<p>【强制】单元测试是可以重复执行的，不能受到外界环境的影响。<br /> 
+说明：单元测试通常会被放到持续集成中，每次有代码 check in 时单元测试都会被执行。如果单测对外部环境（网络、服务、中间件等）有依赖，容易导致持续集成机制的不可用。<br /> 
+正例：为了不受外界环境影响，要求设计代码时就把 SUT 的依赖改成注入，在测试时用 spring这样的 DI 框架注入一个本地（内存）实现或者 Mock 实现。</p>
+</li>
+<li>
+<p>【强制】对于单元测试，要保证测试粒度足够小，有助于精确定位问题。单测粒度至多是类级别，一般是方法级别。<br /> 
+说明：只有测试粒度小才能在出错时尽快定位到出错位置。单测不负责检查跨类或者跨系统的交互逻辑，那是集成测试的领域。</p>
+</li>
+</ol>
+<p>五、MySQL 数据库</p>
+<p>(一)建表规约</p>
+<ol start="2">
+<li>【强制】表名、字段名必须使用小写字母或数字，禁止出现数字开头，禁止两个下划线中间只出现数字。数据库字段名的修改代价很大，因为无法进行预发布，所以字段名称需要慎重考虑。说明：MySQL 在 Windows 下不区分大小写，但在 Linux 下默认是区分大小写。因此，数据库名、表名、字段名，都不允许出现任何大写字母，避免节外生枝。</li>
+<li>【强制】varchar 是可变长字符串，不预先分配存储空间，长度不要超过 5000，如果存储长度大于此值，定义字段类型为 text，独立出来一张表，用主键来对应，避免影响其它字段索引效率。</li>
+</ol>
+<p>(二)索引规约</p>
+<ol start="2">
+<li>【强制】超过三个表禁止 join。需要 join 的字段，数据类型必须绝对一致；多表关联查询时，保证被关联的字段需要有索引。<br /> 
+说明：即使双表 join 也要注意表索引、SQL 性能。</li>
+<li>【强制】在 varchar 字段上建立索引时，必须指定索引长度，没必要对全字段建立索引，根据实际文本区分度决定索引长度即可。<br /> 
+说明：索引的长度与区分度是一对矛盾体，一般对字符串类型数据，长度为 20 的索引，区分度会高达 90%以上，可以使用 count(distinct left(列名, 索引长度))/count(*)的区分度来确定。</li>
+</ol>
+<p>(三)SQL 语句</p>
+<ol>
+<li>
+<p>【强制】不要使用 count(列名)或 count(常量)来替代 count(<em>)，count(</em>)是 SQL92 定义的标准统计行数的语法，跟数据库无关，跟 NULL 和非 NULL 无关。<br /> 
+说明：count(*)会统计值为 NULL 的行，而 count(列名)不会统计此列为 NULL 值的行。</p>
+</li>
+<li>
+<p>【强制】count(distinct col) 计算该列除 NULL 之外的不重复行数，注意 count(distinctcol1, col2) 如果其中一列全为 NULL，那么即使另一列有不同的值，也返回为 0。</p>
+</li>
+<li>
+<p>【强制】当某一列的值全是 NULL 时，count(col)的返回结果为 0，但 sum(col)的返回结果为NULL，因此使用 sum()时需注意 NPE 问题。<br /> 
+正例：可以使用如下方式来避免 sum 的 NPE 问题：SELECT IF(ISNULL(SUM(g)),0,SUM(g))<br /> 
+FROM table;</p>
+</li>
+<li>
+<p>【强制】使用 ISNULL()来判断是否为 NULL 值。说明：NULL 与任何值的直接比较都为 NULL。</p>
+<p>1） NULL&lt;&gt;NULL 的返回结果是 NULL，而不是 false。</p>
+<p>2） NULL=NULL 的返回结果是 NULL，而不是 true。<br /> 
+3） NULL&lt;&gt;1 的返回结果是 NULL，而不是 true。</p>
+</li>
+<li>
+<p>【强制】在代码中写分页查询逻辑时，若 count 为 0 应直接返回，避免执行后面的分页语句。</p>
+</li>
+<li>
+<p>【强制】不得使用外键与级联，一切外键概念必须在应用层解决。<br /> 
+说明：以学生和成绩的关系为例，学生表中的 student_id是主键，那么成绩表中的 student_id则为外键。如果更新学生表中的 student_id，同时触发成绩表中的 student_id 更新，即为级联更新。外键与级联更新适用于单机低并发，不适合分布式、高并发集群；级联更新是强阻塞，存在数据库更新风暴的风险；外键影响数据库的插入速度。</p>
+</li>
+<li>
+<p>【强制】禁止使用存储过程，存储过程难以调试和扩展，更没有移植性。</p>
+</li>
+<li>
+<p>【强制】数据订正时，删除和修改记录时，要先 select，避免出现误删除，确认无误才能执行更新语句。</p>
+</li>
+</ol>
+<p>(四)ORM 映射</p>
+<ol>
+<li>【强制】在表查询中，一律不要使用 * 作为查询的字段列表，需要哪些字段必须明确写明。说明：1）增加查询分析器解析成本。2）增减字段容易与 resultMap 配置不一致。</li>
+<li>【强制】POJO 类的布尔属性不能加 is，而数据库字段必须加 is_，要求在 resultMap 中进行字段与属性之间的映射。<br /> 
+说明：参见定义 POJO 类以及数据库字段定义规定，在<resultMap>中增加映射，是必须的。在 MyBatis Generator 生成的代码中，需要进行对应的修改。</li>
+<li>【强制】不要用 resultClass 当返回参数，即使所有类属性名与数据库字段一一对应，也需要定义；反过来，每一个表也必然有一个与之对应。<br /> 
+说明：配置映射关系，使字段与 DO 类解耦，方便维护。</li>
+<li>【强制】sql.xml 配置参数使用：#{}，#param# 不要使用${} 此种方式容易出现 SQL 注入。</li>
+</ol>
+<p>(三)服务器</p>
+<ol>
+<li>【推荐】高并发服务器建议调小 TCP 协议的 time_wait 超时时间。<br /> 
+说明：操作系统默认 240 秒后，才会关闭处于 time_wait 状态的连接，在高并发访问下，服务器端会因为处于 time_wait 的连接数太多，可能无法建立新的连接，所以需要在服务器上调小此等待值。<br /> 
+正例：在 linux 服务器上请通过变更/etc/sysctl.conf 文件去修改该缺省值（秒）：<br /> 
+net.ipv4.tcp_fin_timeout = 30</li>
+<li>【推荐】给 JVM 设置-XX:+HeapDumpOnOutOfMemoryError 参数，让 JVM 碰到 OOM 场景时输出dump 信息。<br /> 
+说明：OOM 的发生是有概率的，甚至有规律地相隔数月才出现一例，出现时的现场信息对查错非常有价值。</li>
+<li>【推荐】在线上生产环境，JVM 的 Xms 和 Xmx 设置一样大小的内存容量，避免在 GC 后调整堆大小带来的压力。</li>
+</ol>
+</div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="">小七的博客</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","qigaowei/qigaowei.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
