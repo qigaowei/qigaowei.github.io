@@ -51,7 +51,6 @@ List list = Arrays.asList(str);
    第二种情况：str[0] = "gujin"; 那么 list.get(0)也会随之修改。
 6. 【强制】泛型通配符<? extends T>来接收返回的数据，此写法的泛型集合不能使用 add 方法，而<? super T>不能使用 get 方法，做为接口调用赋值时易出错。
    说明：扩展说一下 PECS(Producer Extends Consumer Super)原则：第一、频繁往外读取内容的，适合用<? extends T>。第二、经常往里插入的，适合用<? super T>。
-   ——禁止用于商业用途，违者必究——     10 /35
 8. 【强制】 在 JDK7 版本及以上，Comparator 要满足如下三个条件，不然 Arrays.sort，Collections.sort 会报 IllegalArgumentException 异常。
    说明：三个条件如下
    1） x，y 的比较结果和 y，x 的比较结果相反。
