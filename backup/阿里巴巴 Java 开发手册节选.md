@@ -54,7 +54,6 @@ List list = Arrays.asList(str);
 8. 【强制】 在 JDK7 版本及以上，Comparator 要满足如下三个条件，不然 Arrays.sort，Collections.sort 会报 IllegalArgumentException 异常。
    说明：三个条件如下
    1） x，y 的比较结果和 y，x 的比较结果相反。
-   阿里巴巴 Java 开发手册
    2） x>y，y>z，则 x>z。
    3） x=y，则 x，z 比较结果和 y，z 比较结果相同。
    反例：下例中没有处理相等的情况，实际使用中可能会出现异常：
