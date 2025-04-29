@@ -10,10 +10,20 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="1. 单元测试（不依赖 Spring 上下文）：
+<meta name="description" content="org.mockito.InjectMocks
+org.springframework.boot.test.mock.mockito.SpyBean
+org.springframework.boot.test.mock.mockito.MockBean
+
+
+1. 单元测试（不依赖 Spring 上下文）：
     - 使用 @InjectMocks 和 @Mock，更轻量、更快速。">
 <meta property="og:title" content="单元测试中，@MockBean和 @SpyBean和 @InjectMocks的区别">
-<meta property="og:description" content="1. 单元测试（不依赖 Spring 上下文）：
+<meta property="og:description" content="org.mockito.InjectMocks
+org.springframework.boot.test.mock.mockito.SpyBean
+org.springframework.boot.test.mock.mockito.MockBean
+
+
+1. 单元测试（不依赖 Spring 上下文）：
     - 使用 @InjectMocks 和 @Mock，更轻量、更快速。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/post/dan-yuan-ce-shi-zhong-%EF%BC%8C%40MockBean-he-%20%40SpyBean-he-%20%40InjectMocks-de-qu-bie.html">
@@ -75,7 +85,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><ol>
+<div class="markdown-body" id="postBody"><p>org.mockito.InjectMocks<br /> 
+org.springframework.boot.test.mock.mockito.SpyBean<br /> 
+org.springframework.boot.test.mock.mockito.MockBean</p>
+<ol>
 <li>单元测试（不依赖 Spring 上下文）：
 <ul>
 <li>使用 @InjectMocks 和 @Mock，更轻量、更快速。</li>

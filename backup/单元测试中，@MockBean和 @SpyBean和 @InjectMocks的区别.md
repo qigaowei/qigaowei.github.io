@@ -1,3 +1,8 @@
+org.mockito.InjectMocks
+org.springframework.boot.test.mock.mockito.SpyBean
+org.springframework.boot.test.mock.mockito.MockBean
+
+
 1. 单元测试（不依赖 Spring 上下文）：
     - 使用 @InjectMocks 和 @Mock，更轻量、更快速。
 2. 集成测试（依赖 Spring 上下文）：
