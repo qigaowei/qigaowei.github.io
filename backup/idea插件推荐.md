@@ -12,11 +12,13 @@
 - https://plugins.jetbrains.com/plugin/20575-smart-input
 7.  包含base64，SQL，json，jsonpath等工具
 - https://plugins.jetbrains.com/plugin/21904-developer-tools
-还有个类似的，在线版
-- https://it-tools.tech/](https://it-tools.tech/
+
+- 还有个类似的，在线版[https://it-tools.tech/](https://it-tools.tech/)
 8. 字符串转驼峰等操作
 - https://plugins.jetbrains.com/plugin/2162-string-manipulation
 9. 不同颜色，显示代码的括号和大括号的层级关系 
 - https://plugins.jetbrains.com/plugin/20710-rainbow-brackets-lite--free-and-opensource
 10. 教你使用快捷键，操作的时候，会提示你对应的快捷键是什么
 - https://plugins.jetbrains.com/plugin/9792-key-promoter-x
+11. 用于提取MyBatis日志并将参数填充到SQL中、压缩、美化SQL
+- https://plugins.jetbrains.com/plugin/23364-mybatislogformatter
