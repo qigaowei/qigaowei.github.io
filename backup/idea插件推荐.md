@@ -22,3 +22,4 @@
 - https://plugins.jetbrains.com/plugin/9792-key-promoter-x
 11. 用于提取MyBatis日志并将参数填充到SQL中、压缩、美化SQL
 - https://plugins.jetbrains.com/plugin/23364-mybatislogformatter
+12. Grep Console(控制台日志高亮)
