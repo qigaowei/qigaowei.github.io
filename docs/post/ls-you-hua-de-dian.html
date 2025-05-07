@@ -11,20 +11,20 @@
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
 <meta name="description" content="1. 服务相互依赖
-2. 使用 sum()时需注意 NPE 问题
-3. 注解Transactional不规范
-4. org.springframework.util.StringUtils#isEmpty,'  '
-```java
+import com.nn.goods.api.dto.OutResult;
+3. 使用 sum()时需注意 NPE 问题
+4. 注解Transactional不规范
+5. org.springframework.util.StringUtils#isEmpty,'  '```java
  public static boolean isEmpty(@Nullable Object str) {
         return str == null || ''.equals(str);
     }
 ```。">
 <meta property="og:title" content="ls优化的点">
 <meta property="og:description" content="1. 服务相互依赖
-2. 使用 sum()时需注意 NPE 问题
-3. 注解Transactional不规范
-4. org.springframework.util.StringUtils#isEmpty,'  '
-```java
+import com.nn.goods.api.dto.OutResult;
+3. 使用 sum()时需注意 NPE 问题
+4. 注解Transactional不规范
+5. org.springframework.util.StringUtils#isEmpty,'  '```java
  public static boolean isEmpty(@Nullable Object str) {
         return str == null || ''.equals(str);
     }
@@ -90,15 +90,16 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><ol>
-<li>服务相互依赖</li>
+<li>服务相互依赖<br /> 
+import com.nn.goods.api.dto.OutResult;</li>
 <li>使用 sum()时需注意 NPE 问题</li>
 <li>注解Transactional不规范</li>
-<li>org.springframework.util.StringUtils#isEmpty,&quot;  &quot;</li>
+<li>org.springframework.util.StringUtils#isEmpty,&quot;  &quot;```java<br /> 
+public static boolean isEmpty(@Nullable Object str) {<br /> 
+return str == null || &quot;&quot;.equals(str);<br /> 
+}</li>
 </ol>
-<pre><code class="language-java"> public static boolean isEmpty(@Nullable Object str) {
-        return str == null || &quot;&quot;.equals(str);
-    }
-</code></pre>
+<pre><code></code></pre>
 </div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
