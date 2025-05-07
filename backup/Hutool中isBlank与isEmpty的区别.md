@@ -14,6 +14,6 @@ StrUtil.isBlank("\n");      // true
 StrUtil.isBlank("abc");     // false
 ```
 
-- 当需要严格判断字符串是否完全没有内容时（包括空白字符），使用isBlank()
+- 当需要严格判断字符串是否完全没有内容时（包括空白字符），使用isBlank()，更严格！！！！
 
 - 当只需要判断字符串是否为null或空字符串（不关心空白字符）时，使用isEmpty()
