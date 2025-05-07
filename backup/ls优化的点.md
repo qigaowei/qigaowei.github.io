@@ -5,8 +5,9 @@
     - 发布的时候启动顺序
 3. 使用 sum()时需注意 NPE 问题
 4. 注解Transactional不规范
-5. org.springframework.util.StringUtils#isEmpty,"  "
-```java
+    - Exception.class
+    - 单表操作也要加
+6. org.springframework.util.StringUtils#isEmpty,"  "```java
  public static boolean isEmpty(@Nullable Object str) {
         return str == null || "".equals(str);
     }
