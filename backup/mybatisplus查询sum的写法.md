@@ -7,3 +7,4 @@ if (ObjectUtils.isNotEmpty(map) && map.containsKey("amount")) {
 	amount = (BigDecimal) map.get("amount");
 }
 ```
+- 使用 sum()时需注意 NPE 问题，这个可以进行优化

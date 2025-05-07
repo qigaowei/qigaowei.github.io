@@ -18,7 +18,8 @@ BigDecimal amount = BigDecimal.ZERO;
 if (ObjectUtils.isNotEmpty(map) && map.containsKey('amount')) {
 	amount = (BigDecimal) map.get('amount');
 }
-```。">
+```
+- 使用 sum()时需注意 NPE 问题，这个可以进行优化。">
 <meta property="og:title" content="mybatisplus查询sum的写法">
 <meta property="og:description" content="```java
 QueryWrapper<CollectRewardLog> wrapper = new QueryWrapper<CollectRewardLog>();
@@ -28,7 +29,8 @@ BigDecimal amount = BigDecimal.ZERO;
 if (ObjectUtils.isNotEmpty(map) && map.containsKey('amount')) {
 	amount = (BigDecimal) map.get('amount');
 }
-```。">
+```
+- 使用 sum()时需注意 NPE 问题，这个可以进行优化。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/post/mybatisplus-cha-xun-sum-de-xie-fa.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -97,6 +99,9 @@ if (ObjectUtils.isNotEmpty(map) &amp;&amp; map.containsKey(&quot;amount&quot;)) 
 	amount = (BigDecimal) map.get(&quot;amount&quot;);
 }
 </code></pre>
+<ul>
+<li>使用 sum()时需注意 NPE 问题，这个可以进行优化</li>
+</ul>
 </div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
