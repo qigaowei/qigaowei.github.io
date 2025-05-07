@@ -14,12 +14,16 @@
 LambdaUpdateWrapper<GiftTag> updateWrapper = new LambdaUpdateWrapper<>();
 updateWrapper.set(GiftTag::getTagStatus, tagStatus).in(GiftTag::getDbId, arrayList);
 giftTagMapper.update(null, updateWrapper);
+或者
+boolean updateResult = this.update(updateWrapper);//service层
 ```。">
 <meta property="og:title" content="mybatisplus的LambdaUpdateWrapper">
 <meta property="og:description" content="```java
 LambdaUpdateWrapper<GiftTag> updateWrapper = new LambdaUpdateWrapper<>();
 updateWrapper.set(GiftTag::getTagStatus, tagStatus).in(GiftTag::getDbId, arrayList);
 giftTagMapper.update(null, updateWrapper);
+或者
+boolean updateResult = this.update(updateWrapper);//service层
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/post/mybatisplus-de-LambdaUpdateWrapper.html">
@@ -84,6 +88,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><pre><code class="language-java">LambdaUpdateWrapper&lt;GiftTag&gt; updateWrapper = new LambdaUpdateWrapper&lt;&gt;();
 updateWrapper.set(GiftTag::getTagStatus, tagStatus).in(GiftTag::getDbId, arrayList);
 giftTagMapper.update(null, updateWrapper);
+或者
+boolean updateResult = this.update(updateWrapper);//service层
 </code></pre>
 </div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
