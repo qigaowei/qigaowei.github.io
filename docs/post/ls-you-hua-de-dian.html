@@ -14,7 +14,8 @@
 import com.nn.goods.api.dto.OutResult;
 3. 使用 sum()时需注意 NPE 问题
 4. 注解Transactional不规范
-5. org.springframework.util.StringUtils#isEmpty,'  '```java
+5. org.springframework.util.StringUtils#isEmpty,'  '
+```java
  public static boolean isEmpty(@Nullable Object str) {
         return str == null || ''.equals(str);
     }
@@ -24,7 +25,8 @@ import com.nn.goods.api.dto.OutResult;
 import com.nn.goods.api.dto.OutResult;
 3. 使用 sum()时需注意 NPE 问题
 4. 注解Transactional不规范
-5. org.springframework.util.StringUtils#isEmpty,'  '```java
+5. org.springframework.util.StringUtils#isEmpty,'  '
+```java
  public static boolean isEmpty(@Nullable Object str) {
         return str == null || ''.equals(str);
     }
@@ -94,12 +96,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 import com.nn.goods.api.dto.OutResult;</li>
 <li>使用 sum()时需注意 NPE 问题</li>
 <li>注解Transactional不规范</li>
-<li>org.springframework.util.StringUtils#isEmpty,&quot;  &quot;```java<br /> 
-public static boolean isEmpty(@Nullable Object str) {<br /> 
-return str == null || &quot;&quot;.equals(str);<br /> 
-}</li>
+<li>org.springframework.util.StringUtils#isEmpty,&quot;  &quot;</li>
 </ol>
-<pre><code></code></pre>
+<pre><code class="language-java"> public static boolean isEmpty(@Nullable Object str) {
+        return str == null || &quot;&quot;.equals(str);
+    }
+</code></pre>
 </div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
