@@ -1,5 +1,7 @@
-1. 服务相互依赖，feign接口参数是另一个api的，jar的传递
-import com.nn.goods.api.dto.OutResult;
+1. 服务相互依赖，
+    - feign接口参数是另一个api的，jar的传递
+    - import com.nn.goods.api.dto.OutResult;
+    - 没必要引入一个jar
 3. 使用 sum()时需注意 NPE 问题
 4. 注解Transactional不规范
 5. org.springframework.util.StringUtils#isEmpty,"  "
