@@ -11,11 +11,17 @@
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
 <meta name="description" content="```java
-queryWrapper.select('db_id', 'nn_amount', 'app_id');
+QueryWrapper<App> queryWrapper = new QueryWrapper<>();
+queryWrapper.lambda().eq(App::getAppId,dto.getAppId());
+queryWrapper.select('id',  'app_id');
+list=list(queryWrapper);
 ```。">
 <meta property="og:title" content="mybatisplus查询指定字段">
 <meta property="og:description" content="```java
-queryWrapper.select('db_id', 'nn_amount', 'app_id');
+QueryWrapper<App> queryWrapper = new QueryWrapper<>();
+queryWrapper.lambda().eq(App::getAppId,dto.getAppId());
+queryWrapper.select('id',  'app_id');
+list=list(queryWrapper);
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/post/mybatisplus-cha-xun-zhi-ding-zi-duan.html">
@@ -77,7 +83,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre><code class="language-java">queryWrapper.select(&quot;db_id&quot;, &quot;nn_amount&quot;, &quot;app_id&quot;);
+<div class="markdown-body" id="postBody"><pre><code class="language-java">QueryWrapper&lt;App&gt; queryWrapper = new QueryWrapper&lt;&gt;();
+queryWrapper.lambda().eq(App::getAppId,dto.getAppId());
+queryWrapper.select(&quot;id&quot;,  &quot;app_id&quot;);
+list=list(queryWrapper);
 </code></pre>
 </div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>

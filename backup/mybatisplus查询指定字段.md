@@ -1,3 +1,6 @@
 ```java
-queryWrapper.select("db_id", "nn_amount", "app_id");
+QueryWrapper<App> queryWrapper = new QueryWrapper<>();
+queryWrapper.lambda().eq(App::getAppId,dto.getAppId());
+queryWrapper.select("id",  "app_id");
+list=list(queryWrapper);
 ```
