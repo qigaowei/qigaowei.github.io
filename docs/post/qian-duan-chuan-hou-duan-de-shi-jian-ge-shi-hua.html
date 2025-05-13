@@ -14,13 +14,15 @@
 com.fasterxml.jackson.annotation.JsonFormat;
 org.springframework.format.annotation.DateTimeFormat;
 ```
-推荐后者。">
+- JsonFormat:
+   - 仅影响 JSON 的序列化和反序列化。">
 <meta property="og:title" content="前端传后端的时间格式化">
 <meta property="og:description" content="```java
 com.fasterxml.jackson.annotation.JsonFormat;
 org.springframework.format.annotation.DateTimeFormat;
 ```
-推荐后者。">
+- JsonFormat:
+   - 仅影响 JSON 的序列化和反序列化。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/post/qian-duan-chuan-hou-duan-de-shi-jian-ge-shi-hua.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -84,7 +86,20 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><pre><code class="language-java">com.fasterxml.jackson.annotation.JsonFormat;
 org.springframework.format.annotation.DateTimeFormat;
 </code></pre>
-<p>推荐后者</p>
+<ul>
+<li>JsonFormat:
+<ul>
+<li>仅影响 JSON 的序列化和反序列化。</li>
+<li>依赖 Jackson（一般是 ObjectMapper）来处理。</li>
+</ul>
+</li>
+<li>DateTimeFormat:
+<ul>
+<li>仅影响 Spring 的数据绑定。</li>
+<li>依赖 Spring 的数据绑定机制。</li>
+</ul>
+</li>
+</ul>
 </div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
