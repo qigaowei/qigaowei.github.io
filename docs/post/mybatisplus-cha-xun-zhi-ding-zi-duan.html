@@ -13,15 +13,23 @@
 <meta name="description" content="```java
 QueryWrapper<App> queryWrapper = new QueryWrapper<>();
 queryWrapper.lambda().eq(App::getAppId,dto.getAppId());
-queryWrapper.select('id',  'app_id');
-list=list(queryWrapper);
+queryWrapper.select('min(new_price) as new_price');
+Map<String, Object> map = this.getMap(queryWrapper);
+BigDecimal amount = BigDecimal.ZERO;
+if (ObjectUtils.isNotEmpty(map) && map.containsKey('new_price')&& StrUtil.isNotBlank(map.get('new_price').toString())) {
+  amount = (BigDecimal) map.get('new_price');
+ }
 ```。">
 <meta property="og:title" content="mybatisplus查询指定字段">
 <meta property="og:description" content="```java
 QueryWrapper<App> queryWrapper = new QueryWrapper<>();
 queryWrapper.lambda().eq(App::getAppId,dto.getAppId());
-queryWrapper.select('id',  'app_id');
-list=list(queryWrapper);
+queryWrapper.select('min(new_price) as new_price');
+Map<String, Object> map = this.getMap(queryWrapper);
+BigDecimal amount = BigDecimal.ZERO;
+if (ObjectUtils.isNotEmpty(map) && map.containsKey('new_price')&& StrUtil.isNotBlank(map.get('new_price').toString())) {
+  amount = (BigDecimal) map.get('new_price');
+ }
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/post/mybatisplus-cha-xun-zhi-ding-zi-duan.html">
@@ -85,8 +93,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <div class="markdown-body" id="postBody"><pre><code class="language-java">QueryWrapper&lt;App&gt; queryWrapper = new QueryWrapper&lt;&gt;();
 queryWrapper.lambda().eq(App::getAppId,dto.getAppId());
-queryWrapper.select(&quot;id&quot;,  &quot;app_id&quot;);
-list=list(queryWrapper);
+queryWrapper.select(&quot;min(new_price) as new_price&quot;);
+Map&lt;String, Object&gt; map = this.getMap(queryWrapper);
+BigDecimal amount = BigDecimal.ZERO;
+if (ObjectUtils.isNotEmpty(map) &amp;&amp; map.containsKey(&quot;new_price&quot;)&amp;&amp; StrUtil.isNotBlank(map.get(&quot;new_price&quot;).toString())) {
+  amount = (BigDecimal) map.get(&quot;new_price&quot;);
+ }
 </code></pre>
 </div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
