@@ -10,63 +10,13 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="```yaml
-spring:
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 172.31.4.12:8848
-    sentinel:
-      transport:
-        dashboard: 172.31.4.12:7014
-      filter:
-        # 网关配置
-        enabled: false
-      eager: true
-      datasource:
-        ds:
-          nacos:
-            server-addr: 172.31.4.12:8848
-            data-id: ${spring.application.name}-sentinel-system.json
-            namespace: 188
-            ruleType: system
-            data-type: json
-```
-- a-b-business-test1.yaml
-- a-b-business-sentinel-system.json
-- data-id: ${spring.application.name}-sentinel-system.json
-- data-id别写错。">
-<meta property="og:title" content="在nacos配置sentinel">
-<meta property="og:description" content="```yaml
-spring:
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 172.31.4.12:8848
-    sentinel:
-      transport:
-        dashboard: 172.31.4.12:7014
-      filter:
-        # 网关配置
-        enabled: false
-      eager: true
-      datasource:
-        ds:
-          nacos:
-            server-addr: 172.31.4.12:8848
-            data-id: ${spring.application.name}-sentinel-system.json
-            namespace: 188
-            ruleType: system
-            data-type: json
-```
-- a-b-business-test1.yaml
-- a-b-business-sentinel-system.json
-- data-id: ${spring.application.name}-sentinel-system.json
-- data-id别写错。">
+<meta name="description" content="">
+<meta property="og:title" content="insert有主键锁">
+<meta property="og:description" content="">
 <meta property="og:type" content="article">
-<meta property="og:url" content="/post/zai-nacos-pei-zhi-sentinel.html">
+<meta property="og:url" content="/post/insert-you-zhu-jian-suo.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
-<title>在nacos配置sentinel</title>
+<title>insert有主键锁</title>
 
 
 
@@ -99,7 +49,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">在nacos配置sentinel</h1>
+<h1 class="postTitle">insert有主键锁</h1>
 <div class="title-right">
     <a href="" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -107,7 +57,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
-    <a href="https://github.com/qigaowei/qigaowei.github.io/issues/418" target="_blank" class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/qigaowei/qigaowei.github.io/issues/421" target="_blank" class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -123,34 +73,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre><code class="language-yaml">spring:
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 172.31.4.12:8848
-    sentinel:
-      transport:
-        dashboard: 172.31.4.12:7014
-      filter:
-        # 网关配置
-        enabled: false
-      eager: true
-      datasource:
-        ds:
-          nacos:
-            server-addr: 172.31.4.12:8848
-            data-id: ${spring.application.name}-sentinel-system.json
-            namespace: 188
-            ruleType: system
-            data-type: json
-</code></pre>
-<ul>
-<li>a-b-business-test1.yaml</li>
-<li>a-b-business-sentinel-system.json</li>
-<li>data-id: ${spring.application.name}-sentinel-system.json</li>
-<li>data-id别写错</li>
-</ul>
-</div>
+<div class="markdown-body" id="postBody"></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
