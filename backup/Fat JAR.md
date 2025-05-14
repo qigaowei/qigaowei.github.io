@@ -1,0 +1,1 @@
+Fat JAR 是一种可执行的 JAR 包（Executable JAR），包含编译后的类及代码运行所需依赖 jar 的存档，可以使用 java-jar 命令运行该应用程序。Fat JAR 和普通的 JAR 不同在于它包含了依赖的 JAR 包。
