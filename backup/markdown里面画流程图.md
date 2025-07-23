@@ -1,3 +1,4 @@
+- 在github的编辑框内，可以看到生成的图片
 ```mermaid
 sequenceDiagram
     Business->>+GroovyEngineInterface: 1script+data
