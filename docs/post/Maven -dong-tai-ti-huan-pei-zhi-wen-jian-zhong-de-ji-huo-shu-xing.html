@@ -12,11 +12,37 @@
     </script>
 <meta name="description" content="- maven动态替换配置文件
 - 需要compile
-。">
+```xml
+<profile>
+    <id>local</id>
+    <properties>
+        <activatedProperties>dev</activatedProperties>
+    </properties>
+</profile>
+```
+--- 
+```yml
+spring:
+    profiles:
+       active: @activatedProperties@
+```。">
 <meta property="og:title" content="Maven 动态替换配置文件中的激活属性">
 <meta property="og:description" content="- maven动态替换配置文件
 - 需要compile
-。">
+```xml
+<profile>
+    <id>local</id>
+    <properties>
+        <activatedProperties>dev</activatedProperties>
+    </properties>
+</profile>
+```
+--- 
+```yml
+spring:
+    profiles:
+       active: @activatedProperties@
+```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/post/Maven%20-dong-tai-ti-huan-pei-zhi-wen-jian-zhong-de-ji-huo-shu-xing.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -81,6 +107,18 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>maven动态替换配置文件</li>
 <li>需要compile</li>
 </ul>
+<pre><code class="language-xml">&lt;profile&gt;
+    &lt;id&gt;local&lt;/id&gt;
+    &lt;properties&gt;
+        &lt;activatedProperties&gt;dev&lt;/activatedProperties&gt;
+    &lt;/properties&gt;
+&lt;/profile&gt;
+</code></pre>
+<hr />
+<pre><code class="language-yml">spring:
+    profiles:
+       active: @activatedProperties@
+</code></pre>
 </div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
