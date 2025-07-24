@@ -1,0 +1,2 @@
+- maven动态替换配置文件
+- 需要compile
