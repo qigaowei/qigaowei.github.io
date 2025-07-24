@@ -1,0 +1,1 @@
+spring.config.location=D:\config\ten-sit.yml
