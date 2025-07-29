@@ -11,10 +11,38 @@
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
 <meta name="description" content="1. 解析cURL文本
-2. 通过接口获取数据，提取数据。">
+2. 通过接口获取数据，提取数据
+3. 获取jvminfo
+```groovy
+import cn.hutool.system.*
+
+class AbcScript2 {
+
+    def run() {
+        // 获取JVM信息对象
+        JvmInfo jvmInfo = new JvmInfo();
+       println('JVM名称: ' + jvmInfo.toString());
+    }
+}
+return new AbcScript2().run()
+```。">
 <meta property="og:title" content="Groovy脚本实战举例">
 <meta property="og:description" content="1. 解析cURL文本
-2. 通过接口获取数据，提取数据。">
+2. 通过接口获取数据，提取数据
+3. 获取jvminfo
+```groovy
+import cn.hutool.system.*
+
+class AbcScript2 {
+
+    def run() {
+        // 获取JVM信息对象
+        JvmInfo jvmInfo = new JvmInfo();
+       println('JVM名称: ' + jvmInfo.toString());
+    }
+}
+return new AbcScript2().run()
+```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/post/Groovy-jiao-ben-shi-zhan-ju-li.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -78,7 +106,20 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><ol>
 <li>解析cURL文本</li>
 <li>通过接口获取数据，提取数据</li>
+<li>获取jvminfo</li>
 </ol>
+<pre><code class="language-groovy">import cn.hutool.system.*
+
+class AbcScript2 {
+
+    def run() {
+        // 获取JVM信息对象
+        JvmInfo jvmInfo = new JvmInfo();
+       println(&quot;JVM名称: &quot; + jvmInfo.toString());
+    }
+}
+return new AbcScript2().run()
+</code></pre>
 </div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
