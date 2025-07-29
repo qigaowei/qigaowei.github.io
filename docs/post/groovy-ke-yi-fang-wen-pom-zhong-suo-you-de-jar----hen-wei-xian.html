@@ -38,6 +38,21 @@ class AbcScript5 {
     }
 }
 return new AbcScript5().run()
+```
+3. 获取配置
+```groovy
+import org.springframework.core.env.Environment
+
+
+class AbcScript6 {
+    def applicationContext
+    def run() {
+        Environment env = applicationContext.getEnvironment();
+        String value = env.getProperty('spring.datasource.password');
+        println(value)
+    }
+}
+return new AbcScript6(applicationContext:applicationContext).run()
 ```。">
 <meta property="og:title" content="groovy可以访问pom中所有的jar---很危险">
 <meta property="og:description" content="示例
@@ -68,6 +83,21 @@ class AbcScript5 {
     }
 }
 return new AbcScript5().run()
+```
+3. 获取配置
+```groovy
+import org.springframework.core.env.Environment
+
+
+class AbcScript6 {
+    def applicationContext
+    def run() {
+        Environment env = applicationContext.getEnvironment();
+        String value = env.getProperty('spring.datasource.password');
+        println(value)
+    }
+}
+return new AbcScript6(applicationContext:applicationContext).run()
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/post/groovy-ke-yi-fang-wen-pom-zhong-suo-you-de-jar----hen-wei-xian.html">
@@ -159,6 +189,22 @@ class AbcScript5 {
     }
 }
 return new AbcScript5().run()
+</code></pre>
+<ol start="3">
+<li>获取配置</li>
+</ol>
+<pre><code class="language-groovy">import org.springframework.core.env.Environment
+
+
+class AbcScript6 {
+    def applicationContext
+    def run() {
+        Environment env = applicationContext.getEnvironment();
+        String value = env.getProperty(&quot;spring.datasource.password&quot;);
+        println(value)
+    }
+}
+return new AbcScript6(applicationContext:applicationContext).run()
 </code></pre>
 </div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>

@@ -27,3 +27,18 @@ class AbcScript5 {
 }
 return new AbcScript5().run()
 ```
+3. 获取配置
+```groovy
+import org.springframework.core.env.Environment
+
+
+class AbcScript6 {
+    def applicationContext
+    def run() {
+        Environment env = applicationContext.getEnvironment();
+        String value = env.getProperty("spring.datasource.password");
+        println(value)
+    }
+}
+return new AbcScript6(applicationContext:applicationContext).run()
+```
