@@ -1,5 +1,5 @@
 示例
-1. 读取文件
+1. 读取文件,可以设置权限控制
 ```groovy
 import cn.hutool.core.io.FileUtil
 
