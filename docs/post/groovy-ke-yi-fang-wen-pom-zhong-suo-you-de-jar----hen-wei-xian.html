@@ -24,7 +24,7 @@ class FileUtil2 {
 }
 return new FileUtil2().run()
 ```
-2. 创建线程
+2. 创建线程,
 ```groovy
 import cn.hutool.core.thread.ThreadUtil
 
@@ -53,6 +53,13 @@ class AbcScript6 {
     }
 }
 return new AbcScript6(applicationContext:applicationContext).run()
+```
+
+4. 防范方法
+```java
+public class SandboxClassLoader extends GroovyClassLoader{
+
+}
 ```。">
 <meta property="og:title" content="groovy可以访问pom中所有的jar---很危险">
 <meta property="og:description" content="示例
@@ -69,7 +76,7 @@ class FileUtil2 {
 }
 return new FileUtil2().run()
 ```
-2. 创建线程
+2. 创建线程,
 ```groovy
 import cn.hutool.core.thread.ThreadUtil
 
@@ -98,6 +105,13 @@ class AbcScript6 {
     }
 }
 return new AbcScript6(applicationContext:applicationContext).run()
+```
+
+4. 防范方法
+```java
+public class SandboxClassLoader extends GroovyClassLoader{
+
+}
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/post/groovy-ke-yi-fang-wen-pom-zhong-suo-you-de-jar----hen-wei-xian.html">
@@ -175,7 +189,7 @@ class FileUtil2 {
 return new FileUtil2().run()
 </code></pre>
 <ol start="2">
-<li>创建线程</li>
+<li>创建线程,</li>
 </ol>
 <pre><code class="language-groovy">import cn.hutool.core.thread.ThreadUtil
 
@@ -205,6 +219,13 @@ class AbcScript6 {
     }
 }
 return new AbcScript6(applicationContext:applicationContext).run()
+</code></pre>
+<ol start="4">
+<li>防范方法</li>
+</ol>
+<pre><code class="language-java">public class SandboxClassLoader extends GroovyClassLoader{
+
+}
 </code></pre>
 </div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>

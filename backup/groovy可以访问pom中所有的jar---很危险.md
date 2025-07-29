@@ -12,7 +12,7 @@ class FileUtil2 {
 }
 return new FileUtil2().run()
 ```
-2. 创建线程
+2. 创建线程,
 ```groovy
 import cn.hutool.core.thread.ThreadUtil
 
@@ -41,4 +41,11 @@ class AbcScript6 {
     }
 }
 return new AbcScript6(applicationContext:applicationContext).run()
+```
+
+4. 防范方法
+```java
+public class SandboxClassLoader extends GroovyClassLoader{
+
+}
 ```
