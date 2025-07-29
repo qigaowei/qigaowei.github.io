@@ -1,3 +1,4 @@
 - 浏览器-F12-网络-在名称处复制为curl(bash)
 - 复制以后可以导入到apifox和postman等
 - 从apifox和postman等，也可以载复制到idea里面
+- 也可以转为java代码，通过[网站](https://www.kgtools.cn/convert/curl)
