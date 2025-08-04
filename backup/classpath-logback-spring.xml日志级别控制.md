@@ -1,3 +1,4 @@
+- 最后一个配置起作用
 ```xml
     <!-- 系统模块日志级别控制  -->
     <logger name="com.kuailu" level="DEBUG"/>
