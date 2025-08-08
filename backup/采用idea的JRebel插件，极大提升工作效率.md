@@ -7,3 +7,4 @@
 2.  必须重启的情况
 - 1MQ，修改了consumerGroup，@RocketMQMessageListener(consumerGroup=，需要重启。
 - 2修改了com.baomidou.mybatisplus的实体类，需要重启。
+- resources中的文件修改
