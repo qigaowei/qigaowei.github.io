@@ -3,3 +3,4 @@
 - 性能优化3s到800ms
 - Transactional的使用
 - String.join不推荐
+- 敏感词检测,绕过的方式
