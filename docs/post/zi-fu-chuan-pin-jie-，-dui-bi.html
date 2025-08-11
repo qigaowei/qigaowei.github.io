@@ -10,7 +10,9 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="```java
+<meta name="description" content="- 注释那一行会报错
+- 使用时需注意
+```java
 import cn.hutool.core.util.StrUtil;
 import org.apache.commons.lang3.StringUtils;
 
@@ -39,7 +41,9 @@ public class JoinTest {
 }
 ```。">
 <meta property="og:title" content="字符串拼接，对比">
-<meta property="og:description" content="```java
+<meta property="og:description" content="- 注释那一行会报错
+- 使用时需注意
+```java
 import cn.hutool.core.util.StrUtil;
 import org.apache.commons.lang3.StringUtils;
 
@@ -127,7 +131,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre><code class="language-java">import cn.hutool.core.util.StrUtil;
+<div class="markdown-body" id="postBody"><ul>
+<li>注释那一行会报错</li>
+<li>使用时需注意</li>
+</ul>
+<pre><code class="language-java">import cn.hutool.core.util.StrUtil;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
