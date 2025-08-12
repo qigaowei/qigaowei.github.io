@@ -1,6 +1,0 @@
-- 选择 @Spy:
-  - 需要测试没有托管在 Spring 容器中的对象。
-  - 只进行简单的单元测试。
-- 选择 @SpyBean:
-   - 需要测试 Spring 上下文中的 Bean。
-   - 进行 Spring Boot 集成测试，且需要部分真实调用的 Bean。

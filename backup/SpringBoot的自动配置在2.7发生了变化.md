@@ -1,5 +1,0 @@
-[Spring-Boot-2.7-Release-Notes](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.7-Release-Notes)
-
-If you have created your own auto-configurations, you should move the registration from spring.factories under the org.springframework.boot.autoconfigure.EnableAutoConfiguration key to a new file named META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports. Rather than a single comma-separate list, each line contains the fully qualified name of an auto-configuration class. See [the included auto-configurations](https://github.com/spring-projects/spring-boot/blob/main/spring-boot-project/spring-boot-autoconfigure/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports) for an example.
-
-For backwards compatibility, entries in spring.factories will still be honored. Furthermore, entries can be listed in both files and will be de-duplicated. This allows a library to target versions of Spring Boot that only support spring.factories and versions of Spring Boot that only support AutoConfiguration.imports.
