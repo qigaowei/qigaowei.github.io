@@ -1,0 +1,1 @@
+在編輯器內右鍵–>format(格式)–>Toggle Word Wrap（切換自動換行）
