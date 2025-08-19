@@ -1,3 +1,0 @@
-``` sql
-ORDER BY RAND()
-```
