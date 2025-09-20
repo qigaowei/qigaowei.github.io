@@ -8,12 +8,12 @@
   },
   "experimental": false,
   "registry-mirrors": [
-    	"http://mirror.gcr.io",
-	"http://registry-1.docker.io",
-	"http://registry.docker.com",
-	"http://dockerproxy.com",
-	"http://docker.fxxk.dedyn.io",
-	"http://docker.io"
-    ]
+    "https://mirror.gcr.io",
+    "https://registry-1.docker.io",
+    "https://registry.docker.com",
+    "https://dockerproxy.com",
+    "https://docker.fxxk.dedyn.io",
+    "https://docker.io"
+  ]
 }
 ```
