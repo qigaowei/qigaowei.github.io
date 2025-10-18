@@ -1,2 +1,3 @@
 - https://github.com/docker-practice/docker-registry-cn-mirror-test
 - 测试结果请到 Actions 标签详情页查看
+- 推荐这个https://docker.1ms.run
