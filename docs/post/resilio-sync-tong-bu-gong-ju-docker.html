@@ -10,10 +10,10 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="- docker run -d --name=resilio-sync --restart=unless-stopped -p 8888:8888 -p 55555:55555 -v /path/to/resilio/config:/mnt/sync/config -v /path/to/resilio/data:/mnt/sync/data resilio/sync
+<meta name="description" content="- docker run -e TZ=Asia/Shanghai -d --name=resilio-sync --restart=unless-stopped -p 8888:8888 -p 55555:55555 -v /path/to/resilio/config:/mnt/sync/config -v /path/to/resilio/data:/mnt/sync/data resilio/sync
 。">
 <meta property="og:title" content="resilio-sync同步工具docker">
-<meta property="og:description" content="- docker run -d --name=resilio-sync --restart=unless-stopped -p 8888:8888 -p 55555:55555 -v /path/to/resilio/config:/mnt/sync/config -v /path/to/resilio/data:/mnt/sync/data resilio/sync
+<meta property="og:description" content="- docker run -e TZ=Asia/Shanghai -d --name=resilio-sync --restart=unless-stopped -p 8888:8888 -p 55555:55555 -v /path/to/resilio/config:/mnt/sync/config -v /path/to/resilio/data:/mnt/sync/data resilio/sync
 。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/post/resilio-sync-tong-bu-gong-ju-docker.html">
@@ -76,7 +76,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><ul>
-<li>docker run -d --name=resilio-sync --restart=unless-stopped -p 8888:8888 -p 55555:55555 -v /path/to/resilio/config:/mnt/sync/config -v /path/to/resilio/data:/mnt/sync/data resilio/sync</li>
+<li>docker run -e TZ=Asia/Shanghai -d --name=resilio-sync --restart=unless-stopped -p 8888:8888 -p 55555:55555 -v /path/to/resilio/config:/mnt/sync/config -v /path/to/resilio/data:/mnt/sync/data resilio/sync</li>
 </ul>
 </div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
