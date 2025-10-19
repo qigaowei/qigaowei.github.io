@@ -10,10 +10,7 @@ sudo tee /etc/docker/daemon.json <<-'EOF'
 
     "registry-mirrors": [
 
-    "http://cf-workers-docker-io-2cl.pages.dev/",
-"http://dockerhub.timeweb.cloud/",
-"http://docker.ketches.cn/",
-"http://docker.m.daocloud.io/"
+    "https://docker.1ms.run"
 
     ]
 
