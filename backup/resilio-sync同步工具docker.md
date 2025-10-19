@@ -1,1 +1,1 @@
-- docker run -d --name=resilio-sync -p 8888:8888 -p 55555:55555 -v /path/to/resilio/config:/mnt/sync/config -v /path/to/resilio/data:/mnt/sync/data resilio/sync
+- docker run -d --name=resilio-sync --restart=unless-stopped -p 8888:8888 -p 55555:55555 -v /path/to/resilio/config:/mnt/sync/config -v /path/to/resilio/data:/mnt/sync/data resilio/sync
