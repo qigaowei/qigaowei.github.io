@@ -91,18 +91,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre><code class="language-java">QueryWrapper&lt;CollectRewardLog&gt; wrapper = new QueryWrapper&lt;CollectRewardLog&gt;();
-wrapper.select(&quot;sum(amount) as amount&quot;);
-Map&lt;String, Object&gt; map = this.getMap(wrapper);
-BigDecimal amount = BigDecimal.ZERO;
-if (ObjectUtils.isNotEmpty(map) &amp;&amp; map.containsKey(&quot;amount&quot;)) {
-	amount = (BigDecimal) map.get(&quot;amount&quot;);
-}
-</code></pre>
-<ul>
-<li>使用 sum()时需注意 NPE 问题，这个可以进行优化</li>
-</ul>
-</div>
+<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

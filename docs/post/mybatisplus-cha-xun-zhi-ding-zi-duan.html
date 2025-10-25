@@ -91,16 +91,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre><code class="language-java">QueryWrapper&lt;App&gt; queryWrapper = new QueryWrapper&lt;&gt;();
-queryWrapper.lambda().eq(App::getAppId,dto.getAppId());
-queryWrapper.select(&quot;min(new_price) as new_price&quot;);
-Map&lt;String, Object&gt; map = this.getMap(queryWrapper);
-BigDecimal amount = BigDecimal.ZERO;
-if (ObjectUtils.isNotEmpty(map) &amp;&amp; map.containsKey(&quot;new_price&quot;)&amp;&amp; StrUtil.isNotBlank(map.get(&quot;new_price&quot;).toString())) {
-  amount = (BigDecimal) map.get(&quot;new_price&quot;);
- }
-</code></pre>
-</div>
+<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

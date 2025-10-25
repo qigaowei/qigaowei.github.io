@@ -81,11 +81,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre><code class="language-sql">SHOW TABLE STATUS LIKE 'xxx_price'
-</code></pre>
-<p>输出结果显示：Data_free=54835281920。碎片占了大量空间。</p>
-<p>当内存碎片过多时，首当其冲会让物理IO被放大。原本“id=1，id=10，id=15”这三条记录读一次数据页就能够拿到，现在由于这几条数据被分散在多个数据页中，从而引发IO次数增多。同时，数据页是加载到缓冲池（Buffer Pool）里面的，这也会导致缓存命中率下降。</p>
-</div>
+<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

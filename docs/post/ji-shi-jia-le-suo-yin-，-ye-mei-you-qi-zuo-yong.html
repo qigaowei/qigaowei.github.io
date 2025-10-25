@@ -73,13 +73,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>这是因为如果索引字段的区分度不够，优化器会认为查找成本过大，此时还是选择走全表扫描。而测试环境表记录较少的情况下，优化器觉得回表开销不大，就能命中索引，这也解释了为什么两者的执行计划不同。</p>
-<pre><code class="language-sql">SELECT COUNT(DISTINCT column_name ) 
-/ COUNT(*)
-</code></pre>
-<p>区分度低于10%的字段避免单独建索引。</p>
-<p>对于联合索引而言，也应尽量将区分度高的字段放在前面。</p>
-</div>
+<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

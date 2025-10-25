@@ -91,24 +91,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre><code class="language-java">import org.springframework.transaction.annotation.Transactional;
-@Transactional(rollbackFor = Exception.class)
-</code></pre>
-<ul>
-<li>
-<p>必须指定Exception.class，要不会回滚失败</p>
-</li>
-<li>
-<p>别跟javax.transaction.Transactional搞混了</p>
-</li>
-<li>
-<p>If your application is SPRING web application and you are using Spring's transaction handling mechanism that is @org.springframework.transaction.annotation.Transactional, then don't mix it with javax.transaction.Transactional.</p>
-</li>
-<li>
-<p>That is Always use, @org.springframework.transaction.annotation.Transactional in a spring application consistently.</p>
-</li>
-</ul>
-</div>
+<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

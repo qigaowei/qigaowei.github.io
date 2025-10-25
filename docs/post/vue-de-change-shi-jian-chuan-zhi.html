@@ -109,27 +109,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre><code class="language-JavaScript">@change=&quot;changeS&quot;
-
-function changeS(e){
-  listGroup({checkType:e}).then((response) =&gt; {
-    specialSelectedList.value = response.data;
-  });
-</code></pre>
-<ul>
-<li>要用e获取值，而不是checkType:checkType.value，</li>
-</ul>
-<pre><code class="language-JavaScript">@change=&quot;changeS&quot;
-
-function changeS(){
- listGroup({checkType:checkType.value}).then((response) =&gt; {
-   specialSelectedList.value = response.data;
- });
-</code></pre>
-<ul>
-<li>原来的定义为let checkType= ref('');。</li>
-</ul>
-</div>
+<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

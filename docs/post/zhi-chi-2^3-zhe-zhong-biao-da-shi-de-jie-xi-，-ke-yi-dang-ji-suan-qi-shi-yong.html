@@ -151,42 +151,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><pre><code class="language-xml">&lt;dependency&gt;
-    &lt;groupId&gt;net.objecthunter&lt;/groupId&gt;
-    &lt;artifactId&gt;exp4j&lt;/artifactId&gt;
-    &lt;version&gt;0.4.8&lt;/version&gt; &lt;!-- 请检查最新版本 --&gt;
-&lt;/dependency&gt;
-</code></pre>
-<pre><code class="language-java">import net.objecthunter.exp4j.Expression;
-import net.objecthunter.exp4j.ExpressionBuilder;
-
-public class PowerCalculation {
-    public static void main(String[] args) {
-        String expression = &quot;2^3&quot;;
-        
-        Expression e = new ExpressionBuilder(expression)
-                .build();
-        
-        double result = e.evaluate();
-        System.out.println(&quot;结果是: &quot; + result);
-    }
-}
-
-</code></pre>
-<ul>
-<li>下面这种只支持加减乘除,2^3这种不支持</li>
-</ul>
-<pre><code class="language-java">import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
-// 创建脚本引擎
- ScriptEngineManager manager = new ScriptEngineManager();
-ScriptEngine engine = manager.getEngineByName(&quot;JavaScript&quot;);
-
-  // 评估表达式并获取结果
-  Object result = engine.eval(expression);
-</code></pre>
-</div>
+<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

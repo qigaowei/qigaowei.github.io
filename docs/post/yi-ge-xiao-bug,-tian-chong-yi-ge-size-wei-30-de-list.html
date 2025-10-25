@@ -91,18 +91,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><ul>
-<li>目的是如果handoverRecordDetailsVo的大小小于30，就给他填充到30，实际不是这样的效果</li>
-</ul>
-<pre><code class="language-java">List handoverRecordDetailsVo = new ArrayList();
-if(handoverRecordDetailsVo.size()&lt;30){
-	for (int i = 0; i &lt; (30-handoverRecordDetailsVo.size()); i++) {
-		Map detail = new HashMap();
-		handoverRecordDetailsVo.add(detail);
-	}
-}
-</code></pre>
-</div>
+<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

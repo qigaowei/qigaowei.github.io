@@ -179,65 +179,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><ol>
-<li>源代码</li>
-</ol>
-<ul>
-<li>time为11:24</li>
-</ul>
-<pre><code class="language-java">private Date generationFreqTime(Date execDate, String time) {
-		Calendar calendar = Calendar.getInstance();
-		calendar.setTime(execDate);
-		try {
-			String[] tems = time.split(&quot;:&quot;);
-			calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(tems[0]));
-			calendar.set(Calendar.MINUTE, Integer.parseInt(tems[1]));
-			calendar.set(Calendar.SECOND, 0);
-		} catch (NumberFormatException e) {
-			e.printStackTrace();
-			calendar.set(Calendar.HOUR_OF_DAY, 8);
-			calendar.set(Calendar.MINUTE, 0);
-			calendar.set(Calendar.SECOND, 0);
-		}
-		return calendar.getTime();
-	}
-</code></pre>
-<ol start="2">
-<li>优化后<br /> 
--上面优化前，下面优化后</li>
-</ol>
-<pre><code class="language-java">private Date generationFreqTime(Date execDate, String time) {
-	return DateUtil.parse(DateUtil.format(execDate,&quot;yyyyMMdd&quot;+time.replace(&quot;:&quot;)+&quot;00&quot;));
-}
-</code></pre>
-<pre><code class="language-java"> &lt;dependency&gt;
-            &lt;groupId&gt;cn.hutool&lt;/groupId&gt;
-            &lt;artifactId&gt;hutool-all&lt;/artifactId&gt;
-            &lt;version&gt;5.7.14&lt;/version&gt;
-        &lt;/dependency&gt;
-</code></pre>
-<ol start="3">
-<li>应用,A股的时间</li>
-</ol>
-<pre><code class="language-java">Date date=new Date();
-        Date time9=DateUtil.parse(DateUtil.format(date,&quot;yyyyMMdd093000&quot;));
-        Date time11=DateUtil.parse(DateUtil.format(date,&quot;yyyyMMdd113000&quot;));
-        Date time13=DateUtil.parse(DateUtil.format(date,&quot;yyyyMMdd130000&quot;));
-        Date time15=DateUtil.parse(DateUtil.format(date,&quot;yyyyMMdd150000&quot;));
-        if((date.after(time9)&amp;&amp;date.before(time11))
-        ||(date.after(time13)&amp;&amp;date.before(time15))){
-
-}
-</code></pre>
-<ol start="4">
-<li>LocalDateTime的做法</li>
-</ol>
-<pre><code class="language-java">// 创建指定日期和时间的LocalDateTime对象
-LocalDateTime specificDateTime = LocalDateTime.of(2021, 5, 16, 10, 30);
-//Specific LocalDateTime: 2021-05-16T10:30
-System.out.println(&quot;Specific LocalDateTime: &quot; + specificDateTime);
-</code></pre>
-</div>
+<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

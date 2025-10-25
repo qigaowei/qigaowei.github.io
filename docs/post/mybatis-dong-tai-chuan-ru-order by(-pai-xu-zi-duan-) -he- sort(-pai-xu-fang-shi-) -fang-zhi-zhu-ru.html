@@ -101,23 +101,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><ul>
-<li>$ 方式会传入一个不改变的字符串，不能够防止注入<br /> 
-如：order by #{orderBy}，如果传入的是 update_time，则会被解析为 order by update_time</li>
-<li>下面这种可以防止注入</li>
-</ul>
-<pre><code class="language-xml">SELECT &lt;include refid=&quot;Base_Column_List&quot;/&gt; 
-FROM alarm_list_info_view as m
-&lt;where&gt;
-     &lt;if test=&quot;param.orderBy== 'begin_time'&quot;&gt;
-    	order by begin_time
-     &lt;/if&gt;
-     &lt;if test=&quot;param.orderBy== 'update_time'&quot;&gt;
-        order by update_time
-     &lt;/if&gt;
-&lt;/where&gt;
-</code></pre>
-</div>
+<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

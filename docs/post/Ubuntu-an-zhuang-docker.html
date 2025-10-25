@@ -129,40 +129,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><ol>
-<li></li>
-</ol>
-<pre><code class="language-shell">curl -fsSL https://test.docker.com/ -o test-docker.sh
- sudo sh test-docker.sh
-# 创建目录
-sudo mkdir -p /etc/docker
-# 写入配置文件
-sudo tee /etc/docker/daemon.json &lt;&lt;-'EOF'
-{
-
-    &quot;registry-mirrors&quot;: [
-
-    &quot;https://docker.1ms.run&quot;
-
-    ]
-
-}
-
-EOF
-# 重启docker服务
-sudo systemctl daemon-reload 
-# 等一会再执行
- sudo systemctl restart docker
-</code></pre>
-<ol start="2">
-<li>出问题查看日志</li>
-</ol>
-<pre><code class="language-shell">sudo journalctl -u docker.service
-</code></pre>
-<ol start="3">
-<li>/etc/docker/daemon.json配置文件一定包含http://</li>
-</ol>
-</div>
+<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

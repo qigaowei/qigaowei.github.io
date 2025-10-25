@@ -111,30 +111,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><ul>
-<li>java.util.ArrayList#ArrayList(java.util.Collection&lt;? extends E&gt;)</li>
-</ul>
-<pre><code class="language-java">Set&lt;Long&gt; ids=new HashSet&lt;&gt;();
-LambdaQueryWrapper&lt;NmTransferAreaUsers&gt; lambdaQueryWrapper
-              = Wrappers.lambdaQuery();
-      lambdaQueryWrapper.in(NmTransferAreaUsers::getNurseId, new ArrayList&lt;&gt;(ids));
-</code></pre>
-<ul>
-<li>下面这种会报错 java.util.Arrays.ArrayList</li>
-</ul>
-<pre><code class="language-java">lambdaQueryWrapper.in(NmTransferAreaUsers::getNurseId, Arrays.asList(ids));
-</code></pre>
-<ul>
-<li>报错信息</li>
-</ul>
-<pre><code class="language-java">org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='ew.paramNameValuePairs.MPGENVAL1', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: 无效的列类型
-</code></pre>
-<ul>
-<li>这个是个元素为set的list<br /> 
-<img src="https://github.com/user-attachments/assets/019f44a0-7d8e-434d-8134-20b0fff1f9a1" alt="image" /></li>
-<li>总结：能用new ArrayList&lt;&gt;就用</li>
-</ul>
-</div>
+<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

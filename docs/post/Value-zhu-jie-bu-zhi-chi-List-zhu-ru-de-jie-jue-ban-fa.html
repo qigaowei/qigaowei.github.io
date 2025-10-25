@@ -165,53 +165,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><ul>
-<li>需要通过配置类</li>
-</ul>
-<pre><code class="language-yaml">groovy:
-  methodBlacklist:
-    - toUpperCase
-  classBlacklist:
-    - java.lang.Runtime
-    - java.lang.ProcessBuilder
-    - java.io.File
-    - java.lang.System
-    - java.lang.Thread
-    - java.lang.ClassLoader
-    - java.lang.reflect
-
-</code></pre>
-<hr />
-<pre><code class="language-java">import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
-
-import java.util.List;
-
-@Component
-@ConfigurationProperties(prefix = &quot;groovy&quot;)
-public class GroovySecurityProperties {
-    private List&lt;String&gt; methodBlacklist;
-    private List&lt;String&gt; classBlacklist;
-
-    public List&lt;String&gt; getMethodBlacklist() {
-        return methodBlacklist;
-    }
-
-    public void setMethodBlacklist(List&lt;String&gt; methodBlacklist) {
-        this.methodBlacklist = methodBlacklist;
-    }
-
-    public List&lt;String&gt; getClassBlacklist() {
-        return classBlacklist;
-    }
-
-    public void setClassBlacklist(List&lt;String&gt; classBlacklist) {
-        this.classBlacklist = classBlacklist;
-    }
-}
-
-</code></pre>
-</div>
+<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

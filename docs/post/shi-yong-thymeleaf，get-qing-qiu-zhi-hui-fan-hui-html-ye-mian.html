@@ -101,24 +101,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><ol>
-<li>前端返回的路径，会是\src\main\resources\templates\gif.html的内容</li>
-</ol>
-<pre><code class="language-xml">&lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
-        &lt;/dependency&gt;
-</code></pre>
-<pre><code class="language-java">@GetMapping(value = &quot;/gif&quot;)
-    public String mumu2(javax.servlet.http.HttpServletRequest request, Model model) throws Exception{
-        return &quot;gif&quot;;
-    }
-</code></pre>
-<ol start="2">
-<li>返回数据，可以全部用post</li>
-<li>必须使用get请求返回数据，可以把文本放到gif.html里面。不过有点局限性</li>
-</ol>
-</div>
+<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
