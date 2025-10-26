@@ -133,7 +133,41 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ol>
+<li>安装 Chrome</li>
+</ol>
+<pre><code class="language-shell">wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+# 检查版本
+google-chrome --version
+</code></pre>
+<ol start="2">
+<li>无法安装使用</li>
+</ol>
+<pre><code class="language-shell">sudo apt-get install -f
+</code></pre>
+<ol start="3">
+<li>安装chromedriver</li>
+</ol>
+<pre><code class="language-shell">unzip chromedriver_linux64.zip
+sudo mv -f chromedriver /usr/local/share/chromedriver
+sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
+chromedriver --version
+</code></pre>
+<ol start="4">
+<li>java配置</li>
+</ol>
+<pre><code class="language-java">options.setBinary(&quot;/opt/google/chrome/chrome&quot;);
+ System.setProperty(&quot;webdriver.chrome.driver&quot;, &quot;/usr/local/share/chromedriver&quot;);
+options.addArguments(&quot;--headless&quot;); //使用无头模式
+options.addArguments(&quot;--disable-javascript&quot;);
+</code></pre>
+<p>参考网站</p>
+<ul>
+<li>https://blog.csdn.net/weixin_44184990/article/details/123590435</li>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

@@ -81,7 +81,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ul>
+<li>可以存一份网址的原文</li>
+<li>再存一份网址的md5</li>
+<li>查询时可以用md5查询</li>
+<li>不过查询时一定要用java转md5，不要用mysql的函数</li>
+<li>使用函数不走索引</li>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

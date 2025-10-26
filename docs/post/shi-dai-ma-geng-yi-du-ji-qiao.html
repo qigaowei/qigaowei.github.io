@@ -107,7 +107,28 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ul>
+<li>代码A</li>
+</ul>
+<pre><code class="language-java">orderInfo.setOrderStopDoctor(checkInfo.getApplyDoctor());
+orderInfo.setOrderStopDoctorName(checkInfo.getApplyDoctorName());
+sheet.setEndDoct(orderInfo.getOrderStopDoctor());
+sheet.setEndDoctName(orderInfo.getOrderStopDoctorName());
+</code></pre>
+<ul>
+<li>代码B</li>
+</ul>
+<pre><code class="language-java">orderInfo.setOrderStopDoctor(checkInfo.getApplyDoctor());
+orderInfo.setOrderStopDoctorName(checkInfo.getApplyDoctorName());
+sheet.setEndDoct(checkInfo.getApplyDoctor());
+sheet.setEndDoctName(checkInfo.getApplyDoctorName());
+</code></pre>
+<ul>
+<li>代码A和代码B，归根到底都是从checkInfo这个对象，获取数据</li>
+<li>代码B更易读，更能说明数据从哪来</li>
+<li>代码A，可能认为数据从数据库中的orderInfo获取的</li>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

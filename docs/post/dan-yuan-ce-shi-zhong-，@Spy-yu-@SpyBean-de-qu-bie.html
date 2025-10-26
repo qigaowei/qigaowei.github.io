@@ -75,7 +75,21 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ul>
+<li>选择 @Spy:
+<ul>
+<li>需要测试没有托管在 Spring 容器中的对象。</li>
+<li>只进行简单的单元测试。</li>
+</ul>
+</li>
+<li>选择 @SpyBean:
+<ul>
+<li>需要测试 Spring 上下文中的 Bean。</li>
+<li>进行 Spring Boot 集成测试，且需要部分真实调用的 Bean。</li>
+</ul>
+</li>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

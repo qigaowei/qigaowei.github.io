@@ -243,7 +243,90 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><pre><code class="language-java">import feign.Client;
+import feign.Feign;
+import org.apache.http.conn.ssl.NoopHostnameVerifier;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import javax.net.ssl.*;
+
+/**
+ * Feign配置，使其支持https
+ */
+@Configuration
+public class FeignConfiguration {
+
+    @Bean
+    public Feign.Builder feignBuilder() {
+        final Client trustSSLSockets = client();
+        return Feign.builder().client(trustSSLSockets);
+    }
+
+    public static SSLSocketFactory feignTrustingSSLSocketFactory = null;
+
+    @Bean
+    public Client client() {
+        if(feignTrustingSSLSocketFactory==null){
+            try {
+                feignTrustingSSLSocketFactory = getFeignTrustingSSLSocketFactory();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        Client client= new Client.Default(feignTrustingSSLSocketFactory, new NoopHostnameVerifier());
+        return client;
+    }
+
+    public static SSLSocketFactory getFeignTrustingSSLSocketFactory() throws Exception {
+        javax.net.ssl.TrustManager[] trustAllCerts = new javax.net.ssl.TrustManager[1];
+        javax.net.ssl.TrustManager tm = new miTM();
+        trustAllCerts[0] = tm;
+        javax.net.ssl.SSLContext sc = javax.net.ssl.SSLContext.getInstance(&quot;SSL&quot;);
+        sc.init(null, trustAllCerts, null);
+        return sc.getSocketFactory();
+    }
+    static class miTM implements javax.net.ssl.TrustManager, javax.net.ssl.X509TrustManager {
+        public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+            return null;
+        }
+
+        public boolean isServerTrusted(java.security.cert.X509Certificate[] certs) {
+            return true;
+        }
+
+        public boolean isClientTrusted(java.security.cert.X509Certificate[] certs) {
+            return true;
+        }
+
+        public void checkServerTrusted(java.security.cert.X509Certificate[] certs, String authType)
+                throws java.security.cert.CertificateException {
+            return;
+        }
+
+        public void checkClientTrusted(java.security.cert.X509Certificate[] certs, String authType)
+                throws java.security.cert.CertificateException {
+            return;
+        }
+    }
+
+}
+</code></pre>
+<pre><code class="language-xml">  &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-openfeign&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+&lt;dependency&gt;
+            &lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;
+            &lt;artifactId&gt;httpclient&lt;/artifactId&gt;
+            &lt;version&gt;4.5.13&lt;/version&gt;
+        &lt;/dependency&gt;
+</code></pre>
+<pre><code class="language-java">@Component
+@FeignClient(name = &quot;NgfwApiFeign&quot;, url = &quot;https://fakeAIMASKurl&quot;, configuration = FeignConfiguration.class)
+public interface NgfwApiFeign {
+</code></pre>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

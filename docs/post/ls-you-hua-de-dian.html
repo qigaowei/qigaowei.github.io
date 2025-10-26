@@ -99,7 +99,29 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ol>
+<li>服务相互依赖，
+<ul>
+<li>feign接口参数是另一个api的，jar的传递</li>
+<li>import com.nn.goods.api.dto.OutResult;</li>
+<li>只是参数，没必要引入一个jar</li>
+<li>发布的时候启动顺序</li>
+</ul>
+</li>
+<li>使用 sum()时需注意 NPE 问题</li>
+<li>注解Transactional不规范
+<ul>
+<li>Exception.class</li>
+<li>单表操作也要加</li>
+</ul>
+</li>
+<li>org.springframework.util.StringUtils#isEmpty,&quot;  &quot;```java<br /> 
+public static boolean isEmpty(@Nullable Object str) {<br /> 
+return str == null || &quot;&quot;.equals(str);<br /> 
+}</li>
+</ol>
+<pre><code></code></pre>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

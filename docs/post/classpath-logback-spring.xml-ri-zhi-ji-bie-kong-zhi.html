@@ -93,7 +93,19 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ul>
+<li>最后一个配置起作用</li>
+</ul>
+<pre><code class="language-xml">    &lt;!-- 系统模块日志级别控制  --&gt;
+    &lt;logger name=&quot;com.kuailu&quot; level=&quot;DEBUG&quot;/&gt;
+
+    &lt;!--系统操作日志--&gt;
+    &lt;root level=&quot;DEBUG&quot;&gt;
+        &lt;appender-ref ref=&quot;console&quot;/&gt;
+        &lt;appender-ref ref=&quot;file_info&quot;/&gt;
+    &lt;/root&gt;
+</code></pre>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

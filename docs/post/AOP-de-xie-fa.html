@@ -169,7 +169,59 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><pre><code class="language-java">package com.example.demo.aspect;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAspect {
+
+    private static final Logger logger = LoggerFactory.getLogger(LoggingAspect.class);
+
+    // 定义切点：拦截 service 包及其子包中所有方法
+    @Pointcut(&quot;execution(* com.example.demo.service..*(..))&quot;)
+    public void serviceLayer() {}
+
+    // 方法执行前运行
+    @Before(&quot;serviceLayer()&quot;)
+    public void logBefore() {
+        logger.info(&quot;方法开始执行...&quot;);
+    }
+
+    // 方法执行后运行
+    @After(&quot;serviceLayer()&quot;)
+    public void logAfter() {
+        logger.info(&quot;方法执行完毕...&quot;);
+    }
+
+    // 环绕通知（可以在方法执行前后添加逻辑）
+    @Around(&quot;serviceLayer()&quot;)
+    public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
+        logger.info(&quot;方法 {} 开始执行...&quot;, joinPoint.getSignature());
+        Object result = joinPoint.proceed();  // 执行目标方法
+        logger.info(&quot;方法 {} 执行完毕，返回值为：{}&quot;, joinPoint.getSignature(), result);
+        return result;
+    }
+}
+</code></pre>
+<p>如果在同一个切面中同时使用 @Before、@After 和 @Around，它们的执行顺序大致如下：</p>
+<ol>
+<li>@Before 先执行（方法执行前逻辑）。</li>
+<li>@Around 的前置逻辑执行。</li>
+<li>目标方法 执行。</li>
+<li>@Around 的后置逻辑执行。</li>
+<li>@After 执行（方法执行后逻辑）。</li>
+</ol>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

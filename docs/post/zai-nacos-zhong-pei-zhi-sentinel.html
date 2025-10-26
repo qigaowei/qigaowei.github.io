@@ -123,7 +123,34 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><pre><code class="language-yaml">spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.31.4.12:8848
+    sentinel:
+      transport:
+        dashboard: 172.31.4.12:7014
+      filter:
+        # 网关配置
+        enabled: false
+      eager: true
+      datasource:
+        ds:
+          nacos:
+            server-addr: 172.31.4.12:8848
+            data-id: ${spring.application.name}-sentinel-system.json
+            namespace: 188
+            ruleType: system
+            data-type: json
+</code></pre>
+<ul>
+<li>a-b-business-test1.yaml</li>
+<li>a-b-business-sentinel-system.json</li>
+<li>data-id: ${spring.application.name}-sentinel-system.json</li>
+<li>data-id别写错</li>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

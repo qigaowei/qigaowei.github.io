@@ -77,7 +77,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><pre><code class="language-shell">CURRENT_IP=$(ip addr | grep inet |grep -v &quot;127.0.0.1&quot; |grep -v inet6|awk '{print $2}'|awk -F &quot;/&quot; '{print $1}'| head -1)
+</code></pre>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

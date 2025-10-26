@@ -125,7 +125,34 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><pre><code class="language-xml"> &lt;repositories&gt;
+        &lt;repository&gt;
+            &lt;id&gt;public&lt;/id&gt;
+            &lt;name&gt;aliyun nexus&lt;/name&gt;
+            &lt;url&gt;https://maven.aliyun.com/repository/central/&lt;/url&gt;
+            &lt;releases&gt;
+                &lt;enabled&gt;true&lt;/enabled&gt;
+            &lt;/releases&gt;
+        &lt;/repository&gt;
+    &lt;/repositories&gt;
+    &lt;pluginRepositories&gt;
+        &lt;pluginRepository&gt;
+            &lt;id&gt;public&lt;/id&gt;
+            &lt;name&gt;aliyun nexus&lt;/name&gt;
+            &lt;url&gt;https://maven.aliyun.com/repository/central/&lt;/url&gt;
+            &lt;releases&gt;
+                &lt;enabled&gt;true&lt;/enabled&gt;
+            &lt;/releases&gt;
+            &lt;snapshots&gt;
+                &lt;enabled&gt;false&lt;/enabled&gt;
+            &lt;/snapshots&gt;
+        &lt;/pluginRepository&gt;
+    &lt;/pluginRepositories&gt;
+</code></pre>
+<ul>
+<li>在project这一层级的下级</li>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

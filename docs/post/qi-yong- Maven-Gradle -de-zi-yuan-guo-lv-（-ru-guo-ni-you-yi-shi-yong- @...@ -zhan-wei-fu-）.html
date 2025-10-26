@@ -171,7 +171,56 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ol>
+<li></li>
+</ol>
+<p>在 pom.xml 中开启资源过滤：</p>
+<pre><code class="language-xml">&lt;build&gt;
+  &lt;resources&gt;
+    &lt;resource&gt;
+      &lt;directory&gt;src/main/resources&lt;/directory&gt;
+      &lt;filtering&gt;true&lt;/filtering&gt;
+    &lt;/resource&gt;
+  &lt;/resources&gt;
+&lt;/build&gt;
+</code></pre>
+<p>然后你才能在 application.yml 中使用：</p>
+<pre><code class="language-yaml">app:
+  version: @project.version@
+</code></pre>
+<ol start="2">
+<li>错误写法</li>
+</ol>
+<pre><code class="language-xml">   &lt;build&gt;
+        &lt;resources&gt;
+            &lt;resource&gt;
+                &lt;directory&gt;src/main/resources&lt;/directory&gt;
+                &lt;excludes&gt;
+                    &lt;exclude&gt;
+                        **/*.xlsx
+                    &lt;/exclude&gt;
+                    &lt;exclude&gt;
+                        **/*.docx
+                    &lt;/exclude&gt;
+                &lt;/excludes&gt;
+                &lt;filtering&gt;true&lt;/filtering&gt;
+            &lt;/resource&gt;
+            &lt;resource&gt;
+                &lt;directory&gt;src/main/resources&lt;/directory&gt;
+                &lt;includes&gt;
+                    &lt;include&gt;
+                        **/*.xlsx
+                    &lt;/include&gt;
+                    &lt;include&gt;
+                        **/*.docx
+                    &lt;/include&gt;
+                &lt;/includes&gt;
+                &lt;filtering&gt;false&lt;/filtering&gt;
+            &lt;/resource&gt;
+        &lt;/resources&gt;
+   &lt;/build&gt;
+</code></pre>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

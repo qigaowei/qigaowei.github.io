@@ -151,7 +151,45 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><pre><code class="language-java">package com.abc.bigdata.riskmanagement.filter;
+
+import lombok.extern.slf4j.Slf4j;
+import org.apache.skywalking.apm.toolkit.trace.TraceContext;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+@Slf4j
+@WebFilter(filterName = &quot;thirdFilter&quot;,urlPatterns = {&quot;/value/tycCompanyBase&quot;
+})
+public class ThirdFilter extends OncePerRequestFilter {
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request,
+                                    HttpServletResponse response,
+                                    FilterChain chain) throws IOException, ServletException {
+        String url=request.getServletPath();
+        String traceId= TraceContext.traceId();
+        log.error(url+traceId);
+        chain.doFilter(request, response);
+    }
+
+}
+</code></pre>
+<ol>
+<li>springboot启动类要加入注解</li>
+</ol>
+<pre><code class="language-java">@ServletComponentScan(basePackages = {&quot;com.abc.bigdata.riskmanagement.filter&quot;})
+</code></pre>
+<ol start="2">
+<li>过滤器注册为@Component导致urlPatterns不生效,应该为@WebFilter</li>
+</ol>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

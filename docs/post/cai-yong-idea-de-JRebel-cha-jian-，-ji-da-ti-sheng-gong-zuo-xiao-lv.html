@@ -87,7 +87,24 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ol>
+<li></li>
+</ol>
+<ul>
+<li>采用idea的JRebel插件，</li>
+<li>一键更新本地代码，</li>
+<li>不用重启SpringBoot</li>
+<li>每次可以节省几分钟</li>
+</ul>
+<ol start="2">
+<li>必须重启的情况</li>
+</ol>
+<ul>
+<li>1MQ，修改了consumerGroup，@RocketMQMessageListener(consumerGroup=，需要重启。</li>
+<li>2修改了com.baomidou.mybatisplus的实体类，需要重启。</li>
+<li>resources中的文件修改</li>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

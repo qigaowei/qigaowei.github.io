@@ -177,7 +177,63 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ol>
+<li>const checkedRows = ref([])<br /> 
+获取用checkedRows.value</li>
+<li>新增修改删除以后需要调用list接口</li>
+<li>变量定义在使用地方的前面</li>
+<li></li>
+</ol>
+<pre><code>WHStyle = ref({
+      width: '600',
+      height: '400'
+    })
+</code></pre>
+<p>不起作用改成下面的</p>
+<pre><code> WHStyle = reactive({
+      width: '500',
+      height: '400'
+    })
+</code></pre>
+<ol start="5">
+<li>不起作用，两个都试试</li>
+</ol>
+<pre><code> :style=&quot;{ width: '100%' }&quot;
+</code></pre>
+<pre><code> width=&quot;100%&quot;
+</code></pre>
+<ol start="6">
+<li>值得注意的写法,获取数组的第一个元素</li>
+</ol>
+<pre><code>const typeList = ref([]);
+typeList.value[0]
+</code></pre>
+<ol start="7">
+<li>动态生成表头，vue页面里面，必须要有对应表头的如下代码</li>
+</ol>
+<pre><code>&lt;template #execShowName_default=&quot;{ row }&quot;&gt;
+                  &lt;span
+                  &gt;{{ row.showName }}&lt;/span&gt;
+                &lt;/template&gt;
+</code></pre>
+<ol start="8">
+<li>实现按顺序加载方法，所有的方法都要加async和await</li>
+</ol>
+<pre><code>onMounted(async () =&gt; {
+  await getSurveyTypeList();
+  await getList();
+});
+async function getList(){
+  await getSpecialSelectedList();
+  await getSpecialUnselectedList();
+}
+async function getSpecialSelectedList() {
+  await listArea({checkType:nmTypeCode.value}).then((response) =&gt; {
+    specialSelectedList.value = response.rows;
+  });
+}
+</code></pre>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

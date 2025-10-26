@@ -93,7 +93,23 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><pre><code class="language-java"> @Autowired
+    public void injectionPayServices(List&lt;OrderPayService&gt; serviceList) {
+      if (serviceList != null) {
+            for (OrderPayService orderPayService : serviceList) {
+                orderServiceMap.put(orderPayService.getServiceId(), orderPayService);
+            }
+        }
+</code></pre>
+<ul>
+<li>
+<p>@Autowired 是 Spring 提供的注解，用于将依赖关系自动注入到类的字段、构造方法或方法中。</p>
+</li>
+<li>
+<p>在这个代码中，@Autowired 标注在方法上，表示 Spring 会自动将容器中所有实现了 OrderPayService 接口的 Bean 作为参数传递给该方法。</p>
+</li>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

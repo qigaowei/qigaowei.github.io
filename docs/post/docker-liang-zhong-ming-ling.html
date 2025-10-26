@@ -73,7 +73,21 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ol>
+<li>RUN 指令是构建镜像时执行的，执行成功后，结果会被提交到镜像。</li>
+</ol>
+<pre><code class="language-shell"># 执行 Maven 构建命令
+RUN mvn clean compile exec:java -Dexec.mainClass=&quot;com.demo.MagnetApplication&quot;
+</code></pre>
+<ol start="2">
+<li>如果希望在运行容器时执行 Maven 命令而不是在构建时执行，可以使用 CMD 或 ENTRYPOINT 指令：</li>
+</ol>
+<pre><code class="language-shell">CMD [&quot;mvn&quot;, &quot;clean&quot;, &quot;compile&quot;, &quot;exec:java&quot;, &quot;-Dexec.mainClass=com.demo.MagnetApplication&quot;]
+</code></pre>
+<ol start="3">
+<li>CMD只能有一个</li>
+</ol>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

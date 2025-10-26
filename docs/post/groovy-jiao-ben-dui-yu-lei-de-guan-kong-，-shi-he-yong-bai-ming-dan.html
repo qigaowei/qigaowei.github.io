@@ -77,7 +77,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ul>
+<li>groovy脚本对于类的管控，适合用白名单</li>
+<li>如果用黑名单，再添加新的jar包，需要人工维护黑名单</li>
+<li>白名单，没有配置，就不能被使用</li>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

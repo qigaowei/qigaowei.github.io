@@ -75,7 +75,49 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><p>抽象类实现接口，<br /> 
+实现类又继承抽象类。</p>
+<p>抽象类是模板，提供了部分实现，定义了算法的骨架。<br /> 
+接口是行为的契约，规定了实现类必须实现的功能。<br /> 
+实现类负责具体化算法中的某些步骤，完成特定逻辑。</p>
+<pre><code class="language-java">// 定义接口
+interface Operation {
+    void step1();
+    void step2();
+}
+
+// 抽象类实现接口
+abstract class AbstractTemplate implements Operation {
+    @Override
+    public void step1() {
+        System.out.println(&quot;Step 1: 通用实现&quot;);
+    }
+
+    // 抽象方法，留给子类实现
+    public abstract void step2();
+}
+
+// 实现类继承抽象类
+class ConcreteClass extends AbstractTemplate {
+    @Override
+    public void step2() {
+        System.out.println(&quot;Step 2: 子类具体实现&quot;);
+    }
+}
+
+// 测试
+public class Main {
+    public static void main(String[] args) {
+        Operation operation = new ConcreteClass();
+        operation.step1();
+        operation.step2();
+    }
+}
+</code></pre>
+<p>输出结果：</p>
+<p>Step 1: 通用实现<br /> 
+Step 2: 子类具体实现</p>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

@@ -73,7 +73,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><p>需求要求支持三种查询，其中两个是单列查询，一个是多列查询。那么只需要建立2个索引就够了。</p>
+<ol>
+<li>建立用户id、日期的联合索引。来满足按照用户查询、和按照用户+日期查询，这样都可以走到这个索引上。</li>
+<li>建立时间索引。来满足按照时间查询。</li>
+</ol>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

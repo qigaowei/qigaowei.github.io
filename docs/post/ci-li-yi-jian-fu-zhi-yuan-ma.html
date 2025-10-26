@@ -219,7 +219,78 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><pre><code class="language-java"> @PostMapping(&quot;/magnet&quot;)
+    @ResponseBody
+    public String magnet(@RequestBody QueryVo vo) throws Exception{
+        StringBuffer magnets=new StringBuffer(&quot;&quot;);
+        if(vo.getPage()==null){
+            vo.setPage(0);
+        }
+        String html=HttpRequest.get(&quot;https://doc2.htmcdn.com:39988/search?word=&quot;+vo.getKey()+&quot;&amp;sort=&amp;page=&quot;+vo.getPage()+&quot;&quot;)
+                .header(&quot;Accept&quot;, &quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7&quot;)
+                .header(&quot;Accept-Encoding&quot;, &quot;gzip, deflate, br, zstd&quot;)
+                .header(&quot;Accept-Language&quot;, &quot;zh&quot;)
+                .header(&quot;Cache-Control&quot;, &quot;no-cache&quot;)
+                .header(&quot;Pragma&quot;, &quot;no-cache&quot;)
+                .header(&quot;Priority&quot;, &quot;u=0, i&quot;)
+                .header(&quot;Referer&quot;, &quot;https://doc.htmcdn.com:39988/search?&quot;)
+                .header(&quot;Sec-Ch-Ua&quot;, &quot;\&quot;Not/A)Brand\&quot;;v=\&quot;8\&quot;, \&quot;Chromium\&quot;;v=\&quot;126\&quot;, \&quot;Google Chrome\&quot;;v=\&quot;126\&quot;&quot;)
+                .header(&quot;Sec-Ch-Ua-Mobile&quot;, &quot;?0&quot;)
+                .header(&quot;Sec-Ch-Ua-Platform&quot;, &quot;\&quot;Windows\&quot;&quot;)
+                .header(&quot;Sec-Fetch-Dest&quot;, &quot;iframe&quot;)
+                .header(&quot;Sec-Fetch-Mode&quot;, &quot;navigate&quot;)
+                .header(&quot;Sec-Fetch-Site&quot;, &quot;same-origin&quot;)
+                .header(&quot;Sec-Fetch-User&quot;, &quot;?1&quot;)
+                .header(&quot;Upgrade-Insecure-Requests&quot;, &quot;1&quot;)
+                .header(&quot;User-Agent&quot;, &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36&quot;)
+                .execute().body();
+        Document doc=Jsoup.parse(html);
+        Elements elements=doc.select(&quot;body &gt; div.wrapper &gt; div.p-wrapper &gt; div:nth-child(6) &gt; div&quot;);
+        if(CollUtil.isNotEmpty(elements)){
+            int i=0;
+            for(Element e:elements){
+                i++;
+                String magnet=doc.select(
+                        &quot;body &gt; div.wrapper &gt; div.p-wrapper &gt; div:nth-child(6) &gt; div:nth-child(&quot;+i+&quot;) &gt; div.sbar &gt; span:nth-child(1) &gt; a&quot;).get(0).attr(&quot;href&quot;);
+                magnets.append(magnet+&quot;\n&quot;);
+                doc.select(
+                        &quot;body &gt; div.wrapper &gt; div.p-wrapper &gt; div:nth-child(6) &gt; div:nth-child(&quot;+i+&quot;)&quot;).append(&quot;&lt;button class=\&quot;btn\&quot; data-clipboard-demo=\&quot;\&quot; &quot; +
+                        &quot;data-clipboard-action=\&quot;copy\&quot; data-clipboard-text=\&quot;&quot;
+                        +magnet+&quot;\&quot;&gt;点击复制磁力链接&lt;/button&gt;&lt;br&gt;\n&quot;);
+            }
+            doc.select(
+                    &quot;body &gt; div.wrapper &gt; div.p-wrapper &gt; div:nth-child(6) &gt; div:nth-child(&quot;+i+&quot;)&quot;).append(&quot;&lt;button class=\&quot;btn\&quot; data-clipboard-demo=\&quot;\&quot; &quot; +
+                    &quot;data-clipboard-action=\&quot;copy\&quot; data-clipboard-text=\&quot;&quot;
+                    +magnets.toString()+&quot;\&quot;&gt;点击复制本页所有磁力链接&lt;/button&gt;&lt;br&gt;\n&quot;);
+        }else{
+            doc.append(&quot;&lt;font size=\&quot;3\&quot; color=\&quot;red\&quot;&gt;无资源&lt;/font&gt;&lt;br&gt;\n&quot;);
+        }
+        return doc.select(&quot;body &gt; div.wrapper &gt; div.p-wrapper &gt; div:nth-child(6)&quot;).html();
+    }
+  @Data
+    public static class QueryVo {
+        private String key;
+        private String url;
+        private Integer page;
+    }
+</code></pre>
+<pre><code class="language-xml"> &lt;dependency&gt;
+            &lt;groupId&gt;cn.hutool&lt;/groupId&gt;
+            &lt;artifactId&gt;hutool-all&lt;/artifactId&gt;
+            &lt;version&gt;5.7.14&lt;/version&gt;
+        &lt;/dependency&gt;
+ &lt;dependency&gt;
+            &lt;groupId&gt;org.jsoup&lt;/groupId&gt;
+            &lt;artifactId&gt;jsoup&lt;/artifactId&gt;
+            &lt;version&gt;1.16.1&lt;/version&gt;
+        &lt;/dependency&gt;
+</code></pre>
+<ul>
+<li>html引用clipboard.min.js就可以实现一键复制</li>
+</ul>
+<p>效果如下</p>
+<p><img src="https://github.com/user-attachments/assets/704e25f6-ff7a-4298-8b72-ddb038f75fc9" alt="image" /></p>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

@@ -81,7 +81,79 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ol>
+<li></li>
+</ol>
+<ul>
+<li>公司使用apifox给前端提供接口文档，</li>
+<li>我先通过<a href="http://localhost:9604/v2/api-docs">localhost</a>,导出swagger的json格式，</li>
+<li>然后再导入到apifox，</li>
+<li>结果接口返回值的泛型里面的字段不显示。</li>
+</ul>
+<ol start="2">
+<li></li>
+</ol>
+<ul>
+<li>后来看到apifox的idea插件可以实现泛型返回值的字段解析，</li>
+<li>Apifox Helper 是 Apifox 团队针对 IntelliJ IDEA 环境所推出的插件，可以在 IDEA 环境中识别本地 Java、Kotlin 后端项目的源代码，自动生成 API 文档并一键同步到 Apifox 的项目中。</li>
+<li>完美解决。</li>
+</ul>
+<ol start="3">
+<li></li>
+</ol>
+<ul>
+<li>跟swagger的版本没有关系，跟swagger的注解有关系</li>
+</ul>
+<ol start="4">
+<li>返回值也要支持泛型</li>
+</ol>
+<pre><code class="language-java">import com.github.pagehelper.Page;
+import com.github.pagehelper.page.PageMethod;
+import com.zjrj.common.core.web.page.PageDomain;
+import com.zjrj.common.core.web.page.TableSupport;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+
+import java.io.Serializable;
+import java.util.List;
+
+@Data
+public class TableDataInfoOther&lt;T&gt; implements Serializable {
+    protected static final ThreadLocal&lt;Page&gt; LOCAL_PAGE = new ThreadLocal();
+    private static final long serialVersionUID = 1L;
+    @ApiModelProperty(value = &quot;total&quot;)
+    private long total;
+    @ApiModelProperty(value = &quot;rows&quot;)
+    private List&lt;T&gt; rows;
+    @ApiModelProperty(value = &quot;code&quot;)
+    private int code;
+    @ApiModelProperty(value = &quot;msg&quot;)
+    private String msg;
+
+    public static TableDataInfoOther getDataTable(List&lt;?&gt; list) {
+        TableDataInfoOther rspData = new TableDataInfoOther();
+        rspData.setCode(200);
+        rspData.setRows(list);
+        rspData.setMsg(&quot;查询成功&quot;);
+        rspData.setTotal(LOCAL_PAGE.get().getTotal());
+        LOCAL_PAGE.remove();
+        return rspData;
+    }
+
+    public static Page getPage() {
+        PageDomain pageDomain = TableSupport.buildPageRequest();
+        Integer pageNum = pageDomain.getPageNum();
+        Integer pageSize = pageDomain.getPageSize();
+        Page page= PageMethod.startPage(pageNum,pageSize);
+        LOCAL_PAGE.set(page);
+        return page;
+    }
+}
+</code></pre>
+<ol start="5">
+<li>不是自己创建的项目也没事，也正常使用</li>
+</ol>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

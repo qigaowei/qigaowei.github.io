@@ -173,7 +173,55 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><pre><code class="language-java">public void china(String city,String code,String time){
+        StringBuffer sb=new StringBuffer();
+        String html=HttpUtil.
+                get(&quot;https://weather.cma.cn/web/weather/53679.html&quot;);
+        Document doc=Jsoup.parse(html);
+        Elements timeE=doc.select(&quot;#hourTable_0 &gt; tbody &gt; tr:nth-child(1) &gt; td&quot;);
+        Elements timeTemp=doc.select(&quot;#hourTable_0 &gt; tbody &gt; tr:nth-child(3) &gt; td&quot;);
+        Elements timeRain=doc.select(&quot;#hourTable_0 &gt; tbody &gt; tr:nth-child(4) &gt;td&quot;);
+        int j=0;
+        if(CollUtil.isNotEmpty(timeE)){
+            int i=0;
+            for(Element e:timeE){
+                String tempStr=timeTemp.get(i).select(&quot;td&quot;).text();
+                String timeStr=e.select(&quot;td&quot;).text();
+                String rainStr=timeRain.get(i).select(&quot;td&quot;).text();
+                i++;
+                if(!rainStr.contains(&quot;无降水&quot;)){
+                    if(i!=1){
+                        j++;
+                    }
+                    sb.append(timeStr+&quot;-&quot;+tempStr+&quot;-&quot;+(&quot;&lt;strong style=\&quot;color:red;\&quot;&gt;&quot;+rainStr+&quot;&lt;/strong&gt;&quot;)+&quot;&lt;br&gt;&quot;);
+                }else {
+                    sb.append(timeStr+&quot;-&quot;+tempStr+&quot;-&quot;+rainStr+&quot;&lt;br&gt;&quot;);
+                }
+            }
+        }else{
+            doc.append(&quot;&lt;font size=\&quot;3\&quot; color=\&quot;red\&quot;&gt;无资源&lt;/font&gt;&lt;br&gt;\n&quot;);
+        }
+        if(StrUtil.isNotBlank(sb)){
+            sb=new StringBuffer((&quot;&lt;strong style=\&quot;color:red;\&quot;&gt;&quot;+city+&quot;&lt;/strong&gt;&lt;br&gt;&quot;)+sb.toString());
+            File tianqi=new File(&quot;/root/&quot;+code+&quot;.txt&quot;);
+            if(!tianqi.exists()){
+                FileUtil.touch(tianqi);
+            }
+            String str=FileUtil.readString(tianqi,Charset.forName(&quot;UTF-8&quot;));
+            if(j&gt;0&amp;&amp;!(StrUtil.isNotBlank(str)&amp;&amp;str.equals(sb.toString()))){
+               //发送邮件，自己编写
+                FileUtil.writeBytes(new byte[0], tianqi);
+                FileUtil.appendString(sb.toString(),tianqi, Charset.forName(&quot;UTF-8&quot;));
+            }
+        }
+    }
+</code></pre>
+<ul>
+<li>code为城市代码，我只是写死了</li>
+</ul>
+<p>邮件效果<br /> 
+<img src="https://github.com/user-attachments/assets/e2ca7575-6b8d-4cd8-8e9e-30e1925e9c6b" alt="image" /></p>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

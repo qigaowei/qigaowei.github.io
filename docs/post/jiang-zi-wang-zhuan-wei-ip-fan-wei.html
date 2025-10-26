@@ -101,7 +101,19 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><pre><code class="language-xml">&lt;dependency&gt;
+            &lt;groupId&gt;commons-net&lt;/groupId&gt;
+            &lt;artifactId&gt;commons-net&lt;/artifactId&gt;
+            &lt;version&gt;3.6&lt;/version&gt;
+        &lt;/dependency&gt;
+</code></pre>
+<pre><code class="language-java">          private static List&lt;String&gt; cidrToIpList(String cidr){
+        SubnetUtils utils = new SubnetUtils(cidr);
+        String[] adress = utils.getInfo().getAllAddresses();
+        return Arrays.asList(adress);
+    }
+</code></pre>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

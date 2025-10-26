@@ -75,7 +75,16 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><p>这是因为 80 是 HTTP 协议的默认端口，<br /> 
+浏览器或 HTTP 客户端会自动假定连接使用端口 80。<br /> 
+因此，你只需要输入 IP 地址即可访问。<br /> 
+例如：</p>
+<ul>
+<li>完整形式: http://192.168.1.1:80</li>
+<li>简化形式: http://192.168.1.1<br /> 
+两者效果相同。</li>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

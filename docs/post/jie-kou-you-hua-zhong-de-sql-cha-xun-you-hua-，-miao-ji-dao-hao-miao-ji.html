@@ -75,7 +75,15 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ol>
+<li>循环很多次执行sql，才有优化的空间，执行sql操作次数太少，优化空间不大</li>
+<li>多条sql查询，可以用union拼起来，只执行一条。</li>
+<li>in在mysql和oracle中都有1000个数量限制，不推荐使用</li>
+<li>exist在mybatis的xml写法复杂，没有union简洁</li>
+<li>把查出来的对象，传到下层，避免重复查询</li>
+<li>创建合适的索引</li>
+</ol>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

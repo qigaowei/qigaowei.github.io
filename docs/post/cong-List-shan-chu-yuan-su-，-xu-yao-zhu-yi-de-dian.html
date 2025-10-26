@@ -125,7 +125,33 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><pre><code class="language-java">     List&lt;String&gt; list=new ArrayList&lt;String&gt;();
+        list.add(&quot;1&quot;);
+        list.add(&quot;2&quot;);
+        list.add(&quot;3&quot;);
+        list.add(&quot;4&quot;);
+        for(String str : list){
+            if(&quot;3&quot;.equals(str)){
+                list.remove(str);
+            }
+            System.out.println(str);//代表业务逻辑
+        }
+        System.out.println();
+        for(String str : list){
+            System.out.println(str);
+        }
+</code></pre>
+<p>结果如下，第一个for循环，4没有打印出来需要注意<br /> 
+1<br /> 
+2<br /> 
+3</p>
+<p>1<br /> 
+2<br /> 
+4</p>
+<ul>
+<li>这样删除会有问题，可以复制有用的到新的list</li>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

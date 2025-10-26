@@ -89,7 +89,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><h3>feign 接口直连地址 只配置url所有接口都生效，单个服务配置urls下面的具体服务</h3>
+<pre><code>feign:
+  service:
+    url: 192.168.0.175
+    urls:
+      his-storage-service: 192.168.0.175
+</code></pre>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

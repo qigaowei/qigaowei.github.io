@@ -119,7 +119,55 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ol>
+<li>创建镜像，注意最后的标点符号，跟jar包和Dockerfile一个目录</li>
+</ol>
+<ul>
+<li>docker build -t demo-8-app .</li>
+</ul>
+<ol start="2">
+<li>启动容器,定时任务需要指定时区，端口44444为宿主机端口，33333为容器内的端口，路径类推</li>
+</ol>
+<ul>
+<li>docker run -e TZ=Asia/Shanghai --restart=always -v /root/demo8:/root -d -p 44444:33333 demo-8-app</li>
+</ul>
+<ol start="3">
+<li>通过上个命令返回的id，查看镜像</li>
+</ol>
+<ul>
+<li>docker logs</li>
+</ul>
+<ol start="4">
+<li>停止容器</li>
+</ol>
+<ul>
+<li>docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker stop</li>
+</ul>
+<ol start="5">
+<li>删除容器</li>
+</ol>
+<ul>
+<li>docker ps -a | grep demo-8-app | awk '{print $1}'| xargs docker rm</li>
+</ul>
+<ol start="7">
+<li>删除镜像</li>
+</ol>
+<ul>
+<li>docker images -a | grep demo-8-app | awk '{print $1}'| xargs docker rmi</li>
+</ul>
+<ol start="8">
+<li>Dockerfile内容，创建一个名字为Dockerfile，无扩展名的文件</li>
+</ol>
+<pre><code># 使用官方的Java基础镜像
+FROM openjdk:8-jre-alpine
+
+# 复制应用程序JAR文件到容器中
+COPY demo-0.0.1-SNAPSHOT.jar /demo-0.0.1-SNAPSHOT.jar
+
+# 指定容器启动命令
+CMD [&quot;java&quot;, &quot;-jar&quot;, &quot;/demo-0.0.1-SNAPSHOT.jar&quot;]
+</code></pre>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

@@ -85,7 +85,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><p>Unused declared dependencies found:<br /> 
+org.projectlombok:lombok:jar:1.18.10:compile<br /> 
+com.baomidou:mybatis-plus-extension:jar:3.3.1:compile<br /> 
+com.leigod.user:nn-user-api:jar:2.0.5-SNAPSHOT:compile</p>
+<p>mvn dependency:analyze 的确存在一定的局限性，尤其是对一些注解处理器（如 Lombok）或者动态加载的类库的依赖分析可能不够准确。</p>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

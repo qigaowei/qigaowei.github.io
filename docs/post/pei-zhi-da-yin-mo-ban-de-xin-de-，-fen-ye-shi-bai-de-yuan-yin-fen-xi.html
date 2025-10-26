@@ -73,7 +73,212 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ul>
+<li>背景，数据结构为数组中含有子数组。原来需要显示父元素和子数组明细，现在只需要显示子数组明细，不显示父元素。不含有子数组，保持原样。</li>
+<li>尽量在js中处理数据，方便分页</li>
+<li>在html处理数据，容易造成分页错误。因为js已经分页了，html再删除数据，会出现页面数据少了</li>
+</ul>
+<ol>
+<li>优化前的html</li>
+</ol>
+<pre><code class="language-js">{{each tableData val key}}
+&lt;tr style=&quot;height:30px;&quot;&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;
+		{{val.startShowDate?.substring(0,10)}}
+	&lt;/td&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;{{val.startShowTime || ''}}&lt;/td&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;border-right:none;line-height:14px;&quot; align=&quot;left&quot;&gt;
+		{{if val.orderVoidFlag == '1'}}
+		&lt;span style=&quot;text-decoration: line-through;&quot;&gt;{{val.orderShowName || ''}}&lt;/span&gt;
+		{{else}}
+			{{val.orderShowName || ''}}
+			{{/if}}
+
+	&lt;/td&gt;
+	&lt;td style=&quot;font-size:14px;border: 1px solid red;border-left:none;line-height:14px;&quot;&gt;
+		{{val.orderGroupName || ''}}
+	&lt;/td&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;
+
+		{{if val.startDoctSign}}
+		&lt;image style=&quot;height:23px;width:48px&quot; src=&quot;/his/hisfile{{val.startDoctSign || ''}}&quot; /&gt;
+		{{else}}
+			{{val.startDoctName || ''}}
+			{{/if}}
+	&lt;/td&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;{{val.endShowDate || ''}}&lt;/td&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;{{val.endShowTime || ''}}&lt;/td&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;
+
+
+		{{if val.startNurseSign}}
+		&lt;image style=&quot;height:23px;width:48px&quot; src=&quot;/his/hisfile{{val.startNurseSign || ''}}&quot; /&gt;
+		{{else}}
+			{{val.startNurseName || ''}}
+			{{/if}}
+
+	&lt;/td&gt;
+&lt;/tr&gt;
+{{if val.checkTestItems &amp;&amp; val.orderClass &amp;&amp; val.orderClass == '22'}}
+{{each val.checkTestItems valh keyh}}
+
+&lt;tr style=&quot;height:30px;&quot;&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;
+		...
+	&lt;/td&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;...&lt;/td&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;border-right:none;line-height:14px;&quot; align=&quot;left&quot;&gt;
+		{{if valh.orderVoidFlag == '1'}}
+		&lt;span style=&quot;text-decoration: line-through;&quot;&gt;{{valh.orderShowName || ''}}&lt;/span&gt;
+		{{else}}
+			{{valh.orderShowName || ''}}
+			{{/if}}
+
+	&lt;/td&gt;
+	&lt;td style=&quot;font-size:14px;border: 1px solid red;border-left:none;line-height:14px;&quot;&gt;
+		{{valh.orderGroupName || ''}}
+	&lt;/td&gt;
+
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;
+		{{if valh.startDoctSign}}
+		&lt;image style=&quot;height:23px;width:48px&quot; src=&quot;/his/hisfile{{valh.startDoctSign || ''}}&quot; /&gt;
+		{{else}}
+			{{valh.startDoctName || ''}}
+
+			{{/if}}
+	&lt;/td&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;{{valh.endShowDate || ''}}&lt;/td&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;{{valh.endShowTime || ''}}&lt;/td&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;
+		{{if valh.startNurseSign}}
+		&lt;image style=&quot;height:23px;width:48px&quot; src=&quot;/his/hisfile{{valh.startNurseSign || ''}}&quot; /&gt;
+		{{else}}
+			{{valh.startNurseName|| ''}}
+
+			{{/if}}
+	&lt;/td&gt;
+&lt;/tr&gt;
+
+{{/each}}
+{{/if}}
+{{/each}}
+</code></pre>
+<ol start="2">
+<li>优化后的html</li>
+</ol>
+<pre><code class="language-js">{{each tableData val key}}
+&lt;tr style=&quot;height:30px;&quot;&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;
+		{{val.startShowDate?.substring(0,10)}}
+	&lt;/td&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;{{val.startShowTime || ''}}&lt;/td&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;border-right:none;line-height:14px;&quot; align=&quot;left&quot;&gt;
+		{{if val.orderVoidFlag == '1'}}
+		&lt;span style=&quot;text-decoration: line-through;&quot;&gt;{{val.orderShowName || ''}}&lt;/span&gt;
+		{{else}}
+			{{val.orderShowName || ''}}
+			{{/if}}
+
+	&lt;/td&gt;
+	&lt;td style=&quot;font-size:14px;border: 1px solid red;border-left:none;line-height:14px;&quot;&gt;
+		{{val.orderGroupName || ''}}
+	&lt;/td&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;
+
+		{{if val.startDoctSign}}
+		&lt;image style=&quot;height:23px;width:48px&quot; src=&quot;/his/hisfile{{val.startDoctSign || ''}}&quot; /&gt;
+		{{else}}
+			{{val.startDoctName || ''}}
+			{{/if}}
+	&lt;/td&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;{{val.endShowDate || ''}}&lt;/td&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;{{val.endShowTime || ''}}&lt;/td&gt;
+	&lt;td style=&quot;font-size: 12px;border: 1px solid red;&quot;&gt;
+
+
+		{{if val.startNurseSign}}
+		&lt;image style=&quot;height:23px;width:48px&quot; src=&quot;/his/hisfile{{val.startNurseSign || ''}}&quot; /&gt;
+		{{else}}
+			{{val.startNurseName || ''}}
+			{{/if}}
+
+	&lt;/td&gt;
+&lt;/tr&gt;
+
+{{/each}}
+</code></pre>
+<ol start="3">
+<li>优化前的js</li>
+</ol>
+<pre><code class="language-JavaScript">          let addNum = 0;
+   data.tableData.forEach(item =&gt; {
+   	if (Reflect.ownKeys(item)
+   		.length != 0) {
+   		if (item.checkTestItems &amp;&amp; item.checkTestItems.length &gt; 0 &amp;&amp; item.orderClass &amp;&amp; item.orderClass == '22') {
+   			addNum += item.checkTestItems.length;
+   		}
+   	}
+   })
+
+   if (addNum != 0) {
+   	let lastIndex = data.tableData.length - addNum
+   	console.log(&quot;addNum:&quot;, addNum, lastIndex)
+   	if (lastIndex &gt; 0 &amp;&amp; Reflect.ownKeys(data.tableData[lastIndex])
+   		.length === 0) {
+   		data.tableData.splice(lastIndex, addNum)
+   	} else {
+   		let allRows = data.tableData.length + addNum
+   		console.log(&quot;allRows:&quot;, data.tableData.length, addNum, allRows)
+   		let noBlack = allRows % 26
+   		if (noBlack != 0) {
+   			let lastIndex2 = data.tableData.length - noBlack
+   			if (Reflect.ownKeys(data.tableData[lastIndex2])
+   				.length === 0) {
+   				data.tableData.splice(lastIndex, noBlack)
+   			} else {
+   				let black = 26 - noBlack
+   				console.log(&quot;noBlack:&quot;, noBlack, black)
+   				for (var i = 0; i &lt; black; i++) {
+   					data.tableData.push({});
+   				}
+   			}
+   		}
+   	}
+   }
+</code></pre>
+<ol start="4">
+<li>优化后的js</li>
+</ol>
+<pre><code class="language-JavaScript"> let last = [];
+ data.tableData.forEach(item =&gt; {
+ 	if (Reflect.ownKeys(item)
+ 		.length != 0) {
+ 		if (item.checkTestItems &amp;&amp; item.checkTestItems.length &gt; 0 &amp;&amp; item.orderClass &amp;&amp; item.orderClass == '22') {
+ 			item.checkTestItems.forEach(a =&gt; {
+ 				last.push(a);
+ 			})
+ 		} else {
+ 			last.push(item);
+ 		}
+ 	}
+ })
+ console.log(&quot;last.length:&quot;, last.length)
+ let noBlack = last.length % 26
+ if (noBlack != 0) {
+ 	let black = 26 - noBlack
+ 	console.log(&quot;noBlack:&quot;, noBlack, black)
+ 	for (var i = 0; i &lt; black; i++) {
+ 		last.push({});
+ 	}
+ }
+ data.tableData = last;
+</code></pre>
+<ul>
+<li>优化后，代码量更少，更易读，更优雅</li>
+<li>html由2个循环改为1个循环</li>
+<li>js有两个作用，首先过滤数据，和赋值空对象</li>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

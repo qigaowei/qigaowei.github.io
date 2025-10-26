@@ -183,7 +183,65 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ol>
+<li>不支持</li>
+</ol>
+<pre><code class="language-java">List&lt;Map&lt;String, Object&gt;&gt; allLines = new ArrayList&lt;&gt;();
+        Map&lt;String, Object&gt; row1 = new HashMap&lt;&gt;();
+        row1.put(&quot;姓名&quot;, &quot;张三&quot;);
+        row1.put(&quot;年龄&quot;, 25);
+        row1.put(&quot;城市&quot;, &quot;北京&quot;);
+        allLines.add(row1);
+
+        Map&lt;String, Object&gt; row2 = new HashMap&lt;&gt;();
+        row2.put(&quot;姓名&quot;, &quot;李四&quot;);
+        row2.put(&quot;年龄&quot;, 30);
+        row2.put(&quot;城市&quot;, &quot;上海&quot;);
+        allLines.add(row2);
+
+        String fileName = &quot;/soft/1.xlsx&quot;;
+        // 导出数据到Excel文件
+        EasyExcel.write(fileName)
+                .sheet(&quot;Sheet1&quot;) // 设置工作表的名字
+                .doWrite(allLines); // 写入数据
+</code></pre>
+<ol start="2">
+<li>支持</li>
+</ol>
+<pre><code class="language-java">import com.alibaba.excel.EasyExcel;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class QiTest {
+    public static void main(String[] args) {
+        List&lt;Map&lt;Integer, String&gt;&gt; dataList = new ArrayList&lt;&gt;();
+
+        Map&lt;Integer, String&gt; row1 = new HashMap&lt;&gt;();
+        row1.put(0, &quot;张三&quot;);
+        row1.put(1, &quot;25&quot;);
+        row1.put(2, &quot;北京&quot;);
+
+        Map&lt;Integer, String&gt; row2 = new HashMap&lt;&gt;();
+        row2.put(0, &quot;李四&quot;);
+        row2.put(1, &quot;30&quot;);
+        row2.put(2, &quot;上海&quot;);
+
+        dataList.add(row1);
+        dataList.add(row2);
+
+        String fileName = &quot;/soft/1.xlsx&quot;;
+
+        EasyExcel.write(fileName)
+                .sheet(&quot;Sheet1&quot;)
+                .doWrite(dataList);
+    }
+}
+
+</code></pre>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

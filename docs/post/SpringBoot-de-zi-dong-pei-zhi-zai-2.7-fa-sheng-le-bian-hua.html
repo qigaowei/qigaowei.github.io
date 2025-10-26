@@ -81,7 +81,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><p><a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.7-Release-Notes">Spring-Boot-2.7-Release-Notes</a></p>
+<p>If you have created your own auto-configurations, you should move the registration from spring.factories under the org.springframework.boot.autoconfigure.EnableAutoConfiguration key to a new file named META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports. Rather than a single comma-separate list, each line contains the fully qualified name of an auto-configuration class. See <a href="https://github.com/spring-projects/spring-boot/blob/main/spring-boot-project/spring-boot-autoconfigure/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports">the included auto-configurations</a> for an example.</p>
+<p>For backwards compatibility, entries in spring.factories will still be honored. Furthermore, entries can be listed in both files and will be de-duplicated. This allows a library to target versions of Spring Boot that only support spring.factories and versions of Spring Boot that only support AutoConfiguration.imports.</p>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

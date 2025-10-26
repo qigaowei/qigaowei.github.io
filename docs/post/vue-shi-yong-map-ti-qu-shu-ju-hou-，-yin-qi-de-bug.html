@@ -95,7 +95,25 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><pre><code class="language-js">console.log('response.data.members-------1-',response.data.members)
+var temp=response.data.members;
+form.value.members= response.data.members.map(student =&gt; student.internshipStudentsId);
+console.log('response.data.members-------2-',response.data.members)
+form.value.membersName=temp.map(student =&gt; student.internshipStudentsName).join(&quot;,&quot;)
+</code></pre>
+<ul>
+<li>
+<p>打印如下<br /> 
+<img src="https://github.com/user-attachments/assets/21009b77-5da2-4b46-a332-d4e784912e04" alt="image" /></p>
+</li>
+<li>
+<p>internshipStudentsName消失了</p>
+</li>
+<li>
+<p>所以用var temp=response.data.members;先保存起来</p>
+</li>
+</ul>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

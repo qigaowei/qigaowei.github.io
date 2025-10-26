@@ -97,7 +97,21 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ul>
+<li>假设四个字</li>
+<li>1和2互换，3和4互换</li>
+<li>不影响阅读</li>
+</ul>
+<pre><code class="language-java">import com.github.houbb.sensitive.word.core.SensitiveWordHelper;
+
+public class SensitiveWord {
+    public static void main(String[] args) {
+        System.out.println(SensitiveWordHelper.contains(&quot;斯大林&quot;));
+        System.out.println(SensitiveWordHelper.contains(&quot;大斯林&quot;));
+    }
+}
+</code></pre>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

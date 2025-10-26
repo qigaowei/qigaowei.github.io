@@ -109,7 +109,31 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ol>
+<li>方法，不推荐
+<ul>
+<li>打开 C:\Program Files\Java\jre-1.8\lib\security\java.security</li>
+<li>搜索jdk.tls.disabledAlgorithms</li>
+<li>删除 SSLv3, TLSv1, TLSv1.1,</li>
+<li>结果如下</li>
+</ul>
+<pre><code>jdk.tls.disabledAlgorithms=RC4, DES, MD5withRSA, \
+    DH keySize &lt; 1024, EC keySize &lt; 224, 3DES_EDE_CBC, anon, NULL, \
+    include jdk.disabled.namedCurves
+</code></pre>
+<ul>
+<li>最后，别忘了重启SpringBoot</li>
+</ul>
+</li>
+<li>把javax.mail的包换成com.sun.mail</li>
+</ol>
+<pre><code class="language-xml">      &lt;dependency&gt;
+          &lt;groupId&gt;com.sun.mail&lt;/groupId&gt;
+          &lt;artifactId&gt;javax.mail&lt;/artifactId&gt;
+          &lt;version&gt;1.6.2&lt;/version&gt;
+      &lt;/dependency&gt;
+</code></pre>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

@@ -73,7 +73,15 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ol>
+<li>首先，在电脑的任意界面按下【Win+R】快捷键打开Windows的运行窗口，并且输入“regedit”打开电脑的注册表。</li>
+<li>然后在上方的地址栏直接复制以下信息并回车：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings</li>
+<li>新建一个“DWORD(32位)值”的选项，“FlightSettingsMaxPauseDays”</li>
+<li>然后双击这个选项，将它的基数修改为十进制，数值数据修改为“10000”，也就是推迟10000天。</li>
+<li>接着打开设置，选择Windows更新，在暂停更新的右侧，点击下拉菜单，就能够看到可推迟的周数了。</li>
+</ol>
+<p><a href="https://mp.weixin.qq.com/s/_-KkUyMIL-6dM0x_7p-dfQ">源地址</a></p>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

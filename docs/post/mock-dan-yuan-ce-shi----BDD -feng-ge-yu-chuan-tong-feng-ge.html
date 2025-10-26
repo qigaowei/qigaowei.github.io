@@ -91,7 +91,18 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody">{"code":500,"msg":"未能读取到有效 token错误","error":null,"data":null}</div>
+<div class="markdown-body" id="postBody"><ol>
+<li>传统风格（when-thenReturn）</li>
+</ol>
+<pre><code class="language-java">when(mockService.doSomething()).thenReturn(&quot;Expected Result&quot;);
+</code></pre>
+<ol start="2">
+<li>BDD 风格（given-willReturn）</li>
+</ol>
+<pre><code class="language-java">given(mockService.doSomething()).willReturn(&quot;Expected Result&quot;);
+</code></pre>
+<p>BDD 的核心思想是使用更自然的语言描述行为，从而使测试代码更具可读性。</p>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
