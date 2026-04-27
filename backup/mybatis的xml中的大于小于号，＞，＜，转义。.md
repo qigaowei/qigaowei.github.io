@@ -1,2 +1,0 @@
-- \<![CDATA[ >= ]]> #{startDate}
-- \<![CDATA[ <= ]]> #{endDate}

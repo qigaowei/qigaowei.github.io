@@ -1,1 +1,0 @@
-设置搜encoding

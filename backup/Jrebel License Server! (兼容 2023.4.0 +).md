@@ -1,1 +1,0 @@
-[破解](https://www.jpy.wang/page/jrebel.html)

@@ -1,2 +1,0 @@
-- idea里面环境变量里配置 
-- spring.config.location=D:\config\ten-sit.yml
